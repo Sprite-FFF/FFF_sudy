@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var flag = 0;//f定义一个标识符
+    for(var i=1;i<=100;i++){
+      for(var j=2;j<i;j++){
+          if (i%j==0){
+              flag = 1;
+              break;
+          }else {
+              flag = 0;
+          }
+      }
+//       if(i==j){
+//           console.log(i);
+//       }
+        if (flag==0&&i!=1){
+            console.log(i);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // delegate()   方法绑定事件  事件委托绑定
+
+            // 参数：被委托的子元素   事件类型    事件处理程序
+            // $("#box").delegate("span","click",function(){
+            //     alert(1);
+            // })
+
+            // 可以同时绑定多个事件 
+
+            // $("#box").delegate("span","click mouseenter mouseleave",function(){
+            //     console.log("我爱你");
+            // })
+
+            // $("#box").delegate("span",{
+            //     "click":function(){
+            //         console.log("点击了");
+            //     },
+            //     "mouseenter":function(){
+            //         console.log("进入了");
+            //     },
+            //     "mouseleave":function(){
+            //         console.log("出去了");
+            //     }
+            // });
+
+            // 也可以传入数据
+            // $("#box").delegate("p","click","我听见雨滴落在青青草地",function(e){
+            //     console.log(e.data);
+            //     console.log(e.delegateTarget);  //事件代理对象    e.delegateTarget
+            // });
+
+            $("#box").delegate("p", {
+                "click": function (e) {
+                    // ??? 这里的this指向点击的p标签
+                    // 而不是事件调用者？
+                    $(this).css("background-color", e.data[0]);
+                },
+                "mouseenter": function (e) {
+                    $(this).css("background-color", e.data[1]);
+                },
+                "mouseleave": function (e) {
+                    $(this).css("background-color", e.data[2]);
+                }
+            },["pink","orange","#00ffff"]);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="box">
+        <span>青青子衿</span>
+        <span>悠悠我心</span>
+        <span>但为君故</span>
+        <p>沉吟至今</p>
+        <p>呦呦鹿鸣</p>
+        <p>食野之苹</p>
+    </div>
+</body>
+
+</html>

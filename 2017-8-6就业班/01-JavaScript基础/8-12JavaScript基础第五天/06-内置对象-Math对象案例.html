@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    - 求10-20之间的随机数
+
+    //    for (var i = 0; i <= 100; i++) {
+    //        console.log(parseInt(10 + Math.random() * 11));
+    ////        console.log(Math.ceil(10 + Math.random() * 10));      //取到0的几率太小
+    //
+    //    }
+
+
+    //    - 随机生成颜色RGB
+    //    var r = parseInt(Math.random() * 256);
+    //    var g = parseInt(Math.random() * 256);
+    //    var b = parseInt(Math.random() * 256);
+    //    document.body.bgColor = "rgb("+r+","+g+","+b+")";
+    //    document.body.innerHTML = "rgb("+r+","+g+","+b+")";
+
+    //    定义一个数组；0-9和a-f;   随机六次做数组索引值；  然后用#开头链接起来；
+    var color = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f"];
+    function rollColor() {
+        return parseInt(Math.random() * 16);
+    }
+    document.body.bgColor = "#" + color[rollColor()] + color[rollColor()] + color[rollColor()] + color[rollColor()] + color[rollColor()] + color[rollColor()];
+    document.body.innerHTML = "#" + color[rollColor()] + color[rollColor()] + color[rollColor()] + color[rollColor()] + color[rollColor()] + color[rollColor()];
+
+
+    //    - 模拟实现max()/min()
+    //    var MyMath = {
+    //        myMax: function () {
+    //            var max = arguments[0];
+    //            for (var i = 1; i < arguments.length; i++) {
+    //                if (max < arguments[i]) {
+    //                    max = arguments[i];
+    //                }
+    //            }
+    //            return max;
+    //        },
+    //        myMin: function () {
+    //            var min = arguments[0];
+    //            for (var i = 1; i < arguments.length; i++) {
+    //                if (min > arguments[i]) {
+    //                    min = arguments[i];
+    //                }
+    //            }
+    //            return min;
+    //        }
+    //    };
+    //    console.log(MyMath.myMax(2, 5, 6, 8));
+    //    console.log(MyMath.myMin(2, 5, 6, 8));
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    给定一个字符串如：“abaasdffggghhjjkkgfddsssss3444343”问题如下：
+    var str = "abaasdffggghhjjkkgfddsssss3444343";
+    //    1、 字符串的长度
+    //console.log(str.length);
+    //    2、 取出指定位置的字符，如：0,3,5,9等
+    //console.log(str.substr(0,1));
+    //console.log(str[3]);
+    //console.log(str.charAt(5));
+    //console.log(str.slice(9,10));
+    //    3、 查找指定字符是否在以上字符串中存在，如：i，c ，b等
+//    console.log(str.indexOf("a") == -1 ? "不存在" : "存在");
+    //    4、 替换指定的字符，如：g替换为22,ss替换为b等操作方法
+//    console.log(str.replace(/g/g, "22"));
+    //    5、 截取指定开始位置到结束位置的字符串，如：取得1-5的字符串
+//    console.log(str.slice(1, 6));
+    //    6、 找出以上字符串中出现次数最多的字符和出现的次数
+//    var json = {};
+//    var max = 0;
+//    var maxKey;
+//    for (var i = 0; i < str.length; i++) {
+//        var key = str[i];
+//        if (json[key] == undefined) {
+//            json[key] = 1;
+//        } else {
+//            json[key]++;
+//            if (json[key] > max) {
+//                max = json[key];
+//                maxKey = key;
+//            }
+//        }
+//    }
+//    console.log(json);
+//    console.log(maxKey + ":" + max);
+    //    7、 遍历字符串，并将遍历出的字符两头添加符号“@”输出至当前的文档页面。
+    for (var i = 0; i < str.length; i++) {
+//        console.log("@"+str[i]+"@");
+        document.write("@"+str[i]+"@");
+    }
+</script>
+</body>
+</html>

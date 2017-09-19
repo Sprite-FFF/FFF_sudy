@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        select {
+            width: 200px;
+            height: 300px;
+            background-color: #38B774;
+            font: 24px/32px "simsun";
+            color: #666;
+        }
+
+        button {
+            width: 40px;
+            height: 25px;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            var sel1 = document.getElementById("sel1");
+            var sel2 = document.getElementById("sel2");
+            var btns = document.getElementsByTagName("button");
+
+            function selectedAll(sel1, sel2) {
+                var opts = sel1.getElementsByTagName("option");
+                for (var i = 0; i < opts.length; i++) {
+                    sel2.appendChild(opts[i]);
+                    i--;
+                }
+            }
+
+            btns[0].onclick = function () {
+                selectedAll(sel1, sel2);
+            }
+            btns[1].onclick = function () {
+                selectedAll(sel2, sel1);
+            }
+            function removeSel(sel1, sel2) {
+                var opts = sel1.getElementsByTagName("option");
+                for (var i = 0; i < opts.length; i++) {
+                    if (opts[i].selected == true) {
+                        opts[i].selected = false;
+                        sel2.appendChild(opts[i]);
+                        i--
+                    }
+                }
+                var newArr = Array.from(sel2.children).sort(function (a,b) {
+                    return a.value - b.value;
+                });
+                for (var j = 0; j < newArr.length; j++) {
+                    sel2.appendChild(newArr[j]);
+                }
+            }
+
+            btns[2].onclick = function () {
+                removeSel(sel1, sel2);
+            }
+            btns[3].onclick = function () {
+                removeSel(sel2, sel1);
+            }
+        }
+    </script>
+</head>
+<body>
+<select name="" id="sel1" size="8" multiple>
+    <option value="1">1坦格利安</option>
+    <option value="2">2史塔克</option>
+    <option value="3">3兰尼斯特</option>
+    <option value="4">4拜拉希恩</option>
+</select>
+<button> >>></button>
+<button> <<<</button>
+<button> ></button>
+<button> <</button>
+<select name="" id="sel2" size="8" multiple></select>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #map {
+            width: 800px;
+            height: 600px;
+            background-color: #ccc;
+            position: relative;
+            margin:20px auto;
+        }
+        .header {
+            position: absolute;
+            border-radius: 50%;
+            background: url(img/01.gif) no-repeat;
+            background-size: cover;
+            z-index: 1;
+        }
+        .snake-body {
+            border-radius: 50%;
+            position: absolute;
+            background: url(img/02.gif) no-repeat;
+            background-size: cover;
+        }
+        .food{
+            position: absolute;
+            background: url(img/food.gif) no-repeat;
+            background-size: cover;
+            z-index: 2;
+        }
+    </style>
+    <script src="food.js"></script>
+    <script src="snake.js"></script>
+    <script src="game.js"></script>
+    <script>
+        window.onload = function (){
+            var map = document.getElementById("map");
+            // new Food().render(map);
+            // new Snake().render(map);
+            var game = new Game(map);
+            game.start();
+        }
+    </script>
+</head>
+<body>
+    <div id="map"></div>
+</body>
+</html>

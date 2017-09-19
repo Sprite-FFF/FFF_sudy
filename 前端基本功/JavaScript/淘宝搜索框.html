@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝</title>
+
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .search{
+            width: 300px;
+            height: 30px;
+            margin: 50px auto;
+            position: relative;
+        }
+        .search input{
+            width: 300px;
+            height: 30px;
+        }
+        .search label{
+            display: block;
+            position: absolute;
+            top:6px;
+            left:20px;
+            color:#aaa;
+            cursor: text;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+             function $(id){
+                 return document.getElementById(id);
+             }
+            $("txt").oninput = function(){
+                $("message").style.display = "none";
+                if($("txt").value ==""){
+                    $("message").style.display = "block";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="search">
+        <input type="text" id="txt"/>
+        <label for="txt" id="message">必败的国际大牌</label>
+    </div>
+</body>
+</html>

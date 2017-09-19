@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    冒泡排序：两个循环一个控制轮数，一个控制每轮的次数
+    var arr = [3,4,2,8,5,7,6];
+    for (var i = 0; i < arr.length-1; i++) {
+        //相邻的两个元素进行比较，满足添加就交换位置；
+        //后面的比前面的大交换位置: 降幂排序(越来越小);
+        //后面的比前面的小交换位置: 升幂排序(越来越大);
+        for (var j = 0; j < arr.length-1; j++) {
+            if (arr[j]>arr[j+1]) {
+                var temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+    console.log(arr);
+</script>
+</body>
+</html>

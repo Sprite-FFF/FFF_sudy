@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #00ffff;
+        }
+        .font {
+            font:24px/200px "simsun";
+            color: orangered;
+            text-align: center;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // addClass()   添加类名
+            // $("#box").addClass("box");
+            // addClass()   添加多个类名
+            $("#box").addClass("box font"); // 用空格隔开
+            
+            // removeClass()    移除类名
+            // $("#box").removeClass("font");
+
+            // 移除多个类名
+            // 如果不写参数   将会移除该对象身上所有的类名 
+            // $("#box").removeClass("box font");
+
+            // hasClass     判断有没有这个类  返回true 和 false
+            console.log( $("#box").hasClass("font"));
+
+            // toggleClass();  切换类
+            $("#btn").click(function () { 
+                $("#box").toggleClass("font");  // 如果有这个类就移除    如果没有则添加
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="box">
+        林深时见鹿
+    </div>
+    <button id="btn">切换</button>
+</body>
+</html>

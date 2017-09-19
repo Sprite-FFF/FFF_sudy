@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        div {
+            height: 2000px;
+       }
+    </style>
+    <script src="./jquery-1.12.4.js"></script>
+    <script src="./jquery.lazyload.js"></script>
+    <script>
+        // 当我们打开一个网页时 里面会有很多图片
+        // 打开一瞬间 我们只能看到首屏这部分区域
+        // 如果你要一次性全部加载完毕所有图片 会很慢 浪费带宽 影响用户体验
+
+        // 懒加载
+        // 打开页面加载用户能看到的图片
+        // 随着用户下拉 快要看到图片时 立即加载图片
+        // 这就是懒加载
+        // 有专门的插件
+
+        // 使用方式
+        // 引入插件 调用懒加载方法
+
+        $(function () {
+            $('img').lazyload();
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <img data-original="./images/01.jpg">
+    <div></div>
+    <img data-original="./images/01.jpg">
+</body>
+</html>

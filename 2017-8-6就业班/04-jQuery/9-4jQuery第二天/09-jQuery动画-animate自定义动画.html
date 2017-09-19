@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: #00ffff;
+        }
+    </style>
+    <script src="jquery-1.12.4.js">
+
+    </script>
+    <script>
+        $(function () {
+            // animate()
+            // 第一个参数：Json对象 里面放多个想要改变的属性
+            // 第二个参数：动画执行的时间
+            // 第三个参数：动画的运动形式    
+            // jQuery为我们提供了两种   swing(慢→快→慢)    linear(匀速)
+            // 这里可以引入一个第三方的基于jQuery的动画库，实现多种运动形式    tween.js
+
+            // $("button").click(function (e) { 
+            //     $("#box").animate({
+            //         "width":"600px",
+            //         "height":"400px",
+            //     },2000);
+            // });
+            // 
+            // 支持链式调用
+
+            $("button").click(function(){
+                // 先执行前面的   后执行后面的
+                $("#box").animate({"width":600},1500).animate({"height":400});
+            });
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <button>点击</button>
+    <div id="box">
+        
+    </div>
+</body>
+</html>

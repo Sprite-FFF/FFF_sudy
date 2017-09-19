@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #aaa;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            function myGetElementsByClassName(cName) {
+                if(document.getElementsByClassName){
+                    return document.getElementsByClassName(cName);
+                }
+                var allTag = document.getElementsByTagName("*");
+                var dom = [];
+                for (var i = 0; i < allTag.length; i++) {
+                    var cNameArr = allTag[i].className.split(" ");
+                    for (var j = 0; j < cNameArr.length; j++) {
+                        if (cNameArr[j] == cName){
+                            dom.push(cNameArr[j]);
+                        }
+                    }
+                }
+                return dom;
+            }
+
+            function $(str) {
+                var str1 = str.charAt(0);
+                var str2 = str.substr(1);
+                switch (str1){
+                    case "#":
+                        return document.getElementById(str2);
+                    case ".":
+                        return myGetElementsByClassName(str2);
+                    default:
+                        return document.getElementsByTagName(str);
+                }
+            }
+            $("#box").style.backgroundColor = "#00ffff";
+            $(".box1")[0].style.backgroundColor = "#00ffff";
+            console.log($("div").length);
+        }
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<div id="box"></div>
+<div></div>
+<div class="box1"></div>
+<div></div>
+<div></div>
+</body>
+</html>

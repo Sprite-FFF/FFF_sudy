@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="file" id="file"><span></span>
+<script>
+    var file = document.getElementById("file");
+    file.onchange = function(){
+        var path = file.value;
+        var suxxif = path.substr(path.lastIndexOf(".")).toLowerCase();
+//        toLowerCase()将字符串转换为小写
+//        toUpperCase()将字符串转换为大写
+        alert(suxxif);
+    }
+
+</script>
+</body>
+</html>

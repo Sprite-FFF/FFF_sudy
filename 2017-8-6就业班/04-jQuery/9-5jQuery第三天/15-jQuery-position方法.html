@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #box {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 600px;
+            top: 100px;
+            background-color:plum;
+        }
+        #box div{
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+            margin: 100px auto;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // position()方法
+            // 获取相对于距离该元素最近的有定位的父盒子的位置  若没有则body
+            // 返回json对象 不包含自身margin
+            // 跟自身有没有定位没有关系
+            // 只读属性 不能设置
+            // 和offsetLeft/offsetTop的区别 js中的offsetLeft/Top包含自身margin
+            // 
+
+            console.log($("#box").position());
+            console.log($("#box div").position());
+            console.log($("#box div").position().top);
+            console.log($("#box div").position().left);
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <div></div>
+    </div>
+</body>
+</html>

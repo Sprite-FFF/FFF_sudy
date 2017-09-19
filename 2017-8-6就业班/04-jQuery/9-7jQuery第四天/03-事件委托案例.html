@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        window.onload = function () {
+            // js事件委托
+
+            // var ul = document.getElementsByTagName("ul")[0];
+            // ul.onclick = function (e) {
+            //     e = e || event;
+            //     var target = e.target || e.srcElement;
+            //     console.log(target);
+            //     if (target.nodeName == "A") {
+            //         this.removeChild(target.parentNode);
+            //     }
+            // }
+
+            // jQuery
+
+            $("ul").delegate("a","click",function(e){
+                console.log(e.target);  //当前点击的是谁   目标阶段
+                console.log(e.delegateTarget); //   事件委托的父级元素
+                console.log(this);  //  事件委托的子元素
+                console.log(e.type);    // 事件类型
+                if(e.target.nodeName == "A"){
+                    $(this).parent().remove();
+                }
+                
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>凄凉别后两应同<a href="javascript:;">删除</a></li>
+        <li>最是不胜清怨明中<a href="javascript:;">删除</a></li>
+        <li>曾经沧海难为水<a href="javascript:;">删除</a></li>
+        <li>除却巫山不是云<a href="javascript:;">删除</a></li>
+        <li>死生契阔<a href="javascript:;">删除</a></li>
+        <li>与子成说<a href="javascript:;">删除</a></li>
+        <li>执子之手<a href="javascript:;">删除</a></li>
+    </ul>
+</body>
+
+</html>

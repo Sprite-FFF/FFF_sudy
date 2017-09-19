@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .nav{
+            height:20px;
+            width: 100%;
+            background-color: lightskyblue;
+            padding: 20px;
+            line-height: 20px;
+        }
+        .nav a{
+            text-decoration: none;
+            font-family: "微软雅黑";
+            font-size: 14px;
+            color: #fff;
+        }
+        .reg{
+            display:none;
+            width: 400px;
+            height:300px;
+            border: 5px solid #ccc;
+            box-shadow: 2px 2px 12px 2px #555;
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-left: -205px;
+            margin-top:-155px;
+        }
+        .tit{
+            width: 380px;
+            height:30px;
+            padding-left: 20px;
+            line-height: 30px;
+            color: #000;
+            font-weight: 500;
+            font-size: 16px;
+            background-color:#1A66B3;
+            cursor: move;
+        }
+        .tit span{
+            float: right;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+        function $(id){
+            return document.getElementById(id);
+        }
+        window.onload = function(){
+            $("open").onclick = function(){
+                $("regBox").style.display = "block";
+            }
+            $("close").onclick = function(){
+                $("regBox").style.display = "none";
+            }
+
+            var regbox = $("regBox");
+            var title = $("reg_title");
+            title.onmousedown = function (event){
+                var event = event || window.event;
+                var x = event.clientX - regbox.offsetLeft -205;
+                var y = event.clientY - regbox.offsetTop - 155;
+                console.log(x,y);
+                document.onmousemove = function(event){
+                    var event = event || window.event;
+                    regbox.style.left = event.clientX - x +"px";
+                    regbox.style.top = event.clientY - y+"px";
+                }
+            }
+            document.onmouseup = function(){
+                document.onmousemove = null;
+            }
+        }
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<div class="nav">
+    <a id="open" href="javascript:void(0)">点击注册</a>
+</div>
+<div class="reg" id="regBox">
+    <div class="tit" id="reg_title">
+        注册信息
+        <span id="close">关闭</span>
+    </div>
+</div>
+</body>
+</html>

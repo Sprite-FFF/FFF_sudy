@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // addEventListener(事件名,function,)
+    //相同事件源绑定相同事件时会被层叠
+    //    document.onclick = function () {
+    //        console.log("人生若只如初见");
+    //    }
+    //    document.onclick = function () {
+    //        console.log("何事秋风悲画扇");
+    //    }
+
+    //    事件监听则不会出现这种问题
+    //事件名不带on
+    //ie678不兼容
+    //    document.addEventListener("click", function () {
+    //        console.log("人生若只如初见");
+    //    });
+    //    document.addEventListener("click", function () {
+    //        console.log("何事秋风悲画扇");
+    //    });
+    //ie678中的事件监听   attachEvent(事件，function)
+    //
+    //    document.attachEvent("onclick", function () {
+    //        console.log("何事秋风悲画扇");
+    //    });
+    //    document.attachEvent("onclick", function () {
+    //        console.log("何事秋风悲画扇");
+    //    });
+
+    //    兼容性封装
+    function addEvent(ele, event, func) {
+        if (ele.addEventListener && typeof (ele.addEventListener) == "function") {
+            ele.addEventListener(event, func);
+        } else if (ele.attachEvent) {
+            ele.attachEvent("on" + event, func);
+        } else {
+            ele["on" + event] = func;
+        }
+    }
+
+    addEvent(document, "click", function () {
+        console.log("人生若只如初见")
+    });
+    addEvent(document, "click", function () {
+        console.log("何事秋风悲画扇")
+    });
+    addEvent(document, "click", function () {
+        console.log("等闲变却故人心")
+    });
+    addEvent(document, "click", function () {
+        console.log("却道故人心易变")
+    });
+</script>
+</body>
+</html>

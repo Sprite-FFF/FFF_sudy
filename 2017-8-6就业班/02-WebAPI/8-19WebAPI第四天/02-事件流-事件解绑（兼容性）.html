@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+//            document.onclick = function () {
+//                console.log("君不见黄河之水天上来");
+//            }
+            //同一时间源同一事件多次绑定后面的会覆盖前面的
+//            document.onclick = function () {
+//                console.log("奔流到海不复回");
+//            }
+//            事件监听  addEventListener    //ie768不兼容  attachEvent
+//            document.addEventListener("click", function () {
+//                console.log("奔流到海不复回");
+//            });
+//
+//            兼容封装
+            function addEvent(ele, evt, func) {
+                if (ele.addEventListener && typeof (ele.addEventListener) == "function") {
+                    ele.addEventListener(evt, func);
+                } else if (ele.attachEvent) {
+                    ele.attachEvent("on" + evt, func);
+                } else {
+                    ele["on" + evt] = func;
+                }
+            }
+
+//            addEvent(document, "click", function () {
+//                console.log("君不见黄河之水天上来");
+//            });
+//            addEvent(document, "click", function () {
+//                console.log("奔流到海不复回");
+//            });
+            function event1() {
+                console.log("君不见黄河之水天上来");
+            }
+
+            function event2() {
+                console.log("奔流到海不复回");
+            }
+
+            function event3() {
+                console.log("君不见高堂明镜悲白发");
+            }
+
+            function event4() {
+                console.log("朝如青丝暮成雪");
+            }
+
+            addEvent(document,"click",event1);
+            addEvent(document,"click",event2);
+            addEvent(document,"click",event3);
+            addEvent(document,"click",event4);
+
+//            removeEventListener(事件,函数名);      匿名函数绑定无法解绑  IE6、7、8、不支持
+//            detachEvent() IE6\7\8
+//            document.removeEventListener("click",event1);
+//            document.removeEventListener("click",event2);
+
+//            兼容封装处理
+            function removeEvent (ele,evt,func){
+                if(ele.removeEventListener && typeof (ele.removeEventListener) == "function"){
+                    ele.removeEventListener(evt,func);
+                } else if (ele.detachEvent){
+                    ele.detachEvent("on"+evt,func);
+                } else{
+                    ele["on"+evt] = null;       //DOM0 解绑  事件源.事件 = null
+                }
+            }
+            removeEvent(document,"click",event1);
+            removeEvent(document,"click",event2);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

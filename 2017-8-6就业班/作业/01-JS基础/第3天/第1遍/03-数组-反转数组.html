@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = ["临", "兵", "斗", "者", "皆", "阵", "列", "在", "前"];
+    console.log(arr);
+    //    1.顺序遍历，逆序添加（需要一个新数组）
+    var newArr = [];
+    //    for (var i = 0; i < arr.length; i++) {
+    //       newArr[newArr.length] = arr[arr.length-1-i];
+    //    }
+    //    console.log(newArr);
+    //    2.逆序遍历，顺序添加
+    //    for (var i = arr.length-1; i >= 0; i--) {
+    //        newArr[newArr.length] = arr[i];
+    //    }
+    //    console.log(newArr);
+    //    3.原数组操作，互换位置
+    var temp;
+    for (var i = 0; i < arr.length / 2; i++) {
+        temp = arr[i];
+        arr[i] = arr[arr.length-i-1];
+        arr[arr.length-i-1] = arr[i];
+    }
+    console.log(arr);
+</script>
+</body>
+</html>

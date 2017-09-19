@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            // jquery 中的链式编程    
+            // 原理：return this
+            $("#box").css("width",100).css("height",100).css("background-color","#00ffff");
+        });
+
+        // 在jQuery中只有设置方法 操作完毕 才能返回当前对象
+        // 获取方法在操作完毕后 会返回获取的值 所以就没办法返回当前对象
+        var obj = {
+            name:"",
+            setName : function(name){
+                this.name = name;
+                return this;    // 链式编程原理
+            },
+            getName : function(){
+                console.log(this.name);
+            }
+        }
+
+        obj.setName("小丁猫").getName();
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

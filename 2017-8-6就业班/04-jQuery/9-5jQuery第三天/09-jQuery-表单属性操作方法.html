@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // 表单里的属性   checked  disabled   selected
+            // 等属性直接使用attr获取    并不是很准确
+            console.log($("input").attr("checked"));    //返回checked而不是true或者false
+            //  prop()  方法专门获取checked  disabled   selected这类属性
+            console.log($("input:checked").prop("checked"));    // 返回true
+        });
+    </script>
+</head>
+<body>
+    <input type="checkbox" checked name="" value="">守望先锋 <br>
+    <input type="text">
+</body>
+</html>

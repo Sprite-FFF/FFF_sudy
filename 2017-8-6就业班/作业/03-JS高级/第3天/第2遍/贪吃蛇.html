@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #map {
+            width: 800px;
+            height: 600px;
+            background-color: #ccc;
+            position: relative;
+            margin: 20px auto;
+        }
+        .food{
+            width: 20px;
+            height: 20px;
+            background-color: #00ffff;
+            position: absolute;
+        }
+        .snake-head{
+            width: 20px;
+            height :20px;
+            background-color: red;
+            position: absolute;
+        }
+        .snake-body{
+            width: 20px;
+            height: 20px;
+            background-color: #00ffff;
+            position: absolute;
+        }
+    </style>
+
+    <script src="food.js"></script>
+    <script src="snake.js"></script>
+    <script src="game.js"></script>
+    <script>
+        window.onload = function () {
+            var map = document.getElementById("map");
+            var game = new Game(map);
+            game.start();
+        }
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="map"></div>
+</body>
+
+</html>

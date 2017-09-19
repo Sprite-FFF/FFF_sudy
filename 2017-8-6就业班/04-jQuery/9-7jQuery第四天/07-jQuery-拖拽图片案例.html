@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        img{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        // js实现方法
+        // window.onload = function(){
+        //     var img = document.getElementsByTagName("img")[0];
+        //     img.onmousedown = function(e){
+        //         e = e || event;
+        //         // 获取鼠标在盒子中的位置
+        //         var x = e.clientX - this.offsetLeft;
+        //         var y = e.clientY - this.offsetTop;
+        //         // 阻止浏览器默认行为
+        //         // e.preventDefault&&e.preventDefault();
+        //         // IE 6、7、8 阻止浏览器默认行为
+		// 	    e.returnValue&&(e.returnValue = false);
+
+        //         // 解决IE6、7、8图片无法拖拽的问题 需要使用一个设置全局捕获方法
+        //         img.setCapture && img.setCapture();
+        //         document.onmousemove = function(e){
+        //             e = e || event;
+        //             img.style.left = e.clientX - x +"px";
+        //             img.style.top = e.clientY - y + "px";
+        //         }
+                
+        //         return false;
+        //     }
+
+        //     document.onmouseup = function(){
+        //        document.onmousemove = null;
+        //        img.releaseCapture&&img.releaseCapture();
+        //     }
+        // }
+
+
+        // jQuery实现
+
+        $(function () {
+            $("img").on("mousedown",function(e){
+                // 获取鼠标在图片内的位置  固定距离
+                // var x = e.clientX - $(this).position().left;
+                // var y = e.clientY - $(this).position().top;
+
+                // jQuery   offsetX/Y获取鼠标在当前元素里的位置
+                var x = e.offsetX;
+                var y = e.offsetY;
+                // ie678 拖拽图片设置全局捕获方法
+                this.setCapture && this.setCapture();
+                $(document).on("mousemove",function(e){
+                    $("img").css({
+                        "left": e.clientX - x,
+                        "top" : e.clientY - y,
+                    });
+                });
+                // 鼠标弹起 取消掉所有document上的事件
+                $(document).on("mouseup",function(){
+                    $(this).off();
+                    // 取消全局捕获的方法
+                    this.releaseCapture && this.releaseCapture();
+                })
+                // 在jQuery中 既取消浏览器默认行为  又取消冒泡
+                return false;
+            })
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <img src="images/food.gif" alt="">
+</body>
+</html>

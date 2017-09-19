@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: orchid;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // 1、简单事件绑定方式
+            // 缺点：不能一次书写多个事件
+            // $("#box").click(function(){
+            //     alert(123);
+            // });
+
+            // 2、bind()方法绑定
+
+            // $("#box").bind("click",function(){
+            //     console.log("昔我往矣、杨柳依依");
+            // })
+
+            // 可以一次绑定多个事件
+            // $("#box").bind({
+            //     "click": function(){
+            //         console.log("昔我往矣、杨柳依依");
+            //     },
+            //     "mouseleave":function(){
+            //         console.log("今我来思、雨雪霏霏");
+            //     }
+            // });
+
+            // 可以传入一些数据     e.data()
+
+            // $("#box").bind("click",{name:"莞莞",age:18},function(e){
+            //     console.log(e.data.name);
+            //     console.log(e.data.age);
+            // });
+
+            // $("#box").bind({
+            //     "click":function(e){
+            //         console.log(e.data);
+            //     },
+            //     "mouseleave":function(e){
+            //         console.log(e.data.name);
+            //     }
+            // },{name:"莞莞",age:18});
+
+            // $("#box").bind("click","青青子衿、悠悠我心",function(e){
+            //     alert(e.data);
+            // });
+
+            // bind()方法 不支持事件委托
+
+            // 3、delegate() 方法绑定事件
+
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id= "box">
+        点击我
+    </div>
+</body>
+</html>

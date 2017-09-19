@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    1.求两个数的最大数
+    //    2.判断一个数是偶数还是奇数
+    //    3.分数转换，把百分制转换成ABCDE   <60  E  60-70 D  70-80 C  80-90 B  90 - 100 A
+    //    4.判断一个年份是闰年还是平年
+    //        闰年：能被4整除，但不能被100整除的年份 或者 能被400整除的年份
+    //    5.判断一个人的年龄是否满18岁(是否成年)
+
+    //    1.求两个数的最大数
+  /*  var num1=100,num2=200;
+    if (num1>num2){
+        alert(num1);
+    } else {
+        alert(num2);
+    }*/
+
+    //    2.判断一个数是偶数还是奇数
+//    var num = parseInt(prompt("请输入一个合法数字："));
+//    if (num%2==0){
+//        alert("偶数");
+//    } else {
+//        alert("奇数");
+//    }
+
+    //    3.分数转换，把百分制转换成ABCDE   <60  E  60-70 D  70-80 C  80-90 B  90 - 100 A
+  /*  var num = parseInt(prompt("请输入成绩："));
+    if (num>=90 && num<=100) {
+        alert("A");
+    } else if (num<90 && num>=80) {
+        alert("B");
+    } else if (num<80 && num>=70) {
+        alert("C");
+    } else if (num<70 && num>=60) {
+        alert("D");
+    } else {
+        alert("E 不及格")
+    }*/
+
+    //    4.判断一个年份是闰年还是平年
+    //        闰年：能被4整除，但不能被100整除的年份 或者 能被400整除的年份
+  /*  var year = 2100;
+    if (year%4 == 0 && year%100 != 0 || year%400 == 0) {
+        alert("闰年");
+    } else {
+        alert("平年");
+    }*/
+    //    5.判断一个人的年龄是否满18岁(是否成年)
+    var age = parseInt(prompt("请输入你的年龄！"));
+    if (age>=18 && age<=120) {
+        alert ("恭喜你！成年了");
+    } else if (age<18 && age>0) {
+        alert ("你还未成年！不能上网");
+    } else {
+        alert("年龄不合法");
+    }
+</script>
+</body>
+</html>

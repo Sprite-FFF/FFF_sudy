@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    //用户输入一个三位数，用程序计算三位数字的和
+    var num = prompt("请输入一个三位数：");
+    var num1 = parseInt(num);
+    var b = parseInt(num1/100);
+    var s = parseInt(num%100/10);
+    var g = parseInt(num%10);
+    var sum = b+s+g;
+    alert(sum);
+</script>
+</body>
+</html>

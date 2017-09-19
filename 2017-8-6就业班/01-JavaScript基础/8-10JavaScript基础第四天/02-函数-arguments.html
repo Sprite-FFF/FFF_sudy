@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    arguments是函数的内置对象
+    //    存储实参的伪数组
+    //    arguments.length实参个数
+    //    arguments.callee  函数名
+    //    function fn (a,b,c){
+    //        alert(a);
+    //        alert(b);
+    //        alert(c);
+    //        console.log(arguments);
+    //        console.log(arguments.length);
+    //        console.log(arguments.callee);
+    //        console.log(fn.length);  //打印函数名就是打印函数体
+    //        console.log(arguments.callee.length);
+    //    }
+    //    fn(1,2,3);
+    //    console.log(fn.length);//   函数名.length    形参个数
+
+
+
+    //    求任意个数的最大值
+    //    求任意个数的和
+    function fn() {
+        var max = arguments[0];
+        var sum = 0;
+        for (var i = 0; i < arguments.length; i++) {
+            if (max < arguments[i]) {
+                max = arguments[i];
+            }
+            sum += arguments[i];
+        }
+        console.log(max);
+        console.log(sum);
+    }
+    fn(1,2,3,4);
+
+</script>
+</body>
+</html>

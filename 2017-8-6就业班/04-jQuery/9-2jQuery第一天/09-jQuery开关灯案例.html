@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            text-align: center;
+        }
+        img{
+            display: block;
+            width: 800px;
+            margin: 60px auto;
+        }
+        button{
+            width: 80px;
+            height: 30px;
+            margin:30px;
+        }
+    </style>
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            $("button:eq(0)").click(function(){
+                $("body").css("backgroundColor","#fff");
+            });
+            $("button:eq(1)").click(function(){
+                $("body").css("backgroundColor","#333");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>开灯</button>
+    <button>关灯</button>
+    <img src="images/3.jpg" alt="">
+</body>
+</html>

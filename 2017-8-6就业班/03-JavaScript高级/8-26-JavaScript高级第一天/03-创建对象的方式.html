@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    1.对象字面量创建方式
+    //    var obj = {
+    //        name: "新垣结衣",
+    //        gender: "女",
+    //        smile: function () {
+    //            alert("hahaha~~~");
+    //        }
+    //    }
+    //    console.log(obj);
+    //    2.构造函数声明方式 new
+    //    var obj = new Object();
+    //    obj.name = "石原里美";
+    //    obj.gneder = "女";
+    //    console.log(obj);
+    //    3.工厂函数方式
+    //    function createPerson(name,gender) {
+    //        var obj = {};
+    //        obj.name = name;
+    //        obj.gender = gender;
+    //        obj.sayHai = function () {
+    //            console.log("冻住，不许走！");
+    //        };
+    //        return obj;
+    //    }
+    //    var person1 = createPerson("小美","女");
+    //    console.log(person1);
+    //    person1.sayHai();
+    //    4.构造函数模式
+    function Person(name,gender) {
+        this.name = name;
+        this.gender = gender;
+        this.sing = function () {
+            alert("夏天夏天快要过去留下小秘密");
+        }
+    }
+
+    var person1 = new Person("韩宝仪","女");
+    var person2 = new Person("田金磊","男");
+    person1.sing();
+</script>
+</body>
+</html>

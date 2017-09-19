@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            // $("#box").click(null);   //jquery事件内部通过 addEventListener()绑定事件
+
+            // $("#box").off("click");     //普通事件可以通过off()方法解绑
+
+            // $("#box").bind("click",function(){
+            //     alert("夕阳西下、断肠人在天涯");
+            // });
+
+            // $("#box").unbind("click");
+
+
+            // undelegate();
+
+            $("#box").on("click",function(){
+                alert("两情若是久长时、又岂在朝朝暮暮");
+            });
+
+            $("#box").off("click");
+
+        })
+    </script>
+</head>
+<body>
+    <div id="box">
+        庚金为器、离火为神
+    </div>
+</body>
+</html>

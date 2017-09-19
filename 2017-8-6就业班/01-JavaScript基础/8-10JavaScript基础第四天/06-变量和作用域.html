@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    作用域：根据作用的范围的不同，变量可以分为两种:全局变量和局部变量
+    //    1.全局变量(成员变量):哪里都可以访问到的变量,函数里面和外面都可以访问到
+    //    函数外部用var定义的变量和任何地方没有用var定义的变量
+    //    var num; //全局变量
+    //    num="全局变量";//全局变量
+    //    function fn(){
+    //        var aaa = "局部变量";
+    //        bbb = "全局变量";
+    //    }
+    //    fn() //函数中不带var的全局变量，函数必须调用才能加载到内存中
+
+    //    隐式全局变量：定义时不容易被发现；
+    //    function fn() {
+    //        var a = b = c = 1;//a为局部变量，b、c为全局变量
+    //        var a = 1;b = 2;c = 3;  //a为局部变量，b、c为全局变量   分号不能共用一个var
+    //        var a = 1,b= 1,c=1; //局部变量
+    //    }
+
+    //    作用域：根据作用的范围不同，函数可以分为  作用域链
+//    fn1();  //0级链   可以相互调用
+//    function fn1() {
+//        alert(1);
+//        fn2();
+//    }
+//    function fn2() {
+//        alert(2);
+//    }
+//    function fn3() {
+//        alert(3);
+//    }
+
+    function fn1() {
+        function fn2() {    //一级链       自己函数里的同级链可以相互调用
+            alert(2);
+        }
+
+        function fn3() {
+            alert(3);
+        }
+    }
+    function fn4() {
+        alert(4);
+    }
+
+</script>
+</body>
+</html>

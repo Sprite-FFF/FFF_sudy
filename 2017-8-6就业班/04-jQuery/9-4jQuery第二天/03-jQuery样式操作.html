@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // 设置单个样式
+            $("#box").css("backgroundColor","#00ffff");
+
+            //设置多个样式
+            // css() 参数可以接收一个json对象 里面可以写多个样式
+            $("#box").css({
+                "width":300,
+                "height":300,
+                "line-height":"300px"
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="box">
+        明月松间照、清泉石上流
+    </div>
+</body>
+</html>

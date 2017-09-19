@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            margin: 100px;
+            background-color: plum;
+        }
+    </style>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            // offset()方法
+            // 设置获取盒子相对于文档document中的位置
+            // 返回值 json对象   left和top
+            // console.log($("#box").offset());
+            // console.log($("#box").offset().left);
+            // console.log($("#box").offset().top);
+
+            // 设置值
+            // 在设置这个值时  默认给盒子添加position:relative
+            // $("#box").offset({left:400,top:400});
+            
+            console.log($("#box").offset().left);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="box"></div>
+</body>
+
+</html>

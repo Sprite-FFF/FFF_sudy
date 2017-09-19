@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: #38B774;
+            position: absolute;
+            top:100px;
+            left:0px;
+        }
+        button{
+            width: 80px;
+            height: 35px;
+            margin:60px;
+        }
+    </style>
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var btn = document.getElementById("btn");
+            var box = document.getElementById("box");
+            btn.onclick = function () {
+                var leader = box.offsetLeft;
+                var target = 400;
+                var timer = setInterval(function () {
+                    leader = leader+(target-leader)/10;
+                    box.style.left = leader + "px";
+                },30);
+            }
+            //封装
+        }
+    </script>
+</head>
+<body>
+<button id="btn">缓动</button>
+<div id="box">
+    我能梦见你，Everyday
+</div>
+</body>
+</html>

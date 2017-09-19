@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 插件基于jQuery 就要引入jQuery-->
+    <script src="./jquery-1.12.4.js"></script>
+    <script>
+
+        // 尝试通过$.fn.extend()方法给jq对象添加一个改变样式的方法
+        // $.fn.extend({
+        //     changeStyle:function(){
+        //         this.css("color","red");    //基于jQuery开发插件一大优点就是可以使用jQuery语法
+        //     }
+        // });
+
+        // 改变多个样式
+        // $.fn.extend({
+        //     changeStyle:function(){
+        //         this.css({
+        //             "color":"orange",
+        //             "font-size":"16px",
+        //             "background-color":"#00ffff"
+        //         });
+        //     }
+        // });
+
+        // 让用户自己设置
+
+        // $.fn.extend({
+        //     changeStyle:function(color,fontSize,bgColor){
+        //         this.css({
+        //             "color":color,
+        //             "fontSize":fontSize,
+        //             "backgroundColor":bgColor
+        //         });
+        // }});
+        // $(function () {
+        //     $("#box").changeStyle("red",24,"orange");
+        // });
+
+        // 如果用户想改变多个样式传参很不方便
+        // 这时可以传入一个json格式的数据
+        // $.fn.extend({
+        //     changeStyle:function(json){
+        //         this.css({
+        //             "color":json.color,
+        //             "fontSize":json.fontSize,
+        //             "backgroundColor":json.backgroundColor
+        //         })
+        //     }
+        // });
+
+        // $(function () {
+        //     $("#box").changeStyle({
+        //         "color":"#00ffff",
+        //         "fontSize":18,
+        //         "backgroundColor":"#ff0000",
+        //     });
+        // });
+
+        // 如果用户不传参数最好按照默认样式
+        // 如果用户传参了那么按照用户设置的样式来
+
+        $.fn.extend({
+            "changeStyle":function(json){
+                // 给一个默认样式
+                var defaultSettings = {
+                    "color":"purple",
+                    "fontSize":"20px",
+                    "backgroundColor":"orange"
+                }
+
+                // 想办法给默认样式和传入的配置进行融合
+                // 定义一个空对象
+                var settings = {};
+
+                // 将传入的配置和默认样式融合后赋值给settings
+                $.extend(settings,defaultSettings,json);
+
+                this.css({
+                    "color":settings.color,
+                    "fontSize":settings.fontSize,
+                    "backgroundColor":settings.backgroundColor
+                });
+            }
+        });
+
+        // 这样一个简单的改变样式的插件就写好了
+        // jq对象能直接调用
+        $(function () {
+            $("#box").changeStyle();
+            $("#box1").changeStyle({
+                "color":"red"
+            });
+            $("#box2").changeStyle({
+                "color":"#00ffff",
+                "fontSize":"24px",
+                "backgroundColor":"yellow"
+            });
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">卿本佳人、奈何做贼</div>
+    <div id="box1">卿本佳人、奈何做贼</div>
+    <div id="box2">卿本佳人、奈何做贼</div>
+</body>
+</html>

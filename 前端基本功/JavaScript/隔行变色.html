@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .table{
+            width: 400px;
+            margin:50px auto;
+        }
+        .table ul{
+            list-style: none;
+        }
+        .table li{
+            height: 32px;
+            line-height: 32px;
+        }
+        .table li span{
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+        }
+        .hover{
+            background-color: #00ffff !important;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var li = document.getElementsByTagName("li");
+            for(var i=0;i<li.length;i++){
+                if(i%2==0){
+                    li[i].style.backgroundColor = "#aaa";
+                }
+                else{
+                    li[i].style.backgroundColor = "#ccc"
+                }
+                li[i].onmouseover = function(){
+                    this.className = "hover";
+                }
+                li[i].onmouseout = function(){
+                    this.className = "";
+                }
+            }
+        }
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<div class="table">
+    <ul>
+        <li><span>山田妖精</span><span>和田纱雾</span><span>萨拉托加</span><span>厌战</span></li>
+        <li><span>山田妖精</span><span>和田纱雾</span><span>萨拉托加</span><span>厌战</span></li>
+        <li><span>山田妖精</span><span>和田纱雾</span><span>萨拉托加</span><span>厌战</span></li>
+        <li><span>山田妖精</span><span>和田纱雾</span><span>萨拉托加</span><span>厌战</span></li>
+        <li><span>山田妖精</span><span>和田纱雾</span><span>萨拉托加</span><span>厌战</span></li>
+        <li><span>山田妖精</span><span>和田纱雾</span><span>萨拉托加</span><span>厌战</span></li>
+        <li><span>传智播客</span><span>卖茶的</span><span>农夫山泉</span><span>计算机网络</span></li>
+        <li><span>传智播客</span><span>卖茶的</span><span>农夫山泉</span><span>计算机网络</span></li>
+        <li><span>传智播客</span><span>卖茶的</span><span>农夫山泉</span><span>计算机网络</span></li>
+        <li><span>传智播客</span><span>卖茶的</span><span>农夫山泉</span><span>计算机网络</span></li>
+        <li><span>传智播客</span><span>卖茶的</span><span>农夫山泉</span><span>计算机网络</span></li>
+        <li><span>传智播客</span><span>卖茶的</span><span>农夫山泉</span><span>计算机网络</span></li>
+    </ul>
+</div>
+</body>
+</html>

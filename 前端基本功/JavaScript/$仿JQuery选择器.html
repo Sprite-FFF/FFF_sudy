@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #aaa;
+            margin: 20px auto;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            $("#demo").style.backgroundColor = "red";
+            $(".box")[0].style.backgroundColor = "red";
+            alert($("div").length);
+            }
+
+        function MyGetElementsByClassName(classname){
+            if(document.getElementsByClassName){
+                return document.getElementsByClassName(classname);
+            }
+            var arr = [];
+            var dom = document.getElementsByTagName("*");
+            for(var i = 0; i<dom.length; i++){
+//            if(dom[i].className = classname)
+//            {
+//                arr.push(dom[i]);
+//            }
+                var txtArr = dom[i].className.split(" ");
+                for(var j=0; j < txtArr.length; j++){
+                    if(txtArr[j]==classname){
+                        arr.push(dom[i]);
+                    }
+                }
+            }
+            return arr;
+        }
+
+
+        function $(str){
+            var s = str.charAt(0);
+            var ss = str.substr(1);
+            switch (s) {
+                case "#":
+                    return document.getElementById(ss);
+                    break;
+                case ".":
+                    return MyGetElementsByClassName(ss);
+                    break;
+                default:
+                    return document.getElementsByTagName(str);
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+<div id="demo"></div>
+<div></div>
+<div class="box"></div>
+<div></div>
+<div></div>
+</body>
+</html>

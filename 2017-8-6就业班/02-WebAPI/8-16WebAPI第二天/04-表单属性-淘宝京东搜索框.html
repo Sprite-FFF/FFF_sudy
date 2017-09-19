@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        input {
+            border: none;
+            outline: none;
+        }
+
+        #jd-search {
+            border: 2px solid #C81623;
+            width: 400px;
+            height: 40px;
+            display: block;
+            margin:50px auto;
+            padding-left: 10px;
+            color: #ccc;
+        }
+        div {
+            width: 400px;
+            height:40px;
+            position: relative;
+            margin:50px auto;
+        }
+        #tb-search{
+            border: 2px solid #ff8400;
+            width: 400px;
+            height:40px;
+            display: block;
+            padding-left: 10px;
+            color: #333;
+        }
+        label {
+            position: absolute;
+            top:14px;
+            left: 16px;
+            color:#ccc;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var jd = document.getElementById("jd-search");
+            jd.onfocus = function () {
+                if (jd.value=="京东618") {
+                    jd.value = "";
+                    jd.style.color ="#333";
+                }
+            }
+            jd.onblur = function () {
+                if (jd.value=="") {
+                    jd.value = "京东618";
+                    jd.style.color = "#ccc";
+                }
+            }
+
+            //淘宝搜索框
+            var tb = document.getElementById("tb-search");
+            var lab = document.getElementsByTagName("label")[0];
+            tb.oninput = function () {
+                lab.className = "hide";
+            }
+            tb.onblur = function () {
+                if(tb.value==""){
+                    lab.className = "";
+                }
+            }
+        }
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="jd-search" value="京东618">
+<div>
+    <label for="tb-search">淘宝双十一</label>
+    <input type="text" id="tb-search">
+</div>
+
+</body></botml>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [2,1,6,7,3,9,0,4,5];
+    var temp;
+    var m=0;
+    var n=0;
+    //优化的方向：
+    //   1.次数优化，没多比较一轮，少比较一次；
+    //   2.轮数优化；如果已经提前完成了，就不用在比较了；
+
+    //每一轮能够找出一个满足条件的，那么从第二轮开始，每一轮比较都可以少比较一次；
+    for (var i = 0; i < arr.length-1; i++) {
+        for (var j = 0; j < arr.length-1-i; j++) {  //每多进行一轮，每轮就少比较一次
+            //相邻的两个元素进行比较，满足添加就交换位置；
+            //后面的比前面的大交换位置: 降幂排序(越来越小);
+            //后面的比前面的小交换位置: 升幂排序(越来越大);
+            if (arr[j] > arr[j+1]) {
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+            n++;    //记录比较次数、每比较一次n+1
+        }
+        m++;    //记录比较轮数、每比较一轮m+1
+    }
+    console.log(arr);
+    console.log(m);
+    console.log(n);
+</script>
+</body>
+</html>

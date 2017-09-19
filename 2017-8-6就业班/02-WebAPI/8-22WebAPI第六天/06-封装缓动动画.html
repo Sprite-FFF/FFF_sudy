@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: #38B774;
+            position: absolute;
+            top: 100px;
+            left: 0px;
+        }
+
+        button {
+            width: 80px;
+            height: 35px;
+            margin: 60px;
+        }
+    </style>
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var btn1 = document.getElementById("btn1");
+            var btn2 = document.getElementById("btn2");
+            var box = document.getElementById("box");
+
+            function animate(ele, target) {
+                clearInterval(ele.timer);
+                var leader = ele.offsetLeft;
+                ele.timer = setInterval(function () {
+                    leader = leader + (target - leader) / 10;
+                    ele.style.left = leader + "px";
+                    if (leader == target) {
+                        clearInterval(ele.timer);
+                    }
+                }, 20);
+            }
+
+            btn1.onclick = function () {
+                animate(box, 200);
+            }
+            btn2.onclick = function () {
+                animate(box, 400);
+            }
+        }
+    </script>
+</head>
+<body>
+<button id="btn1">缓动200</button>
+<button id="btn2">缓动400</button>
+<div id="box">
+    我能梦见你，Everyday
+</div>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        ul li {
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            float: left;
+            margin: 0 20px 20px 0;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("li").each(function(index,ele){
+                $(ele).css("opacity",(index+1)*0.1);
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+        <li>什么也看不见</li>
+    </ul>
+</body>
+
+</html>

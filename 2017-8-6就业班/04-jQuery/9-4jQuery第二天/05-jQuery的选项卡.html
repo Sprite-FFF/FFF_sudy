@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #box {
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+        }
+
+        span {
+            cursor: pointer;
+            float: left;
+            display: inline-block;
+            width: 100px;
+            height: 28px;
+            background-color: orangered;
+            text-align: center;
+            line-height: 28px;
+            color: #fff;
+        }
+
+        #box div {
+            display: none;
+            width: 300px;
+            height: 272px;
+            background-color: orchid;
+        }
+
+        #box .current {
+            display: block;
+        }
+
+        .bg {
+            background-color: orchid;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+
+        // js实现选项卡切换
+
+
+        // window.onload = function (){
+        //     var bar = document.getElementsByTagName("span");
+        //     var box = document.getElementById("box");
+        //     var divs = box.getElementsByTagName("div");
+
+        //     for(var i = 0;i < bar.length;i++){
+        //         bar[i].index = i;
+        //         bar[i].onclick = function(){
+        //             for (var i = 0; i < bar.length; i++) {
+        //                 bar[i].className = "";
+        //                 divs[i].className = "";
+        //             }
+        //             this.className = "bg";
+        //             divs[this.index].className = "current";
+        //         }
+        //     }
+        // }
+
+        // jQuery实现tab选项卡
+
+        $(function () {
+            $("span").click(function () { 
+               var idx = $(this).index();
+               $(this).addClass("bg").siblings("span").removeClass("bg");
+               $("#box div").eq(idx).addClass("current").siblings("div").removeClass("current");
+            });
+        });
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box">
+        <span class="bg">1</span>
+        <span>2</span>
+        <span>3</span>
+        <div class="current">1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            display: inline-block;
+            font:18px/24px "simsun";
+            text-decoration: none;
+            color:#666;
+            margin:30px;
+        }
+        a:hover {
+            color:#00B0E7;
+        }
+        #mask{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top:0;
+            left: 0;
+            background: rgba(0,0,0,.3);
+            display: none;
+        }
+        .login-box {
+            width: 400px;
+            height:220px;
+            border: 1px solid #f0f0f0;
+            background: #fff;
+            margin: 200px auto;
+            text-align: center;
+            padding-top:80px;
+            position: relative;
+        }
+        input{
+            width: 260px;
+            height:28px;
+            margin-top: 30px;
+            line-height: 32px;
+        }
+        span{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            font:18px/20px "微软雅黑";
+            background: #6FDEA3;
+            cursor: pointer;
+        }
+    </style>
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var a = document.getElementById("login");
+            var mask = document.getElementById("mask");
+            var close = document.getElementById("close");
+            //点击a会冒泡触发document的点击事件影响mask显示，所以要阻止冒泡
+            a.onclick = function (event) {
+                var event = event || window.event;
+                event.stopPropagation?event.stopPropagation():event.cancelBubble=true;
+                mask.style.display = "block";
+            }
+
+            //需求2：点击关闭按钮和mask(遮罩层)，隐藏遮罩层；(要用到冒泡)
+            //要用到冒泡: 给document绑定onclick事件，所有元素都会冒泡过来;
+            //判断：如果是span，或者mask盒子，那么就隐藏盒子;
+            document.addEventListener("click",
+            function (event) {
+                var event = event || window.event;
+                var ele = event.target?event.target:event.srcElement;
+                if(ele.tagName == "SPAN" || ele.id == "mask"){
+                    mask.style.display = "none";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<a href="#" id="login">登录</a>
+<a href="#">注册</a>
+<div id="mask">
+    <div class="login-box">
+        账号：<input type="text">  <br/>
+        密码：<input type="text">
+        <span id="close">×</span>
+    </div>
+</div>
+
+</body>
+</html>

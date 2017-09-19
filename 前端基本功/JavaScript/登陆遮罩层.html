@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding: 0;
+        }
+        #mask{
+            display: none;
+            width: 100%;
+            height: 100%;
+            background:rgba(0,0,0,0.3);
+            position: fixed;
+            top:0;
+            left: 0;
+            z-index:999;
+        }
+        #login_div{
+            display: none;
+            width: 400px;
+            height: 400px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-left: -200px;
+            margin-top: -200px;
+            z-index: 1000;
+            background-color: #fff;
+        }
+        #login_div span{
+            display: block;
+            width: 20px;
+            height: 20px;
+            font:20px/20px "微软雅黑";
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+
+        }
+        a{
+            display: block;
+            height: 24px;
+            width: 100px;
+            text-align: center;
+            margin: 50px auto;
+            font: 12px/24px "宋体";
+            text-decoration: none;
+        }
+        a:hover{
+            color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function(){
+            function $(id){
+                return document.getElementById(id);
+            }
+            $("login").onclick = function(){
+                $("mask").style.display = "block";
+                $("login_div").style.display = "block";
+            }
+
+           $("close_lg").onclick = function(){
+                $("mask").style.display = "none";
+                $("login_div").style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="mask"></div>
+<a id="login" href="javascript:void (0);">你好，请登录</a>
+<div id="login_div">
+    <span id="close_lg">×</span>
+</div>
+</body>
+</html>

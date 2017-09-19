@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    简单数据类型（值类型）: number,string,boolean,undefined,null
+//    复杂数据类型：Object、function
+//    在内存中：简单数据类型存储在栈中
+//    复杂数据类型存储在堆中
+//    简单数据类型在值传递时传递的是值，复杂数据类型传递的是地址；
+//    复杂数据类型在传值时容易操作同一片空间
+
+
+//    改其中一个另一个不会被修改
+    var num1 = 100;
+    var num2 = num1;
+    num2 = 200;
+    console.log(num1);      //100;
+    console.log(num2);      //200;
+
+//改一个另一个也修改  因为值传递时传递的是地址，操作的是同一片空间
+    var obj1 = {
+        name : "蕾欧娜",
+        age : 19
+    }
+    var obj2 = obj1;
+    obj2.name = "戴安娜";
+    console.log(obj1.name);     //戴安娜
+    console.log(obj2.name);     //戴安娜
+
+</script>
+</body>
+</html>

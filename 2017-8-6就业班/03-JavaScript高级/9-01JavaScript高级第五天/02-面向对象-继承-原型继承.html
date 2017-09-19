@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        function Person(name,age,gender){
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+        }
+        Person.prototype.play = function(){
+            console.log("正在玩耍......");
+        }
+        Person.prototype.eat = function(){
+            console.log("正在吃饭....")
+        }
+        var person = new Person("琳",20,"女");
+        function Student(){
+            
+        }
+        //原型继承  将子元素的原型指向父元素的实例对象，原型就有父元素的属性和方法了
+        //原型继承简单方便 但无法传参    需要将constructor构造器属性改回来，不然指向的是父元素构造函数
+        Student.prototype = person;
+        var student = new Student();
+        console.log(student.name);
+        console.log(student.age);
+        student.play();
+        student.eat();
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

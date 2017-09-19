@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // jQuery   创建元素节点方法
+            // 1、
+            var ele = $("<span>")
+            $("#box").append(ele);
+
+            // 2、
+            $("#box").append("<span>午时已到</span>");
+
+            // 3、
+            $("#box").html("<span>无限风光在险峰</span>");
+            // .html()方法会覆盖掉原来的
+            $("#box").html("<div><span>明月几时有、把酒问青天</span></div>")
+            // .append()方法创建添加元素不会覆盖原来的
+            $("#box").append("<span>不知天上宫阙、今夕是何年</span>");
+            // .append()方法也可以标签嵌套
+            $("#box").append("<div><span>我欲乘风归去、又恐琼楼玉宇</span></div>");
+
+            // 如果获取页面上已经有的元素，将这个元素添加到另一个元素中、会把之前的干掉
+            // 类似剪切的功能
+        });
+    </script>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+</body>
+</html>

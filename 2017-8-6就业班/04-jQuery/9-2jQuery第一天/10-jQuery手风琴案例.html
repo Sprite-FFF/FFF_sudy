@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        #box {
+            width: 200px;
+            margin:100px auto;
+
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        li{
+            border:1px solid #aaa;
+            width: 100%;
+            line-height: 35px;
+            text-align: center;
+            cursor: pointer;
+            margin-top:-1px;            
+        }
+        li div{
+            width: 200px;
+            height: 200px;
+            display: none;
+        }
+
+    </style>
+    <script src="./jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $("li").on('mouseenter',function(){
+                $(this).css("backgroundColor",'#00ffff').siblings().css("backgroundColor",""); 
+            })
+            $("li").on("click",function(){
+                $(this).children("div").show();
+                $(this).siblings().children("div").hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="box">
+        <ul>
+            <li>
+                <span>01</span>
+                <div>窗含西岭千秋雪、门泊东吴万里船</div>
+            </li>
+            <li>
+                <span>02</span>
+                <div>但使龙城飞将在、不教胡马度阴山</div>
+            </li>
+            <li>
+                <span>03</span>
+                <div>生而为人对不起</div>
+            </li>
+            <li>
+                <span>04</span>
+                <div>海上生明月、天涯共此时</div>
+            </li>
+            <li>
+                <span>05</span>
+                <div>生活总是一团乱麻</div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

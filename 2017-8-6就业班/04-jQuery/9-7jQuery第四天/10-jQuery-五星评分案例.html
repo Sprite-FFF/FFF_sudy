@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            float: left;
+            font:40px/48px "simsun";
+            color: yellow;
+            cursor: pointer;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            var str1 = "☆";
+            var str2 = "★";
+            $("li").on("mouseover",function(){
+                // 先暴力清除一下
+                $("li").html(str1);
+                // 鼠标放到哪个星星上就它和前面的星星变成实心的
+                $(this).html(str2).prevAll().html(str2);
+            });
+            $("li").on("click",function(){
+                // 当鼠标单击星星时，给这个星星做一个标记
+                // 添加一个类
+                $(this).addClass("mark").siblings().removeClass("mark");
+            })
+            $("li").on("mouseleave",function(){
+                // 鼠标移开时、将所有星星变成空心的
+                $("li").html(str1);
+                // 找到前面添加的类
+                // 让它和它前面的星星都变成实心
+                $(".mark").html(str2).prevAll().html(str2);
+            })
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <ul id="box">
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+        <li>☆</li>
+    </ul>
+</body>
+</html>

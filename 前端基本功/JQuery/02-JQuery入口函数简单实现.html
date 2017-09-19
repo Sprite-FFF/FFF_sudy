@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function IQuery(dom) {
+//        返回一个对象
+        return {
+            // 对象有一个ready方法
+            ready: function (func) {
+//                alert("我是ready");
+//                func(); //执行回调函数
+//                判断windowonload有没有这个事件
+//                如果有，保存一个旧的函数，先执行这个新的函数，再执行旧的函数
+                if (typeof (dom.onload) == "function") {
+                    var oldFunc = dom.onload;
+                    dom.onload = function () {
+                        func(); //执行一个新的
+                        oldFunc();  //执行旧的
+                    }
+                } else {
+                    dom.onload = func;
+                }
+            }
+        }
+    }
+
+    IQuery(window).ready(function () {
+        alert("第一次调用入口函数");
+    });
+    IQuery(window).ready(function () {
+        alert("第二次调用入口函数");
+    });
+    IQuery(window).ready(function () {
+        alert("第三次调用入口函数");
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var obj = {
+        name : "艾瑞亚",
+        age : 14,
+        gender :true
+    }
+//    对象没有length属性  所以不能用for循环遍历
+//    遍历对象使用for...in...
+    for (var key in obj) {
+        console.log(key+":"+obj[key]);
+    }
+
+    console.log("---------");
+//    删除对象属性
+    delete obj.gender;
+
+    for (var key in obj) {
+        console.log(key+":"+obj[key]);
+    }
+</script>
+</body>
+</html>

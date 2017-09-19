@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .box{
+            width: 150px;
+            height: 150px;
+            background-color: #00ffff;
+            margin:100px auto; 
+            text-align: center;
+        }
+        .box p{
+            line-height: 60px;
+            font-size: 12px;
+            font-family: "宋体";
+            color: orangered;
+        }
+        .box span{
+            display: block;
+            width: 75px;
+            height: 75px;
+            margin:0 auto;
+            line-height: 75px;
+            background-color: #009900;
+            color: #000000;
+            font-size: 26px;
+            font-weight: 400;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var box = document.getElementById("date");
+            var date = new Date();
+            var arr = ["日","一","二","三","四","五","六"];
+            box.children[0].innerHTML = date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日"+"  "+"星期"+arr[date.getDay()];
+            box.children[1].innerHTML = date.getDate();
+        }
+    </script>
+    <title>Title</title>
+</head>
+<body>
+    <div class="box" id="date">
+        <p>2015-11-13 星期一</p>
+        <span>13</span>
+    </div>
+</body>
+</html>

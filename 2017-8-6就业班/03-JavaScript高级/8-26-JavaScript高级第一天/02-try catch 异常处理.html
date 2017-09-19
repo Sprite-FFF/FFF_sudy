@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    try{
+//        //尝试运行
+//        //如果try块里的代码出现错误就会执行catch块内的代码
+//        console.log(a);
+//    } catch (ex){   //ex是捕获到出现的错误
+//        console.log(ex);
+//    }
+//    var num = 10;       //前面出错不会影响到后面的运行
+//    console.log(num+=10);
+
+    try{
+        var data = false;
+        //我们可以在try块里手动抛出一个错误
+        if (!data) {
+            throw new Error("数据错误");
+        }
+    } catch(ex){
+        console.log(ex);
+    }
+    finally {
+        //不管如何finally里面的代码最终都会被执行
+        var num = 10;
+        console.log(num+=20);
+    }
+</script>
+</body>
+</html>

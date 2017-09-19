@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style: none;
+            width: 200px;
+            margin:100px auto;
+        }
+        li {
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        .bg {
+            background-color: #C50934;
+            color: #fff;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var ul = document.getElementById("ul");
+            var btn = document.getElementById("btn");
+            var str = ["鞠濑绘里", "山田妖精", "妮可罗宾", "珈百璃"];
+            btn.onclick = function () {
+                //利用innerHTML添加属性
+                var str1 = "";
+//                for (var i = 0; i < str.length; i++) {
+//                    str1 += "<li>" + str[i] + "</li>"
+//                }
+//                ul.innerHTML = str1;
+                ul.innerHTML = "";   //每次添加先清除
+                for (var i = 0; i < str.length; i++) {
+                    var li  = document.createElement("li");
+                    li.innerHTML = str[i];
+                    ul.appendChild(li);
+                }
+                //高亮显示
+                var lis = ul.getElementsByTagName("li");
+                for (var j = 0; j < lis.length; j++) {
+                    lis[j].onmouseover = function () {
+                        this.className = "bg";
+                    }
+                    lis[j].onmouseout  = function () {
+                        this.className = ""
+                    }
+
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+<button id="btn">点击获取四大美女</button>
+<ul id="ul"></ul>
+</body>
+</html>

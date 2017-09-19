@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //重写pop方法
+        // Array.prototype.pop = function () {
+        //     var last = this[this.length - 1];
+        //     this.length = this.length - 1;
+        //     return last;
+        // }
+        // var arr = [1,2,3,4];
+        // console.log(arr.pop());
+        // console.log(arr);
+
+        //push方法
+        // Array.prototype.push = function () {
+        //     for (var i = 0; i < arguments.length; i++) {
+        //         this[this.length] = arguments[i];
+        //     }
+        //     return this.length;
+        // }
+
+        // var arr = [1,2,3,4];
+        // console.log(arr.push(1,2,3));
+        // console.log(arr);
+
+        //indexOf 方法
+        // String.prototype.indexOf = function(str,index){
+        //     index = index || 0;
+        //     for (var i = 0; i < this.length; i++) {
+        //         if(this[i]==str){
+        //             return i;
+        //         }
+        //     }
+        //     return -1;
+        // }
+
+        // var str = "abcde";
+        // console.log(str.indexOf("b"));
+        // console.log(str.indexOf("e",3));
+        // console.log(str.indexOf("f"));
+
+        //正则实现实现trim方法
+        String.prototype.trim = function () {
+            return this.replace(/^\s+|\s+$/g,"");
+        }
+
+        var str = "   sjdkls   ";
+        console.log(str);
+        console.log(str.trim());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        .*{
+            margin:0;
+            padding:0;
+        }
+        .content{
+            width:600px;
+            /*margin:0 auto;*/
+        }
+        .left{
+            width: 300px;
+            height: 500px;
+            background-color: greenyellow;
+            float: left;
+        }
+        .right{
+            width: 300px;
+            height: 500px;
+            background-color: #00ffff;
+            float: left;
+        }
+        .foot{
+            width: 600px;
+            height:100px;
+            background-color: red;
+        }
+        /*清楚浮动1*/
+        /*.clear{*/
+            /*clear:both;*/
+        /*}*/
+        /*清除浮动2*/
+        /*HTML5和CSS3伪元素*/
+        .clearfix:after{
+            content:"";
+            display: block;
+            clear: both;
+            height:0;
+            line-height:0;
+            visibility: hidden;
+        }
+        .clearfix{
+            zoom: 1;
+            /*为了兼容IE*/
+        }
+    </style>
+    <title>清楚浮动</title>
+</head>
+<body>
+<div class="content clearfix">
+    <div class="left"></div>
+    <div class="right"></div>
+    <!--内墙法-->
+    <!--<div class="clear"></div>-->
+</div>
+<!--外墙法-->
+<!--<div class="clear"></div>-->
+<div class="foot"></div>
+</body>
+</html>

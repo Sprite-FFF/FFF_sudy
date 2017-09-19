@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //        1.打印1-100之间所有数
+    //        2.求1-100之间所有数的和
+    //        3.求1-100之间所有数的平均值
+    //        4.求1-100之间所有偶数的和
+    //        5.同时求1-100之间所有偶数和奇数的和
+
+    //        1.打印1-100之间所有数
+//    for (var i = 1; i <= 100; i++) {
+//        console.log(i);
+//    }
+
+    //        2.求1-100之间所有数的和
+//    var sum = 0;
+//    for (var i = 1;i<=100;i++) {
+//        sum+=i;
+//    }
+//    console.log(sum);
+
+    //        3.求1-100之间所有数的平均值
+//    var num = 100;
+    //    var sum = 0;
+    //    var avg = 0;
+    //    for (var i = 1; i <= num; i++) {
+    //        sum+=i;
+    //    }
+    //    avg = sum/num;
+    //    console.log(avg);
+
+    //        4.求1-100之间所有偶数的和
+//    var evenSum = 0;
+//    for (var i = 1; i <=100; i++) {
+//        if (i%2 == 0){
+//            evenSum+=i;
+//        }
+//    }
+//    console.log(evenSum);
+
+    //        5.同时求1-100之间所有偶数和奇数的和
+    var evenSum= 0,oddSum = 0;
+    for (var i = 1; i <=100; i++) {
+        if (i%2==0){
+            evenSum+=i;
+        }
+        else {
+            oddSum+=i;
+        }
+    }
+    console.log(evenSum);
+    console.log(oddSum);
+</script>
+</body>
+</html>

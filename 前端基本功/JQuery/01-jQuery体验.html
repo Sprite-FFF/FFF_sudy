@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #00ffff;
+        }
+    </style>
+    <script src = jquery-1.11.1.js></script>
+    <script>
+        //jQuery入口函数
+        $(document).ready(function () {
+            $("#btn").click(function () {
+               $(".box").hide();    //hide()让元素隐藏
+            });
+        });
+    </script>
+</head>
+<body>
+<button id="btn">点击</button>
+<div class="box">
+
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-1.12.4.js"></script>
+    <script>
+        // window.onload    页面上所有资源加载完毕才开始执行
+        window.onload = function(){
+            console.log('js入口函数加载完毕');
+        }
+        // 页面文档结构加载完毕就执行
+        $(document).ready(function () {
+            console.log('jq入口函数加载完毕');
+        });
+    </script>
+</head>
+<body>
+    <img src="http://img.hb.aicdn.com/3fa69cc5eb19457e8843a302aaebd0794422675394b44-d5PGzD_fw658" alt="">
+    <img src="http://img.hb.aicdn.com/57e17008030abea08114246937cc8884a7c8988198dae-7BoGnE_fw658" alt="">
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            color: #00ffff;
+            font-size: 35px;
+            line-height: 35px;
+            background-color: #ccc;
+            font-family: "SimSun", "宋体";
+            /*text-align: right;*/
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //外部循环控制行数
+  /*  for (var i = 1; i <= 6; i++) {
+        //内部循环控制输出每行的五角星
+        for (var j = 1; j <= 6; j++) {
+            document.write("☆");
+        }
+        //每行五角星后面跟一个换行符
+        document.write("</br >");
+    }*/
+
+    //    打印第一个三角形
+/*    for (var i = 1; i <= 6; i++) {
+        for (var j = 1; j <= i; j++) {
+            //让j<=i 控制每行打印五角星的个数
+            document.write("☆");
+        }
+        document.write("<br />")
+    }*/
+
+    //    打印第二个三角形
+//    for (var i=1;i<=6;i++) {
+//        for (var j = 6;j>=i;j--){
+//            document.write("☆");
+//        }
+//        document.write("<br />")
+//    }
+
+//    控制台打印正方形
+//    var str = "";
+//    for (var i = 1; i <=9; i++) {
+//        for (var j = 0; j <=9; j++) {
+//            str+="☆  ";
+//        }
+//        str+="\r\n\r\n";
+//    }
+//    console.log(str);
+//    控制台打印三角形
+   /* var str = "";
+    for (var i = 1; i <= 9; i++) {
+        for (var j = 1; j <=i; j++) {
+            str +="☆ ";
+        }
+        str +="\r\n";
+    }
+    console.log(str);
+    */
+    var str = "";
+    for (var i = 1; i <= 9; i++) {
+        for (var k = 8; k>=i; k--) {
+        str +="　";
+        }
+        for (var j = 1; j <=i; j++) {
+            str +="☆";
+        }
+        str +="\r\n";
+    }
+    console.log(str);
+</script>
+</body>
+</html>

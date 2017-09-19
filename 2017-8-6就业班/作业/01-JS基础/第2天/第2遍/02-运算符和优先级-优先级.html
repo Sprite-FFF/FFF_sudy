@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    1.（）优先级最高 右括号先算括号里面的
+//    2.一元运算符   ++、--、正负号、！
+//    3.算术运算符   先* / %、后 + -
+//    4.关系运算符   先 > < >= <= 后 == === != !==
+//    5.逻辑运算符   先 与&& 后 或||
+//    6.赋值运算符
+
+alert(4 >= 6 || '人' != '阿凡达' && !(12 * 2 == 144) && true);
+//   4 >= 6 || '人' != '阿凡达' && true && true
+//   false || true && true && true
+//   false || true
+var num = 10;
+alert(5 == num / 2 && (2 + 2 * num).toString() === '22');
+//    5 == 5 && "22" == '22'
+//    true && true
+
+</script>
+</body>
+</html>

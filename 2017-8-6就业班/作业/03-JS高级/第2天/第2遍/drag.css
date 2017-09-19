@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    background-color: #00ffff;
+    position: absolute;
+    top:0;
+    left: 0;
+    cursor: move;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function A (){
+            this.name = "狐狸";
+        }
+        A.prototype.play = function(){
+            console.log("我会跳");
+        }
+        var a = new A();    
+        function B () {
+            this.age = 12;
+        }
+        B.prototype = a;    //将B构造函数的原型指向A的实例对象a，就实现了B继承A
+        console.log(B.prototype.constructor);   //这时B的原型里的constructor属性指向的是构造函数A
+        B.prototype.sayhi = function(){
+            console.log("你好");
+        }
+        var b = new B();
+        // console.log(B.prototype);
+        // console.log(b.name);
+        // b.play();
+
+        // 确定原型与实例的关系
+        // instanceof操作符
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

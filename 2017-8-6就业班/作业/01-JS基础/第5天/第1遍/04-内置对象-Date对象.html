@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    var time = new Date();  //Date是一个实例属性
+    //    console.log(time);
+
+    //        var time = new Date("2017/8/13");
+    //        console.log(time);
+
+    //    var time = new Date("Thu Jan 01 1970 08:00:00 GMT+0800 (中国标准时间)");
+    //    console.log(time);
+    //    var time = new Date(2017,8,13);
+    //    console.log(time);
+
+    //    var time = new Date();
+    //    //
+    //    console.log(time.getTime());    //返回累计毫秒数（1970-1-1 0:0:0）
+    //    console.log(time.getFullYear());    //返回完整年份
+    //    console.log(time.getYear());
+    //    console.log(time.getDate());    //返回日（1-31）
+    //    console.log(time.getHours());   //返回小时（0-23）
+    //    console.log(time.getDay());     //返回星期  0是周日
+    //    console.log(time.getMinutes()); //返回分钟（0-59）
+    //    console.log(time.getSeconds());//返回秒（0-59）
+    //    console.log(time.getMilliseconds());//返回当前毫秒数
+
+    //    var time1 = Date.now();
+    //    var time2 = +new Date();
+    //    var time3 = new Date().getTime();
+    //    var time4 = new Date().valueOf();
+    //
+    //    console.log(time1);
+    //    console.log(time2);
+    //    console.log(time3);
+    //    console.log(time4);
+
+    //1.把今天的时间打印到控制台;
+//    var date = new Date();
+//    var year = date.getFullYear();
+//    var month = date.getMonth() + 1;
+//    month = month < 10 ? "0" + month : month;
+//    var day = date.getDate();
+//    day = day < 10 ? "0" + day : day;
+//    var week = date.getDay();
+//    week = week == 0 ? "日" : week;
+//    var hour = date.getHours();
+//    hour = hour < 10 ? "0" + hour : hour;
+//    var minutes = date.getMinutes();
+//    minutes = minutes < 10 ? "0" + minutes : minutes;
+//    var second = date.getSeconds();
+//    second = second < 10 ? "0" + second : second;
+//    document.body.innerHTML = "现在是北京时间：" + year + "年 " + month + "月 " + day + "日 " + "星期" + week + " "+hour+":"+minutes+":"+second;
+
+
+    // //3.计算时间差，返回相差的天/时/分/秒(距离七夕)
+    //求总时间差，然后换算成：天/时/分/秒
+    var future = new Date("2017/8/28");
+    var now = new Date().getTime();
+    var time = future - now;
+    var day = parseInt(time/1000/3600/24);
+    var hours = parseInt(time/1000/3600%24);
+    hours = hours<10?"0"+hours:hours;
+    var min = parseInt(time/1000/60%60);
+    min = min<10?"0"+min:min;
+    var sec = parseInt(time/1000%60);
+    sec = sec<10?"0"+sec:sec;
+    document.body.innerHTML="距离七夕情人节还有："+day+"天"+hours+"小时"+min+"分钟"+sec+"秒";
+</script>
+</body>
+</html>

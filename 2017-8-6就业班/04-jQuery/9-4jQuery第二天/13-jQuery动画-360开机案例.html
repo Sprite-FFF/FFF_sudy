@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        img{
+            vertical-align: middle;
+        }
+        #box{
+            width: 322px;
+            position: fixed;
+            right: -322px;
+            bottom: 0; 
+            opacity: 0;
+        }
+        #bottom {
+            height: 0;
+            opacity: 0;
+        }
+        span{
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // 出现：
+            $("#box").animate({"right":0,"opacity":1},1000,function(){
+                $("#bottom").animate({"height":101,"opacity":1},500);
+            });
+            $("#close").click(function(){
+                $("#bottom").animate({"height":0,"opacity":0},500,function(){
+                    $("#box").animate({"right":-322,"opacity":0},1000);
+                });
+            });
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <span id="close"></span>
+        <div id="top"><img src="images/t.jpg" alt=""></div>
+        <div id="bottom"><img src="images/b.jpg" alt=""></div>
+    </div>
+</body>
+</html>

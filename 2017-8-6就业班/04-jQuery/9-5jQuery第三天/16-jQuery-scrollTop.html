@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        // scrollTop()/scrollLeft()
+        // 相当于js里的scrollTop和scrollLeft
+        // window.onload = function () {
+        //     window.onscroll = function () {
+        //         var scrollT = document.documentElement.scrollTop || document.body.scrollTop;
+        //         console.log(scrollT);
+        //     }
+        // }
+
+
+            // $(window).scroll(function(){
+            //     console.log($(this).scrollTop());
+            // });
+
+            // 可以设置值
+            $(document).ready(function () {
+                $(document).click(function(){
+                    $(this).scrollTop(500);
+                });
+            });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

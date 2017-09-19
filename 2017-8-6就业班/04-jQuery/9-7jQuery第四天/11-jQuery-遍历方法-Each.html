@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        ul{
+            list-style: none;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            // jQuery中为我们实现了隐式迭代
+            $("li").css("color","#00ffff");
+            // each()可实现遍历操作
+            // 类似数组forEach()迭代方法
+            $("li").each(function(i,ele){
+                console.log(i); //元素索引
+                console.log(ele);   //每个元素  
+                // ele是一个dom对象
+                $(ele).html(i);
+            });
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>网</li>
+        <li>络</li>
+        <li>连</li>
+        <li>接</li>
+        <li>中</li>
+        <li>断</li>
+    </ul>
+</body>
+</html>

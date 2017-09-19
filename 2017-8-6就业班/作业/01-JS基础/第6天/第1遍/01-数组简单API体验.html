@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr =  [1,2,3,4,5];
+//    Array.isArray()   H5新增方法，判断是否为一个数组
+    console.log(Array.isArray(arr));    //静态方法  直接调用
+    //instanceof  A instanceof B  判断A是否为B对象或构造函数构造
+    console.log(arr instanceof Object); //true
+    console.log(arr instanceof Array);  //true
+    console.log(arr instanceof Person); //false
+    function Person (){
+
+    }
+//    valueOf() 返回数组本身
+    console.log(arr.valueOf());
+</script>
+</body>
+</html>

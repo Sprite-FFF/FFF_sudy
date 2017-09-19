@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        //闭包：
+        // 函数内部定义一个函数，内部函数可以引用外部函数变量或者参数，
+        // 使该变量或者参数常驻内存避免被销毁
+        function fn (){
+            var a = 12;
+            return function (){
+                console.log(++a);
+            }
+        }
+
+        // console.log(fn());
+        // fn()();
+        fn()(); //13
+        fn()(); //13
+        fn()(); //13
+
+        var func = fn();
+        func(); //13
+        func(); //14
+        func(); //15
+    </script>
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>

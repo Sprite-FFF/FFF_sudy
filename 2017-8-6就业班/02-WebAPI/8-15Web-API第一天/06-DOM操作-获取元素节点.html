@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li id="first">1</li>
+    <li class="lis">2</li>
+    <li>3</li>
+    <li class="lis">4</li>
+    <li>5</li>
+</ul>
+
+<script>
+    //    获取元素节点
+    //    1.    document.getElementById()   通过ID获取
+    //    console.log(document.getElementById("first"));  //返回获取到的元素
+    //    console.log(document.getElementById("two"));  //获取不到返回null，如若有多个相同ID的元素，则获取第一个
+
+    //    2.    document.getElementsByTagName()     通过元素标签名获取
+    //    console.log(document.getElementsByTagName("li"));//返回获取到的元素组成的伪数组
+    //    console.log(document.getElementsByTagName("ul"));//只获取到一个也返回伪数组
+    //    console.log(document.getElementsByTagName("div"));//没获取到也返回空数组
+
+    //    3.document.getElementsByClassName()   通过类名获取元素    IE6、7、8不支持
+    //    返回节点伪数组
+
+    //    4.document.getElementsByName()    通过属性name获取元素
+    //    返回伪数组 不能缩小范围查询    IE6789获取不到元素    10+可以获取
+
+    //    5.document.querySelector  模拟Css选择器    （ 只能选择一个）IE678不支持
+    //    console.log(document.querySelector(".lis"));
+    //    console.log(document.querySelector("#first"));
+    //    console.log(document.querySelector("ul li"));
+    //    6.document.querySelectorAll() 模拟CSS选择器    全部选择
+    console.log(document.querySelectorAll("ul li"));    //返回伪数组
+
+    //byId最简单获取可以直接用    ←querySelector
+    //其他方法返回的都是伪数组，就算只有一个也需要[0]
+
+</script>
+</body>
+</html>

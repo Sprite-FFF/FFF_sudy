@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // .children(选择器)  参数可选    直接子元素
+
+            // $("#box").children().css("backgroundColor", "pink"); //所有的子元素
+            // $("#box").children("span").css("backgroundColor", "pink");  //子元素里的span元素
+
+            // .find(选择器)   找到所有子元素  
+            // $("#box").find("span").css("backgroundColor", "hotpink");   //相当于后代选择器
+
+            // $("#box ul li:eq(0)").siblings().css("backgroundColor", "skyblue"); //找所有兄弟元素
+
+            // parent();
+            // $("li:eq(0)").parent().css("backgroundColor", "#00ffff");   //找直接的父元素
+
+            // $("ul").parents().css("backgroundColor", "pink");    //找所有父节点，知道找到文档根节点html节点为止
+
+            // next()   //该元素得下一个兄弟元素节点
+            // $("ul").next().html("我是下一个兄弟节点");
+
+            // prev() 找上一个兄弟节点
+            // $("span").prev().html("我是上一个兄弟节点");
+
+            // :first   
+            // $("#box :first").text("我是第一个儿子");
+            // $("#box span:first").text("我是第一个span儿子");
+
+            // :last
+
+            // .index() 当前元素在兄弟元素中的排行的序列
+            console.log($("#box span:first").index());
+        });
+    </script>
+</head>
+
+<body>
+    <div id="box">
+        <ul>
+            <li>li1</li>
+            <li>li2</li>
+            <span>span</span>
+            <li>li3</li>
+        </ul>
+        <div>div</div>
+        <span>span</span>
+    </div>
+</body>
+
+</html>

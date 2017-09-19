@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            width: 300px;
+            margin:100px auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .nav li {
+            margin-left: 10px;
+            cursor: pointer;
+            width: 80px;
+            line-height: 32px;
+            float: left;
+            background-color: orchid;
+            text-align: center;
+        }
+        .nav li .menu {
+            display: none;
+        }
+    </style>
+    <script src="./jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("li").on("mouseenter",function(){
+                $(this).find(".menu").show();
+            });
+            $("li").on("mouseleave",function(){
+                $(this).find(".menu").hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <span>一级菜单</span>
+                <div class="menu">
+                    <div>二级菜单</div>
+                    <div>二级菜单</div>
+                    <div>二级菜单</div>
+                </div>
+            </li>
+            <li>
+                <span>一级菜单</span>
+                <div class="menu">
+                    <div>二级菜单</div>
+                    <div>二级菜单</div>
+                    <div>二级菜单</div>
+                </div>
+            </li>
+            <li>
+                <span>一级菜单</span>
+                <div class="menu">
+                    <div>二级菜单</div>
+                    <div>二级菜单</div>
+                    <div>二级菜单</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery-1.12.4.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        #box{
+            width: 500px;
+            height: 500px;
+            background-color: #00ffff;
+            margin: 0 auto;
+        }
+        #box1 {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background-color: red;
+        }
+    </style>
+    <script>
+        $(function () {
+            // $("#box").mouseenter(function () { 
+            //     console.log("鼠标进入");
+            // });
+            // $("#box").mouseleave(function () { 
+            //     console.log("鼠标移出");
+            // });
+            $("#box").mouseover(function () { 
+                console.log("鼠标进入");
+            });
+            $("#box").mouseout(function () { 
+                console.log("鼠标移出");
+            });
+
+            // mouseenter   只有鼠标进入被选元素时才会触发 不会冒泡
+            // mouseover    鼠标进入被选元素的子元素时也会触发 会冒泡
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <div id="box1"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function(){
+            var div1 = document.getElementById("div1").innerHTML;
+            var div2 = document.getElementById("div2").innerHTML;
+            function onBtnClick(id,txt){
+                document.getElementById(id).onclick = function(){
+                    this.nextSibling.innerHTML = txt;
+                }
+            }
+            onBtnClick("btn1",div1.concat(div2));
+            onBtnClick("btn2",div1.slice(3,7));  // 起始位置可以是负数，如果是负数则从右边开始取
+            onBtnClick("btn3",div1.substr(3,4));  // 从起始位置开始，连续取几个。起始位置也可以为负数  ！但是IE678会报错
+            //substring() 始终会把小的值作为起始位置，大的值作为结束位置
+        }
+    </script>
+</head>
+<body>
+<div id="div1">my name is anny</div>
+<div id="div2">what's your name</div>
+<button id="btn1">concat()</button><span></span><br>
+<button id="btn2">slice()</button><span></span><br>
+<button id="btn3">substr()</button><span></span><br>
+</body>
+</html>

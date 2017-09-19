@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .box{
+            width:350px;
+            height:350px;
+            border: 1px solid #aaa;
+            margin:50px 0 0 50px;
+            position: relative;
+        }
+        .small{
+            width: 100%;
+            height:100%;
+            cursor: move;
+        }
+        .box .big{
+            display: none;
+            width: 450px;
+            height:450px;
+            position: absolute;
+            left: 360px;
+            top:0;
+            border:1px solid #aaa;
+            overflow: hidden;
+        }
+        .mask{
+            display: none;
+            width:200px;
+            height:200px;
+            background: rgba(255,255,0,0.4);
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        .big img{
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+    </style>
+    <script>
+        function $(id) {
+            return document.getElementById(id);
+        }
+        window.onload = function(){
+            var box = $("zoom");     //最外层大盒子
+            var normal = box.children[0];  //正常盒子
+            var mask = box.children[0].children[1];     //随鼠标移动的盒子
+            var thumb = box.children[1];    //放大的盒子
+            normal.onmouseover = function(){
+                mask.style.display = "block";
+                thumb.style.display = "block"
+            }
+            normal.onmouseout = function(){
+                mask.style.display = "none";
+                thumb.style.display = "none";
+            }
+            //随鼠标移动效果
+            var x=0;
+            var y=0;
+            normal.onmousemove = function(event){
+                var event = event || window.event;
+                x = event.clientX - box.offsetLeft - mask.offsetWidth/2;
+                y = event.clientY - box.offsetTop - mask.offsetHeight/2;
+                if(x<0){
+                    x = 0;
+                }
+                if(y<0){
+                    y = 0;
+                }
+                if(x>normal.offsetWidth - mask.offsetWidth){
+                    x = normal.offsetWidth - mask.offsetWidth;
+                }
+                if(y>normal.offsetHeight - mask.offsetHeight){
+                    y = normal.offsetHeight - mask.offsetHeight;
+                }
+                mask.style.left = x +"px";
+                mask.style.top = y +"px";
+
+                var thumbX = -x*(800/this.offsetWidth);
+                var thumbY = -y*(800/this.offsetHeight);
+                thumb.children[0].style.left = thumbX + "px";
+                thumb.children[0].style.top = thumbY + "px";
+            }
+        }
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<div class="box" id="zoom">
+    <!--正常盒子-->
+    <div class="small">
+        <img src="images/001.jpg" alt="">
+        <!--移动选择的盒子-->
+        <div class="mask"></div>
+    </div>
+    <!--大盒子-->
+    <div class="big">
+        <img src="images/0001.jpg" alt="">
+    </div>
+</div>
+</body>
+</html>

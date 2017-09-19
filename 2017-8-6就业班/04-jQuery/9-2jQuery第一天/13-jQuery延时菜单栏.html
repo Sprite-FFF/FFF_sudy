@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .nav {
+            position: relative;
+            width: 400px;
+            height: 32px;
+            margin: 100px auto;
+        }
+
+        .nav li {
+            cursor: pointer;
+            float: left;
+            width: 80px;
+            line-height: 32px;
+            text-align: center;
+            background-color: orchid;
+            margin-left: 12px;
+        }
+        .nav li a{
+            color:antiquewhite;
+            text-decoration: none;
+        }
+
+        .content {
+            width: 400px;
+            position: absolute;
+            top: 35px;
+            left: 12px;
+            background-color:violet;
+        }
+        .menu {
+            display: none;
+        }
+
+    </style>
+    <script src="./jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // 定义一个timer
+            var timer = null;
+            $("li").on("mouseenter",function(){
+                // 要用定时器先清定时器
+                clearTimeout(timer);
+                // 排他思想 鼠标进入对应的模块显示 其他模块隐藏
+                $(".menu").eq($(this).index()).show().siblings().hide();
+            });
+            // 鼠标移出 定时器开启   300毫秒后再让模块隐藏
+            $("li").on("mouseleave",function(){
+                // var that = this;
+                // 定时器内部this指向window
+                // 利用bind() 改变定时器内部this指向
+                
+                timer = setTimeout(function() {
+                    $(".menu").eq($(this).index()).hide();
+                }.bind(this), 300);
+            });
+
+            // 鼠标进入该模块
+            // 清除定时器    便不在隐藏
+            $(".menu").on("mouseenter",function(){
+                clearTimeout(timer);
+            });
+            // 鼠标移出该模块  立即隐藏
+
+            $(".menu").on("mouseleave",function(){
+                $(this).hide();
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="javascript:;">小叮当</a></li>
+            <li><a href="javascript:;">小叮当</a></li>
+            <li><a href="javascript:;">小叮当</a></li>
+            <li><a href="javascript:;">小叮当</a></li>
+        </ul>
+        <div class="content">
+            <div class="menu">
+                <div>LF177</div>
+                <div>LF177</div>
+                <div>LF177</div>
+            </div>
+            <div class="menu">
+                <div>长生</div>
+                <div>长生</div>
+                <div>长生</div>
+            </div>
+            <div class="menu">
+                <div>孤存</div>
+                <div>孤存</div>
+                <div>孤存</div>
+            </div>
+            <div class="menu">
+                <div>你在干啥</div>
+                <div>你在干啥</div>
+                <div>你在干啥</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

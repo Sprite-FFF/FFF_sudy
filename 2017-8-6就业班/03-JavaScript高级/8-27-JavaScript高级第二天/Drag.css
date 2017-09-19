@@ -1,0 +1,25 @@
+#box,#box1,#box2,#box3,#box4{
+    width: 100px;
+    height: 100px;
+    cursor: move;
+    background-color: #00ffff;
+    position: absolute;
+    top:100px;
+    left: 100px;
+}
+#box1{
+    left: 200px;
+    background-color: #FF0000;
+}
+#box2{
+    left: 300px;
+    background-color: #00FF79;
+}
+#box3{
+    left: 400px;
+    background-color: #7C0EA2;
+}
+#box4{
+    left: 500px;
+    background-color: greenyellow;
+}

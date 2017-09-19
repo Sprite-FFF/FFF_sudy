@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // 其他添加元素节点的方法
+            // 1、A.append(B)    将B放入A的里面的最后 
+            // 2、A.prepend(B)    将B放入A的里面的最前面
+            // 3、A.after(B)     将B放到A的后面
+            // 4、A.before(B)    将B放到A的前面
+
+            // 在box内部 的后面添加     包含关系
+            $("#box").append("<div>夕阳无限好、只是近黄昏</div>");
+
+            // 在box的内部 的前面添加    包含关系
+            $("#box").prepend("<span>李商隐</span>");
+
+            // 在box的后面添加    并列关系
+            $("#box").after("<span>驱车登古原</span>");
+
+            // 在box的前面添加    并列关系
+            $("#box").before("<div>向晚意不适</div>");
+        });
+    </script>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+</body>
+</html>

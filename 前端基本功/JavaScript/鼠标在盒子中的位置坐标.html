@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width:400px;
+            height: 400px;
+            background-color: #00ffff;
+            margin:100px auto;
+        }
+    </style>
+    <script>
+        window.onload = function (){
+            var box = document.getElementById("box");
+            box.onclick = function(event){
+                var event = event || window.event;
+                var x = event.clientX - this.offsetLeft;
+                var y = event.clientY - this.offsetTop;
+                this.innerHTML = x +"px,"+y+"px";
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+</div>
+</body>
+</html>

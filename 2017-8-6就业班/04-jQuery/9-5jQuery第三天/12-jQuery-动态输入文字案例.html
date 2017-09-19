@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes blink {
+            0%,
+            100% {
+                opacity: 1
+            }
+            50% {
+                opacity: 0
+            }
+        }
+
+        @-webkit-keyframes blink {
+            0%,
+            100% {
+                opacity: 1
+            }
+            50% {
+                opacity: 0
+            }
+        }
+
+        @-moz-keyframes blink {
+            0%,
+            100% {
+                opacity: 1
+            }
+            50% {
+                opacity: 0
+            }
+        }
+
+        .wrap {
+            width: 1000px;
+            text-align: center;
+            margin: 100px auto 0;
+        }
+
+        .wrap h1 {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+        }
+
+        .word {
+            font-weight: 700;
+        }
+
+        .typed-cursor {
+            opacity: 1;
+            -webkit-animation: blink .7s infinite;
+            -moz-animation: blink .7s infinite;
+            animation: blink .7s infinite;
+            display: none;
+        }
+
+        .saySection {
+            margin-top: 50px;
+        }
+
+        .saySection input {
+            font-size: 30px;
+        }
+
+        .saySection .txtSay {
+            padding-left: 10px;
+        }
+
+        .saySection .btnSay {
+            display: inline-block;
+            padding: 0 20px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            function write (str){
+                if(!str){
+                    return;
+                }
+                $("#inValue").prop("disabled",true);
+                var newStr = "";
+                var num = 0;
+                var timer = setInterval(function(){
+                    newStr += str[num];
+                    num++;
+                    $(".word").html(newStr);
+                    $(".typed-cursor").show();
+                    if(num > str.length-1){
+                        clearInterval(timer);
+                        $(".typed-cursor").hide();
+                        $("#inValue").prop("disabled",false); 
+                    }
+                },300);
+            }
+
+            // var str = "醉里挑灯看剑、梦回吹角连营";
+            // write(str);
+
+            $("#btnSay").click(function(){
+                var str = $("#inValue").val();
+                $("#inValue").val("");
+                write(str);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>
+            You want to say ： <span class="word"></span><span class="typed-cursor">|</span> ！
+        </h1>
+
+        <div class="saySection">
+            <input type="text" id="inValue" class="txtSay">
+            <input type="button" value="Say" id="btnSay" class="btnSay">
+        </div>
+    </div>
+</body>
+
+</html>

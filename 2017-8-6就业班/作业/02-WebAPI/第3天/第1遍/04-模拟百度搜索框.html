@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+        }
+        #search {
+            width:520px;
+            margin:100px auto;
+        }
+        input {
+            width: 400px;
+            border: 2px solid #1A66B3;
+            outline: none;
+            height: 36px;
+            font:16px/32px "微软雅黑";
+            padding-left: 20px;
+            float: left;
+        }
+        button{
+            float: right;
+            width: 80px;
+            height: 40px;
+            outline: none;
+            border: none;
+            background-color: #1A66B3;
+            color: #fff;
+        }
+        ul {
+            width: 422px;
+            border: 1px solid #1A66B3;
+            list-style: none;
+            float: left;
+            border-top:0;
+        }
+        li{
+            width: 402px;
+            height: 28px;
+            font: 14px/28px "微软雅黑";
+            padding-left: 20px;
+            cursor: pointer;
+        }
+        li:hover {
+            background: #f0f0f0;
+        }
+    </style>
+    <script>
+        window.onload = function (){
+            var ipt = document.getElementById("ipt");
+            var sec = document.getElementById("search");
+            var keywords = ["a", "aa", "aaa", "ab", "abc", "abcd", "abcde", "abcdef", "abcdefg", "bb", "bbb", "bbbc", "bbbcd"];
+            ipt.onkeyup = function () {
+                var newArr = [];
+                for (var i = 0; i < keywords.length; i++) {
+                    if(keywords[i].indexOf(this.value) == 0){
+                        newArr.push(keywords[i]);
+                    }
+                }
+                //创建一个ul
+                var ul = document.createElement("ul");
+                if(sec.children.length == 3){
+                    sec.removeChild(sec.children[2]);
+                }
+                if(newArr.length==0 || this.value == ""){
+                    if(sec.children.length == 2){
+                        return;
+                    }
+                    sec.removeChild(sec.children[2]);
+                }
+                for (var j = 0; j < newArr.length; j++) {
+                    //根据新数组的数量去动态创建li
+                    var li = document.createElement("li");
+                    li.innerHTML = newArr[j];
+                    ul.appendChild(li);
+                }
+                sec.appendChild(ul);
+            }
+        }
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<div id="search">
+    <input type="text" id="ipt">
+    <button>百度一下</button>
+    <!--<ul>-->
+        <!--<li>aaa</li>-->
+    <!--</ul>-->
+</div>
+</body>
+</html>

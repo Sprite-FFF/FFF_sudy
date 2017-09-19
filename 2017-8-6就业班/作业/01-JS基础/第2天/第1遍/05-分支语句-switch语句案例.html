@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //1.素质教育（把分数变成ABCDE）
+//    var grades = parseInt(prompt("输入成绩："));
+    //    switch (true) {
+    //        case grades <= 100 && grades >= 90:
+    //            alert("A");
+    //            break;
+    //        case grades < 90 && grades >= 80:
+    //            alert("B");
+    //            break;
+    //        case grades < 80 && grades >= 70:
+    //            alert("C");
+    //            break;
+    //        case grades < 70 && grades >= 80:
+    //            alert("D");
+    //            break;
+    //        case grades < 60 && grades >= 0:
+    //            alert("E");
+    //            break;
+    //        default:
+    //            alert("成绩不合法！");
+    //    }
+
+    //拓展：
+    //思路：分数/10然后取整；
+//    var grades = Number(prompt("输入成绩："));
+//    grades = parseInt(grades/10);
+//    switch(grades) {
+//        case 10:
+//            alert("A");
+//            break;
+//        case 9:
+//            alert("A");
+//            break;
+//        case 8:
+//            alert("B");
+//            break;
+//        case 7:
+//            alert("C");
+//            break;
+//        case 6:
+//            alert("D");
+//            break;
+//        default:
+//            alert("E");
+//            break;
+//    }
+
+    //2.根据月份输出四季；(123春；....)
+//    var month = 4;
+//    switch (month) {
+//        case 1:
+//            alert("春");
+//            break;
+//        case 2:
+//            alert("春");
+//            break;
+//        case 3:
+//            alert("春");
+//            break;
+//        case 4:
+//            alert("夏");
+//            break;
+//        case 5:
+//            alert("夏");
+//            break;
+//        case 6:
+//            alert("夏");
+//            break;
+//        case 7:
+//            alert("秋");
+//            break;
+//        case 8:
+//            alert("秋");
+//            break;
+//        case 9:
+//            alert("秋");
+//            break;
+//        case 10:
+//            alert("冬");
+//            break;
+//        case 11:
+//            alert("冬");
+//            break;
+//        case 12:
+//            alert("冬");
+//            break;
+//    }
+//    拓展：switch语句穿透
+    var month = 4;
+    switch (month) {
+        case 1:
+        case 2:
+        case 3:
+            alert("春");
+            break;
+        case 4:
+        case 5:
+        case 6:
+            alert("夏");
+            break;
+        case 7:
+        case 8:
+        case 9:
+            alert("秋");
+            break;
+        case 10:
+        case 11:
+        case 12:
+            alert("冬");
+            break;
+    }
+</script>
+</body>
+</html>

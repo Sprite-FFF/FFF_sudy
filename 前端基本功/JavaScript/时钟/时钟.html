@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+    <style>
+        .clock{
+            position: relative;
+            width: 600px;
+            height: 600px;
+            margin:100px auto;
+            background:url(images/clock.jpg) no-repeat;
+        }
+        .clock div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+        .hours{
+            background: url("images/hour.png")no-repeat center center;
+        }
+        .minutes{
+            background: url("images/minute.png")no-repeat center center;
+        }
+        .seconds{
+            background: url("images/second.png")no-repeat center center;
+        }
+
+    </style>
+    <script>
+        window.onload = function() {
+            function $(id) {
+                return document.getElementById(id);
+            }
+            var second = 0,minute = 0,hour = 0,ms = 0;
+            setInterval(function () {
+                var date = new Date();
+                ms = date.getMilliseconds();
+                second = date.getSeconds() + ms/1000;
+                minute = date.getMinutes() + second/60;
+                hour = date.getHours()%12 +　minute/60;
+                // 旋转角度 CSS3
+                $("s").style.webkitTransform = "rotate("+second*6+"deg)";
+                $("m").style.webkitTransform = "rotate("+minute*6+"deg)";
+                $("h").style.webkitTransform = "rotate("+hour*30+"deg)";
+            },1000)
+
+        }
+    </script>
+</head>
+<body>
+<div class="clock">
+    <div class="hours" id="h"></div>
+    <div class="minutes" id="m"></div>
+    <div class="seconds" id="s"></div>
+</div>
+</body>
+</html>

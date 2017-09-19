@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 1000px auto;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            font: 24px/32px "SimSun", "宋体";
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var box = document.getElementsByClassName("box")[0];
+            box.onmousemove = function (event) {
+                event = event || window.event;
+                //鼠标在页面中的坐标
+                var pageX = event.pageX || event.clientX+document.documentElement.scrollLeft;
+                var pageY = event.pageY || event.clientY+document.documentElement.scrollTop;
+//                鼠标在盒子里的坐标 = 鼠标在页面中的坐标-盒子在页面中的坐标
+                var x = pageX - box.offsetLeft;
+                var y = pageY - box.offsetTop;
+                box.innerHTML = x +"---"+y;
+            }
+//
+//            box.onmousemove = function (event) {
+//                event = event || window.event;
+//                var x = event.clientX - box.offsetLeft;
+//                var y = event.clientY - box.offsetTop;
+//                box.innerHTML = x + "☆☆☆"+ y;
+//            }
+        }
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<div class="box">
+
+</div>
+</body>
+</html>

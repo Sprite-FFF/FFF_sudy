@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function fn (a,b,c) {
+        alert(a+b+c);
+        console.log(arguments);
+        console.log(arguments.callee);
+        console.log(arguments[0]);
+        console.log(arguments[1]);
+        console.log(arguments[2]);
+        console.log(fn);
+        console.log(fn.length);
+    }
+    fn(1,2,3);
+</script>
+</body>
+</html>

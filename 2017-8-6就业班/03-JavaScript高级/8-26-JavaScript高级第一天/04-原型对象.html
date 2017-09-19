@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    function Person(name, age) {
+//        this.name = name;
+//        this.age = age;
+////        this.sing = function () {
+////            alert("往事只能回味~");
+////        };
+//    }
+//
+//    Person.prototype.sing = function () {
+//        alert("往事只能回味~");
+//    };
+//    Person.prototype.play = function () {
+//        alert("啪~啪~啪~突突突突~");
+//    }
+//        var person1 = new Person("王宝强",28);
+//        var person2 = new Person("王宝强",28);
+//    //    console.log(person1 == person2);
+//        console.log(person1.sing == person2.sing);
+    //每个构造函数都有一个属性prototype,对象
+    //    console.log(Person.prototype);
+    //prototype有一个属性constructor直接指向这个构造函数
+    //    console.log(Person.prototype.constructor);
+
+
+function Student(name,age) {
+    this.name = name;
+    this.age = age;
+}
+    Student.prototype = {
+        constructor:Student,
+        sayName: function () {
+            alert(this.name +"是我");
+        }
+    }
+
+    var stu = new  Student("小明",18);
+    console.log(stu.constructor);
+    console.log(stu.sayName.prototype);
+    console.log(stu.sayName.prototype.constructor);
+</script>
+</body>
+</html>

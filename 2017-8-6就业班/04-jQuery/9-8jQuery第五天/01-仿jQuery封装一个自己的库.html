@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="wQuery.js"></script>
+    <script>
+        W(function(){
+            console.log(W("li"));
+            console.log(W(".current"));
+            console.log(W("#current"));
+            W("li").css({
+                "backgroundColor":"red",
+                "color":"#fff",
+            });
+            W(".current").css("color","#000");
+            console.log(W("#current").css("backgroundColor"));
+            W(".current").html("天行健、君子以自强不息");
+
+            W("li").click(function(){
+                alert(123);
+            })
+        });
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li class="current">2</li>
+        <li id="current">3</li>
+        <li>4</li>
+    </ul>
+</body>
+</html>

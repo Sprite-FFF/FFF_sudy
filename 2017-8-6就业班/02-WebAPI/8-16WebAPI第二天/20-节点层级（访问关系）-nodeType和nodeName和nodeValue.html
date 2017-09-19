@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            //元素节点、属性节点、文本节点
+            var ele = document.getElementById("box");   //获取元素节点
+            var att = ele.getAttributeNode("id");   //获取属性节点
+            var txt = ele.firstChild;   //获取文本节点
+
+            //nodeType
+            console.log(ele.nodeType);  //1 如果用childNodes;nodeType=1就能获取到元素节点
+            console.log(att.nodeType);  //2
+            console.log(txt.nodeType);  //3
+            console.log(document.nodeType); //9 注释节点8
+
+            //nodeName
+            console.log(ele.nodeName);  //DIV
+            console.log(att.nodeName);  //id
+            console.log(txt.nodeName);  //#text 所有文本节点都是#text
+
+            //nodeValue
+            console.log(ele.nodeValue); //null
+            console.log(att.nodeValue); //box
+            console.log(txt.nodeValue); //你好
+        }
+    </script>
+</head>
+<body>
+<div id="box">你好</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function createObj (name,age){
+        var person = new Object();
+        person.name = name;
+        person.age = age;
+        person.dance = function (){
+            console.log( this.name+"hey hey hey start dash");
+        }
+        return person;
+    }
+
+   var person1 = createObj("南小鸟","16");
+    console.log(person1);
+</script>
+</body>
+</html>

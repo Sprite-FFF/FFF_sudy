@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var price=0;
+    var xh = prompt("请输入汽油型号：");
+    var num =parseInt(prompt("请输入升数："));
+    if (xh=="92"){
+        num>=20?price=5.9*num:price=6*num;
+    }
+    else{
+        num>=30?price=6.95*num:price=7*num;
+    }
+    alert("价格为："+price);
+</script>
+</body>
+</html>

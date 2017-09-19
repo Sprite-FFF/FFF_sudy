@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    对象的创建
+//    var obj = new Object();
+//    obj.name = "小泉花阳";
+//    obj.sing = function (){
+//        alert("lalala~");
+//    }
+//    console.log(obj);
+
+//    var obj = {
+//        name:"东条希",
+//        age:18,
+//        sing:function (){
+//            alert("hahaha~");
+//        }
+//    }
+//    console.log(obj);
+//    //delete 删除属性
+//    delete obj.name;    //delete智能删除属性方法
+//    console.log(obj);
+
+//    function createPerson(name,age,gender){
+//        var obj = new Object();
+//        obj.name = name;
+//        obj.gender = gender;
+//        obj.age = age;
+//        obj.sing = function(){
+//            alert("lovelive");
+//        }
+//        return obj;
+//    }
+//
+//    var person = createPerson("星空凛","16","女");
+//    console.log(person);
+//    //对象没有length属性，所以不能用for循环遍历
+//    //遍历对象的属性用for...in..。
+//    for(var key in person){
+//        console.log(key+":"+person[key]);
+//    }
+
+    function Lovelive(name,age){
+        this.name = name;
+        this.age = age;
+        this.sing = function() {
+            alert("maiomiaomaio~");
+        }
+    }
+    var girl = new Lovelive("西木野真姬",18);
+
+//    instanceof  操作符
+
+    console.log(girl);
+    console.log(girl instanceof Object);
+    console.log(girl instanceof  Lovelive);
+
+//    json  JavaScript Object Notation
+//    json  对象的一个分支
+//    一种数据组织形式  json数组
+
+    var json = {"name":"安娜","age":61}
+    //json 的属性名必须是字符串
+
+
+</script>
+</body>
+</html>

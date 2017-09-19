@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-1.12.4.js"></script>
+    <script>
+        // 1、入口函数 
+        // js中入口函数只能写一个 如果有多个会发生覆盖
+        // jQuery中入口函数 可以有多个
+        // window.onload = function(){
+        //     alert(123);
+        // }
+        // // 后面的会被执行
+        // window.onload = function(){
+        //     alert(456);
+        // }
+
+        $(function(){
+            alert(123);
+        });
+        
+        // jQuery入口函数 老式写法
+        // 不会发生冲突
+        $(document).ready(function(){
+            alert(345);
+        });
+
+        // 原生js在获取元素时 如果发生一些错误  会报错 后面的代码不会执行
+        // jQuery在获取元素时、如果发生错误
+        // 不会报错 当前功能无法使用    但不会影响后面的代码执行
+        // jQuery容错性较好
+
+        // jQuery操作简单
+        // 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

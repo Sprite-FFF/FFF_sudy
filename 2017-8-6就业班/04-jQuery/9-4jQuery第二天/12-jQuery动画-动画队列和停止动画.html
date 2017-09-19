@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #box,#box1 {
+            width: 100px;
+            height: 100px;
+            background-color: orangered;
+        }
+        #box1 {
+            position: absolute;
+            top: 600px;
+            left: 0;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // 如果一个元素上有连续多个动画 这些动画会按照一定的顺序进行排队    按照
+            // 执行顺序依次触发 直到执行完毕才停止   
+            // stop()   第一个参数：是否停止动画队列  第二个参数：是否跳转到最终效果 
+
+           
+
+            $("#box").animate({"width":"600px"},2000).animate({"height":"400px"},2000);
+            $("#box1").animate({"width":"600px"},2000).animate({"height":"400px"},2000);
+
+            $("button").click(function () { 
+                // $("#box").stop();   //如果不写参数    默认都为false
+                // $("#box").stop(true);   //停止动画队列
+                // $("#box").stop(false,true); //到达最终效果
+
+                $("#box").finish(); //清除整个动画队列  并到达最终效果
+
+            });
+            
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <button>stop</button>
+    <div id="box">
+
+    </div>
+    <div id="box1">
+
+    </div>
+</body>
+</html>

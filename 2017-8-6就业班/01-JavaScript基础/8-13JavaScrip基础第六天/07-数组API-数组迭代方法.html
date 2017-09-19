@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //数组迭代方法
+    //every()、filter()、forEach()、map()、some()
+    //    every()
+    //    对数组每一项进行回调函数操作
+    //    如果有一项返回false 则立刻停止遍历，返回false
+    //    如果都返回true 则返回true
+    var arr = [1,2,3,4,5,6,7];
+    console.log(arr.every(function (element,index,array){
+        //回调函数三个参数：element：数组的每项元素，index：元素索引 array：数组本身
+        console.log(element);
+        console.log(index);
+        console.log(array);
+        return element>0;
+    }));
+
+//    some()    如果有一项返回true,就返回true，如果全部返回false则返回false
+//    console.log(arr.some(function (ele,index,array) {
+//        return ele<=0;
+//    }));
+
+//    filter()  返回结果为true组成的新数组
+    console.log(arr.filter(function (ele,index,array) {
+       return ele>=4;
+    }));
+    //map() 返回操作结果的数组
+    console.log(arr.map(function (ele,index,array) {
+        return ele+1;
+    }));
+    //forEach()
+    //纯粹遍历，无返回值
+    console.log(arr.forEach(function (ele,index,array) {
+        return ele*10;
+    }));
+    console.log(arr);
+</script>
+</body>
+</html>

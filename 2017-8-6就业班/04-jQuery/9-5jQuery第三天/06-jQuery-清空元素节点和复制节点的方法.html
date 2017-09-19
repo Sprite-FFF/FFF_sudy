@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 清空元素节点
+            // 1、empty()方法  
+            // 将元素内所有节点清空   包括节点上的事件
+            // $("#box").empty();
+
+            // 2、html()方法
+            // $("#box").html("");
+            // 不推荐使用    元素上的事件等不会清楚 可能会造成内存泄漏
+
+            // remove()方法   移除自身(自尽)
+            // $("#box").remove();
+            // $("span").remove();
+
+            // 复制节点
+            // clone();
+            // 参数：true  可以将元素身上的事件也复制过来
+
+            var ele = $("#box").clone(true);
+            $("body").append(ele);
+            $("button").click(function () {
+                alert("123");
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="box">
+        <span>亦余心之所善兮</span>
+        <span>虽九死其犹未悔</span>
+        <span></span>
+        <span></span>
+        <button>点击</button>
+    </div>
+</body>
+
+</html>

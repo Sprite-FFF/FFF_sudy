@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            width: 180px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+        }
+        li{
+            line-height: 38px;
+            text-align: center;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        // 过滤选择器
+        $(function(){   
+            // $("li:eq(0)").css("backgroundColor","lightpink");    //:eq(index)    从0开始
+
+            $("li:odd").css("backgroundColor","greenyellow");   //索引为奇数
+            $("li:even").css("backgroundColor","#00ffff");  //索引为偶数
+
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</body>
+</html>

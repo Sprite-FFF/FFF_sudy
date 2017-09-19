@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: orangered;
+            padding: 10px;
+            margin: 50px;
+            border: 5px solid#Aaa;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            // width() 和 height()
+            console.log($("#box").width()); //获取盒子宽高    不包括padding和border
+            console.log($("#box").height());    // 200 200
+
+            // innerWidth() 和 innerHeight()
+            console.log($("#box").innerWidth());    //获取盒子宽高    不包括盒子border
+            console.log($("#box").innerHeight());   //包括盒子padding   220 220
+
+            // outerWidth() 和 outerHeight()
+            console.log($("#box").outerWidth());    //获取盒子宽高    padding+border+width/..height
+            console.log($("#box").outerHeight());   //230 230
+
+            console.log($("#box").outerWidth(true));    // 330
+            // 这里传入一个参数 true 会把margin也算进去
+            // margin+border+padding+width/height
+
+            // 当这些方法在设置属性值时，只会让宽高变化  margin padding border不会变化
+            
+        });
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

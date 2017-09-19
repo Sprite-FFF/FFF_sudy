@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        ul {
+            width: 500px;
+            margin:100px auto;
+        }
+        li{
+            width: 400px;
+            margin: 0 auto;
+            font:24px/32px "simsun";
+            background-color: #38B774;
+            color: #f0f0f0;
+        }
+        span{
+            width: 400px;
+            background-color: #0A7EC3;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+
+            //新创建出来的元素没有事件
+            var ul = document.getElementById("ul");
+            var lis = ul.getElementsByTagName("li");
+            var btn = document.getElementById("btn");
+//            for (var i = 0; i < lis.length; i++) {
+//                lis[i].onclick = function () {
+//                    alert("我是一只li");
+//                }
+//            }
+            btn.onclick = function () {
+                var li = document.createElement("li");
+                li.innerHTML = "我是后生的li";
+                ul.appendChild(li);
+            }
+            //事件委托：把某类元素上的逻辑，通过冒泡机制绑定给他的父元素，然后通过判断执行逻辑;
+            //让新创建的元素，也有老事件;(不在管是不是老元素，而是管是不是这个元素)；
+//            ul.onclick = function (event) {
+//               var event = event || window.event;
+//                var ele = event.target?event.target:event.srcElement;
+//                if(ele.tagName == "LI"){
+//                    alert("我是一个li");
+//                }
+//            }
+
+            ul.addEventListener("click", function (event) {
+                var event = event || window.event;
+                var ele = event.target?event.target:event.srcElement;
+                //判断时间引发者是不是li标签
+                if(ele.tagName == "LI"){
+                    alert("我是一个li");
+                }
+            });
+        }
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">创建li</button>
+<ul id="ul">
+    <li>原生li</li>
+    <span>span</span>
+    <li>原生li</li>
+    <span>span</span>
+    <li>原生li</li>
+    <span>span</span>
+</ul>
+</body>
+</html>

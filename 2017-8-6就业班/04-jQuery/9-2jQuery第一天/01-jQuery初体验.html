@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #AAA;
+            margin: 20px;
+            display: none;
+        }
+
+        button {
+            margin: 40px;
+        }
+    </style>
+    <script>
+        //js的写法
+        // window.onload = function () {
+        //     var btns = document.getElementsByTagName("button");
+        //     var divs = document.getElementsByTagName("div");
+        //     btns[0].onclick = function () {
+        //         for (var i = 0; i < divs.length; i++) {
+        //             divs[i].style.display = "block";
+        //         }
+        //     }
+        //     btns[1].onclick = function(){
+        //         for(var i = 0;i<divs.length;i++){
+        //             divs[i].innerHTML = "我辈岂是蓬蒿人？";
+        //         }
+        //     }
+        // }
+    </script>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        // jQuery 写法
+        // jQuery 入口函数
+        $(function(){
+            $("button:eq(0)").click(function (){
+                $("div").show();
+            });
+            $("button:eq(1)").click(function(){
+                $("div").text("东风不与周郎便，铜雀春深锁二乔");
+            });
+        });
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击显示</button>
+    <button>点击添加内容</button>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

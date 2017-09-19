@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style: none;
+            width: 300px;
+            border: 1px solid #aaa;
+            margin: 100px auto;
+        }
+
+        li{
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+        }
+    </style>
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        window.onload = function(){
+            // 用原生js获取的元素对象 就是dom对象
+            var lis = document.getElementsByTagName("li");
+           // console.log(lis);
+            // 将dom对象转化为jq对象·   $(lis);
+           // console.log($(lis));
+            $(lis).html("青青子衿、悠悠我心");
+            
+        }
+
+        $(function(){
+            // 通过$符获取的元素对象，就是jq对象
+            // 只有jq对象才能用JQuery的方法
+            // console.log($("li"));
+            // $("li").css("backgroundColor","#00ffff");
+            // 将jq对象转化为dom对象 
+            // 1、
+            console.log($("li").get(0));   
+            // 2、
+            console.log($("li")[0]);
+
+            var aa = $.makeArray($("li"));  //静态的makeArray方法    将一个jq对象里有多个元素直接转成一个dom元素数组
+            console.log(aa)
+            aa[0].style.backgroundColor = "red";
+            $(aa).css("backgroundColor","yellow")
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+    </ul>
+</body>
+</html>

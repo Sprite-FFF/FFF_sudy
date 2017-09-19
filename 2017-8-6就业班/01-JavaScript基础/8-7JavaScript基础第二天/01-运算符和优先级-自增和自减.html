@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //  i++     后置++，先运算后自加
+    //  ++i     前置++，先自加后运算
+    var i = 1;
+    console.log(i++ + 1);   //先运算 再自加   结果输出2
+    console.log(++i + 1);    //先自加后运算    结果输出4
+
+//    面试题
+//    var a = 1;  var b = ++a + ++a;   console.log(b);    /*结果输出5*/
+//    var a = 1;  var b = a++ + ++a;  console.log(b);    /* 结果输出4*/
+//    var a = 1; var b = a++ + a++;   console.log(b);     /*结果输出3*/
+//    var a = 1;var b = ++a + a++;    console.log(b); /* 结果输出4*/
+</script>
+</body>
+</html>

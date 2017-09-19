@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    1.递归：就是函数自己调用自己   要有跳出条件，否则就是死循环；
+    //    var num = 1;
+    //    function fn() {
+    //        if(num>10){
+    //            return;
+    //        }
+    //        console.log(num);
+    //        num++;
+    //        fn();
+    //    }
+    //    fn();
+    //    2.闭包：函数作为返回值
+    //    function fn(){
+    //        return function (){
+    //            num = 4;
+    //        }
+    //    }
+    //    fn()();
+    //    console.log(num);   //闭包为什么能扩大函数作用域？？？？？？
+
+    //    回调函数：函数作为参数传递和调用；
+    //    function a(demo){
+    //        demo();
+    //    }
+    //    function b(){
+    //        alert("我是一个回调函数被调用了");
+    //    }
+    //    a(b);   //b就是一个回调函数
+
+    //  回调函数作为一种规则
+    function fn (func) {
+        var num1 = 1;
+        var num2 = 2;
+        func(num1,num2);
+    }
+
+    fn(function (a,b){  //匿名函数作为实参进行运算；
+        console.log(a+b);
+    });
+</script>
+</body>
+</html>

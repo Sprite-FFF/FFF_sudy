@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            margin:100px auto;
+            width: 500px;
+            padding-top: 10px;
+            font:12px/24px "微软雅黑";
+            border: 1px solid #aaa;
+        }
+        textarea{
+            width: 400px;
+            resize: none;
+        }
+        #btn{
+            font: 12px/16px "微软雅黑";
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            width: 400px;
+            margin:10px auto;
+            border-bottom:1px dashed #aaa;
+        }
+        .time{
+            color: #00ffff;
+            float: right;
+        }
+        li a{
+            font: 12px/24px "微软雅黑";
+            float: right;
+            margin-right: 20px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            function $(id){
+                return document.getElementById(id);
+            }
+            var ul = document.createElement("ul");
+            $("plq").appendChild(ul);
+            $("btn").onclick = function(){
+                var txt = $("txtIpt").value;//获取文本框内容
+                if(txt.length==0) {
+                    alert("输入的内容不能为空")
+                }
+                else {
+                    txt = txt + "<span class='time'>" + new Date().toLocaleTimeString() + "</span>" + "<a href='javascript:void(0)'>删除</a>"
+                    var newLi = document.createElement("li");
+                    newLi.innerHTML = txt;
+                    ul.insertBefore(newLi, ul.children[0]);
+                }
+                var dels = ul.getElementsByTagName("a");
+                for(var i=0;i<dels.length;i++){
+                    dels[i].onclick = function(){
+                        ul.removeChild(this.parentNode);
+                    }
+                }
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+<div class="box" id="plq">
+    评论发布：<textarea name="" id="txtIpt" cols="30" rows="10"></textarea>
+    <button id="btn">评论</button>
+    <!--<ul></ul>-->
+    <!--<ul>-->
+        <!--<li>123</li>-->
+        <!--<li>123</li>-->
+    <!--</ul>-->
+</div>
+</body>
+</html>

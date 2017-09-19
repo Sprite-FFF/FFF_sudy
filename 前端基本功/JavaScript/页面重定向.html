@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .demo a{
+            display: block;
+            width: 100%;
+            height: 65px;
+            text-decoration: none;
+            color: red;
+            font: 24px/65px "宋体";
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload = function (){
+            var count = 5;
+            setTimeout(goIndexPage,1000);
+            function goIndexPage() {
+                count--;
+                document.getElementById("address").innerHTML = "<a href='https://www.baidu.com/'>本页面将在"+count+"秒后跳转。。。</a>";
+                if(count<=0) {
+                    window.location.href = "https://www.baidu.com/";
+                }
+                else{
+                    setTimeout(arguments.callee,1000);
+                    // arguments.callee 返回的是正在执行的函数。只能在正在使用的函数体内部使用。在使用函数递归调用时推荐使用。
+                }
+            }
+        }
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<div class="demo" id="address">
+
+</div>
+</body>
+</html>

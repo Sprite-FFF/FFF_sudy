@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    location  和地址有关，是window的一个属性  只是这个属性是一个对象
+        console.log(location.href      );//页面地址；
+        console.log(location.hash      );//返回url中#后面的内容，包含#
+        console.log(location.host      );//主机名，包括端口
+        console.log(location.hostname  );//主机名
+        console.log(location.pathname  );//url中的路径部分
+        console.log(location.protocol  );//协议 一般是http、https
+        console.log(location.search	   );//查询字符串
+
+//    方法：assign(),
+    document.onclick = function () {
+        location.assign("http://ntlias-stu.boxuegu.com");// 改变url地址并记录到历史记录 只能跳转页面不能读取
+        location.href="http://ntlias-stu.boxuegu.com";    //可以读取和跳转
+        location.replace("http://ntlias-stu.boxuegu.com");//跳转但不记录到历史记录
+        location.reload();  //从新加载页面
+    }
+
+
+</script>
+</body>
+</html>

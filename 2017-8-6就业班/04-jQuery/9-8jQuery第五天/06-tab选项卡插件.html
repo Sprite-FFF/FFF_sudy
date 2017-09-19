@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .active{
+            background-color: orchid;
+        }
+        #box1 div,#box div{
+            width: 200px;;
+            height: 200px;
+            border: 1px solid #Aaa;
+            background-color: orchid;
+            display:none;
+        }
+    </style>
+
+    <script src="./jquery-1.12.4.js"></script>
+    <script src="./Tab.js"></script>
+    <script>
+        $(function () {
+            $("#box").tab();
+            $("#box1").tab();
+        });
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+    <div id="box1"></div>
+</body>
+</html>

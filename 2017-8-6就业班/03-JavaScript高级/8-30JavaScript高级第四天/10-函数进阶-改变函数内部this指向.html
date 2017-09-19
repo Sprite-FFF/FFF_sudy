@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        // 函数有三个方法可以改变内部this指向
+        // call()   apply()     bind()
+
+        //call()    1.第一个参数：需要改变的this的指向    2.从第二个参数开始，后面的参数都是实参
+        var name = "糯米";
+        var obj = {
+            name:"团子",
+        }
+        function fn () {
+            console.log(this.name);
+            console.log(arguments);
+        }
+        // fn(1,2);   //直接执行时，内部this指向window
+        // fn.call(this,1,2,3);  //直接将这个执行window的this传进去、将内部this改变为window
+        // fn.call(obj,1,2,3,4);   //将obj改变为函数内部this指向，所以输出“团子”
+        
+
+
+        //apply()   1.第一个参数，需要改变的this的指向    2.第二个参数：是一个数组，里面放的是实参
+        //除了第二个参数，其他用法和call()相同
+
+        // fn.apply(this,[1,2]);
+        // fn.apply(obj,[1,2,3]);
+
+        //bind()    和apply、call最大的区别在于那啥，不会立即执行；
+        // fn.bind(this)();
+
+        var a = fn.bind(obj);
+        a();
+
+        //总结：
+        // call 和apply 方法特性一样 有区别
+//					都是用来调用函数，而且是立即调用
+//					它们的第一个参数都是可以用来更改函数内部this指向的
+//					但是call 的第二参数起 后面可以写多个实参 
+//					apply方法 它第二参数是一个数组 数组里面放多个实参
+				// 注意的:是如果你指定的this指向为 null或者undefined 那么它内部this指向window
+				
+				// bind方法
+				//  它和 call、apply 最大的区别是：bind 不会立即调用
+				 
+				//  bind用来绑定this的时候 有两种形式
+				 
+				//  1 在函数执行之前 进行绑定  后续通过函数调用再往里面传入实参
+				//  2 在函数调用的时候 进行绑定 
+				//  		参数的书写位置:
+				//  			可以往绑定的括号里面写参数
+				//  			也可以往执行的括号里面写参数
+				//  			它会汇总所有的参数
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

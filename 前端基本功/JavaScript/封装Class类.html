@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: #00ffff;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+<div></div>
+<div></div>
+<div class="box"></div>
+<div></div>
+<div class="box"></div>
+<div></div>
+<div></div>
+<div class="box"></div>
+<div></div>
+<div></div>
+<script>
+    console.log(MyGetElementsByClassName("box").length);
+    function MyGetElementsByClassName(classname){
+        if(document.getElementsByClassName){
+            return document.getElementsByClassName(classname);
+        }
+        var arr = [];
+        var dom = document.getElementsByTagName("*")
+        for(var i = 0; i<dom.length; i++){
+//            if(dom[i].className = classname)
+//            {
+//                arr.push(dom[i]);
+//            }
+            var txtArr = dom[i].className.split(" ");
+            for(var j=0; j < txtArr.length; j++){
+                if(txtArr[j]==classname){
+                    arr.push(dom[i]);
+                }
+            }
+        }
+        return arr;
+    }
+
+</script>
+</body>
+</html>

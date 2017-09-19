@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #box1 {
+            width: 400px;
+            height: 400px;
+            background-color: #38B774;
+            margin: 200px auto;
+            overflow: hidden;
+        }
+
+        #box2 {
+            width: 200px;
+            height: 200px;
+            background-color: #C81623;
+            margin: 100px auto;
+            cursor: pointer;
+        }
+    </style>
+    <title>Title</title>
+    <script>
+        //事件冒泡：子盒子事件被触发时，父系盒子相同事件也会被触发，从内到外依次触发
+        window.onload = function () {
+            var box1 = document.getElementById("box1");
+            var box2 = document.getElementById("box2");
+            document.onclick = function () {
+                alert("我是document");
+            }
+            box1.onclick = function () {
+                alert("我是box1");
+            }
+            box2.onclick = function () {
+                alert("我是box2");
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="box1">
+    <div id="box2"></div>
+</div>
+</body>
+</html>

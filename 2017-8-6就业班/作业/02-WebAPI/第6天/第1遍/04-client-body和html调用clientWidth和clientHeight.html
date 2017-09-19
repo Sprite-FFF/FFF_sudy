@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //调用者是body、html         可以获取浏览器可视区域的宽高
+    //所有浏览器（不包括ie678）：区分dtd约束
+    //有dtd约束    document.documentElement.clientWidth/Height
+    //没有dtd约束   document.body.clientWidth/Height
+    //w3c   :window.innerWidth/Height   ie678不支持
+
+//    console.log(document.documentElement.clientWidth);
+//    console.log(document.documentElement.clientHeight);
+
+    //兼容性封装
+    function clientWidth() {
+        return window.innerWidth || document.documentElement.clientWidth;
+    }
+    function clientHeight() {
+        return window.innerHeight || document.documentElement.clientHeight;
+    }
+    window.onresize = function () {
+        console.log(clientWidth()+"----"+clientHeight());
+    }
+</script>
+</body>
+</html>

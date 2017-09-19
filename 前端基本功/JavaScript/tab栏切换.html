@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+        }
+        .tab{
+            width: 300px;
+            height: 20px;
+            text-align: center;
+        }
+        .tab span{
+            display: block;
+            float: left;
+            background-color: #00ffff;
+            margin-left: 1px;
+            width: 99px;
+            height: 20px;
+            cursor: pointer;
+            font:14px/20px "微软雅黑";
+        }
+        .box .titbg{
+            background-color:  #ff9dff;
+        }
+        .content{
+            width: 300px;
+            height: 280px;
+        }
+        .content ul{
+            list-style: none;
+        }
+        .content li{
+            display: none;
+            width: 299px;
+            margin-left: 1px;
+            height: 280px;
+            text-align: center;
+            line-height: 280px;
+            border-bottom: 2px solid #956baa;
+            background-color: #ff9dff;
+        }
+         li.show{
+            display: block;
+        }
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function(){
+            function $(id){
+                return document.getElementById(id);
+            }
+            function showTab(id){
+                var span = $(id).getElementsByTagName("span");
+                var li = $(id).getElementsByTagName("li");
+                for(var i = 0;i<span.length;i++)
+                {
+                    span[i].index = i;
+                    span[i].onclick = function(){
+                        for(var j = 0;j<span.length;j++)
+                        {
+                            span[j].className = "";
+                            li[j].className = "";
+                        }
+                        this.className = "titbg";
+                        li[this.index].className = "show";
+                    }
+                }
+            }
+
+            showTab("box1");
+            showTab("box2");
+            showTab("box3");
+
+        }
+    </script>
+</head>
+<body>
+<div class="box" id="box1">
+    <div class="tab">
+        <span class="titbg">艾米</span>
+        <span>妖精</span>
+        <span>沙雾</span>
+    </div>
+    <div class="content">
+        <ul>
+            <li class="show">你好、我是艾米丽</li>
+            <li>你好、我是妖精大人</li>
+            <li>你好、我是妹妹</li>
+        </ul>
+    </div>
+</div>
+<div class="box" id="box2">
+    <div class="tab">
+        <span>艾米</span>
+        <span>妖精</span>
+        <span>沙雾</span>
+    </div>
+    <div class="content">
+        <ul>
+            <li class="show">你好、我是艾米丽</li>
+            <li>你好、我是妖精大人</li>
+            <li>你好、我是妹妹</li>
+        </ul>
+    </div>
+</div>
+<div class="box" id="box3">
+    <div class="tab">
+        <span>艾米</span>
+        <span>妖精</span>
+        <span>沙雾</span>
+    </div>
+    <div class="content">
+        <ul>
+            <li class="show">你好、我是艾米丽</li>
+            <li>你好、我是妖精大人</li>
+            <li>你好、我是妹妹</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

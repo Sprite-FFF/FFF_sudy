@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var name = prompt("请输入姓名：");
+    var grades = prompt("请输入成绩：");
+    if (grades == 90){
+        alert("学生"+name+"成绩为"+grades+"判定优秀！");
+    }
+    else  if(grades<50) {
+        alert("不及格！");
+    }else  if(grades>=50&&grades<65){
+        alert("及格");
+    }
+    else  if(grades>=65 && grades<80){
+        alert("良好");
+    }
+    else if(grades>=80 && grades<=100){
+        alert("优秀")
+    }else{
+        alert("成绩无效");
+    }
+</script>
+</body>
+</html>

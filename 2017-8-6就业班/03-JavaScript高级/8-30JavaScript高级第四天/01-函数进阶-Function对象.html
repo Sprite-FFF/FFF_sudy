@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        // 所有函数都是Function构造函数的实例对象
+        // Function也是它本身的实例对象
+        var func = new Function("a","b","alert(a+b)");
+        func(1,2);
+        console.dir(Function());
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

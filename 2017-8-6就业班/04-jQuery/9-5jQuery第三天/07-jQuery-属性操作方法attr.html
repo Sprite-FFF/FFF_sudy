@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // js中属性操作方法
+            // getAttribute()   setAttribute()  removeAttribute()
+
+            // jQuery   attr()
+
+            // 设置属性
+            // $("div").attr("title","古诗");
+
+            // 设置多个属性
+            $("div").attr({
+                "title": "古诗",
+                "index": "0",
+                "style": "background-color:orange"
+            });
+
+            // 获取属性
+            var str = $("div").attr("title");
+            console.log(str);
+
+            // 在jQuery中，当一个方法时设置方法时、那么它会将选取的所有的元素都设置一遍
+            // 如果是获取时   它只会获取选取的第一个元素
+
+            // removeAttr() 移除属性
+            // $("div").removeAttr("style");
+            $("div").removeAttr();  //..如果写参数将不会做任何操作
+
+        });
+    </script>
+</head>
+
+<body>
+    <div>黄梅时节家家雨</div>
+    <div>青草池塘处处蛙</div>
+    <div>有约不来过夜半</div>
+    <div>闲敲棋子落灯花</div>
+</body>
+
+</html>

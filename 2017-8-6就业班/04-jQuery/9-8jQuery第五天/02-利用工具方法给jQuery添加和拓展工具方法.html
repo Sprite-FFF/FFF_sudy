@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 使用自己模拟的jQuery -->
+    <script src="./jquery-1.12.4.js"></script>
+    <script src="./wQuery.js"></script>
+    <script>
+        var a = null;
+        var arr  = [];
+        var obj = {};
+
+        console.log(typeof a);
+        console.log(typeof arr);
+        console.log(typeof obj);
+        // 都是object
+        // $.type() 这是一个工具方法    
+        // 工具方法不是为jq对象提供的、而是为其他数据类型提供的
+
+        console.log($.type(a)); //null
+        console.log($.type(arr)); //array
+        console.log($.type(obj));   //object
+
+        // $.trim() 去掉前后空格
+
+        // $.extend();  专门给开发者提供了一个拓展静态工具方法的api
+
+        // 不可用
+        // $.extend(function add(a,b){
+        //     return a+b;
+        // });
+        // console.log($.add(1,2));
+        // 
+
+        // 正确：
+        // 传入一个json格式
+        $.extend({
+            add:function(a,b){
+                return a+b;
+            },
+        });  
+
+        // 以上操作就为jq添加了一个add工具方法
+        
+        console.log($.add(1,2));
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

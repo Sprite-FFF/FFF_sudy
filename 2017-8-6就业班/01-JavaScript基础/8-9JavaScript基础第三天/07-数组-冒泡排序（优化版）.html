@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [2,1,6,7,3,9,0,4,5];
+    var temp,flag,m=0,n=0;
+    for (var i = 0; i < arr.length-1; i++) {
+        flag = true;    //开闭原则：定义一个boolean值，默认值为true，如果发生了交换赋值为false，
+        for (var j = 0; j < arr.length-1-i; j++) {
+            if (arr[j]>arr[j+1]) {
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                flag = false;
+            }
+            n++;    //记录比较次数
+        }
+        m++;    //记录比较轮数
+        if (flag) {
+            break;
+        }
+    }
+    console.log(arr);
+    console.log(m);
+    console.log(n);
+</script>
+</body>
+</html>

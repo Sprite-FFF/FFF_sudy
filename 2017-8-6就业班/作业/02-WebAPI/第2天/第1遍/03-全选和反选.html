@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #aaa;
+            border-collapse: collapse;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid #aaa;
+        }
+
+        th {
+            background-color: #0099cc;
+            height: 40px;
+            color: #fff;
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var selectedAll = document.getElementById("selectedAll");
+            var tBody = document.getElementById("tBody");
+            var tr = tBody.getElementsByTagName("tr");
+            var ipts = tBody.getElementsByTagName("input");
+            //鼠标滑过高亮显示
+            for (var i = 0; i < tr.length; i++) {
+                tr[i].onmouseover = function () {
+                    this.style.backgroundColor = "#fff";
+                }
+                tr[i].onmouseout = function () {
+                    this.style.backgroundColor = "#f0f0f0";
+                }
+            }
+
+            //全选
+            selectedAll.onclick = function () {
+                for (var i = 0; i < ipts.length; i++) {
+                    ipts[i].checked = this.checked
+                }
+            }
+
+            for (var i = 0; i < ipts.length; i++) {
+                ipts[i].onclick = function () {
+                    var flag = true;
+                    for (var j = 0; j < ipts.length; j++) {
+                       if(ipts[j].checked == false){
+                           flag = false;
+                       }
+                    }
+                    selectedAll.checked = flag;
+                }
+            }
+        }
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>
+            <input type="checkbox" id="selectedAll">
+        </th>
+        <th>Name</th>
+        <th>Gender</th>
+    </tr>
+    </thead>
+    <tbody id="tBody">
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>绘里</td>
+        <td>女</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>绘里</td>
+        <td>女</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>绘里</td>
+        <td>女</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>绘里</td>
+        <td>女</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>绘里</td>
+        <td>女</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

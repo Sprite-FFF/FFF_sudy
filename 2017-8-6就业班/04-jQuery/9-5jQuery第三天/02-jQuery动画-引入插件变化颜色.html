@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+     <script src="jquery.color.js"></script>
+    <script>
+        $(function () {
+            $("#box").animate({"width":"400px",
+            "height":"400px",
+            "background-color":"#00ffff"
+        },2000);
+    });
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

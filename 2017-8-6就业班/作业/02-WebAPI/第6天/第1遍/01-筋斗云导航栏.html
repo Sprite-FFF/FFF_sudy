@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>筋斗云</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .box {
+            width: 800px;
+            height: 42px;
+            margin: 100px auto;
+            background: #fff url("images/wifi.png") no-repeat right center;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        ul {
+            position: relative;
+        }
+
+        ul li {
+            float: left;
+            width: 83px;
+            height: 42px;
+            text-align: center;
+            line-height: 42px;
+            cursor: pointer;
+        }
+
+        span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 83px;
+            height: 42px;
+            background: url("images/cloud.gif") no-repeat;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var box = document.getElementById("box");
+            var cloud = document.getElementById("cloud");
+            var lis = box.getElementsByTagName("li");
+            var leader = 0;
+            var target = 0;
+            var current = 0;
+
+            //页面只有一个定时器，不能关
+            var timer = setInterval(function () {
+                leader = leader + (target - leader) / 10;
+                cloud.style.left = leader + "px";
+                console.log(1);
+            }, 15);
+            for (var i = 0; i < lis.length; i++) {
+                lis[i].onmouseover = function () {
+//                    alert(this.offsetLeft);
+                    target = this.offsetLeft;
+                }
+                lis[i].onmouseout = function () {
+                    target = current;
+                }
+                lis[i].onclick = function () {
+                    current = target;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="box" id="box">
+    <span id="cloud"></span>
+    <ul>
+        <li>首页新闻</li>
+        <li>师资力量</li>
+        <li>活动策划</li>
+        <li>企业文化</li>
+        <li>招聘信息</li>
+        <li>公司简介</li>
+        <li>上海校区</li>
+        <li>广州校区</li>
+    </ul>
+</div>
+
+
+</body>
+</html>

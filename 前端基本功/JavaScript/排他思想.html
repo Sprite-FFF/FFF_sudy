@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .color{
+            background-color: #00ffff;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var btns = document.getElementsByTagName("button");
+            for(var i=0;i<btns.length;i++){
+                btns[i].onclick = function(){
+                    for(var i=0;i<btns.length;i++){
+                        btns[i].className = "";
+                    }
+                    this.className = "color";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<button>思想</button>
+<button>思想</button>
+<button>思想</button>
+<button>思想</button>
+<button>思想</button>
+</body>
+</html>

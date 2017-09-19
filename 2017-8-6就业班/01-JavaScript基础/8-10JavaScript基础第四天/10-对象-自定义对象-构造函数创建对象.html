@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    this和new：
+    //    构造函数：用来创建对象的函数
+    //a.和函数一样；b.首字母大写
+
+    //    new在使用中发挥了哪些功能
+    //    1.在内存中创建了一个新的空对象
+    //    2.让this指向这个新的对象
+    //    3.执行构造函数（给这个新对象添加属性和方法）
+    //    4.new返回这个新对象（外部可以接收这个新对象）
+
+    //    this在使用时发挥了哪些功能
+
+    //    1.函数在定义时this是不确定的，只有在调用时才可以确定
+    //    2.一般函数直接执行，内部this指向window
+    //    3.函数作为一个对象方法，被该对象所调用，那么this指向该对象
+    //    4.构造函数中的this其实是一个隐式对象，类似一个初始化模型，所有属性和方法都被挂载带了这个隐式对象上，后续通过new关键字来调用，实现实例化
+    //    a.this指向函数调用者
+    // b.new如果连接一个函数this就被改变为被创建的对象的本身
+    //构造函数创建对象
+    function Girl(name, age) {
+        this.name = name;
+        this.age = age;
+        this.sing = function () {
+            alert("I See~ I See~,hey hey hey start dash");
+        }
+    }
+
+    var person1 = new Girl("西木野真姬", 17);
+    console.log(person1);
+    person1.sing();
+</script>
+</body>
+</html>

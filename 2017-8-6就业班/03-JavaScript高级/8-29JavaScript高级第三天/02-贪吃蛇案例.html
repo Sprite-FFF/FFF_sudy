@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #map {
+            width: 800px;
+            height: 600px;
+            position: relative;
+            background-color: #ccc;
+            margin: 10px auto;
+        }
+    </style>
+    <script src="food.js"></script>
+    <script src="snake.js"></script>
+    <script src="game.js"></script>
+    <script>
+        window.onload = function(){
+            var map = document.getElementById("map");
+            // var fd = new Food();
+            // fd.render(map);
+            // var snake = new Snake();
+            // snake.render(map);
+
+            var game = new Game(map);
+            game.start();
+
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 搭建页面 -->
+    <div id="map"></div>
+</body>
+
+</html>

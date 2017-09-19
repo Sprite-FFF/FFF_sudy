@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css" >
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .box{
+            width: 210px;
+            /*height: ;*/
+            border:1px solid #cecece;
+            margin: 50px auto;
+            background-color: #f5f8fa;
+        }
+
+        .box .title{
+            height: 22px;
+            padding-top: 3px;
+            background-color: #ecedee;
+            color:#7c850f;
+            font: 14px/22px "微软雅黑";
+
+        }
+        .box .photo{
+            width:182px;
+            border:1px solid #cecece;
+            margin-top:10px;
+            margin-left: 13px;
+        }
+        .box .vName{
+            width: 182px;
+            height:14px;
+            margin:11px 13px 17px 13px;
+            text-align: center;
+            font: 14px/14px "宋体";
+            color:#9090aa;
+            font-weight:bold;
+        }
+        .box .vName img{
+            margin-left: 6px;
+        }
+        .box .weibo {
+            width: 69px;
+            height: 23px;
+            background: url("imgs/vb.jpg") no-repeat;
+            text-align: center;
+            border-radius: 3px;
+            margin: 0 70px 15px 69px;
+        }
+        .box .btns{
+            width: 149px;
+            height:54px;
+            margin:0 31px 0 30px;
+            }
+        .box .btns .btn{
+            width: 69px;
+            hetght:23px;
+        }
+        .frist{
+            margin-left: 9px;
+            float: right;
+        }
+    </style>
+    <title>微博</title>
+</head>
+<body>
+<div class="box">
+    <h4 class="title">个人资料</h4>
+    <div class="content">
+    <div class="photo">
+        <img src="imgs/1.jpg" alt="">
+    </div>
+   <div class="vName">V闪闪
+       <span class="v">
+           <img src="imgs/v.jpg" alt="">
+       </span>
+   </div>
+    <input class="weibo" type="button" value="微博">
+    <div class="btns">
+        <input class="btn" type="button" value="加好友">
+        <input class="btn frist" type="button" value="发纸条">
+        <input class="btn" type="button" value="写留言">
+        <input class="btn frist" type="button" value="加关注">
+    </div>
+</div>
+</body>
+</html>

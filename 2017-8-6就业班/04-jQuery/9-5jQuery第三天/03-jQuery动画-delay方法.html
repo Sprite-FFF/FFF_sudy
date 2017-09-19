@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: orangered;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // delay()方法    动画延迟执行
+            // 参数：延迟时间
+
+            // 变化宽高后    延迟三秒淡出
+            $("#box").animate({"width":"300px","height":"300px"},2000).delay(3000).fadeOut(1500);
+
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

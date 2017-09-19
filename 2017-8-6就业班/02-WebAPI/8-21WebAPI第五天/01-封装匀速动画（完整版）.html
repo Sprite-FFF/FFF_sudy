@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            width: 80px;
+            height: 35px;
+            margin: 60px;
+        }
+
+        .box1, .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: #00ffff;
+            position: absolute;
+            top: 200px;
+            left: 0;
+            font: 50px/100px "simsun";
+            text-align: center;
+            color: #f0f0f0;
+        }
+
+        .box2 {
+            background-color: #6FDEA3;
+            top: 400px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var btns = document.getElementsByTagName("button");
+            var box1 = document.getElementsByClassName("box1")[0];
+            var box2 = document.getElementsByClassName("box2")[0];
+            //封装匀速动画
+            function animate(ele, target) {
+                //要用定时器先清定时器
+                clearInterval(ele.timer);
+                //把定时器保存在元素的一个属性
+                ele.timer = setInterval(function () {
+                    //目标如果在后面，那么步长为正值，往后走
+                    //目标如果在前面，步长为负值，往回走
+                    var step = ele.offsetLeft < target ? 10 : -10;
+                    if (Math.abs(target - ele.offsetLeft) < Math.abs(step)) {
+                        ele.style.left = target + "px";
+                        clearInterval(ele.timer);
+                    } else {
+                        ele.style.left = ele.offsetLeft + step + "px";
+                    }
+                }, 30);
+            }
+
+            btns[0].onclick = function () {
+                animate(box1, 200);
+                animate(box2, 200);
+            }
+            btns[1].onclick = function () {
+                animate(box1, 405);
+                animate(box2, 405);
+            }
+        }
+    </script>
+</head>
+<body>
+<button>1</button>
+<button>2</button>
+<div class="box1">
+    1
+</div>
+<div class="box2">
+    2
+</div>
+</body>
+</html>

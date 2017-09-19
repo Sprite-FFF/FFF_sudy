@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.onload = function(){
+            var sel = document.getElementById("sel");
+            sel.onchange = function (){
+                var vl = this.value;
+                switch (vl) {
+                    case "1":
+                        document.body.style.backgroundImage = "url(images/chun.jpg)";
+                        break;
+                    case "2":
+                        document.body.style.backgroundImage = "url(images/xia.jpg)";
+                        break;
+                    case "3":
+                        document.body.style.backgroundImage = "url(images/qiu.jpg)";
+                        break;
+                    case "4":
+                        document.body.style.backgroundImage = "url(images/dong.jpg)";
+                        break;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<select id="sel">
+    <option value="0">-------</option>
+    <option value="1">春意绵绵</option>
+    <option value="2">夏日炎炎</option>
+    <option value="3">秋风瑟瑟</option>
+    <option value="4">冬雪皑皑</option>
+</select>
+</body>
+</html>

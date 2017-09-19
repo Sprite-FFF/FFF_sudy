@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        .main {
+            margin: 0 auto;
+            width: 1000px;
+            padding-top: 10px;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function(){
+            if($(this).scrollTop() >= $("#topPart").height()){
+                $("#navBar").addClass("fixed");
+                $("#mainPart").css("margin-top",$("#navBar").height());
+            }else{
+                $("#navBar").removeClass("fixed");
+                $("#mainPart").css("margin-top","");
+            }
+        });
+    });
+</script>
+
+<body>
+    <div class="top" id="topPart">
+        <img src="images/top.png" alt="">
+    </div>
+    <div class="nav" id="navBar">
+        <img src="images/nav.png" alt="">
+    </div>
+    <div class="main" id="mainPart">
+        <img src="images/main.png" alt="">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .djs{
+            width: 100%;
+            height: 60px;
+            border: 1px dashed #00ffff;
+            color: #000;
+            font:32px/60px "微软雅黑";
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+
+            var endTime = new Date("2017/12/12 00:00:00");
+            setInterval(function(){
+                var date = new Date();
+                var seconds = parseInt((endTime.getTime() - date.getTime())/1000);
+                var days = parseInt(seconds/3600/24);
+                var hours = parseInt(seconds/3600%24);
+                var minutes = parseInt(seconds/60%60);
+                var s= parseInt(seconds%60);
+                days<10?days="0"+days : days;
+                hours<10?hours="0"+hours : hours;
+                minutes<10?minutes="0"+minutes : minutes;
+                s<10?s="0"+s : s;
+                document.getElementById("time").innerHTML = "距离双十二还剩"+days+"天"+hours+"小时"+minutes+"分钟"+s+"秒";
+            },1000);
+        }
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<div class="djs" id="time"></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #box{
+            width: 300px;
+            height: 300px;
+            background-color: #00ffff;
+        }
+    </style>
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // slideDown()和slideUp()
+            // 滑入滑出
+            // 第一个参数：动画执行时间
+            // 第二个参数：回调函数
+
+            $("button:eq(0)").click(function () { 
+                $("#box").slideDown(500);
+            });
+            $("button:eq(1)").click(function(){
+                $("#box").slideUp(500);
+            });
+        });
+
+            // slideToggle()    切换
+    </script>
+</head>
+<body>
+    <button>滑入</button>
+    <button>滑出</button>
+    <div id="box"></div>
+</body>
+</html>

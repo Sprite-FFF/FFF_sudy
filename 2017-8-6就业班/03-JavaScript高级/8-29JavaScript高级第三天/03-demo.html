@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var jsonArr = [{"name":"静静","age":1},{"name":"香香","age":13},{"name":"霉霉","age":1},{"name":"小池","age":12}];
+        console.log(jsonArr);
+        var last = jsonArr[jsonArr.length - 1];
+        console.log(last);
+        jsonArr.push(last); 
+        console.log(jsonArr);
+        // jsonArr.pop(last);
+        jsonArr[jsonArr.length-1].name = "琳琳";
+        console.log(jsonArr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

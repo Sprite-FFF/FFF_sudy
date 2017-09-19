@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    字符串的不可变性
+    //        1.字符串一旦确定是不可更改的
+    //        2.需要需要重新开辟空间进行操作
+    var str = "youarebeautiful";
+    //    concat()  字符串链接   一般都用+
+    //    console.log(str.concat("?"));
+
+    //  字符串截取   slice()
+    //    console.log(str.slice(3,6));    //从索引值3开始截取到索引值6但不包括6
+    //    console.log(str.slice(3));    //从索引值3开始截取到最后
+    //    console.log(str.slice(-3));    //从字符串最后开始数3个截取到最后
+    //    console.log(str.slice(6,3));    //空字符串
+    // substr()
+    //    console.log(str.substr(3)); //从索引值为3的地方开始截取到最后
+    //    console.log(str.substr(3,5)); //从索引值为3的地方开始连续截取5个
+    //    console.log(str.substr(-3)); ////从字符串最后开始数3个截取到最后
+    //    console.log(str.substr(-3,2)); ////从字符串最后开始数3个连续截取2个
+
+    //    substring()   等同于slice
+    //    不同点
+    console.log(str.substring(6, 3)); //会智能分别参数，把小的数作为起点，将大的数作终点
+    console.log(str.substring(-1)); //如果是负数,返回整个字符串
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#box,
+#box1 {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #aaa;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+li {
+    font: 14px/30px "微软雅黑";
+    background-color: #f0f0f0;
+    float: left;
+    width: 100px;
+    cursor: pointer;
+}
+
+#box div,
+#box1 div {
+    width: 100%;
+    height: 270px;
+    font: 24px/270px "微软雅黑";
+    display: none;
+}
+
+.bg {
+    background-color: #DAC817;
+}
+
+#box .current,
+#box1 .current {
+    background-color: #DAC817;
+    display: block;
+}

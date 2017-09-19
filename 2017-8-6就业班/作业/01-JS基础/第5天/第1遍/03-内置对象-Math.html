@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    Math  内置对象    是一个静态对象，不需要new
+    //    console.log(Math.PI);       //圆周率
+    //    console.log(Math.random());       //生成随机数   取值范围[0,1)
+    //    console.log(Math.floor(2.2));       // 2 向下取整，地板函数
+    //    console.log(Math.ceil(2.2));       //3 向上取整 天花板函数
+    //    console.log(Math.max(1,2,3,4));       //4   求最大值
+    //    console.log(Math.min(1,1,2,3,4));       //1 求最小值
+    //    console.log(Math.pow(2,2));       //4   幂运算
+    //    console.log(Math.sqrt(4));       // 开平方
+    //    console.log(Math.abs(-5));       //5 求绝对值
+
+    //    模拟实现max()/min()
+    //    var myMath = {
+    //        myMax: function () {
+    //            var max = arguments[0];
+    //            for (var i = 1; i < arguments.length; i++) {
+    //                if (max < arguments[i]) {
+    //                    max = arguments[i];
+    //                }
+    //            }
+    //            return max;
+    //        },
+    //        myMin: function () {
+    //            var min = arguments[0];
+    //            for (var i = 0; i < arguments.length; i++) {
+    //                if (min > arguments[i]) {
+    //                    min = arguments[i];
+    //                }
+    //            }
+    //            return min;
+    //        }
+    //
+    //    }
+    //
+    //    console.log(myMath.myMax(1, 2, 3, 4));
+    //    console.log(myMath.myMin(1, 2, 3, 4));
+
+    //    随机生成颜色RGB
+
+//    var r = parseInt(Math.random()*256);
+//    var g = parseInt(Math.random()*256);
+//    var b = parseInt(Math.random()*256);
+//    document.body.bgColor = "rgba("+r+","+g+","+b+")";
+//    document.body.innerHTML = "rgba("+r+","+g+","+b+",)";
+
+     var color = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"];
+    function get(){
+        return parseInt(Math.random()*15);
+    }
+
+    document.body.bgColor = "#"+color[get()]+color[get()]+color[get()]+color[get()]+color[get()]+color[get()];
+    document.body.innerHTML = "#"+color[get()]+color[get()]+color[get()]+color[get()]+color[get()]+color[get()];
+
+    //随机生成10-20之间的数；
+    for (var i = 0; i < 100; i++) {
+        console.log(parseInt(10+Math.random()*11));
+    }
+
+</script>
+</body>
+</html>

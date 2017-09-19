@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 300px;
+            background-color: #00ffff;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // fadeIn()和fadeOut
+            // 淡入和淡出
+            // 第一个参数：动画执行时间
+            // JQuery的动画是时间版的   采用的是tween算法 补间动画
+            // 第二个参数    回调函数
+            $("button:eq(0)").click(function (e) { 
+                $("#box").fadeIn(500);
+            });
+            $("button:eq(1)").click(function (e) { 
+                $("#box").fadeOut(500);
+            });
+
+            // fadeToggle() 切换
+        });
+    </script>
+</head>
+<body>
+    <button>淡入</button>
+    <button>淡出</button>
+    <div id="box"></div>
+</body>
+</html>

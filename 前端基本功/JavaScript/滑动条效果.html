@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .scroll{
+            width:400px;
+            height:8px;
+            margin:50px auto;
+            background-color: #aaa;
+            position: relative;
+        }
+        .bar{
+            width: 10px;
+            height:22px;
+            background: #00ffff;
+            position: absolute;
+            left: 0;
+            top:-7px;
+            cursor:pointer;
+        }
+        .mask{
+            width: 0;
+            height:8px;
+            background-color: #00ffff;
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+    </style>
+    <script>
+        function $(id) {
+            return document.getElementById(id);
+        }
+        window.onload = function(){
+            var bar = $("scl").children[0];
+            var mask = $("scl").children[1];
+            bar.onmousedown = function(event){
+                var event = event || window.event;
+//                alert($("scl").offsetLeft);
+                var leftVal = event.clientX - this.offsetLeft;
+                var that = this;
+                document.onmousemove = function(event){
+                    var event = event || window.event;
+//                    var val = event.clientX - $("scl").offsetLeft - that.offsetWidth/2;
+                    var val = event.clientX - leftVal - that.offsetWidth/2;
+                    if(val<=0){
+                        val = 0;
+                    }
+                    if(val>=390){
+                       val = 390;
+                    }
+                    that.style.left = val + "px";
+                    mask.style.width = val + "px";
+                    var demo =parseInt(parseInt(val)/390*100);
+                    $("demo").innerHTML = "进度："+demo+"%";
+                    window.getSelection?window.getSelection().removeAllRanges():document.selection.empty();//兼容性取消选中
+                }
+            }
+            document.onmouseup = function(){
+                document.onmousemove = null;
+
+            }
+        }
+    </script>
+    <title>Title</title>
+</head>
+<body>
+    <div class="scroll" id="scl">
+        <div class="bar"></div>
+        <div class="mask"></div>
+    </div>
+    <p id="demo"></p>
+</body>
+</html>

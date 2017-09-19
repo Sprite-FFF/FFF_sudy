@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .box{
+            margin: 50px auto;
+            width: 247px;
+            height: 208px;
+            overflow: hidden;
+            border: 1px solid #aaa;
+        }
+        ul{
+            list-style: none;
+            width: 253px;
+        }
+        .box li{
+            float: left;
+            width: 62px;
+            height: 70px;
+            border-bottom: 1px solid #aaa;
+            border-right:1px solid #aaa;
+            margin-left: -1px;
+            margin-top:-1px;
+        }
+        .box li a{
+            display: block;
+            text-align: center;
+            width: 62px;
+            height: 70px;
+            font-size: 12px;
+            font-weight: "微软雅黑";
+            color:#666;
+            line-height: 24px;
+            text-decoration: none;
+        }
+        .box li a i{
+            display: block;
+            width: 25px;
+            height: 25px;
+            margin-left: 18px;
+            margin-top: 15px;
+            background: url(icon_lifeserv.png) no-repeat 0 0;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function(){
+            var ul = document.getElementById("ul_icon");
+            var bg = ul.getElementsByTagName("i");
+            for(var i=0;i<bg.length;i++){
+                bg[i].style.backgroundPosition = "0 -"+ i*25 +"px";
+            }
+            var link = ul.getElementsByTagName("a");
+            for(var i=0;i<link.length;i++){
+                link[i].onmouseover = function(){
+                    this.style.color="red";
+                    this.children[0].style.backgroundPositionX ="-25px";
+                }
+                link[i].onmouseout = function(){
+                    this.style.color = "#666";
+                    this.children[0].style.backgroundPositionX  = "0";
+                }
+            }
+        }
+    </script>
+    <title>Title</title>
+</head>
+<body>
+ <div class="box">
+     <ul id="ul_icon">
+         <li><a href=""><i></i><span>话费</span></a></li>
+         <li><a href=""><i></i><span>飞机</span></a></li>
+         <li><a href=""><i></i><span>彩票</span></a></li>
+         <li><a href=""><i></i><span>游戏</span></a></li>
+         <li><a href=""><i></i><span>出行</span></a></li>
+         <li><a href=""><i></i><span>白条</span></a></li>
+         <li><a href=""><i></i><span>企业购</span></a></li>
+         <li><a href=""><i></i><span>加油卡</span></a></li>
+         <li><a href=""><i></i><span>金融</span></a></li>
+         <li><a href=""><i></i><span>卷纸</span></a></li>
+         <li><a href=""><i></i><span>金融</span></a></li>
+         <li><a href=""><i></i><span>保险</span></a></li>
+     </ul>
+ </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    var num1 = 111;
+    //    console.log(num1);
+    //    fn(num1);
+    ////    console.log(aaa);   //报错    aaa形参也是局部变量，外部访问不到
+    //    console.log(num1);
+    //    function fn(aaa) {
+    //        aaa = 222;
+    //        num1 = 333; //要想改变全局变量或者简单数据类型，直接在这里改动
+    //    }
+
+    //    function Stu(name){
+    //        this.name = name;
+    //    }
+    //    var stu1 = new Stu("张三");
+    //    console.log(stu1.name);
+    //    fn(stu1);
+    ////    console.log(obj);     //报错  因为obj还是个局部变量
+    //    console.log(stu1.name);
+    //    function fn(obj) {
+    //        obj.name = "李四";
+    //        obj = new Stu("王五");
+    //    }
+    //
+    //    function Person(name){
+    //        this.name = name;
+    //    }
+    //
+    //    var person1 = new Person("赵四");
+    //    var person2 = person1;
+    //    console.log(person1.name);
+    //    console.log(person2.name);
+
+    //    回调函数：函数作为参数进行传递和调用
+    //    回调函数一般用于定义一种规则
+    //    function a(demo) {
+    //        demo(); //这里的demo一定是一个回调函数，因为这里有括号
+    //    }
+    //    function b() {
+    //        alert("我是一个回调函数，我被执行了")
+    //    }
+    //    a(b);
+
+    function fn(a, b, demo) {
+        return  demo(a, b); //demo说怎么算就怎么算
+    }
+
+    console.log(fn(111,222,test1));
+    console.log(fn(111,222,test2));
+    console.log(fn(111,222,test3));
+    console.log(fn(111,222,test4));
+    //test函数定义规则，（四则运算），这四个方法只能做回调函数，不能调用回调函数
+    function test1(num1, num2) {
+        return num1 + num2;
+    }
+    function test2(num1, num2) {
+        return num1 - num2;
+    }
+    function test3(num1, num2) {
+        return num1 * num2;
+    }
+    function test4(num1, num2) {
+        return num1 / num2;
+    }
+
+</script>
+</body>
+</html>

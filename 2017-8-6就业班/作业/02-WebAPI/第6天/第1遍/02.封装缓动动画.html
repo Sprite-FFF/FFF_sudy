@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            width: 80px;
+            height: 35px;
+            margin: 60px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 200px;
+            left: 0;
+            background-color: #00ffff;
+        }
+    </style>
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var box = document.getElementsByClassName("box")[0];
+            var btns = document.getElementsByTagName("button");
+            //自己的封装
+//            function animate(ele, target) {
+//                clearInterval(ele.timer);
+//                var leader = ele.offsetLeft;
+//                ele.timer = setInterval(function () {
+//                    if (leader == target) {
+//                        clearInterval(ele.timer);
+//                    }
+//                    leader = leader + (target - leader) / 10;
+//                    ele.style.left = leader + "px";
+//                }, 30);
+//            }
+
+            //老师的
+
+            function animate(ele,target) {
+                clearInterval(ele.timer);
+                ele.timer = setInterval(function () {
+                    var step = (target-ele.offsetLeft)/10;
+                    step = step>0?Math.ceil(step):Math.floor(step);
+                    ele.style.left = ele.offsetLeft + step +"px";
+                    if(ele.style.left == target){
+                        clearInterval(ele.timer);
+                    }
+                },30);
+            }
+
+            btns[0].onclick = function () {
+                animate(box, 400);
+            }
+            btns[1].onclick = function () {
+                animate(box, 1000);
+            }
+        }
+    </script>
+</head>
+<body>
+<button>400</button>
+<button>1000</button>
+<div class="box">
+    一江春水向东流，恰似你的温柔
+</div>
+</body>
+</html>

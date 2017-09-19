@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    判断一个数是否是素数(又叫质数，只能被1和自身整数的数)
+    //    求斐波那契数列Fibonacci中的第n个数是多少？      1 1 2 3 5 8 13 21...
+    //    翻转数组，返回一个新数组
+    //    对数组排序，从小到大
+    //    输入一个年份，判断是否是闰年[闰年：能被4整数并且不能被100整数，或者能被400整数]
+    //    输入某年某月某日，判断这一天是这一年的第几天？
+
+    //    判断一个数是否是素数(又叫质数，只能被1和自身整数的数)
+    function prime(num) {
+        var flag = true;
+        for (var i = 2; i <= num / 2; i++) {
+            if (num % i == 0) {
+                flag = false;
+                break;
+            }
+            else {
+                flag = true;
+            }
+        }
+        if (flag) {
+            alert("素数");
+        } else {
+            alert("非素数");
+        }
+    }
+    prime(2);
+
+    //    求斐波那契数列Fibonacci中的第n个数是多少？      1 1 2 3 5 8 13 21...
+    //    function fibonacci(num) {
+    //        var a = 1;
+    //        var b = 1;
+    //        var temp = 1;
+    //        for (var i = 3; i <= num; i++) {
+    //            temp = a+b;
+    //            a = b;
+    //            b = temp;
+    //        }
+    //        return temp;
+    //    }
+    //    alert(fibonacci(12));
+
+    //    翻转数组，返回一个新数组
+    //第一种
+    //        function reversArr(arr) {
+    //            var newArr = [];
+    //            for (var i = arr.length - 1; i >= 0; i--) {
+    //                newArr[newArr.length] = arr[i];
+    //            }
+    //            return newArr;
+    //        }
+    //        console.log(reversArr([1,2,3,4,5]));
+
+    //    对数组排序，从小到大
+    //    function bubOrder (arr) {
+    //        var temp;
+    //        var flag = true;
+    //        for (var i = 0; i < arr.length-1; i++) {
+    //            flag = true;
+    //            for (var j = 0; j < arr.length-1-i; j++) {
+    //                if (arr[j]>arr[j+1]) {
+    //                    temp = arr[j];
+    //                    arr[j] = arr[j+1];
+    //                    arr[j+1] = temp;
+    //                    flag = false;
+    //                }
+    //            }
+    //        }
+    //        return arr;
+    //    }
+    //    console.log(bubOrder([2,3,5,3,8,5,1]));
+    //    输入一个年份，判断是否是闰年[闰年：能被4整数并且不能被100整数，或者能被400整数]
+    //    function leap(year) {
+    //        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+    //            alert("闰年");
+    //        }
+    //        else {
+    //            alert("平年");
+    //        }
+    //    }
+    //    leap(400);
+    //    输入某年某月某日，判断这一天是这一年的第几天？
+    //    function nice(year, month, day) {
+    //        var months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    //        var days = day;
+    //        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+    //            months[1] = 29;
+    //        }
+    //        for (var i = 0; i < month - 1; i++) {
+    //            days += months[i];
+    //        }
+    //        return days;
+    //    }
+    //    alert(nice(2017,8,10));
+</script>
+</body>
+</html>

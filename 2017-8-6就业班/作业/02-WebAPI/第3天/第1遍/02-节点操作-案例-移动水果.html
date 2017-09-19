@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        select {
+            width: 150px;
+            height: 200px;
+            background: #38B774;
+            font: 14px/24px "微软雅黑";
+            color: #f0f0f0;
+        }
+        button{
+            width: 40px;
+            height: 25px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var sel1 = document.getElementById("sel1");
+            var sel2 = document.getElementById("sel2");
+            var btns = document.getElementsByTagName("button");
+//            btns[0].onclick = function () {
+//                var opts = sel1.getElementsByTagName("option");
+//                for (var i = 0; i < opts.length; i++) {
+//                    sel2.appendChild(opts[i]);
+//                    i--;
+//                }
+//            }
+//            btns[1].onclick = function(){
+//                var opts = sel2.getElementsByTagName("option");
+//                for (var i = 0; i < opts.length; i++) {
+//                    sel1.appendChild(opts[i]);
+//                    i--;
+//                }
+//            }
+
+            //封装
+            /**
+             *
+             * @param ele1 获取option的select
+             * @param ele2 被添加的select
+             */
+            function appendAll(ele1, ele2) {
+                var opts = ele1.getElementsByTagName("option");
+                for (var i = 0; i < opts.length; i++) {
+                    ele2.appendChild(opts[i]);
+                    i--;
+                }
+            }
+
+            btns[0].onclick = function () {
+
+                appendAll(sel1, sel2);
+            };
+            btns[1].onclick = function () {
+                appendAll(sel2, sel1);
+            };
+
+//            btns[2].onclick = function () {
+//                var opts = sel1.getElementsByTagName("option");
+//                for (var i = 0; i < opts.length; i++) {
+//                    if (opts[i].selected == true) {
+//                        opts[i].selected = false;
+//                        sel2.appendChild(opts[i]);
+//                        i--;
+//                    }
+//                }
+//            }
+//            btns[3].onclick = function () {
+//                var opts = sel2.getElementsByTagName("option");
+//                for (var i = 0; i < opts.length; i++) {
+//                    if (opts[i].selected == true) {
+//                        opts[i].selected = false;
+//                        sel1.appendChild(opts[i]);
+//                        i--;
+//                    }
+//                }
+//            }
+
+            //封装
+            /**
+             *
+             * @param ele1
+             * @param ele2
+             */
+            function appendSelected(ele1, ele2) {
+                var opts = ele1.getElementsByTagName("option");
+                for (var i = 0; i < opts.length; i++) {
+                    if (opts[i].selected == true) {
+                        opts[i].selected = false;
+                        ele2.appendChild(opts[i]);
+                        i--
+                    }
+                }
+            }
+
+            btns[2].onclick = function () {
+                appendSelected(sel1, sel2);
+            }
+            btns[3].onclick = function () {
+                appendSelected(sel2, sel1);
+            }
+        }
+
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<select name="" id="sel1" size="8" multiple>
+    <option value="1">电眼逼人</option>
+    <option value="2">乌鸦坐飞机</option>
+    <option value="3">白鹤亮翅</option>
+    <option value="4">黑虎掏心</option>
+</select>
+<button> >>></button>
+<button> <<<</button>
+<button> ></button>
+<button> <</button>
+<select name="" id="sel2" size="8" multiple></select>
+</body>
+</html>

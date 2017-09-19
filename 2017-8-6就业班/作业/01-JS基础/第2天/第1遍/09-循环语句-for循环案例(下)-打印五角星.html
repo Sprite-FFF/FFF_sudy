@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font: 35px/35px "simsun";
+            color: #00ffff;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //1.打印一个正方形;
+    //2.打印一个三角形;
+    //3.打印九九乘法表;
+
+    //1.打印一个正方形;
+    var str = "☆";
+//    for (var i = 1; i <= 9; i++) {
+//        for (var j = 0; j <= 9; j++) {
+//            document.write(str);
+//        }
+//        document.write("<br />");
+//    }
+    //打印第一个三角形
+//    for (var i = 0; i <= 9; i++) {
+//        for (var j = 0; j <= i ; j++) {
+//            document.write(str);
+//        }
+//        document.write("<br />")
+//    }
+    //打印第二个三角形
+//    for (var i = 0; i <= 9; i++) {
+//            for (var j = 9; j >= i; j--) {
+//                document.write(str);
+//            }
+//            document.write("<br />")
+//        }
+//    打印第三个三角形
+    for (var i = 1; i <= 9; i++) {
+        for (var k = 8; k >= i; k--) {
+            document.write("&nbsp");
+        }
+        for (var j = 1; j <= i; j++) {
+            document.write(str);
+        }
+        document.write("<br />")
+    }
+
+    //打印第四个三角形
+//    for (var i = 0; i <= 9; i++) {
+//        for (var k = 0; k <= i-1; k++) {
+//            document.write("&nbsp");
+//        }
+//        for (var j = 9; j >=i; j--) {
+//            document.write(str);
+//        }
+//        document.write("<br />")
+//    }
+
+//    for (var i = 1; i <= 9; i++) {
+//        for (var j = 1; j <= 9; j++) {
+//            if (j < i) {
+//                document.write("&nbsp")
+//            } else {
+//                document.write(str);
+//            }
+//        }
+//        document.write("<br />")
+//    }
+    //打印九九乘法表
+//    for (var i = 1; i <= 9; i++) {
+//        for (var j = 1; j <= i; j++) {
+//            document.write(j+"*"+i+"="+i*j+"&nbsp");
+//        }
+//        document.write("<br />");
+//    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        .view{
+            width: 600px;
+            height: 200px;
+            margin: 100px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .view ul{
+            width:500%;
+            height: 200px;
+            list-style: none;
+            position: absolute;
+            left: 0;
+            top:0;
+        }
+        .view li{
+            float: left;
+            cursor: pointer;
+        }
+        .view li img{
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+        function $(id){
+            return document.getElementById(id);
+        }
+        window.onload = function(){
+            var timer = null;
+            var num = 0;
+            timer = setInterval(marquee,10);
+            function marquee() {
+                num<-1200?num=0:num--;
+                $("ulPic").style.left = num+"px";
+            }
+            $("scroll").onmouseover = function(){
+                clearInterval(timer);
+            }
+            $("scroll").onmouseout = function (){
+                timer = setInterval(marquee,10);
+            }
+        }
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<div class="view" id="scroll">
+    <ul id="ulPic">
+        <li><img src="images/01.jpg" alt=""></li>
+        <li><img src="images/02.jpg" alt=""></li>
+        <li><img src="images/03.jpg" alt=""></li>
+        <li><img src="images/04.jpg" alt=""></li>
+        <li><img src="images/01.jpg" alt=""></li>
+        <li><img src="images/02.jpg" alt=""></li>
+    </ul>
+</div>
+</body>
+</html>

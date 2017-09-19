@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //1.把今天的时间打印到控制台;
+//    var date = new  Date();
+//    var year = date.getFullYear();
+//    var month = date.getMonth()+1;
+//    month = month<10?"0"+month:month;
+//    var day = date.getDate();
+//    day = day<10?"0"+day:day;
+//    var week = date.getDay();
+//    week = week==0?7:week;
+//    var hour = date.getHours();
+//    hour = hour<10?"0"+hour:hour;
+//    var minutes = date.getMinutes();
+//    minutes = minutes<10?"0"+minutes:minutes;
+//    console.log("现在是北京时间："+year+"年 "+month+"月 "+day+"日 星期"+week+" "+hour+"点"+minutes+"分");
+
+    // //3.计算时间差，返回相差的天/时/分/秒(距离七夕)
+    //求总时间差，然后换算成：天/时/分/秒
+
+    var fuTime = new Date("2017/8/28").getTime();
+    console.log(fuTime);
+    var nowTime = new Date().getTime();
+    console.log(nowTime);
+    var time = fuTime-nowTime;
+
+    var day = parseInt(time/1000/3600/24);
+    var hour = parseInt(time/1000/3600%24);
+    var minutes = parseInt(time/1000/60%60);
+    var seconds = parseInt(time/1000%60);
+    console.log("距离七夕还有："+day+"天"+hour+"小时"+minutes+"分钟"+seconds+"秒");
+
+
+</script>
+
+</body>
+</html>

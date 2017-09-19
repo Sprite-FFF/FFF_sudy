@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // val()方法
+            $("button").click(function(){
+                alert($("input").val());
+                $("input").val("这是我设置的value");
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="text" value="有志者、事竟成">
+    <button>获取</button>
+</body>
+</html>

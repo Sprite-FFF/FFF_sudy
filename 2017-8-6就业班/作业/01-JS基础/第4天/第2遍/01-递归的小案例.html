@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    function fact (num){
+//        var fact = 1;
+//        for (var i = 1;i<=num;i++)
+//        {
+//            fact*=i;
+//        }
+//    }
+//    递归求1-n和
+//    function sum (num){
+//        if (num==1){
+//            return num;
+//        }
+//        return num + sum(num-1);
+//    }
+//    console.log(sum(100));
+//    递归求阶乘
+//    function  fact(num) {
+////        console.log(num);
+//        return num>1?num*fact(num-1):1;
+//    }
+//    console.log(fact(5));
+//    递归求阶乘和
+//    function factSum(num) {
+//        if(num==1) {
+//            return 1;
+//        }
+//        return fact(num) + factSum(num-1);
+//    }
+//
+//    console.log(factSum(5));
+
+    function factSum (num) {
+        if (num==1) {
+            return 1;
+        }
+        var fact = 1;
+        for(var i = 1;i<=num;i++) {
+            fact*=i;
+        }
+        return fact + factSum(num-1);
+    }
+    console.log(factSum(5));
+//    递归求斐波那契数列
+//    function fibonacci (n){
+//        return n>2?fibonacci(n-1)+fibonacci(n-2):1;
+//    }
+//    console.log(fibonacci(12));
+</script>
+</body>
+</html>

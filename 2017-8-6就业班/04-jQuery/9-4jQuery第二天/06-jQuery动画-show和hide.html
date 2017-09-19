@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #box {
+            width: 300px;
+            height: 300px;
+            background-color: #00ffff;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            // show() 和 hide()
+            // 如果不写参数   相当于直接显示和隐藏
+            // 第一个参数    动画执行时间 单位毫秒
+            // 可以写字符串 常量    normal(400) slow(600)   fast(200)
+            // 第二个参数    回调函数    动画执行完毕执行的操作
+            
+            function fn (){
+                    alert("动画执行完毕");
+                }
+            $("button:eq(0)").click(function () { 
+                $("#box").show(500,fn);
+            });
+            $("button:eq(1)").click(function(){
+                $("#box").hide(500,fn);
+            }); 
+
+            // toggle()     切换显示和隐藏
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <button>显示</button>
+    <button>隐藏</button>
+    <div id="box"></div>
+</body>
+</html>

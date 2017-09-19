@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var num = 2384.3287423563;
+//    第一种
+    var str = num.toString();
+    var newStr = str.substr(0,str.indexOf(".")+3);
+    console.log(newStr);
+//    第二种
+    var newNum = parseInt(num*100);
+    console.log(newNum/100);
+//    第三种
+    console.log(num.toFixed(2));
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box img{
+            width:60px;
+            height: 60px;
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var pic = document.getElementById("pic");
+//          缓动动画
+            var targetX = 0,leaderX = 0,targetY = 0,leaderY = 0;
+            setInterval(function(){
+                leaderX = leaderX+(targetX - leaderX)/10;
+                pic.style.left = leaderX + "px";
+                leaderY = leaderY+(targetY - leaderY)/10;
+                pic.style.top = leaderY + "px";
+            },10);
+//            获取鼠标位置
+            document.onmousemove = function(event){
+                var event = event || window.event;
+                targetX = event.clientX - pic.offsetWidth/2;
+                targetY = event.clientY - pic.offsetHeight/2;
+            }
+        }
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<div class="box">
+    <img src="img.jpg" id="pic" alt="">
+</div>
+</body>
+</html>

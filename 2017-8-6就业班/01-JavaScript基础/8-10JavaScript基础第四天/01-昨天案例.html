@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //判断素数
+    //    function prime(num) {
+    //        var flag = false;
+    //        for (var i = 2; i <= num / 2; i++) {
+    //            if (num%i==0) {
+    //               flag = false;
+    //                break;
+    //            }
+    //        }
+    //        flag = true;
+    //        return flag;
+    //    }
+    //
+    //    alert(prime(2));
+
+    //斐波那契数列
+    //    function fibonacci(n) {
+    //        var n1 = 1;
+    //        var n2 = 1;
+    //        var temp;
+    //        for (var i = 3; i <= n; i++) {
+    //            temp = n2;
+    //            n2 = n1+n2;
+    //            n1 = temp;
+    //        }
+    //        return n2;
+    //    }
+    //
+    //    alert(fibonacci(12));
+
+    //反转数组
+    //    function reversArr(arr) {
+    //        var newArr = [];
+    //        for (var i = arr.length - 1; i >= 0; i--) {
+    //            newArr[newArr.length] = arr[i];
+    //        }
+    //        return newArr;
+    //    }
+    //    alert(reversArr([1,2,3,4,5,6]));
+
+    //排序
+    //    function bubSort(array) {
+    //        var temp;
+    //        var flag = true;
+    //        for (var i = 0; i < array.length - 1; i++) {
+    //            flag = true;
+    //            for (var j = 0; j < array.length - 1 - i; j++) {
+    //                if (array[j] > array[j + 1]) {
+    //                    temp = array[j];
+    //                    array[j] = array[j + 1];
+    //                    array[j + 1] = temp;
+    //                    flag = false;
+    //                }
+    //            }
+    //            if (flag) {
+    //                break;
+    //            }
+    //        }
+    //        return array;
+    //    }
+    //    alert(bubSort([2,1,5,9,7,6,3,9]));
+    //    输入年月日
+    function getDays(year, month, day) {
+        var months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        var days = day;
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            months[1] = 29;
+        }
+        for (var i = 0; i < month - 1; i++) {
+            days += months[i];
+        }
+        return days;
+    }
+    alert(getDays(2000,2,29));
+</script>
+</body>
+</html>

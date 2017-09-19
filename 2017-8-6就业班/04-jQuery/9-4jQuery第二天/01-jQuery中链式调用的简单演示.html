@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+       $(function () {
+            // 在jquery里 如果jq对象执行了一个设置操作 那么该方法2会在执行完毕之后 返回当前的jq对象
+            // 这种情况称为jQuery中的链式调用 也叫链式操作
+            $("#box").css("width",300).css("height",300).css("backgroundColor","red");
+       });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

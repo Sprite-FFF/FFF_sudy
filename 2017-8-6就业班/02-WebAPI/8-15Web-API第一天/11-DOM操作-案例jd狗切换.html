@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        img {
+            cursor: pointer;
+            border: 1px solid #aaa;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var img = document.getElementsByTagName("img")[0];
+            img.onmouseover = function () {
+                this.src = "images/jd2.png";
+            }
+            img.onmouseout = function(){
+                this.src = "images/jd1.png";
+            }
+        }
+    </script>
+    <title>Title</title>
+</head>
+<body>
+<img src="images/jd1.png" alt="">
+</body>
+</html>
