@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b6daa7de-4699-4cd3-baa7-bceaf8a563ea" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-10JavaScript基础第四天/01-昨天案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-10JavaScript基础第四天/02-函数-arguments.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-10JavaScript基础第四天/03-函数-匿名函数.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-10JavaScript基础第四天/04-函数是一种数据类型function.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-10JavaScript基础第四天/05-函数高级-递归、回调函数、递归、闭包.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-10JavaScript基础第四天/06-变量和作用域.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-10JavaScript基础第四天/07-预解析和声明提升.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-10JavaScript基础第四天/08-对象-创建对象.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-10JavaScript基础第四天/09-创建多个对象-函数封装.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-10JavaScript基础第四天/10-对象-自定义对象-构造函数创建对象.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-12JavaScript基础第五天/01-对象的使用-遍历和删除.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-12JavaScript基础第五天/02-对象拓展-json.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-12JavaScript基础第五天/03- 简单数据类型和复杂数据类型.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-12JavaScript基础第五天/05- 内置对象-Math.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-12JavaScript基础第五天/06-内置对象-Math对象案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-12JavaScript基础第五天/08-内置对象-Date对象案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-12JavaScript基础第五天/09-拓展-数据类型和回调函数.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-13JavaScrip基础第六天/03-数组API-数组元素的添加和删除.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-13JavaScrip基础第六天/07-数组API-数组迭代方法.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-13JavaScrip基础第六天/08-数组API-数组元素的转换成字符串.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-13JavaScrip基础第六天/14-字符串的API-大小写的转换.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-6JavaScript基础第一天/JS初体验.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-6JavaScript基础第一天/数据类型和转换.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-6JavaScript基础第一天/逻辑运算符.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-7JavaScript基础第二天/01-运算符和优先级-自增和自减.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-7JavaScript基础第二天/02-for循环打印三角形.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-7JavaScript基础第二天/03-for循环打印九九乘法表.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-9JavaScript基础第三天/05-数组-冒泡排序（简单版）.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-9JavaScript基础第三天/06-数组-冒泡排序（中级版）.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-9JavaScript基础第三天/07-数组-冒泡排序（优化版）.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-9JavaScript基础第三天/08-函数-函数定义和调用.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/01-JavaScript基础/8-9JavaScript基础第三天/09-函数-函数参数案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-15Web-API第一天/02-BOM 属性-location.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-15Web-API第一天/03-BOM属性-histroy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-15Web-API第一天/04-BOM属性-navigator.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-15Web-API第一天/06-DOM操作-获取元素节点.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-15Web-API第一天/08-DOM操作-案例-点击按钮弹窗.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-15Web-API第一天/11-DOM操作-案例jd狗切换.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-15Web-API第一天/12-显示和隐藏div.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-16WebAPI第二天/04-表单属性-淘宝京东搜索框.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-16WebAPI第二天/07-表单属性-全选和反选.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-16WebAPI第二天/20-节点层级（访问关系）-nodeType和nodeName和nodeValue.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-18WebAPI第三天/01-节点操作-案例-四大美女高亮显示.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-19WebAPI第四天/02-事件流-事件解绑（兼容性）.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-19WebAPI第四天/03-事件流-对象event.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-19WebAPI第四天/04-事件流-事件冒泡体验.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-19WebAPI第四天/06-事件流-阻止传播（取消冒泡）.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-19WebAPI第四天/07-事件流总结.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-19WebAPI第四天/08-事件流-事件委托.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-19WebAPI第四天/09-事件流-注册登录（阻止冒泡）.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-21WebAPI第五天/01-封装匀速动画（完整版）.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-21WebAPI第五天/03-滑动轮播图/03-滑动轮播图.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-22WebAPI第六天/05-缓动动画-体验.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-22WebAPI第六天/06-封装缓动动画.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-22WebAPI第六天/07-筋斗云导航栏.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-22WebAPI第六天/11-模拟响应式.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-22WebAPI第六天/13-拓展-dtd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-22WebAPI第六天/jquery1.1.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-24WebAPI第七天/01-点击页面图片跟随.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-24WebAPI第七天/02-跟随鼠标移动.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-24WebAPI第七天/03-计算鼠标在盒子中的位置.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-24WebAPI第七天/05-拖拽盒子案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-24WebAPI第七天/images/img2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/02-WebAPI/8-24WebAPI第七天/jquery1.1.1.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-26-JavaScript高级第一天/01-预解析-声明提升-面试题.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-26-JavaScript高级第一天/02-try catch 异常处理.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-26-JavaScript高级第一天/03-创建对象的方式.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-26-JavaScript高级第一天/04-原型对象.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-26-JavaScript高级第一天/06-for in 遍历对象.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-27-JavaScript高级第二天/01-原型.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-27-JavaScript高级第二天/02-重写内置对象的方法-数组去重.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-27-JavaScript高级第二天/03-重写内置对象的一些方法-pop.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-27-JavaScript高级第二天/06-面向对象拖拽盒子.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-27-JavaScript高级第二天/Drag.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-29JavaScript高级第三天/01-基于原型链的继承.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-29JavaScript高级第三天/02-贪吃蛇案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-29JavaScript高级第三天/03-demo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-29JavaScript高级第三天/snake.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-30JavaScript高级第四天/01-函数进阶-Function对象.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-30JavaScript高级第四天/02-函数进阶-模拟实现forEach.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-30JavaScript高级第四天/03-函数进阶-闭包.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/8-30JavaScript高级第四天/10-函数进阶-改变函数内部this指向.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/9-01JavaScript高级第五天/01-找字符串中数字.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/9-01JavaScript高级第五天/02-面向对象-继承-原型继承.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/9-01JavaScript高级第五天/05-面向对象-继承-组合式继承完成拖拽盒子案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/9-01JavaScript高级第五天/06-正则表达式-体验.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/03-JavaScript高级/9-01JavaScript高级第五天/08-正则表达式-search.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/01-jQuery初体验.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/02-jQuery概念.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/03-jQuery和原生写法优缺点.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/04-jQuery对象和DOM对象.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/05-jQuery入口函数&amp;&amp;js入口函数对比.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/06-jQuery选择器-基础选择器.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/07-jQuery选择器-筛选选择器.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/08-jQuery选择器-过滤选择器.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/09-jQuery开关灯案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/10-jQuery手风琴案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/11-jQuery突出显示案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/12-jQuery下拉菜单.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/13-jQuery延时菜单栏.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/14-jQuery淘宝精品导航案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/04.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/05.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/06.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/QQ截图20121215110234.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/abg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/lili.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/冬裙.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/呢大衣.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/围巾.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/女包.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/女裤.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/女靴.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/棉服.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/毛衣.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/牛仔裤.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/男包.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/男棉服.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/男毛衣.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/男靴.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/登山鞋.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/皮带.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/皮衣.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/羽绒服.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/images/雪地靴.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-2jQuery第一天/jquery-1.12.4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/01-jQuery中链式调用的简单演示.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/02-mouseover和mouseenter区别.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/03-jQuery样式操作.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/04-jQuery操作类.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/05-jQuery的选项卡.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/06-jQuery动画-show和hide.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/07-jQuery动画-slideDown和slideUp.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/08-jQuery动画-fadeIn和fadeDown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/09-jQuery动画-animate自定义动画.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/10-jQuery动画-引入tween动画库.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/11-jQuery动画-淡入淡出轮播图.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/12-jQuery动画-动画队列和停止动画.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/13-jQuery动画-360开机案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/images/b.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/images/slide01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/images/slide02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/images/slide03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/images/slide04.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/images/slide05.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/images/t.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/jquery-1.12.4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-4jQuery第二天/tween.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/01-jQuery动画-fadeTo-突出显示案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/02-jQuery动画-引入插件变化颜色.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/03-jQuery动画-delay方法.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/04-jQuery中DOM节点操作-创建元素节点.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/05-jQuery-其他添加DOM节点方法.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/06-jQuery-清空元素节点和复制节点的方法.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/07-jQuery-属性操作方法attr.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/08-jQuery-美女相册.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/09-jQuery-表单属性操作方法.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/10-jQuery-全选案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/11-jQuery-获取表单文本内容-val方法.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/12-jQuery-动态输入文字案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/13-jQuery-jQuery的宽高方法.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/14-jQuery-offset方法.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/15-jQuery-position方法.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/16-jQuery-scrollTop.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/17-jQuery-固定导航栏.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/18-jQuery-固定导航栏-拓展.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/04.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/05.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/06.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/1-small.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/2-small.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/3-small.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/4-small.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/main.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/nav.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/placeholder.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/images/top.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/jquery-1.12.4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/jquery.color.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-5jQuery第三天/offsetLeft-demo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-7jQuery第四天/01-jQuery事件机制-事件绑定-3种.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-7jQuery第四天/02-jQuery事件机制-时间绑定-delegate方法.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-7jQuery第四天/03-事件委托案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-7jQuery第四天/04-jQuery事件机制-事件绑定-on.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-7jQuery第四天/05-jQuery事件解绑.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-7jQuery第四天/06-jQuery-按键变色案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-7jQuery第四天/07-jQuery-拖拽图片案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-7jQuery第四天/08-jQuery-拖拽盒子案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-7jQuery第四天/09-jQuery-链式编程特点.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-7jQuery第四天/10-jQuery-五星评分案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-7jQuery第四天/11-jQuery-遍历方法-Each.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-7jQuery第四天/12-jQuery-透明度变化案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-7jQuery第四天/13-jQuery-多库共存.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-7jQuery第四天/domo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-7jQuery第四天/images/food.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-7jQuery第四天/jquery-1.12.4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-8jQuery第五天/01-仿jQuery封装一个自己的库.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-8jQuery第五天/02-利用工具方法给jQuery添加和拓展工具方法.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-8jQuery第五天/03-如何基于jQuery开发一个插件.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-8jQuery第五天/05-懒加载和使用懒加载插件.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-8jQuery第五天/06-tab选项卡插件.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-8jQuery第五天/Tab.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-8jQuery第五天/images/01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-8jQuery第五天/jquery-1.12.4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-8jQuery第五天/jquery.lazyload.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/04-jQuery/9-8jQuery第五天/wQuery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第1天/第1遍/++i和i++.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第1天/第1遍/变量交换.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第1天/第1遍/星期.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第1天/第1遍/鸡蛋.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第1天/第2遍/变量交换.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第1天/第2遍/星期.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第1天/第2遍/鸡蛋.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第1天/第3遍/变量交换.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第1天/第3遍/星期.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第1天/第3遍/鸡蛋.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第1遍/01-运算符和优先级-自增和自减.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第1遍/02-运算符和优先级-优先级.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第1遍/03-判断语句-if语句案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第1遍/04-三元表达式.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第1遍/05-分支语句-switch语句案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第1遍/06-循环语句-while循环案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第1遍/07-循环语句-dowhile循环案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第1遍/08-循环语句-for循环案例(上).html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第1遍/09-循环语句-for循环案例(下)-打印五角星.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第1遍/10-循环语句-continue和break关键字.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第1遍/11-循环语句-作业-斐波那契数列.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第2遍/01-运算符和优先级-自增和自减.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第2遍/02-运算符和优先级-优先级.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第2遍/03-判断语句-if语句案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第2遍/04-三元表达式.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第2遍/05-分支语句-switch语句.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第2遍/06-循环语句-while循环案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第2遍/07-循环语句-for循环案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第2遍/08-循环语句-for循环案例下.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第2天/第2遍/09-循环语句-作业-斐波那契数列.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第3天/第1遍/01-斐波那契数列.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第3天/第1遍/02-数组-数组遍历案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第3天/第1遍/03-数组-反转数组.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第3天/第1遍/04-数组-冒泡排序.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第3天/第1遍/05-函数-函数参数案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第3天/第1遍/06-返回值案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第3天/第1遍/07-函数-作业.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第3天/第2遍/01-斐波那契数列.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第3天/第2遍/02-反转数组.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第3天/第2遍/03-冒泡排序.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第3天/第2遍/04 -函数-作业.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第4天/第1遍/01-函数-arguments.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第4天/第1遍/02-匿名函数.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第4天/第1遍/03-对象-创建对象.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第4天/第1遍/04-对象-工厂模式创建多个对象.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第4天/第1遍/05-对象-构造函数创建多个对象.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第4天/第2遍/01-递归的小案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第5天/第1遍/01-对象的使用-遍历和删除属性.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第5天/第1遍/02-简单数据类型和复杂数据类型.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第5天/第1遍/03-内置对象-Math.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第5天/第1遍/04-内置对象-Date对象.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第5天/第1遍/05-拓展-数据类型和回调函数.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第5天/第2遍/demo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第1遍/01-数组简单API体验.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第1遍/02-数组API-数组元素的添加和删除.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第1遍/03-数组API-数组元素重排序.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第1遍/04-数组API-数组的链接，截取，替换.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第1遍/05-数组API-索引值查找.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第1遍/06-数组API-迭代方法.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第1遍/07-数组API-数组元素转换为字符串.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第1遍/08-数组清空.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第1遍/09-数组API案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第1遍/10-字符串API-基本包装类型.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第1遍/11-字符串API-根据索引查字符和根据字符查索引.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第1遍/12-字符串API-字符串链接和截取.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第1遍/13-数组ApI-大小写转换.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第1遍/14-数组API-其他方法.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第1遍/15-字符串API案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第2遍/01-数组重排序.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第2遍/02-字符串API案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第2遍/03-作业.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第3遍/01-数组去重.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第3遍/02-数组API案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/01-JS基础/第6天/第3遍/03-栈和队列操作.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第1天/第1遍/01-BOM方法-定时器-倒计时.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第1天/第1遍/02-DOM案例-jd头部广告.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第1天/第1遍/03-DOM案例-jd狗切换.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第1天/第1遍/04-DOM操作-显示和隐藏div.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第1天/第1遍/images/0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第1天/第1遍/images/jd1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第1天/第1遍/images/jd2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第1天/第2遍/01-BOM方法-定时器-倒计时.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第1天/第2遍/02-DOM-案例-jd头部广告.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第1天/第2遍/03-DOM-案例-jd狗切换.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第1天/第2遍/04-DOM-案例-显示和隐藏div.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第1天/第2遍/images/0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第1天/第2遍/images/jd1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第1天/第2遍/images/jd2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第1天/第3遍/模仿JQuery的$选择器.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第2天/第1遍/01-淘宝搜索框.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第2天/第1遍/02-京东搜索框.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第2天/第1遍/03-全选和反选.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第2天/第1遍/04-Tab栏切换.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第2天/第1遍/05-高级隔行变色.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第2天/第1遍/文档元素.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/01-节点操作-案例-四大美女高亮显示.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/02-节点操作-案例-移动水果.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/03-在线用户.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/04-模拟百度搜索框.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/05-微博评论.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/0f000PC3L7v5WMl_8bcCX6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/75_avatar_small.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/89_avatar_small.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/arrow.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/big.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/bpic_1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/cloud.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/content.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/content_bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/lb1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/lb2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/lb3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/lb4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/lb5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/main.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/mm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/mu.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/nav.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/noavatar_small.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/placeholder.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/rss.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/small.webp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/taobao.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/tianshi.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/tip1_c.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/tip1_f.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/tip1_h.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/top.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/xiaoniao.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第1遍/images/百度换肤.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第3天/第2遍/01-移动水果（排序）.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第4天/第1遍/01-事件流-事件监听（兼容性）.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第4天/第1遍/02-事件流-事件解绑（兼容性）.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第4天/第1遍/03-事件流-event对象.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第4天/第1遍/04-事件流-事件冒泡体验.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第4天/第1遍/05-事件流-事件传播阶段（捕获-目标-冒泡）.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第4天/第1遍/06-事件流-阻止事件传播.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第4天/第1遍/07-事件流-事件委托.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第4天/第1遍/08-事件流-注册登录（事件冒泡）.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第1遍/无缝滚动轮播图/06-无缝滚动（旗舰版）.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第1遍/无缝滚动轮播图/images/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第1遍/无缝滚动轮播图/images/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第1遍/无缝滚动轮播图/images/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第1遍/无缝滚动轮播图/images/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第1遍/无缝滚动轮播图/images/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第1遍/无缝滚动轮播图/无缝滚动轮播图.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第2遍/无缝滚动轮播图/images/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第2遍/无缝滚动轮播图/images/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第2遍/无缝滚动轮播图/images/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第2遍/无缝滚动轮播图/images/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第2遍/无缝滚动轮播图/images/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第2遍/无缝滚动轮播图/无缝滚动轮播图(旗舰版).html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第3遍/01-无缝滚动轮播图.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第3遍/images/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第3遍/images/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第3遍/images/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第3遍/images/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第5天/第3遍/images/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第6天/第1遍/01-筋斗云导航栏.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第6天/第1遍/02.封装缓动动画.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第6天/第1遍/03-返回顶部小火箭.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第6天/第1遍/04-client-body和html调用clientWidth和clientHeight.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第6天/第1遍/images/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第6天/第1遍/images/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第6天/第1遍/images/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第6天/第1遍/images/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第6天/第1遍/images/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第6天/第1遍/images/Top.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第6天/第1遍/images/b.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第6天/第1遍/images/cloud.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第6天/第1遍/images/main.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第6天/第1遍/images/nav.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第6天/第1遍/images/t.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第6天/第1遍/images/top.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第6天/第1遍/images/wifi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第7天/第1遍/01-点击图片跟随.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第7天/第1遍/02-图片跟随鼠标.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第7天/第1遍/03-计算鼠标在盒子中的位置.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第7天/第1遍/04-电商放大镜案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第7天/第1遍/05-拖动盒子.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第7天/第1遍/06-模拟滚动条.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第7天/第1遍/images/0001.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第7天/第1遍/images/001.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第7天/第1遍/images/img2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/02-WebAPI/第7天/第1遍/jquery1.1.1.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/03-JS高级/第2天/第1遍/01-面向对象拖拽盒子.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/03-JS高级/第2天/第1遍/02-实现部分内置函数方法.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/03-JS高级/第2天/第1遍/Drag.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/03-JS高级/第2天/第1遍/Drag.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/03-JS高级/第2天/第2遍/01-面向对象拖拽盒子.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/03-JS高级/第2天/第2遍/drag.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/03-JS高级/第2天/第2遍/drag.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/03-JS高级/第2天/第3遍/01-面向对象Tab栏.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/03-JS高级/第2天/第3遍/Tab.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/03-JS高级/第2天/第3遍/Tab.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/03-JS高级/第3天/第1遍/01-贪吃蛇案例.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/03-JS高级/第3天/第1遍/food.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/03-JS高级/第3天/第1遍/img/01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/03-JS高级/第3天/第2遍/food.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/03-JS高级/第3天/第2遍/game.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/03-JS高级/第3天/第2遍/snake.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/2017-8-6就业班/作业/03-JS高级/第3天/第2遍/贪吃蛇.html" afterPath="" />
+    </list>
+    <ignored path="MyCode.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="MyCode" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1378" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017-8-6-itcast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b6daa7de-4699-4cd3-baa7-bceaf8a563ea" name="Default" comment="" />
+      <created>1506256210910</created>
+      <option name="number" value="Default" />
+      <updated>1506256210910</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2496329" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+</project>

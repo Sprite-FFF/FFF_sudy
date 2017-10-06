@@ -1,0 +1,351 @@
+/* 圆点导航 */
+
+#fp-nav {
+  position: fixed;
+  z-index: 100;
+  margin-top: -32px;
+  top: 50%;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+#fp-nav.right {
+  right: 17px;
+}
+
+#fp-nav ul li {
+  display: block;
+  width: 14px;
+  height: 13px;
+  margin: 7px;
+  position: relative;
+}
+
+#fp-nav ul li a {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span {
+  height: 12px;
+  width: 12px;
+  margin: -6px 0 0 -6px;
+  border-radius: 100%;
+}
+
+#fp-nav ul li a span {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  height: 4px;
+  width: 4px;
+  border: 0;
+  background: #333;
+  left: 50%;
+  top: 50%;
+  margin: -2px 0 0 -2px;
+  transition: all 0.1s ease-in-out;
+}
+
+#fp-nav ul li:hover a span {
+  width: 10px;
+  height: 10px;
+  margin: -5px 0px 0px -5px;
+}
+
+
+/* 购物中心链接 */
+
+.shopping-center {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  z-index: 999;
+}
+
+
+/* 第一屏 */
+
+.qbh-title {
+  position: relative;
+  background-image: url("../image/qbh-title-bg.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.qbh-title .qbh-title-extra {
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.qbh-title .qbh-title-sofa {
+  position: absolute;
+  bottom: 338px;
+  left: 50%;
+  transform: translate(-260px);
+  animation: upsofa 1.5s linear infinite;
+}
+
+
+/* 沙发动画 */
+
+@keyframes upsofa {
+  0% {
+    bottom: 338px;
+  }
+  50% {
+    bottom: 378px;
+  }
+  100% {
+    bottom: 338px;
+  }
+}
+
+.qbh-title .qbh-title-name {
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  animation: upname 2s linear infinite;
+}
+
+/* 名字动画 */
+
+@keyframes upname {
+  0% {
+    top: 10%;
+  }
+  50% {
+    top: 15%;
+  }
+  100% {
+    top: 10%;
+  }
+}
+
+
+/* 第二屏 */
+
+.qbh-list {
+  position: relative;
+  background-image: url("../image/qbh-list-bg.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+/* 上方文字描述 */
+
+.qbh-list .qbh-list-worda,
+.qbh-list .qbh-list-wordb {
+  position: absolute;
+  bottom: 500px;
+  left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 50px;
+}
+
+.qbh-list .qbh-list-wordb {
+  opacity: 0;
+}
+
+
+/* search 部分 */
+
+.qbh-list .qbh-list-compurter {
+  width: 990px;
+  height: 500px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -495px;
+}
+
+.qbh-list .qbh-list-search {
+  display: none;
+  position: absolute;
+  bottom: 300px;
+  right: 0px;
+  /*384px*/
+  width: 222px;
+  height: 45px;
+  background-image: url("../image/qbh-list-search-box.png");
+  background-repeat: no-repeat;
+}
+
+.qbh-list .qbh-list-search-font {
+  position: absolute;
+  top: 3px;
+  right: 30px;
+  opacity: 0;
+}
+
+.qbh-list .qbh-list-search-finish {
+  position: absolute;
+  bottom: 300px;
+  left: 50%;
+  margin-left: -111px;
+  display: none;
+}
+
+/* 沙发列表 */
+
+.qbh-list .qbh-list-sofas {
+  display: none;
+  position: absolute;
+  bottom: 217px;
+  right: 270px;
+  height: 100px;
+}
+
+/* 掉下去的沙发 */
+
+.qbh-list .qbh-list-sofa-pic {
+  position: absolute;
+  bottom: 348px;
+  right: 496px;
+  width: 100px;
+  opacity: 0;
+  z-index: 15;
+}
+
+/* 第三屏 */
+
+.qbh-buy {
+  position: relative;
+}
+
+.qbh-buy .qbh-buy-main {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -350px;
+  width: 700px;
+  height: 500px;
+  background-image: url("../image/qbh-buy-main-bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.qbh-buy-main .qbh-buy-select {
+  position: absolute;
+  bottom: 0px;
+  right: 8px;
+  width: 300px;
+  height: 250px;
+}
+
+.qbh-buy-main .qbh-buy-choose-start,
+.qbh-buy-main .qbh-buy-choose-end {
+  position: absolute;
+}
+
+.qbh-buy-main .qbh-buy-add-cart-start,
+.qbh-buy-main .qbh-buy-add-cart-end {
+  position: absolute;
+  bottom: 10px;
+}
+
+.qbh-buy-choose-end,
+.qbh-buy-add-cart-end {
+  opacity: 0;
+}
+
+/* 掉下去的沙发 */
+
+.qbh-buy .qbh-buy-rotate-sofa {
+  position: absolute;
+  bottom: 168px;
+  right: 378px;
+  opacity: 0;
+  z-index: 9;
+}
+
+/* 第四屏 */
+
+.qbh-info {
+  position: relative;
+  background-image: url("../image/qbh-info-bg.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.qbh-info .qbh-info-cloud {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  animation: cloud 60s linear infinite;
+}
+
+
+/* 云的动画 */
+
+@keyframes cloud {
+  0% {
+    left: 50%;
+  }
+  50% {
+    left: -10%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+.qbh-info .qbh-info-worda,
+.qbh-info .qbh-info-wordb {
+  position: absolute;
+  bottom: 482px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.qbh-info .qbh-info-wordb {
+  opacity: 0;
+}
+
+.qbh-info .qbh-info-cart-box {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -204px;
+  width: 407px;
+  height: 346px;
+}
+
+.qbh-info-cart-box .qbh-info-cart {
+  position: absolute;
+  z-index: 10;
+}
+
+.qbh-info-cart-box .qbh-info-rotate-sofa {
+  display: none;
+  position: absolute;
+  bottom: 200px;
+  left: 160px;
+}
+
+.qbh-info .qbh-info-address-box {
+  display: none;
+  position: absolute;
+  bottom: 205px;
+  left: 50%;
+  margin-left: -142px;
+  width: 283px;
+  height: 270px;
+  background-image: url("../image/qbh-info-address-box.png");
+}
+
+.qbh-info-address {
+  position: absolute;
+  bottom: 164px;
+  left: 50%;
+  margin-left: -88px;
+  opacity: 0;
+}
