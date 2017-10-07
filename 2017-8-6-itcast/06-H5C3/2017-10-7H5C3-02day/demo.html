@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: orchid;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击</button>
+    <div class="box">
+
+    </div>
+    <script src="./jquery.min.js"></script>
+    <script>
+        $("button").on("click", function () {
+            $(".box").animate({
+                "left": 1000
+            }, 3000, function () {
+                $(".box").animate({
+                    "width":300
+                },2000); 
+            }).hide(600);
+        });
+    </script>
+</body>
+
+</html>
