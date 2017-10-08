@@ -1,0 +1,25 @@
+<div class="nav">
+        <div class="w980">
+            <div class="logo l"><a href="./index.php"></a></div>
+            <div class="menu l">
+                <ul>
+                    <?php foreach ($navs as $key => $value) {?>
+                    <li>
+                        <?php foreach ($value as $k => $val) {?>
+                            <?php if($k==0){ ?>
+                                <a href="./waterfall_1.php" class="toplist"><?php echo $val; ?></a>
+                            <?php }else{?>
+                                <a href="./waterfall_1.php"><?php echo $val; ?></a>
+                            <?php }?>
+                        <?php }?>
+                    </li>
+                    <?php }?>
+                </ul>
+            </div>
+            <div class="search r">
+                <form action="" method="">
+                    <input type="text" name="" value="" /><button type="submit"></button>
+                </form>
+            </div>
+        </div>
+    </div>

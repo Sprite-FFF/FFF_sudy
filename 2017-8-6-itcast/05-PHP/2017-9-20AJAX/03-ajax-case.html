@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>我们正在学习AJAX</h1>
+    <!-- 这里的内容会被刷新 -->
+    <p>我在这里念了一句诗</p>
+    <button id="btn">刷新</button>
+    <script>
+        var btn = document.getElementById("btn");
+        btn.addEventListener("click", function () {
+            var xhr = new XMLHttpRequest;
+            xhr.open("get","./example.php");
+            xhr.send();
+            xhr.addEventListener("readystatechange", function () {
+                if(xhr.readyState===4){
+                    document.querySelector("p").innerHTML = xhr.responseText;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

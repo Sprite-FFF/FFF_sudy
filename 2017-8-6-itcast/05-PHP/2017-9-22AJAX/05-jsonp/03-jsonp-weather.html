@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .search{
+            width: 400px;
+            height: 32px;
+            border: 2px solid orangered;
+            margin: 50px auto;
+        }
+        button{
+            float: right;
+            width: 80px;
+            height: 32px;
+            background-color: orangered;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            font:14px/32px "微软雅黑";
+            color:#fff;
+        }
+        input{
+            width:300px;
+            outline: none;
+            border:none;
+            line-height: 32px;
+            padding-left: 10px;
+        }
+        table{
+            width: 700px;
+            border: 1px solid #f0f0f0;
+            text-align: center;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        th,td{
+            border: 1px solid #f0f0f0;  
+            line-height: 35px;
+        }
+        td{
+            background-color: #ccc;
+        }
+        th{
+            color: #00ffff;
+            font-size: 14px;
+            font-weight: 400;
+            background-color: orchid;
+        }
+        img {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <input type="text" placeholder="请输入城市查询">
+        <button>查询</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>星期</th>
+                <th>白天</th>
+                <th>夜间</th>
+                <th>天气</th>
+                <th>风向</th>
+            </tr>
+        </thead>
+        <tbody id="weather">
+
+        </tbody>
+    </table>
+    <table>
+            <thead>
+                <tr>
+                    <th>标题</th>
+                    <th>指数</th>
+                    <th>建议</th>
+                </tr>
+            </thead>
+            <tbody id="prompt">
+                
+            </tbody>
+    </table>
+    <!-- 搭建模板 -->
+    <script type="text/template" id="tpl">
+        {{each weather val key}}
+        <tr>
+            <td><%= val.date %></td>
+            <td><img src="{{val.dayPictureUrl}}" alt=""></td>
+            <td><img src="{{val.nightPictureUrl}}" alt=""></td>
+            <td><%= val.weather %></td>
+            <td><%= val.wind %></td>
+        </tr>
+        {{/each}}
+    </script>
+    <script type="text/template" id="tpl1">
+        {{each prompt val key}}
+        <tr>
+            <td><%= val.title %></td>
+            <td><%= val.zs %></td>
+            <td><%= val.des %></td>
+        </tr>
+        {{/each}}
+    </script>
+</body>
+<script src="../jquery-1.12.4.js"></script>
+<script src="../template-web.js"></script>
+<script>
+    $("button").on("click",function(){
+        var city = $("input").val() || "北京";
+        $.ajax({
+            url:'http://api.map.baidu.com/telematics/v3/weather',
+            data:{
+                ak:'0A5bc3c4fb543c8f9bc54b77bc155724',
+                location:city,
+                output:"json"
+            },
+            dataType:"jsonp",
+            success:function(info){
+                // console.log(info);
+                // console.log(info.results);
+                // console.log(info.results[0]);
+                // console.log(info.results[0].index);
+                // console.log(info.results[0].weather_data);
+                var hl = template("tpl",{weather:info.results[0].weather_data});
+                var hl1 = template("tpl1",{prompt:info.results[0].index})
+                $("#weather").html(hl);
+                $("#prompt").html(hl1);
+            }
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度网盘</title>
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="./public/css/fonts.css">
+    <link rel="stylesheet" href="./public/assets/scrollbar/jquery.scrollbar.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 头部 -->
+        <!-- 提取头部公共部分 用include包含 -->
+        <!-- 路径：因为这个html文件包含在index.php下 -->
+        <!-- 执行环境其实时index.php的路径 -->
+        <?php include './views/header.html'; ?>
+        <!-- 主体 -->
+        <div class="body">
+            <!-- 侧边栏 -->
+            <!-- 提取公共侧边栏部分 -->
+            <?php include './views/aside.html';?>
+            <!-- 内容 -->
+            <div class="content">
+                <!-- 操作 -->
+                <div class="action">
+                    <a href="javascript:;" class="upload">
+                        <i class="icon icon-upload"></i>上传
+                    </a>
+                    <a href="javascript:;" class="mkdir">
+                        <i class="icon icon-newfolder"></i>新建文件夹
+                    </a>
+                    <a href="javascript:;">
+                        <i class="icon icon-download"></i>离线下载
+                    </a>
+                    <a href="javascript:;">
+                        <i class="icon icon-device"></i>我的设备
+                    </a>
+                </div>
+                <!-- 路径导航 -->
+                <div class="breadcrumb clearfix">
+                    <a href="javascript:;" class="back"> 返回上一级</a>
+                    <a href="javascript:;">全部文件夹</a>
+                    <span>教学视频</span>
+                </div>
+                <div class="directory">
+                    <div class="title">
+                        <div class="cols">
+                            <input type="checkbox">
+                            文件名
+                            <i class="icon icon-downtitle"></i>
+                        </div>
+                        <div class="cols">&nbsp;</div>
+                        <div class="cols">大小</div>
+                        <div class="cols">修改日期</div>
+                    </div>
+                    <div class="items">
+                        <?php foreach($dir_data as $key => $val){?>
+                        <div class="item">
+                            <div class="cols">
+                                <input type="checkbox">
+                                <span class="thumb folder"></span>
+                                <a href="index.php/?name=<?php echo $val['realpath']; ?>" class="name"><?php echo $val['name']; ?></a>
+                            </div>
+                            <div class="cols">
+                                <div class="extra">
+                                    <a href="javascript:;" class="icon icon-share"></a>
+                                    <a href="javascript:;" class="icon icon-download"></a>
+                                    <a href="javascript:;" class="icon icon-more"></a>
+                                </div>
+                            </div>
+                            <div class="cols"><?php echo $val['size'];?></div>
+                            <div class="cols">
+                                <?php echo $val['mtime'];?>
+                            </div>
+                        </div>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/assets/scrollbar/jquery.scrollbar.min.js"></script>
+    <script>
+        $('.items').scrollbar({
+            // showArrows: true
+        });
+    </script>
+</body>
+</html>

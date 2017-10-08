@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    </header>
+    <section>
+        <aside>
+            这里是侧边栏
+        </aside>
+        <div>
+            这里是正文内容
+        </div>
+    </section>
+    <footer>
+    </footer>
+
+    <script src="../jquery-1.12.4.js"></script>
+
+    <script>
+        // 可以实现类似文件包含的功能
+        // 通过ajax实现
+        $("header").load("./header.html");
+        $("footer").load("./footer.html");
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        table {
+            width: 500px;
+            margin: 100px auto;
+            text-align: center;
+            border: 1px solid #f0f0f0;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #f0f0f0;
+            line-height: 32px;
+        }
+
+        th {
+            background-color: orchid;
+            color: #00ffff;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        span {
+            color: orange;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击有惊喜</button>
+    <table>
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>属性</th>
+                <th>性别</th>
+                <th>技能</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <!-- 搭建模板 -->
+    <script type="text/template" id="tpl">
+        {{each list val key}}
+        <tr>
+            <td>{{key+1}}</td>
+            <td>{{val.name}}</td>
+            <td>{{val.attr}}</td>
+            <td>{{val.gender}}</td>
+            <td>{{val.skill}}</td>
+        </tr>
+        {{/each}}
+    </script>
+    <!-- 引入jQuery -->
+    <script src="./jquery-1.12.4.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./template-web.js"></script>
+    <script>
+        $(function () {
+            $("button").on("click", function () {
+                $.ajax({
+                    url: "./01-demo.php",
+                    // 如果不写默认为get
+                    type: "get",
+                    success: function (info) {
+                        // 响应的数据info
+                        // jQuery默认不会解析
+                        // 除非响应头中设置了
+                        // Content-Type：application/json
+                        console.log(info);
+                        var html = template("tpl",{list:info});
+                        $("tbody").html(html);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

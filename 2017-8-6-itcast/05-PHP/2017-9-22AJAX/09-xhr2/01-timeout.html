@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XMLHttpRequest2.0</title>
+</head>
+<body>
+    <button>点击</button>
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+        // XMLHttpRequest2.0在技术层面做了很大提升
+        // 1、可以设置超时、并对超时做出逻辑控制
+        var btn = document.querySelector("button");
+        btn.onclick = function(){
+            var xhr = new XMLHttpRequest;
+            xhr.open("get","./01-timeout.php");
+            xhr.send();
+            xhr.timeout = 2000;
+            // 请求超时会触发一个事件叫timeout
+            xhr.ontimeout = function(){
+                alert("请求超时");
+            }
+        }
+    </script>
+</body>
+</html>

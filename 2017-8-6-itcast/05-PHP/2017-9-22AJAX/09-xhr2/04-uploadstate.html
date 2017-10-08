@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #load {
+            width: 400px;
+            height: 20px;
+            background-color: #ccc;
+            margin-top: 30px;
+        }
+
+        #loaded {
+            width: 0%;
+            height: 100%;
+            background-color: greenyellow;
+        }
+    </style>
+    <title>XMLHttpRequest2.0</title>
+</head>
+
+<body>
+    <input type="file" name="file" id="fl">
+    <button>点击</button>
+    <div id="load">
+        <div id="loaded"></div>
+    </div>
+    <span></span>
+
+    <script>
+        // XMLHttpRequest2.0
+        // 新增了对上传进度的支持
+        var file = document.querySelector('input');
+        var btn = document.querySelector('button');
+        var loaded = document.querySelector("#loaded");
+        var span = document.querySelector("span");
+
+        btn.onclick = function () {
+            var data = new FormData();
+            data.append('file',file.files[0]);
+
+            var xhr = new XMLHttpRequest;
+            xhr.open("post","./04-uploadstate.php");
+            // 通过事件来监听文件上传进度
+            xhr.upload.onprogress = function(event){
+                // event.total表示文件大小
+                // event.loaded 表示已上传的大小
+                var percent = event.loaded/event.total *100 + "%";
+                loaded.style.width = percent;
+                span.innerText = '已上传:'+ percent;
+            }
+            xhr.send(data);
+            
+        }
+    </script>
+</body>
+
+</html>

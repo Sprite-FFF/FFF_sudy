@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        // XMLHttpRequest 是一个独立的 JavaScript的内置对象
+        // 用于向服务器发起请求   既可以使用异步方式也可以使用同步方式
+        // 当以异步方式发请求时   才成为了AJAX的一部分    如果说以同步方式
+        // 使用XMLHttpRequest、则不能称为AJAX了
+         var xhr = new XMLHttpRequest;
+        // 通过open方法的第三个方式可以设定
+        // 是以同步方式还是异步方式发起请求
+        // 第三个参数是boolean类型  默认为true 以异步方式
+         xhr.open("get","./example.php");
+        //  请求头多数情况下可以不设置   也有一些情况是必须设置
+        // 不设置的情况下、浏览器会自动进行设置
+
+        xhr.send();
+        // 当以异步方式处理时、需要事件监听
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState === 4){
+                document.write(xhr.responseText);
+            }
+        }
+
+        // 如果以同步方式处理    则不需要在开启事件监听了
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

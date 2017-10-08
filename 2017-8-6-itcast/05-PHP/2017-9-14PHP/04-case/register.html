@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        ul{
+            list-style: none;
+            width: 400px;
+            margin:100px auto;
+        }
+        li{
+            height: 35px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <form action="./register.php" method="post">
+       <ul>
+           <li>
+               用户名：<input type="text" name="user">
+           </li>
+           <li>
+               密　码：<input type="password" name="pwd">
+           </li>
+           <li>
+               性　别：
+               <input type="radio" name="gender" value="男">女
+               <input type="radio" name="gender" value="女">男
+           </li>
+           <li>
+               <input type="submit" value="注册">
+           </li>
+           <li></li>
+       </ul>
+    </form>
+</body>
+</html>

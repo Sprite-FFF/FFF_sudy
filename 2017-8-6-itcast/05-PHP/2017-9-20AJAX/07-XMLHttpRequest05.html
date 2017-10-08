@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var xhr = new XMLHttpRequest;
+        xhr.open("get", "./example.php");
+        xhr.send();
+        xhr.addEventListener("readystatechange", function () {
+            // 通过 xhr.status 可以获取服务器响应的状态码  如200    403     404等
+            console.log(xhr.status);
+            // 通过xhr.statusText 可以获取服务器相应信息     OK  NotFound等
+            console.log(xhr.statusText);
+            // 
+            if (xhr.readyState === 4 && xhr.status == 200) {
+                document.write(xhr.responseText);
+                // 通过xhr.getResponseHeader();   可以获取某个响应头
+                console.log(xhr.getResponseHeader("X-Powered-By"));
+                console.log(xhr.getResponseHeader("Server"));
+
+                // 通过xhr.getAllResponseHeaders()    获得所有响应头
+                console.log(xhr.getAllResponseHeaders());
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

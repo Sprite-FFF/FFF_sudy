@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模板引擎原理2</title>
+</head>
+<body>
+    <button id="btn">点我</button>
+    <div id="content">
+        <!-- <p>我叫<span></span>、今年<span></span>岁了、可爱的小<span></span>生、我还会唱歌</p> -->
+    </div>
+    <script>
+        var btn = document.getElementById("btn");
+        var content = document.getElementById("content");
+        btn.onclick = function(){
+            var xhr = new XMLHttpRequest;
+            xhr.open("get","./data.php");
+            xhr.send();
+            xhr.addEventListener("readystatechange",function(){
+                if(this.readyState == 4&&this.status == 200){
+                    var data = JSON.parse(this.responseText);
+                    var str = ' <p>我叫<span><% name %></span>、今年<span><% age %></span>岁了、可爱的小<span><% gender %></span>生、我还会唱歌</p>';
+                    var reg = /<%\s+([a-z0-9]+)\s+%>/;
+                    var result;
+                    // 用while循环去替换字符串里标记
+                    while(result = reg.exec(str)){
+                        str = str.replace(result[0],data[result[1]]);
+                    }
+                    content.innerHTML = str;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

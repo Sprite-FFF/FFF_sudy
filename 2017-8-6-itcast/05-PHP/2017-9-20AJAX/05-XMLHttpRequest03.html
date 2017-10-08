@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="txt"></p>
+
+    <script>
+        // 使用 XMLHttpRequest 可以发起请求、并处理响应结果
+        // 请求时可以携带一些参数
+        // 携带参数根据请求方式不同、传递方式也有一些差异
+        // 以get方式发起请求时、携带参数位于请求地址后面
+        // 格式为  并且请求主体为空
+        // 如果以post方式发起请求时、携带参数需要通过请求主体来发送
+        // 格式默认为
+
+        var xhr = new XMLHttpRequest;
+        xhr.open("get", "./get.php?name=FFF&age=18");
+        xhr.send();
+        xhr.addEventListener("readystatechange", function () {
+            if (xhr.readyState === 4) {
+                document.querySelector("p").innerHTML = xhr.responseText;
+            }
+        });
+    </script>
+</body>
+
+</html>

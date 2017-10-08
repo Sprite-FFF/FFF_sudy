@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XMLHttpRequest2.0</title>
+</head>
+<body>
+    <input type="file" name="file" id="fl">
+    <button>点击</button>
+    <script>
+        // 二进制数据支持
+
+        var btn = document.querySelector("button");
+        var file = document.getElementById("fl");
+        btn.addEventListener("click",function(){
+            var xhr = new XMLHttpRequest;
+            // 通过files可以获得文件信息
+            // 将文件信息添加给FormData对象
+            // 可以实现文件的上传
+            // console.log(file.files[0]);
+            // 通过FormData 内置对象可以将上传文件转换成二进制数据
+            // 然后将二进制数据传给XMLHttpRequest2.0
+            // 实现文件上传
+            xhr.open("post","./03-upload.php");
+            var data = new FormData();
+            data.append("file",file.files[0]);
+            xhr.send(data);
+            xhr.addEventListener("readystatechange",function(){
+                if(this.readyState==4&&this.status==200){
+                    console.log(this.responseText);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

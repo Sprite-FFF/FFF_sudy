@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var xhr = new XMLHttpRequest;
+        xhr.open("post","./post.php");
+        // 如果当以post方式向服务器发起请求时
+        // 并且携带了参数、必须要设置请求头 Content-Type
+        //
+        // xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        // // send 发起请求并携带参数
+        // xhr.send("name=绘里&age=18");
+
+        // post  请求参数为json格式时需要设置请求头为
+        xhr.setRequestHeader("Content-type","application/json");
+        xhr.send('{"name"="绘里","age"=18}');
+        xhr.addEventListener("readystatechange",function(){
+            if(xhr.readyState === 4){
+                // document.write(JSON.parse(xhr.responseText));
+                document.write(xhr.responseText);
+            }
+        });
+    </script>
+</body>
+</html>

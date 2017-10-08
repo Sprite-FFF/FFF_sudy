@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        function cors(info){
+            console.log(info+"是跨域服务端传过来的参数");
+            console.log("我被执行了");
+            console.log(info);
+        }
+    </script>
+    <!-- 要放在函数定义的下面 -->
+     <script src="http://www.test.com/JSONP.php?fn=cors"></script>
+</body>
+</html>

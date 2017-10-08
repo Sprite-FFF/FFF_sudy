@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        table {
+            width: 500px;
+            margin: 100px auto;
+            text-align: center;
+            border: 1px solid #f0f0f0;
+            border-collapse: collapse;
+        }
+        th,td {
+            border: 1px solid #f0f0f0;
+            line-height: 32px;
+        }
+        th{
+            background-color:orchid;
+            color: #00ffff;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        span {
+            color: orange;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击有惊喜</button>
+    <table>
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>属性</th>
+                <th>性别</th>
+                <th>技能</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script type="text/template" id="tpl">
+        <!-- 原生语法 -->
+        <% for(var i = 0;i<list.length;i++) { %>
+        <tr>
+            <td>
+                <%= i+1 %>
+            </td>
+            <td>
+                <%= list[i].name %>
+            </td>
+            <td>
+                <!-- 可以进行if判断 -->
+                <% if(list[i].attr=="SSR") { %>
+                 <span><%= list[i].attr %></span>   
+                <% } else {%>
+                    <%= list[i].attr %>
+                <% } %>
+            </td>
+            <td>
+                <%= list[i].gender %>
+            </td>
+            <td>
+                <%= list[i].skill %>
+            </td>
+        </tr>
+        <% } %>
+    </script>
+    <script src="./template-web.js"></script>
+    <script>
+        var tb = document.querySelector("tbody");
+        var btn = document.querySelector("button");
+        btn.addEventListener("click",function(){
+            var xhr = new XMLHttpRequest;
+            xhr.open("get","./dmeo.php");
+            xhr.send();
+            xhr.addEventListener("readystatechange",function(){
+                if(this.readyState==4&&this.status==200){
+                    var data = JSON.parse(this.responseText);
+                    // 调用模板引擎
+                    // 这里要注意、后台传过来的json数据转换完成后是一个对象数组
+                    // template()   方法第二个参数必须接收一个对象
+                    // 所以必须要转换为一个对象
+                    console.log(template("tpl",{list:data}));
+                    tb.innerHTML = template("tpl",{list:data});
+
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>请求</button>
+
+    <!-- <script>
+        var xhr = new XMLHttpRequest;
+        xhr.open('get','./02-demo.php');
+        xhr.send();
+        xhr.addEventListener("readystatechange",function(){
+            if(xhr.readyState === 4&&xhr.status){
+                // 接收到一个特定格式的字符串
+                // Javascript提供了专门的方法可以将一个json格式的字符串
+                // 转化为一个js的数据或者对象
+                console.log(xhr.responseText);
+                // JSON javascript中的内置对象    专门处理json格式字符串
+                console.log(JSON.parse(xhr.responseText));
+            }
+        })
+    </script> -->
+
+    <!-- 服务器端处理json数据 -->
+    <script>
+        var btn = document.querySelector("button");
+        var obj = {
+            name: "花阳",
+            age: 16,
+            gender: "女"
+        }
+        btn.addEventListener("click", function () {
+            var xhr = new XMLHttpRequest;
+            xhr.open("get", "./02-demo.php?test=" + JSON.stringify(obj));
+            xhr.send();
+            xhr.addEventListener("readystatechange", function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.write(xhr.responseText);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

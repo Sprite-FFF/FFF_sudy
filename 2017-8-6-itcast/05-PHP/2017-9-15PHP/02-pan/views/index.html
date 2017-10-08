@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度网盘</title>
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="./public/css/fonts.css">
+    <link rel="stylesheet" href="./public/assets/scrollbar/jquery.scrollbar.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 头部 -->
+        <?php include './views/header.html';?>
+        <!-- 主体 -->
+        <div class="body">
+            <!-- 侧边栏 -->
+           <?php include './views/aside.html';?>
+            <!-- 内容 -->
+            <div class="content">
+                <!-- 操作 -->
+                <div class="action">
+                    <a href="javascript:;" class="upload">
+                        <i class="icon icon-upload"></i>上传
+                    </a>
+                    <a href="javascript:;" class="mkdir">
+                        <i class="icon icon-newfolder"></i>新建文件夹
+                    </a>
+                    <a href="javascript:;">
+                        <i class="icon icon-download"></i>离线下载
+                    </a>
+                    <a href="javascript:;">
+                        <i class="icon icon-device"></i>我的设备
+                    </a>
+                </div>
+                <!-- 路径导航 -->
+                <div class="breadcrumb clearfix">
+                    <!-- 返回上一级 -->
+                    <!-- javascript:history.back(); -->
+                    <!-- 返回上一级  用dirname获取当前的上一级文件夹就好 -->
+                    <a href="./index.php?name=<?php echo dirname($dir); ?>" class="back"> 返回上一级</a>
+                    <!-- 面包屑导航遍历 -->
+                    <?php foreach($breadcrumb as $key => $val){?>
+                    <a href="./index.php?name=<?php echo $val; ?>"><?php echo basename($val); ?></a>
+                    <?php } ?>
+                    <!-- 显示文件夹名  -->
+                    <!-- 用basename方法获取整个路径的最后一集目录就好 -->
+                    <span><?php echo basename($dir);?></span>
+                </div>
+                <div class="directory">
+                    <div class="title">
+                        <div class="cols">
+                            <input type="checkbox">
+                            文件名
+                            <i class="icon icon-downtitle"></i>
+                        </div>
+                        <div class="cols">&nbsp;</div>
+                        <div class="cols">大小</div>
+                        <div class="cols">修改日期</div>
+                    </div>
+                    <div class="items">
+                        <?php foreach($items as $key => $val){?>
+                        <div class="item">
+                            <div class="cols">
+                                <input type="checkbox">
+                                <!-- 根据文件后缀修改类名显示响应的图标 -->
+                                <span class="thumb <?php echo $val['type']?>"></span>
+                                <!-- 通过标识符flag去判断 -->
+                                <!-- 如果是文件就修改地址不在请求 -->
+                                <!-- 如果是文件夹点击就可以继续请求 -->
+                                <?php if($val['flag']){ ?>
+                                <a href="./index.php?name=<?php echo $val['realpath']; ?>" class="name"><?php echo $val['name']; ?></a>
+                                <?php } else{ ?>
+                                    <a href="javascript:;" class="name"><?php echo $val['name']; ?></a>
+                                <?php } ?>
+                            </div>
+                            <div class="cols">
+                                <div class="extra">
+                                    <a href="javascript:;" class="icon icon-share"></a>
+                                    <a href="javascript:;" class="icon icon-download"></a>
+                                    <a href="javascript:;" class="icon icon-more"></a>
+                                </div>
+                            </div>
+                            <!-- 文件大小 -->
+                            <div class="cols"><?php echo $val['size']; ?></div>
+                            <!-- 文件修改时间 -->
+                            <div class="cols">
+                                <?php echo $val['mtime']; ?>
+                            </div>
+                        </div>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/assets/scrollbar/jquery.scrollbar.min.js"></script>
+    <script>
+        $('.items').scrollbar({
+            // showArrows: true
+        });
+    </script>
+</body>
+</html>

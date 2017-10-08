@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">点击有惊喜</button>
+    <div id="content"></div>
+    <script type="text/template" id="tpl">
+        <!-- template_web.js的模板标记是<%= %> -->
+        <p>大家好我叫<span><%= name %></span>、今年<span><%= age %></span>岁了、是个可爱的小<span><%= gender %></span>生哦</p>
+    </script>
+    <!-- 引入template-web.js后 会提供一个全局的函数 template-->
+    <!-- 函数需要两个参数 -->
+    <!-- 第一个参数：对应模板的id -->
+    <!-- 第二个参数是一个对象格式的数据 -->
+    <script src="./template-web.js"></script>
+    <script>
+        var btn = document.getElementById("btn");
+        var content = document.getElementById("content");
+
+        btn.addEventListener("click", function () {
+            var xhr = new XMLHttpRequest;
+            xhr.open("get", "./data.php");
+            xhr.send();
+            xhr.addEventListener("readystatechange", function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(this.responseText);
+                    // 调用模板引擎
+                    content.innerHTML = template("tpl", data);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

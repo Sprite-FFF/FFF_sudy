@@ -1,0 +1,76 @@
+<div class="aside">
+    <ul>
+        <li class="active">
+            <a href="javascript:;">
+                <i class="icon icon-disk"></i>
+                全部文件
+            </a>
+        </li>
+        <li>
+            <a href="./type.php?type=pic">
+                <i></i>
+                图片
+            </a>
+        </li>
+        <li>
+            <a href="./type.php?type=doc">
+                <i></i>
+                文档
+            </a>
+        </li>
+        <li>
+            <a href="./type.php?type=video">
+                <i></i>
+                视频
+            </a>
+        </li>
+        <li>
+            <a href="./type.php?type=bt">
+                <i></i>
+                种子
+            </a>
+        </li>
+        <li>
+            <a href="./type.php?type=audio">
+                <i></i>
+                音乐
+            </a>
+        </li>
+        <li>
+            <a href="./type.php?type=extra">
+                <i></i>
+                其它
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <i class="icon icon-my-share"></i>
+                我的分享
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <i class="icon icon-delete"></i>
+                回收站
+            </a>
+        </li>
+    </ul>
+    <div class="footer">
+        <!-- 磁盘状态 -->
+        <div class="state">
+            <div class="line">
+                <!-- 磁盘信息 绿色进度条 -->
+                <span class="left" style = "width:<?php echo $diskInfo['percent']; ?>"></span>
+            </div>
+            <!-- 磁盘信息 磁盘占用情况和磁盘容量 -->
+            <span><?php echo $diskInfo['used'];?>G/<?php echo $diskInfo['total']?>G</span>
+        </div>
+        <!-- client -->
+        <div class="client">
+            <a href="javascript:;" class="icon icon-yunguanjia"></a>
+            <a href="javascript:;" class="icon icon-android"></a>
+            <a href="javascript:;" class="icon icon-apple"></a>
+            <a href="javascript:;" class="icon icon-more"></a>
+        </div>
+    </div>
+</div>

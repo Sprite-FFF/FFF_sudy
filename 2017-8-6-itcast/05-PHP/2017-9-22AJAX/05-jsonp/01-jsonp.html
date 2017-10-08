@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button>click</button>
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+        // 在jquery中使用$.ajax()封装了XMLHttpRequest
+        // 同时在$.ajax()中也封装了JSONP
+
+        // 通过src发送一个跨域请求、同时将事先定义好的函数名字发送到服务端、
+        // 服务端接收到这个函数名字、字符串拼接执行这个函数、
+        // 通过参数将数据返回给前端
+
+        //
+        $("button").on("click",function(){
+            $.ajax({
+                url:"http://test.com/jquery-jsonp.php",
+                // type:'post',不可用
+                dataType:'jsonp',
+                // 传递的函数名 默认为jQuery23748932749随机数字
+                // jsonpCallback:'fn',
+                // 传递参数时的key    默认值为callback
+                // jsonp:''
+                success:function(info){
+                    console.log(info);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

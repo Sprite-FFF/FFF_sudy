@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <form action="./checkuser.php" method="get"> -->
+        <ul>
+            <li>
+                用户名：<input id="user" name="userName" type="text"><span class="success"></span>
+            </li>
+            <li>
+                密　码：<input type="password">
+            </li>
+            <li>
+                <input type="submit" value="提交">
+            </li>
+        </ul>
+    <!-- </form> -->
+
+        
+    <script>
+        var user = document.querySelector("#user");
+        user.onblur = function(){
+            var xhr = new XMLHttpRequest;
+            xhr.open("get","./checkuser.php?name="+user.value);
+            xhr.send();
+            xhr.addEventListener("readystatechange",function(){
+                if(xhr.readyState === 4){
+                    document.querySelector("span").innerHTML=xhr.responseText;
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

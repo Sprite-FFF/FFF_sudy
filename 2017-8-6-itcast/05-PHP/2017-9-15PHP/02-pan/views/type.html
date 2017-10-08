@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度网盘</title>
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="./public/css/fonts.css">
+    <link rel="stylesheet" href="./public/assets/scrollbar/jquery.scrollbar.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 头部 -->
+        <?php include './views/header.html' ?>
+        <!-- 主体 -->
+        <div class="body">
+            <!-- 侧边栏 -->
+            <?php include './views/aside.html' ?>
+            <!-- 内容 -->
+            <div class="content">
+                <!-- 操作 -->
+                <div class="action">
+                    <a href="javascript:;" class="upload">
+                        <i class="icon icon-upload"></i>上传
+                    </a>
+                    <a href="javascript:;" class="mkdir">
+                        <i class="icon icon-newfolder"></i>新建文件夹
+                    </a>
+                    <a href="javascript:;">
+                        <i class="icon icon-download"></i>离线下载
+                    </a>
+                    <a href="javascript:;">
+                        <i class="icon icon-device"></i>我的设备
+                    </a>
+                </div>
+                <!-- 路径导航 -->
+                <div class="breadcrumb clearfix">
+                    <a href="javascript:;" class="back"> 返回上一级</a>
+                    <a href="javascript:;">全部文件夹</a>
+                    <span>教学视频</span>
+                </div>
+                <!-- 类型显示 -->
+                <div class="types">
+                    <div class="title">
+                        <a href="javascript:;">2016-08-02</a>
+                        <span><?php echo count($data);?>张</span>
+                    </div>
+                    <div class="thumbs clearfix">
+
+                        <?php foreach($data as $key => $val){?>
+                        <a href="javascript:;">
+                            <img src="./img.php?path=<?php echo $val['realpath']; ?>" alt="">
+                        </a>
+                        <?php }?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/assets/scrollbar/jquery.scrollbar.min.js"></script>
+    <script>
+        $('.items').scrollbar({
+            showArrows: true
+        });
+    </script>
+</body>
+</html>

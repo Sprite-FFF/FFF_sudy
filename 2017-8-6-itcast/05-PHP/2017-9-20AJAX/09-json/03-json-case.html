@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        table {
+            width: 500px;
+            margin: 100px auto;
+            border: 1px solid #aaa;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #f0f0f0;
+            height: 32px;
+        }
+
+        th {
+            background-color: orchid;
+            font: 16px/32px "微软雅黑";
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击获取</button>
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>歌曲</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+    <script>
+        var tb = document.querySelector("tbody");
+        var btn = document.querySelector("button");
+
+        btn.addEventListener("click", function () {
+            var xhr = new XMLHttpRequest;
+            xhr.open("get", "./03-json-case.php");
+            xhr.send();
+            xhr.addEventListener("readystatechange", function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var list = JSON.parse(xhr.responseText);
+                    tb.innerHTML = '';
+                    for (var i = 0; i < list.length; i++) {
+                        tb.innerHTML = tb.innerHTML += "<tr>" +
+                            "<td>" + list[i].name + "</td>" +
+                            "<td>" + list[i].gender + "</td>" +
+                            "<td>" + list[i].age + "</td>" +
+                            "<td>" + list[i].music + "</td>" +
+                            "</tr>";
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

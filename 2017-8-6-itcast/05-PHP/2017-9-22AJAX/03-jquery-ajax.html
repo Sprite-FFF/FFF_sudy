@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery封装的ajax</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <script src="./jquery-1.12.4.js"></script>
+    <script>
+        // 核心方法
+        // $.ajax()
+
+
+        $("button").on("click", function () {
+
+            // 快捷方法 
+            // 以get方式发起一个请求 相当于$.ajax()的type设置为get
+            // 至少一个至多四个参数
+
+            // $.get({
+            //     url: "./demo.php",
+            //     data:{"name":"拉姆","age":16},
+            //     timeout:3000,
+            //     success: function (info) {
+            //         console.log(info);
+            //     },
+            //     error:function(err){
+            //         console.log(err);
+            //     }
+            // });
+
+                $.get("./demo.php",{"name":"拉姆","age":16},function(info){
+                    console.log(info);
+                },function(err){
+                    console.log(err);
+                });
+
+            // 相当于$.ajax() 的请求方式为 post
+                // $.post({
+                //     url:"./demo.php",
+                //     success:function(info){
+                //         console.log(info);
+                //     }
+                // });
+
+            // 要求服务器返回的数据为json格式
+            // $.getJSON();
+
+            // 约束服务器返回数据格式为JavaScript
+            // $.getScript();
+
+        });
+    </script>
+</body>
+
+</html>

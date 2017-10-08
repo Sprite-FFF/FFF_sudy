@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery中的AJAX</title>
+</head>
+<body>
+    <button>点击</button>
+    <script src="./jquery-1.12.4.js"></script>
+    <script>
+        // 在jQuery中也对XMLHttpRequest进行了封装
+        
+        $("button").on("click",function(){
+            $.ajax({
+                url:'./demo.php',
+                type:'get',
+                // 设置超时
+                // 如果超时未得到响应、会取消这次请求
+                timeout:3000,
+                // 用来约束服务端返回的数据格式
+                dataType:'json',
+                // 发送请求之前调用回调函数
+                beforeSend:function(){
+                    // 一般用于数据校验
+                    // 回调函数如果返回值为false
+                    // 那么整个请求都不会再执行
+                console.log("发送请求之前就要执行我");
+                },
+                // 请求发送成功调用回调函数
+                success:function(info){
+                    console.log(info);
+                },
+                // 执行失败后执行的回调函数
+                // 失败是逻辑执行的失败
+                error:function(){
+                    console.log('对不起失败了');
+                },
+                // 执行请求完成后执行的回调函数
+                // 不管成功失败都会执行
+                complete:function(){
+                    console.log('最后执行我');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

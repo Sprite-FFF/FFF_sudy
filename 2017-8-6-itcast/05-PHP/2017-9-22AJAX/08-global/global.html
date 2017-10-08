@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuer Ajax 全局事件</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #F7F7F7;
+		}
+
+		table {
+			width: 900px;
+			border: 1px solid #CCC;
+			border-collapse:collapse;
+			margin: 50px auto;
+		}
+
+		caption {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+
+		td, th {
+			height: 40px;
+			text-align: center;
+			border: 1px solid #CCC;
+		}
+
+		button {
+			display: block;
+			margin: 10px auto;
+		}
+
+		.loading {
+			display: none;
+		}
+
+	</style>
+</head>
+<body>
+	<table>
+		<caption>jQuery Ajax 全局事件</caption>
+		<tr>
+			<th>操作</th>
+			<th>ajaxStart</th>
+			<th>ajaxSend</th>
+			<th>ajaxSuccess</th>
+			<th>ajaxError</th>
+			<th>ajaxComplete</th>
+			<th>ajaxStop</th>
+			<th>Loading状态</th>
+		</tr>
+		<tr>
+			<td>
+				<button class="btn1">点此获取</button>
+				<button class="btn2">点此获取</button>
+			</td>
+			<td><span class="start">被执行了...</span></td>
+			<td><span class="send">被执行了...</span></td>
+			<td><span class="success">被执行了...</span></td>
+			<td><span class="error">被执行了...</span></td>
+			<td><span class="complete">被执行了...</span></td>
+			<td><span class="stop">被执行了...</span></td>
+			<td><img class="loading" src="./images/loading.gif" alt=""></td>
+		</tr>
+	</table>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		// ajax全局事件
+		// 
+
+		$(".btn1").on("click",function(){
+			$.ajax({
+				url:"./demo1.php",
+				type:"get"
+			});
+		});
+
+		$(".btn2").on("click",function(){
+			$.ajax({
+				url:"./demo2.php",
+				type:"get"
+			});
+		});
+
+		// jQuery将一次请求分为6个阶段
+		// 并且可以对每个阶段进行逻辑控制
+		// 通过document元素调用某些事件
+		// 请求经历到了某个阶段、就执行某个阶段的回调函数
+
+		$(document).ajaxStart(function(){
+			console.log("准备发送请求了");
+		});
+
+		$(document).ajaxSend(function(){
+			console.log("发送请求了");
+		});
+
+		$(document).ajaxSuccess(function(){
+			console.log("请求成功了");
+		});
+
+		$(document).ajaxError(function(){
+			console.log("请求发生了错误");
+		});
+
+		// 所有请求都会经历完成
+		$(document).ajaxComplete(function(){
+			console.log("请求完成后");
+		});
+
+		// 全部请求结束后才执行
+		$(document).ajaxStop(function(){
+			console.log("请求结束了");
+		});
+	</script>
+</body>
+</html>

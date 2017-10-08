@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模板引擎原理</title>
+</head>
+<body>
+    <button id="btn">点我</button>
+    <div id="content">
+        <!-- <p>我叫<span></span>、今年<span></span>岁了、可爱的小<span></span>生、我还会唱歌</p> -->
+    </div>
+    <script>
+        var btn = document.getElementById("btn");
+        var content = document.getElementById("content");
+        btn.onclick = function(){
+            var xhr = new XMLHttpRequest;
+            xhr.open("get","./data.php");
+            xhr.send();
+            xhr.addEventListener("readystatechange",function(){
+                if(this.status === 200&&this.readyState===4){
+                    // document.write(this.responseText);
+                    var data = JSON.parse(this.responseText);
+                    var str = ' <p>我叫<span><% name %></span>、今年<span><% age %></span>岁了、可爱的小<span><% gender %></span>生、我还会唱歌</p>';                    
+                    // 通过正则来实现、其实就是字符串替换
+                    var reg = /<%\s+([a-z0-9]+)\s+%>/;
+
+                    var result = reg.exec(str);
+                    // console.log(result);
+                    // 使用正则方法 exec() 匹配到结果后、返回值为一个数组
+                    // 匹配不到返回null
+                    // 数组第一个单元为 匹配结果
+                    // 第二个 index (在何处匹配到的)
+                    // 第三个 input 为原匹配内容
+
+                    // 如果正则表达式中使用'()'匹配单元
+                    // 会将匹配结果拆分成若干部分
+
+                    // 第一次替换
+                    // result[0]:<% name %>
+                    // result[1]:name
+                    str = str.replace(result[0],data[result[1]]);
+                    // console.log(str);
+                    result = reg.exec(str);
+
+                    // 第二次替换
+                    // result[0]:<% age %>
+                    // result[1]:age
+                    str = str.replace(result[0],data[result[1]]);
+                    // console.log(str);
+
+                    // 第三次替换
+                    // result[0]:<% gender %>
+                    // result[1]:gender
+                    result = reg.exec(str);
+                    str = str.replace(result[0],data[result[1]]);
+                    console.log(str);
+                    content.innerHTML = str;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // XMLHttpRequest 属于JavaScript中的一个内置对象
+        // 其功能是向服务器发起一个请求，并能处理服务器做出的响应
+        // xhr
+
+        // 使用XMLHttpRequest 发起请求和处理响应按以下步骤
+
+        // 1、new 实例化一个xhr对象
+        var xhr = new XMLHttpRequest();
+        // 2、实例对象包含了若干方法和事件、通过这些方法和事件
+        // 实现与服务器通信
+        // ① open()方法  打开一个链接
+        // 至少需要两个参数 可以有第3个参数
+        // 第一个参数：请求方式
+        // 第二个参数：请求地址
+        xhr.open("get",'./example.php');
+        // ② setRequestHeader() 设置请求头部信息
+        // 需要两个参数
+        // 第一个参数：请求头的   key
+        // 第二个参数：请求头的   value
+        // 请求头信息    可以连续设置多个
+        xhr.setRequestHeader("Content-Type","text/html");
+        xhr.setRequestHeader("Content-Length","6");
+
+        // send()f方法    将请求发出去
+        // 其中send方法可以传参也可以不传参
+        xhr.send();
+
+        // 3、需要处理服务端做出的响应
+        // 可以设想请求发出去    响应结果回到浏览器   必然耗费一定时间
+        // 如果说请求响应没有完成、后面又有其他功能逻辑需要执行
+        // 则必定会阻塞后面代码逻辑执行
+        // 为了更高效率的执行逻辑、可以通过一个事件来对响应结果（状态）
+        // 进行事件监听、实现以异步的方式对响应结果进行处理
+        // XMLHttpRequest 将请求和响应整个过程分为了五个步骤
+
+        // 状态0  UNSENT                  open尚未调用
+        // 状态1  OPENED                  open已经调用
+        // 状态2  HEADERS_RECEIEVED       接收到响应头信息
+        // 状态3  LOADING                 正在接收响应相应数据(响应主体)
+        // 状态4  DONE                    响应完成
+        xhr.addEventListener("readystatechange",function(){
+            if(xhr.readyState === 4) {
+                // 响应完成、处理数据更有价值
+                // 通过xhr.responseText属性获取响应
+                var txt = xhr.responseText;
+                document.write(txt);
+            }
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

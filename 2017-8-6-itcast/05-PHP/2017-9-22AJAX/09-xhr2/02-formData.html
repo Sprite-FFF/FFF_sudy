@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XMLHttpRequest2.0</title>
+</head>
+<body>
+    <form method="post">
+        <ul>
+            <li>
+                用户：<input type="text" name="user">
+            </li>
+            <li>
+                密码：<input type="text" name="pwd">
+            </li>
+            <li>
+                <button type="submit">点击</button>
+            </li>
+        </ul>
+    </form>
+
+   <script>
+        var form = document.querySelector('form');
+        form.onsubmit = function(event){
+            var xhr = new XMLHttpRequest;
+            xhr.open('post','./02.formData.php');
+            //   XMLHttpRequest1.0时
+            // 传统方式需要通过dom操作获取表单数据
+            // 但是新的XMLHttpRequest2.0可以支持使用FormData获取表单数据
+            // FormData是H5新增的一个内置对象
+            // 通过new一个FormData  传递一个表单作为参数
+            // 注意：会自动忽略没有name属性的表单
+
+            var data = new FormData(this);
+            // FormData对象有一个append方法
+            // 通过append方法、可以追加额外数据
+            data.append('hobby',"睡觉");
+            xhr.send(data);
+            xhr.addEventListener("readystatechange",function(){
+                if(this.readyState==4&&this.status==200){
+                    var info =JSON.parse(this.responseText);
+                    console.log(info);
+                }
+            });
+            event.preventDefault();
+        }
+   </script>
+    
+</body>
+</html>

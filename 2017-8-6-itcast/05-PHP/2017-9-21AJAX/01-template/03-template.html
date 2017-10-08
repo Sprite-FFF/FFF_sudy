@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>封装模板引擎</title>
+</head>
+
+<body>
+    <button id="btn">点我</button>
+    <div id="content">
+
+    </div>
+    <div id="content1"></div>
+    <!-- 利用script标签来建立模板 -->
+    <!-- 改变type属性 内容就不会按照js去解析 -->
+    <!-- 需要有一个id -->
+    <script type="text/template" id="tpl">
+        <p>大家好我叫<span><% name %></span>、今年<span><% age %></span>岁了、是个可爱的小<span><% gender %></span>生哦</p>
+    </script>
+    <script type="text/template" id="tpl2">
+        <ul>
+            <li><span><% name %></span></li>
+            <li><span><% age %></span></li>
+            <li><span><% gender %></span></li>
+        </ul>
+    </script>
+    <script>
+        var content = document.getElementById("content");
+        var btn = document.getElementById("btn");
+        // 封装模板引擎方法
+        function template(data, tpl) {
+            var reg = /<%\s+([a-z0-9]+)\s+%>/;
+            var str = document.getElementById(tpl).innerHTML;
+            var result;
+            while (result = reg.exec(str)) {
+                // console.log(result);
+                str = str.replace(result[0], data[result[1]]);
+            }
+            return str;
+        }
+
+        btn.addEventListener("click", function () {
+            var xhr = new XMLHttpRequest;
+            xhr.open("get", "./data.php");
+            xhr.send();
+            xhr.addEventListener("readystatechange", function () {
+                if(this.readyState==4&&this.status==200){
+                    // 调用模板引擎
+                    var data = JSON.parse(this.responseText);
+                    // console.log(template(data,"tpl"));
+                    content.innerHTML = template(data,"tpl");
+                    document.getElementById("content1").innerHTML = template(data,"tpl2");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
