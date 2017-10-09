@@ -1,0 +1,393 @@
+/* BUG: 给html和body设置了width:100%和height:100%后 */
+
+
+/* reset.css 里有一条初始化语句 html:overflow:hidden */
+
+
+/* 导致超出屏幕部分被隐藏 */
+
+html,
+body,
+main,
+section {
+    font-family: Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+    text-shadow: 0 1px 0 black, 0 0 5px black;
+    font-size: 14px;
+}
+
+main {
+    position: relative;
+}
+
+a {
+    color: #000;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.wrap {
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/* 第一屏 */
+
+section.first {
+    background-image: url("../image/first-bg.jpg");
+    background-repeat: repeat;
+}
+
+
+/* 头部导航 */
+
+section.first .nav {
+    width: 80%;
+    height: 75px;
+    margin: 0 auto;
+    min-width: 980px;
+    max-width: 1200px;
+}
+
+
+/* 左侧logo */
+
+section.first .nav-left .logo {
+    width: 106px;
+    height: 0px;
+    padding-top: 76px;
+    background-image: url("../image/topnav-logo.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+
+
+/* 左侧导航 */
+
+section.first .nav-left ul {
+    padding-left: 20px;
+}
+
+.nav-left ul li {
+    float: left;
+}
+
+.nav-left li a {
+    display: block;
+    padding: 0 30px;
+    line-height: 75px;
+}
+
+.current {
+    background: #12b7f5;
+}
+
+.nav-left li a:hover {
+    background: #12b7f5;
+}
+
+section.first .nav-right {
+    font-size: 12px;
+}
+
+
+/* 注册按钮 */
+
+.nav-right .register {
+    width: 96px;
+    height: 39px;
+    margin-top: 18px;
+    background: url("../image/sprite-icon.png") no-repeat 0 -244px;
+}
+
+
+/* 头侧导航 */
+
+.nav-right ul li {
+    float: left;
+    height: 46px;
+    line-height: 46px;
+    margin-left: 30px;
+}
+
+
+/* 在线人数 */
+
+.nav-right .viewOnline {
+    display: block;
+    text-align: right;
+    letter-spacing: 1.9px;
+}
+
+.nav-right .viewOnline:hover {
+    text-decoration: underline;
+}
+
+
+/* 网站标题 */
+
+section.first .site-name {
+    width: 100%;
+    height: 124px;
+    background: url("../image/site-name.png") no-repeat center center;
+}
+
+
+/* 下载按钮 */
+
+section.first .download a {
+    display: block;
+    width: 240px;
+    height: 53px;
+    background: url("../image/download.png") no-repeat center center;
+    margin: 20px auto;
+}
+
+
+/* 产品特点 */
+
+section.first .featrue {
+    width: 100%;
+    height: 0;
+    padding-top: 147px;
+    /* overflow: hidden; */
+    background: url("../image/feture.png") no-repeat center center;
+}
+
+
+/* 文档 */
+
+section.first .doc {
+    width: 98%;
+    margin: 0 auto;
+}
+
+section.first .doc img {
+    width: 100%;
+}
+
+
+/* Tim QQ */
+
+section.first .imqq {
+    width: 100%;
+    height: 321px;
+    margin: 0 auto;
+    background: url("../image/imqq.png") no-repeat center center;
+}
+
+
+/* 第二屏 */
+
+section.second,
+section.fourth,
+section.sixth {
+    width: 100%;
+    height: 600px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.second {
+    background-image: url("../image/firstimage.jpg");
+}
+
+section.third {
+    height: 600px;
+}
+
+section.third .third-left {
+    position: absolute;
+    bottom: 0;
+    left: -32px;
+    width: 664px;
+    height: 763px;
+    background-image: url("../image/third-phone.png");
+}
+
+section.third .third-right,
+section.fifth .fifth-left,
+section.seventh .seventh-right {
+    position: absolute;
+    right: 7px;
+    top: 115px;
+    width: 487px;
+}
+
+section.third .third-right,
+section.seventh .seventh-right {
+    text-align: right;
+}
+
+.third-right .goutong,
+.fifth-left .goutong,
+.seventh-right .goutong {
+    width: 487px;
+    height: 107px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.third-right .goutong {
+    background-image: url("../image/third-goutong.png");
+}
+
+.third-right p,
+.fifth-left p,
+.seventh-right p {
+    letter-spacing: 2px;
+    font-size: 18px;
+    line-height: 25px;
+    opacity: 0.6;
+}
+
+.third-right .more,
+.fifth-left .more,
+.seventh-right .more {
+    font-size: 20px;
+    color: #12b7f5;
+    opacity: 0.6;
+}
+
+.third-right ul {
+    width: 100%;
+    height: 46px;
+    margin-top: 20px;
+    background: url("../image/qcall_figs.png") no-repeat 160px top;
+}
+
+.third-right ul li {
+    opacity: 0.6;
+    float: left;
+    padding: 60px 28px 0 28px;
+    border-left: 1px solid #e9e9e9;
+}
+
+.third-right ul li:first-child {
+    padding-left: 137px;
+    border: none;
+}
+
+.third-right ul li:last-child {
+    padding-right: 0px;
+}
+
+
+/* 第四屏 */
+
+section.fourth {
+    background-image: url("../image/fourthimage.jpg");
+}
+
+
+/* 第五屏 */
+
+section.fifth {
+    height: 600px;
+}
+
+section.fifth .fifth-left {
+    position: absolute;
+    left: 7px;
+    top: 115px;
+}
+
+.fifth-left .goutong {
+    width: 433px;
+    background-image: url("../image/fifth-goutong.png");
+}
+
+.fifth-left ul {
+    width: 100%;
+    height: 50px;
+    background: url("../image/qfile_figs.png") no-repeat left top;
+    margin-top: 20px;
+}
+
+.fifth-left ul li {
+    opacity: 0.6;
+    float: left;
+    padding: 60px 28px 0px;
+    border-left: 1px solid #e9e9e9;
+}
+
+.fifth-left ul li:first-child {
+    padding-left: 5px;
+    border: none;
+}
+
+section.fifth .fifth-right {
+    width: 597px;
+    height: 330px;
+    background: url("../image/fifth-compurter.png") no-repeat center center;
+    position: absolute;
+    right: -100px;
+    bottom: 104px;
+}
+
+/* 第六屏 */
+
+section.sixth {
+    background-image: url("../image/sixth-bg.jpg");
+}
+
+/* 第七屏 */
+
+section.seventh {
+    height: 600px;
+}
+
+section.seventh .seventh-left {
+    position: absolute;
+    bottom: 0;
+    left: 70px;
+    width: 344px;
+    height: 506px;
+    background: url("../image/seven-phone.png") no-repeat 0 0;
+}
+
+section.seventh .seventh-right .goutong {
+    width: 488px;
+    background: url("../image/seven-goutong.png");
+}
+
+.seventh-right ul {
+    width: 100%;
+    height: 110px;
+    margin-top:20px;
+    padding-left: 216px;
+}
+
+.seventh-right ul li{
+    float: left;
+}
+
+.seventh-right ul li {
+    padding:60px 20px 0;
+    /* margin:0 20px; */
+    border-left: 1px solid #e9e9e9;    
+}
+
+
+.seventh-right ul li:first-child {
+    border:none;
+    background: url("../image/qblog_figs.png") no-repeat 22px 0;
+}
+
+.seventh-right ul li:nth-child(2) {
+    background: url("../image/qblog_figs.png") no-repeat -82px 0;
+}
+.seventh-right ul li:last-child {
+    background: url("../image/qblog_figs.png") no-repeat -192px 0;
+}
