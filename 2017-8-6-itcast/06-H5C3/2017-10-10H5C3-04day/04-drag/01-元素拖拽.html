@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .drag {
+            width: 100px;
+            height: 100px;
+            background: orchid;
+        }
+
+        .target {
+            position: absolute;
+            top: 50px;
+            right: 100px;
+            width: 300px;
+            height: 300px;
+            background: #00ffff;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 拖拽元素 -->
+    <!-- 除img标签外 其它标签如果想成为拖拽元素 必须给标签设置 draggable="true"-->
+    <div class="drag" draggable="true"></div>
+    <div class="target"></div>
+
+    <script>
+        var drag = document.querySelector('.drag');
+        var target = document.querySelector('.target');
+        // 拖拽元素的事件
+
+        // dargstart 拖拽开始的事件
+        // 当鼠标按下开始拖动时触发
+        drag.addEventListener("dragstart", function (event) {
+            // 事件对象
+            // 设置拖动数据
+            event.dataTransfer.setData("name","新垣结衣");
+            console.log("开始拖动了");
+        });
+
+        // drag 
+        // dragstart开始后 在拖动的过程中会一致触发的事件
+        drag.addEventListener("drag", function () {
+            // console.log("正在拖动...");
+        });
+
+        // dragend 
+        // 结束拖动时触发 拖动完鼠标弹起
+
+        drag.addEventListener("dragend", function () {
+            console.log("拖动结束!");
+        });
+
+        // 目标元素的事件
+        // dragenter
+        // 拖拽元素进入目标事件(判断的是鼠标进入)
+        target.addEventListener("dragenter", function () {
+            console.log("我进去了...");
+        });
+
+        // dragover
+        // 拖拽元素进入目标 且在目标元素内会不停触发
+        target.addEventListener("dragover", function (e) {
+            e.preventDefault(); // 这里要阻止浏览器默认打开拖动的默认行为
+            console.log("我在里面...");
+        });
+
+        // drop
+        // 当拖拽元素进入目标元素 并释放在目标元素内触发
+        target.addEventListener("drop",function(event){
+            this.appendChild(document.querySelector('.drag'));
+            // 本地文件列表
+            console.log(event.dataTransfer.files);
+            // 获取拖动数据            
+            console.log(event.dataTransfer.getData("name"));
+            console.log("释放元素");
+        });
+    </script>
+</body>
+
+</html>

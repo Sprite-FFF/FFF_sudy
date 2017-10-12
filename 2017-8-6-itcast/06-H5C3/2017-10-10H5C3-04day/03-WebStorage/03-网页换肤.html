@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-size:cover;
+        }
+    </style>
+</head>
+<body>
+    <button>新垣结衣</button>
+    <button>石原里美</button>
+    <button>校园风</button>
+    <script>
+        btn_gakki = document.querySelector('button:first-child');
+        btn_sy = document.querySelector('button:nth-child(2)');
+        btn_extra = document.querySelector('button:nth-child(3)');
+
+        btn_gakki.addEventListener("click",function(){
+            window.localStorage.setItem("bgUrl","./image/gakki.jpg");
+            document.body.style.backgroundImage = "url('./image/gakki.jpg')";
+        });
+        btn_sy.addEventListener("click",function(){
+            window.localStorage.setItem("bgUrl","./image/sylm.jpg");
+            document.body.style.backgroundImage = "url('./image/sylm.jpg')";
+        });
+        btn_extra.addEventListener("click",function(){
+            window.localStorage.setItem("bgUrl","./image/extra.jpg");
+            document.body.style.backgroundImage = "url('./image/extra.jpg')";
+        });
+
+        window.onload = function(){
+            var bg = window.localStorage.getItem("bgUrl");
+            document.body.style.backgroundImage = "url("+bg+")";
+        }
+    </script>
+</body>
+</html>

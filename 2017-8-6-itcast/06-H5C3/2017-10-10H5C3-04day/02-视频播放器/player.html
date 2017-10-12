@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>星星视频播放器v1.0</title>
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/player.css">
+</head>
+
+<body>
+    <div class="player">
+        <video src="./video/movie02.mp4" width="100%" height="100%" poster="./image/761165.jpg"></video>
+        <div class="tools">
+            <!-- 播放/暂停按钮 -->
+            <a href="javascript:;" class="play-btn" id="play_btn">
+                <i class="fa fa-play-circle"></i>
+            </a>
+            <!-- process进度条 -->
+            <div class="process">
+                <div class="process-inner"></div>
+            </div>
+            <!-- 当前播放时间/和总时间 -->
+            <div class="time">
+                <span class="current-time">00:00:00</span>/<span class="total-time">00:00:00</span>
+            </div>
+            <!-- 全屏切换 -->
+            <a href="javascript:;" class="fullscreen">
+                <i class="fa fa-expand"></i>
+            </a>
+        </div>
+    </div>
+</body>
+<script src="./js/player.js"></script>
+
+</html>

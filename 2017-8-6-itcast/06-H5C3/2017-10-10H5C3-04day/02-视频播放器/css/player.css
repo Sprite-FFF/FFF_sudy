@@ -1,0 +1,94 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* 播放器容器 */
+
+.player {
+    position: relative;
+    width: 834px;
+    height: 470px;
+    margin: 50px auto;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+}
+
+video::-webkit-media-controls-enclosure {
+    /*禁用播放器控制栏的样式*/
+    display: none !important;
+}
+
+
+/* 控制工具栏 */
+
+.tools {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 32px;
+    background-color: #ccc;
+    opacity: 0.6;
+    /* 在全屏播放后 要想显示自己的控制菜单 */
+    /* z-index必须大于某个数才行 */
+    z-index: 9999999999;
+}
+
+
+/* 播放/暂停按钮 */
+
+.play-btn {
+    margin-left: 10px;
+    line-height: 32px;
+    font-size: 24px;
+    color: #000;
+}
+
+
+/* 进度条 */
+
+.process {
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    left: 50px;
+    width: 70%;
+    height: 12px;
+    border-radius: 6px;
+    box-shadow: 0 0 2px #000;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.process .process-inner {
+    border-radius: 6px;
+    width: 10%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.time {
+    position: absolute;
+    right: 70px;
+    top: 0;
+    line-height: 32px;
+    font-size: 12px;
+}
+
+.fullscreen {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    line-height: 32px;
+}
+
+.fullscreen {
+    font-size: 20px;
+    color: #000;
+}

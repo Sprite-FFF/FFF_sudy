@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文件读取</title>
+</head>
+<body>
+    <input type="file" name="" id="fl">
+    <button>点击查看内容</button>
+    <div id="content">
+
+    </div>
+    <img src="" alt="">
+
+    <script>
+        var fl = document.getElementById("fl");
+        var content = document.getElementById('content');
+        var img = document.querySelector('img');
+        var btn = document.querySelector('button');
+        // FileReader 对象
+        // 
+        // 读取文件过程
+        
+        // 1 实例化FileReader对象
+        var fr = new FileReader();
+
+        // 2 使用文件读取方法准备读取文件
+        // readerAsDataURL()方法
+        // readerAsText()方法
+        
+        btn.onclick = function(){
+            fr.readAsDataURL(fl.files[0]);
+            // 3 onload 事件监控是否读取完毕
+            fr.onload = function(){
+                img.src = fr.result;
+            }
+        }
+
+    </script>
+</body>
+</html>

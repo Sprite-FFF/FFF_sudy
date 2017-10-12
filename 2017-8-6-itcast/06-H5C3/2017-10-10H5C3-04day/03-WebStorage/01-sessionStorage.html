@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SessionStorage</title>
+</head>
+<body>
+    <script>
+        // WebStorage 是指客户端存储
+        // WebStorage 有三种存储方式 cookie sessionStorage localStorge
+        // sessionStorage 
+        // sessionStorage H5新增方法 只在浏览器端存储数据 大小限制约为5M 存储周期直到浏览器关闭
+        // 一般只做临时存储之用 方法简介明了 操作简单
+
+        // setItem(key,value) 方法 添加数据
+        window.sessionStorage.setItem("name","黛玉");
+        // getItem(key) 方法 根据key获取
+        console.log(window.sessionStorage.getItem("name"));
+        // removeItem(key) 方法 根据key移除数据 
+        window.sessionStorage.removeItem("name");
+        // 清除数据
+        window.sessionStorage.clear();
+        // 根据index获取key  sessionStorage 是根据key的首字母顺序进行排序的
+        window.sessionStorage.key(0); //索引从0开始
+    </script>
+</body>
+</html>

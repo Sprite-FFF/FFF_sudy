@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>localStorage</title>
+</head>
+<body>
+    <script>
+        // localStroage
+        // H5新增 只在浏览器端存储 大小限制约为5M 永久存储除非手动删除
+
+        // 添加数据
+        // window.localStorage.setItem("name","新垣结衣");
+        // 根据key获取数据
+        console.log(window.localStorage.getItem("name"));
+        // 根据key移除数据
+        window.localStorage.removeItem("name");
+        // 获取键名
+        console.log(window.localStorage.key(0));
+        // 清除数据 
+        window.localStorage.clear();
+    </script>
+</body>
+</html>
