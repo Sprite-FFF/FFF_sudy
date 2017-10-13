@@ -5,8 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width:800px;
+            height: 150px;
+            margin: 50px auto;
+            border: 2px dashed #aaa;
+            line-height: 150px;
+            font-size: 50px;
+            text-align: center;
+            color: #ccc;
+        }
+
+        .content {
+            width: 600px;
+            margin:0 auto;
+        }
+    </style>
 </head>
 <body>
-    <div class="box"></div>
+    <div class="box" id="target">
+        拖拽文件预览
+    </div>
+    <div class="content">
+        
+    </div>
+
+    <script> 
+        // 获取元素
+        var target = document.getElementById("target");
+        var content = document.querySelector('.content');
+
+        document.addEventListener("dragover",function(e){
+            // 阻止浏览器打开文件的默认行为
+            e.preventDefault();
+        });
+
+        target.addEventListener("drop",function(e){
+            // 阻止浏览器默认行为
+            e.preventDefault();
+            var fileReader = new FileReader();
+            fileReader.readAsText(e.dataTransfer.files[0]);
+            fileReader.onload = function(){
+                content.innerHTML = fileReader.result;
+            }
+        });
+    </script>
 </body>
 </html>

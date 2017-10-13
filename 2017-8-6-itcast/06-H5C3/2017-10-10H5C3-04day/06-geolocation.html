@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 判断浏览器是否支持定位
+        if (window.navigator.geolocation) {
+            // 获取当前位置
+            // navigator.geolocation.getCurrentPosition(成功时的回调函数,失败时的回调函数,参数设置);
+            navigator.geolocation.getCurrentPosition(function(position){
+                console.log(position);
+            },function(error){
+                console.log(error);
+            });
+        }
+    </script>
+</body>
+
+</html>
