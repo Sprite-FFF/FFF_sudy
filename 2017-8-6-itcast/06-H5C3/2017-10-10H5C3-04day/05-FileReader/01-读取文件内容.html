@@ -8,7 +8,8 @@
 </head>
 <body>
     <input type="file" name="" id="fl">
-    <button>点击查看内容</button>
+    <button>点击查看图片</button>
+    <button class="btn">点击读取内容</button>
     <div id="content">
 
     </div>
@@ -27,16 +28,26 @@
         var fr = new FileReader();
 
         // 2 使用文件读取方法准备读取文件
-        // readerAsDataURL()方法
-        // readerAsText()方法
-        
+        // readAsDataURL()方法
         btn.onclick = function(){
             fr.readAsDataURL(fl.files[0]);
             // 3 onload 事件监控是否读取完毕
             fr.onload = function(){
+                // 使用readAsDataURL() 读取文件
+                // result属性会存储一个data:url格式的数据
+                // 是可以在页面中直接显示的 
                 img.src = fr.result;
             }
         }
+
+        // readAsText()方法
+        document.querySelector('.btn').onclick = function(){
+            fr.readAsText(fl.files[0]);
+            fr.onload = function(){
+                content.innerHTML = fr.result;
+            }
+        }
+
 
     </script>
 </body>
