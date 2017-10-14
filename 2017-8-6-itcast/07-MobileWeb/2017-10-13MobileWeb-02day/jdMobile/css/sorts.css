@@ -1,0 +1,159 @@
+.jd-sort {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+main {
+    position: fixed;
+    top: 45px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background-image: url("../images/header-bg.png");
+    background-repeat: repeat-x;
+    background-size: 1px 45px;
+    z-index: 999;    
+}
+
+header .back-icon,header .menu-icon{
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 45px;
+    padding: 10px 11px;
+    box-sizing: border-box;
+    background-image: url("../images/jd-sprites.png");
+    background-size: 200px 200px;
+    background-origin:content-box;
+    background-clip: content-box;
+}
+
+header .back-icon {
+    left:0;
+    background-position:-20px 2px;    
+}
+
+header .search-box { 
+    height: 100%;
+    padding:0 50px;
+}
+
+header .search-box input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 6px;
+    padding:0 8px;
+    box-sizing: border-box;
+}
+
+header .menu-icon {
+    right: 0;
+    background-position:-60px 2px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+}
+
+aside {
+    width: 90px;
+    position: relative;    
+}
+
+aside ul {
+    width: 100%;
+    position: absolute;
+}
+
+aside li {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    text-align: center;
+    line-height: 48px;
+    box-sizing: border-box;
+}
+
+article {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+article .pro-content-box {
+    position: absolute;
+    width: 100%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+article .hot-title h2 {
+    width: 100%;
+}
+
+article .hot-title ul {
+    width: 100%;
+    height: 100%;
+    margin-top:15px;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    overflow: hidden;
+}
+
+article .hot-title li {
+    box-sizing: border-box;
+    width: 33.33333%;
+    height: 50px;
+    float: left;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    text-align: center;
+    line-height: 50px;
+}
+
+article .products h2 {
+    width: 100%;
+    padding: 20px 0 10px 0;
+}
+
+article .products ul {
+    width: 100%;
+    overflow: hidden;
+}
+
+article .products ul li {
+    width:33.33%;
+    padding: 0 5px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+}
+
+/* .products li a {
+    width: 100%;
+} */
+
+.products li img {
+    width:100%;
+}
+
+.active {
+    color: #c91523;
+    border-right:none;
+}

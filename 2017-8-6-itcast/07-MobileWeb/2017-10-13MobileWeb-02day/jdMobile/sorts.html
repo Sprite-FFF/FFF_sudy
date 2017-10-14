@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +11,153 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>jd商品列表页</title>
 </head>
+
 <body>
     <!-- 分类页布局容器 -->
     <div class="jd-sort">
         <!-- 头部搜索部分 -->
         <header>
-
+            <a href="javascript:;" class="back-icon"></a>
+            <div class="search-box">
+                <input type="text" placeholder="花王在日本直采,京东全球购自营">
+            </div>
+            <a href="javascript:;" class="menu-icon"></a>
         </header>
-        
+
         <main>
             <!-- 侧边栏导航 -->
-            <aside>
-
+            <aside id="wrap">
+                <ul>
+                    <li class="active">热门推荐</li>
+                    <li>潮流女装</li>
+                    <li>品牌男装</li>
+                    <li>个护化妆</li>
+                    <li>电脑办公</li>
+                    <li>手机数码</li>
+                    <li>母婴童装</li>
+                    <li>图书</li>
+                    <li>家具家纺</li>
+                    <li>居家生活</li>
+                    <li>家具建材</li>
+                    <li>食品生鲜</li>
+                    <li>酒水饮料</li>
+                    <li>运动户外</li>
+                    <li>鞋靴礼品</li>
+                    <li>奢侈礼品</li>
+                    <li>珠宝钟表</li>
+                    <li>玩具乐器</li>
+                    <li>内衣配饰</li>
+                    <li>汽车用品</li>
+                    <li>音像制品</li>
+                    <li>医药保健</li>
+                    <li>计生情趣</li>
+                    <li>京东金融</li>
+                    <li>生活旅行</li>
+                    <li>宠物农资</li>
+                </ul>
             </aside>
             <!-- 右侧内容 -->
-            <article>
-
+            <article id="art-wrap">
+               <div class="pro-content-box">
+                    <div class="hot-title">
+                            <h2>热门搜索</h2>
+                            <ul>
+                                <li>手机</li>
+                                <li>笔记本</li>
+                                <li>空调</li>
+                                <li>收纳用品</li>
+                                <li>炒锅</li>
+                                <li>奶粉</li>
+                                <li>吸顶灯</li>
+                                <li>儿童文学</li>
+                            </ul>
+                        </div>
+                        <div class="products">
+                            <h2>热门导购</h2>
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="./uploads/sort_1.jpg" alt="">国际品牌</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="./uploads/sort_2.jpg" alt="">JD FOR</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="./uploads/sort_3.jpg" alt="">精品女装</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="products">
+                            <h2>热卖品类</h2>
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="./uploads/sort_4.jpg" alt="">连衣裙</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="./uploads/sort_5.jpg" alt="">短袖T恤</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="./uploads/sort_6.jpg" alt="">白衬衫</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="./uploads/sort_7.jpg" alt="">阔腿裤</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="./uploads/sort_8.jpg" alt="">短裤</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="./uploads/sort_9.jpg" alt="">针织开衫</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="./uploads/sort_10.jpg" alt="">宽松卫衣</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="./uploads/sort_11.jpg" alt="">半牛仔裙</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="./uploads/sort_12.jpg" alt="">连衣雪纺裙</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="products">
+                            <h2>裙装</h2>
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="./uploads/sort_13.jpg" alt="">连衣裙</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="./uploads/sort_14.jpg" alt="">LO裙</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="./uploads/sort_15.jpg" alt="">雪纺裙</a>
+                                </li>
+                            </ul>
+                        </div>
+               </div>
             </article>
         </main>
-        
+
     </div>
 </body>
+<!-- 手机端惯性滚动的插件 -->
+<script src="./js/iscroll.js"></script>
+<script>
+    var myScroll = new IScroll("#wrap");
+    var myScroll = new IScroll("#art-wrap");
+</script>
+
 </html>
