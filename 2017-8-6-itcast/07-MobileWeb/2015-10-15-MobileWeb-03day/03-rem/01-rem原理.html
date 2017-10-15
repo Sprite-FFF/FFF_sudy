@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media screen and (width:320px) {
+            html {
+                font-size: calc(320px / 20);
+            }
+        }
+
+        @media screen and (width:375px) {
+            html {
+                font-size: calc(375px / 20);
+            }
+        }
+
+        @media screen and (width:414px) {
+            html {
+                font-size: calc(414px / 20);
+            }
+        }
+
+        .box {
+            width: 10rem;
+            height: 10rem;
+            background-color: sandybrown;
+        }
+
+        /* 相对单位:em和rem */
+        /* em是相对于自身font-size大小 */
+        /* rem是相对于根元素font-size大小 即htmlfont-size大小 */
+        /* rem布局原理 */
+        /* 在实际工作中 我们只会有两种设计图 640px的设计图和750px的设计图*/
+        /* 以640px的设计图为例 */
+        /* 现在我们先加假定将设计图分为20等份 则每等分有32px */
+        /* 我们的目标是将设计图实现为html 并完美的是配到各个大小的手机屏慕*/
+        /* 将每种不同的手机屏也分为20等份 每份在不同的屏幕下大小也各不相同 单每个元素在页面 */
+        /* 中所占的比例是相同的 这样就可以根据比例去乘以不同的屏幕的等分的大小 以计算出不同大小屏幕中 */
+        /* 某个元素的大小 从而实现适配不同大小的手机屏幕 */
+        /* 将每个等份的大小设置为html根元素的fon-size 再使用rem作为单位(rem就是比例) 这就是rem布局的原理 */
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+</body>
+
+</html>

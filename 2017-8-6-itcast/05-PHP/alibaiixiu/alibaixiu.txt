@@ -1,0 +1,144 @@
+﻿01-配置环境：
+	给网站配置域名
+02-提取admin index页面公共部分
+
+03-创建数据库、导入数据库文件
+
+04-登陆功能
+	①公共部分
+	②处理表单
+		login.php 处理程序需要承担两个功能
+		a.如果表单是以post方式提交则执行登陆逻辑
+		b.如果以get方式请求、则展示页面
+
+	i、empty()  检测一个变量是否为空 如果为空则为true、否则为false
+
+	验证登录：
+		①获取POST过来的用户名和密码
+		②查询数据库、比对数据
+			连接数据库：
+			$connect = mysqli_connect()
+			选择数据库
+			mysqli_select_db()
+			设置字符集
+			mysqli_set_charset()
+			查询
+			mysqli_query()
+
+			mysqli_fetch_assoc();
+
+	cookie和session保持状态
+		session_start()	开启session
+		$_SESSION
+
+	首页判断是否有登录信息
+	如果没有就跳转到login.php页面
+
+
+	封装查询数据库操作：config.php
+		封装配置文件：
+			用常量去保存数据库信息
+		封装数据库操作： 	function.php
+		封装连接数据库		connect
+		封装查询 			query()
+		封装fetch			fetch()
+		封装session 		checkLogin()
+		封装insert			insert()
+
+	users.php
+	提取users公共部分
+	判断有无登录信息
+		如果以post请求方式则执行添加用户逻辑
+		如果以get方式请求则展示页面
+
+
+	在处理功能时、在同一个php文件中处理了两种逻辑、分别为get和post、当以get方式请求时、一般是展示性的操作、例如显示网页内容
+	当以post方式请求时、一般是处理数据、例如将数据存储到数据库
+	值得注意的是上述方式只是开发的一种方式，也有将展示页面和处理数据分开两个php页面
+
+	查询用户：
+
+		foreach将所有用户显示到表格
+
+	封装格式化 insert SQL语句
+	改造添加用户
+
+	编辑和删除操作
+		还在users.php处理
+		①如果get请求传参为action=edit&uid= 为编辑操作
+		②如果get请求传参为action=delete&uid=
+
+	在function() 封装删除操作	delete()
+
+	users.php在处理用户增删改查时：
+		通过参数action的值来区别用户要执行的操作
+
+		① 增加 post方式 action = 'add'
+		② 修改 post方式 action = 'update'
+		③ 删除 get方式  action = 'delete'
+		④ 查询 get方式  action = 'edit'
+
+		设置action变量;默认为add
+		点击编辑按钮时、为get请求、并将选择的记录的ID传到后台接收
+		然后将action的值改变为update、根据id查询数据库、将各项的值放入表单中、点击表单提交按钮此时执行修改逻辑
+		设置一个隐藏表单、表单value、表单为要修改的元素的id(或者可以通过GET获取)
+		封装修改操作
+		当点击删除时、同样接收id、根据id删除
+
+
+		jQuery写全选逻辑
+		显示和隐藏批量删除按钮
+		给每个checkbox添加一个value	值为id
+
+		通过$.ajax请求后台完成批量删除操作
+			①先获取需要批量删除的id
+			②ajax 请求url传参action=deleteAll
+			③post请求方式	传递参数为获取到的id
+			④后台根据id批量删除		delete from users where id in(,,,,);
+			⑤删除成功 location.reload()
+
+		个人中心：
+			登录时将用户信息存进了session
+			将session中的id获取到利用id查询数据修改
+
+			头像上传：
+				利用XMLHttpRequest2.0上传预览文件
+				注意路径问题
+
+		分类目录增删改查：
+			根据不同的action做不同的操作
+
+		写文章：
+			插入操作
+			文件上传：用一个隐藏的input去存储路径
+
+		文章列表：
+			展示数据：
+				联表查询
+				分页：
+					根据数据库的总数据来确定
+					确定每页需要的条数
+
+					总数据：total
+					每页的条数：pageSize
+					总共的页数：pageCount
+					$pageCount = ceil(total/pageSize)
+
+					range();
+
+					上一页：
+					下一页：
+
+					mysql:	LIMIT
+						select * from 表名 limit (当前页码-1)*每页条数，每页条数；
+
+		模板继承(了解)
+		富文本编辑器：CKEditor	UEditor插件
+		进度：nprogress插件
+
+		设置：
+			导航菜单
+			json_decode()	第二个参数为true、强制转换为数组
+
+
+

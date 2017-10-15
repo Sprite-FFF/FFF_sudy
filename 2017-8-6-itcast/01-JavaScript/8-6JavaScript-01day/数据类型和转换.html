@@ -14,19 +14,41 @@
     var a = undefined;
     var nul = null;
 
-    console.log(typeof num);
-    console.log(typeof str);
-    console.log(typeof bl);
-    console.log(typeof a);
-    console.log(typeof nul);
+    // console.log(typeof num);
+    // console.log(typeof str);
+    // console.log(typeof bl);
+    // console.log(typeof a);
+    // console.log(typeof nul);
 
-    console.log("-----------");
-    console.log(num.toString());
-    console.log(Boolean(num));
-    console.log(parseInt(str));
-    console.log(parseInt(bl));
-    console.log(parseInt("123"));
-    console.log(Number(bl));
+    // console.log("-----------");
+    // console.log(num.toString());
+    // console.log(Boolean(num));
+    // console.log(parseInt(str));
+    // console.log(parseInt(bl));
+    // console.log(parseInt("123"));
+    // console.log(Number(bl));
+
+    /*-----------------------------*/
+    // 强制转换为bool类型值
+    console.log(Boolean(0));    // 数字0将被转换为false
+    console.log(Boolean(1));    // 其他数字都为true
+    console.log(Boolean(1000));
+
+    console.log("---------------");
+    console.log(Boolean(""));   // 空字符串将被强制转换为false
+    console.log(Boolean(" "));  // 其他字符串都为true
+    console.log(Boolean("1212312"));
+    console.log(Boolean("新垣结衣"));
+
+    console.log("----------------");
+    console.log("false" == false); // 字符串false将被转换为true 所以和false并不相等 返回false
+
+    console.log("----------------");
+    // undefined 双等号下返回他true
+    // 全等下返回false
+    console.log(undefined == null);     //true
+    console.log(undefined === null);    //false
+    console.log(Boolean(undefined));    //false 
 </script>
 </body>
 </html>

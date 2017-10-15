@@ -1,0 +1,105 @@
+@import "./reset.css";
+@import "./normalize.css";
+@import "./setting.less";
+
+// 适配器查询
+@media screen and (width:320px) {
+  html {
+    font-size: calc(320px / 20);
+  }
+}
+
+@media screen and (width:320px) {
+  html {
+    font-size: calc(320px / 20);
+  }
+}
+
+@media screen and (width:375px) {
+  html {
+    font-size: calc(375px / 20);
+  }
+}
+
+@media screen and (width:414px) {
+  html {
+    font-size: calc(414px / 20);
+  }
+} 
+
+/* 头部的样式 */
+
+header {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  height: (88rem / 32);
+  padding-left: (56rem / 32);
+  background-color: @header-bg;
+  line-height: (88rem / 32);
+  font-size: (32rem / 32);
+  color:@white;
+  h2{
+    font-weight: 400;
+  }
+  a {
+    position: absolute;
+    top: (28rem / 32);
+    left: (20rem / 32);
+    width: (20rem / 32);
+    height: (32rem / 32);
+    background-image: url("../images/back.png");
+    background-size: (20rem / 32) (32rem / 32);
+  }  
+}
+
+/* 内容部分 */
+
+.content {
+  box-sizing: border-box;
+  width: 100%;
+  padding: (24rem/32);
+  background-color: @content-bg;
+  .favourable {
+    width: 100%;
+  }
+  .title {
+    width: 100%;
+    height: (58rem / 32);
+    font-size: (28rem / 32);
+    color: tit-color;
+    h3 {
+      float: left;
+    }
+    .count {
+      float: right;
+    }
+  }
+  .add {
+    height: (226rem / 32);
+    box-sizing: border-box;
+    border: 3px dashed @border-color;
+    font-size: (26rem / 32);
+    text-align: center;
+    padding-top: (156rem / 32);
+    color: @add-color;
+    background-color: @white;
+    background-image: url("../images/add-bg.png");
+    background-repeat: no-repeat;
+    background-position: center (36rem / 32);
+    background-size: (104rem / 32 );
+  }
+}
+
+/* footer 部分 */
+
+.footer {
+  box-sizing: border-box;
+  width: 100%;
+  padding: (24rem / 32);
+  margin-top:(120rem / 32);
+  font-size: (24rem / 32);
+  color: @footer-color;
+  line-height: (42rem / 32);
+}
+
