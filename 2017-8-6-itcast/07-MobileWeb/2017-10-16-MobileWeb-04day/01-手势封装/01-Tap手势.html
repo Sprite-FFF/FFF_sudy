@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    #box {
+      width: 50%;
+      height: 50%;
+      background-color: orchid;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box"></div>
+  <script>
+    var box = document.getElementById("box");
+    var startX, startY, endX, endY, startTime, endTime;
+    box.addEventListener("touchstart", function (event) {
+      var touchs = event.targetTouches[0];
+      startX = touchs.clientX;
+      startY = touchs.clientY;
+      startTime = new Date().getTime();
+    });
+
+    box.addEventListener("touchend", function (event) {
+      var touchs = event.changedTouches[0];
+      endX = touchs.clientX;
+      endY = touchs.clientY;
+      startTime = new Date().getTime();
+      if (Math.abs(startX - endX) < 5 && Math.abs(startY - endY) < 5) {
+        alert("寒塘渡鸦影 冷月葬花魂");
+      }
+    });
+  </script>
+</body>
+
+</html>

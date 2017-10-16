@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide ul {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .slide li {
+      float: left;
+    }
+
+    .slide li a {
+      display: block;
+      width: 100%;
+    }
+
+    .slide li img {
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slide">
+    <ul>
+      <li>
+        <a href="javascript:;">
+          <img src="./images/0.png" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <img src="./images/1.png" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <img src="./images/2.png" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <img src="./images/3.png" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <img src="./images/4.png" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <img src="./images/5.png" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <img src="./images/6.png" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <img src="./images/7.png" alt="">
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    var slide = document.querySelector('.slide');
+    var ul = document.querySelector("ul");
+    var first_li = document.querySelector('li:first-child');
+    var last_li = document.querySelector('li:last-child');
+    // 初始化页面 
+    function init() {
+      // 将最后一张图片复制一份放到第一张前面
+      ul.appendChild(first_li.cloneNode(true));
+      ul.insertBefore(last_li.cloneNode(true), first_li);
+      var lis = document.querySelectorAll("li");
+      // 设置宽度
+      setWidth(lis);
+      ul.style.left = -slide.offsetWidth + "px";
+      // 自动播放
+      autopaly();
+    }
+
+    // 设置宽度
+    function setWidth(lis) {
+      slideWidth = slide.offsetWidth;
+      ul.style.width = slideWidth * lis.length + "px";
+      for (var i = 0; i < lis.length; i++) {
+        lis[i].style.width = slideWidth + "px";
+      }
+    }
+
+    // 自动播放
+    var index = -1;
+    var timer = null;
+
+    function autopaly() {
+      timer = setInterval(function () {
+        index--;
+        ul.style.left = index * slide.offsetWidth + "px";
+        ul.style.transition = "all 1s";
+        console.log(index);
+      }, 2000);
+    }
+
+    // 对transition过渡进行监听
+    ul.addEventListener("webkitTransitionEnd", function () {
+
+      if (index == 0) {
+        index = -8;
+      }
+      if (index == -9) {
+        index = -1;
+      }
+      ul.style.left = index * slide.offsetWidth + "px";
+      ul.style.transition = "";
+    });
+
+    // 滑动事件
+    var startX, endX;
+    ul.addEventListener("touchstart", function (event) {
+      clearInterval(timer);
+      var tatchs = event.targetTouches[0];
+      startX = tatchs.clientX;
+    });
+    ul.addEventListener("touchend", function (event) {
+      var tatchs = event.changedTouches[0];
+      endX = tatchs.clientY;
+      endX > startX ? index++ : index--;
+      ul.style.left = index * slide.offsetWidth + "px";
+      ul.style.transition = "all 1s";
+      console.log(index);
+      autopaly();
+    });
+
+    init();
+  </script>
+</body>
+
+</html>

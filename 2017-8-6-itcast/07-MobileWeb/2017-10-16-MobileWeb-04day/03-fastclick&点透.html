@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 这个为什么解决不了点透?  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .box {
+      position: relative;
+      margin: 50px auto;
+      width: 200px;
+      height: 200px;
+    }
+
+    .click {
+      width: 200px;
+      height: 200px;
+      background-color: orchid;
+    }
+
+    .tap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      width: 100px;
+      height: 100px;
+      background-color: orangered;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <div class="click"></div>
+    <div class="tap"></div>
+  </div>
+  <script src="./js/fastclick.js"></script>
+  <script>
+
+    // 使用fastclick.js解决点透问题
+    // FastClick.attach(document.body);
+
+    var click = document.querySelector(".click");
+    var tap = document.querySelector('.tap');
+    click.addEventListener("click", function () {
+      console.log("click事件触发了");
+    });
+
+    var startX, startY, endX, endY, startTime, endTime;
+    tap.addEventListener("touchstart", function (event) {
+      var touchs = event.targetTouches[0];
+      startX = touchs.clientX;
+      startY = touchs.clientY;
+      startTime = new Date().getTime();
+    });
+
+    tap.addEventListener("touchend", function (event) {
+      var touchs = event.changedTouches[0];
+      endX = touchs.clientX;
+      endY = touchs.clientY;
+      endTime = new Date().getTime();
+      if (Math.abs(endX - startX) < 5 && Math.abs(endY - startY) < 5 && (endTime - startTime) < 300) {
+        this.style.display = "none";
+        console.log("tap事件触发了!!!");
+      }
+    });
+
+    // 点透事件
+    // 就是你在点击某个按钮关闭弹出层时 按钮正下方的内容的点击事件也会被触发(或者是打开连接)
+    // 这个就被定义为点透现象
+  </script>
+</body>
+
+</html>

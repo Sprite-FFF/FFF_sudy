@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+    #box {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 40px;
+      height: 40px;
+      background-color: orchid;
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+  <script>
+    var box = document.getElementById("box");
+    var startX,startY,endX,endY,_top,_left;
+    document.addEventListener("touchstart",function(event){
+      var touchs = event.targetTouches[0];
+      startX = touchs.clientX;
+      startY = touchs.clientY;
+      _left = touchs.clientX - box.offsetLeft;
+      _top = touchs.clientY- box.offsetTop;
+    });
+
+    document.addEventListener("touchmove",function(event){
+      var touchs = event.changedTouches[0];
+      endX = touchs.clientX;
+      endY = touchs.clientY;
+      box.style.left = endX - _left + "px";
+      box.style.top = endY - _top + "px";
+    });
+  </script>
+</body>
+</html>
