@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {
+      /* 伸缩容器的属性 */
+      display: flex;
+
+      /* 主轴方向 有四个属性 row:默认值 水平方向 从左往右排列 */
+      /* row-reverse 水平方向 从右往左排列 */
+      /* column 垂直方向 从上往下排列 */
+      /* column-reverse 垂直方向 从下往上排列 */
+      flex-direction: row;
+
+      /* 是否换行 */
+      /* no-wrap 默认值 不换行 */
+      /* wrap 换行 第一行在上方 */
+      /* wrap-reverse 换行 第一行在下方 */
+      flex-wrap: nowrap;
+
+      /* flex-flow 是flex-direction和flex-wrap属性的合写形式 */
+      flex-flow: row nowrap;
+
+      /* 定义了伸缩项目在主轴上的对齐方式 */
+      /* 有5个值 具体对齐方式与主轴方向有关 */
+      /* flex-start 默认值 左对齐 */
+      /* flex-end 右对齐 */
+      /* center 居中 */
+      /* space-between 两端对齐 项目之间的间隔都相等 */
+      /* space-around 每个项目两侧的间隔相等 所以 项目之间的间隔比项目与边框的间隔大一倍 */
+      justify-content: flex-start;
+
+      /* 定义伸缩项目在侧轴的对齐方式 具体对齐方式与交叉轴的方向有关 */
+      /* flex-start 侧轴起点对齐 */
+      /* flex-end 侧轴终点对齐 */
+      /* center 中点对齐 */
+      /* baseline 基线对齐 */
+      /* stretch 默认值 如果项目未设置高度或者高度为auto 将占满整个容器的高度 */
+      align-items: flex-start;
+
+      /* 定义了多跟轴线的对齐方式 如果伸缩只有一根轴线 则不起作用 */
+      align-content: flex-start;
+    }
+
+    .box div {
+      /* 伸缩项目的属性 */
+      flex: 1;
+
+      /* 属性定义伸缩项目的排列顺序 数值越小 排列越靠前 默认为0 */
+      order:0;
+      /* 属性定义项目的放大比例 默认为0 即如果存在剩余空间 也不放大 */
+      /* 如果所有项目的flex-grow属性都为1 则他们将等分剩余空间  */
+      /* 如果一个项目的flex-grow 属性为2 其他项目都为1 则前者占据的空间将比其他多一倍 */
+      flex-grow: 0;
+
+      /* 属性定义了项目的缩小比例 默认为1 即如果空间不足 该项目将缩小 */
+      flex-shrink: 0;
+      
+      /* 属性定义了在分配多余空间之前 项目占据的主轴空间 (main size) 浏览器 */
+      /* 根据这个属性 计算主轴是否有多余空间 它的默认值为 auto 即项目本来大小 */
+      /* 可以设置为px 则项目将占据一定空间 */
+      flex-basis:auto;
+
+      /* flex 属性为前三个属性的合写方式 后两个属性可选 */
+      /* auto (1 1 auto) */
+      /* none (0 0 auto) */
+      /* 建议优先使用 */
+      flex: 0 1 auto;
+
+      /* 属性允许单个项目可以与其他项目有不同的对齐方式 */
+      /* 可以覆盖 align-items 属性 默认值为auto 继承父元素的align-items属性 */
+      /* 属性值与 align-items相同 */
+      align-self: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+
+</html>

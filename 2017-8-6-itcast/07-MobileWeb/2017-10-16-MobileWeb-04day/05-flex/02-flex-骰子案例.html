@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    .box {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .dice {
+      margin: 16px;
+      padding: 4px;
+
+      background-color: #e7e7e7;
+      width: 104px;
+      height: 104px;
+      object-fit: contain;
+
+      box-shadow: inset 0 5px white,
+      inset 0 -5px #bbb,
+      inset 5px 0 #d7d7d7,
+      inset -5px 0 #d7d7d7;
+
+      border-radius: 10%;
+    }
+
+    .dice1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .dice2 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .dice2 span:last-child {
+      align-self: flex-end;
+    }
+
+    .dice3 {
+      display: flex;
+    }
+
+    .dice3 span:nth-child(2) {
+      align-self: center;
+    }
+
+    .dice3 span:last-child {
+      align-self: flex-end;
+    }
+
+    .dice4 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .dice4 div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dice5 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .dice5 div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dice5 .center {
+      align-self: center;
+    }
+
+    .dice6 {
+      display: flex;
+      justify-content: center;
+    }
+    .dice6 div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    span {
+      display: block;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      margin: 4px;
+      background-color: #333;
+      box-shadow: inset 0 3px #111, inset 0 -3px #555;
+    }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="box">
+    <div class="dice dice1">
+      <span></span>
+    </div>
+    <div class="dice dice2">
+      <span></span>
+      <span></span>
+    </div>
+    <div class="dice dice3">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="dice dice4">
+      <div>
+        <span></span>
+        <span></span>
+      </div>
+      <div>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="dice dice5">
+      <div>
+        <span></span>
+        <span></span>
+      </div>
+      <span class="center"></span>
+      <div>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="dice dice6">
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
