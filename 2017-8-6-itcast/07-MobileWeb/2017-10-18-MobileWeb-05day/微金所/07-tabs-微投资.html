@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
+  <title>Document</title>
+  <style>
+    .items {
+      width: 100%;
+      height: 190px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      margin-bottom: 20px;
+      margin-top: 10px;
+      position: relative;
+      padding-right: 80px;
+      background-color: #f5f5f5;
+    }
+
+    .item-left h3 {
+      font-size: 18px;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 10px;
+    }
+
+    .item-left ul {
+      overflow: hidden;
+      list-style: none;
+      padding-left: 20px;
+    }
+
+    .item-left ul li:first-child {
+      float: left;
+    }
+
+    .item-left ul li:last-child {
+      float: right;
+    }
+
+    .item-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 70px;
+      height: 100%;
+      border-left: 1px dashed #000;
+      text-align: center;
+      padding-top: 70px;
+    }
+
+    .item-right::before,
+    .item-right::after {
+      content: "";
+      left: -8px;
+      bottom: -8px;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 1px 0px #fff;
+    }
+
+    .item-right::before {
+      top: -8px;
+    }
+
+    .taste {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .row-second .items {
+      background-color: red;
+      color: #fff;
+    }
+
+    .row-third .item-right .bao,
+    .row-third .item-right .bei {
+      display: inline-block;
+      width: 20px;
+      height: 22px;
+      border: 1px solid yellowgreen;
+      font-size: 12px;
+      line-height: 22px;
+      text-align: center;
+      color: yellowgreen;
+    }
+    .row-third .item-right .bei {
+      border-color: red;
+      color: red;
+    }
+
+    .row-third .progress {
+      width: 160px;
+      height: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="tabs">
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+          <a href="#home" aria-controls="home" role="tab" data-toggle="tab">特别推荐</a>
+        </li>
+        <li role="presentation">
+          <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">微投资</a>
+        </li>
+        <li role="presentation">
+          <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">微消费</a>
+        </li>
+        <li role="presentation">
+          <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">微小宝</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <div class="items">
+                <div class="item-left">
+                  <h3>新手体验</h3>
+                  <ul>
+                    <li>起投金额</li>
+                    <li>起投金额</li>
+                  </ul>
+                  <ul>
+                    <li>0.01万</li>
+                    <li>0.01万</li>
+                  </ul>
+                  <ul>
+                    <li>借贷期限</li>
+                    <li>借贷期限</li>
+                  </ul>
+                  <ul>
+                    <li>10天</li>
+                    <li>10天</li>
+                  </ul>
+                </div>
+                <div class="item-right">
+                  <p>8</p>
+                  <p>年利率</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 row-second">
+                <div class="items">
+                    <div class="item-left">
+                      <h3>新手体验</h3>
+                      <ul>
+                        <li>起投金额</li>
+                        <li>起投金额</li>
+                      </ul>
+                      <ul>
+                        <li>0.01万</li>
+                        <li>0.01万</li>
+                      </ul>
+                      <ul>
+                        <li>借贷期限</li>
+                        <li>借贷期限</li>
+                      </ul>
+                      <ul>
+                        <li>10天</li>
+                        <li>10天</li>
+                      </ul>
+
+                      <span class="taste"><img src="./images/tiyan.png" alt=""></span>
+                    </div>
+                    <div class="item-right">
+                      <p>8</p>
+                      <p>年利率</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 row-third">
+                <div class="items">
+                    <div class="item-left">
+                      <h3>新手体验</h3>
+                      <ul>
+                        <li>起投金额</li>
+                        <li>起投金额</li>
+                      </ul>
+                      <ul>
+                        <li>0.01万</li>
+                        <li>0.01万</li>
+                      </ul>
+                      <ul>
+                        <li>借贷期限</li>
+                        <li>借贷期限</li>
+                      </ul>
+                      <ul>
+                        <li>10天</li>
+                        <li>
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                              60%
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="item-right">
+                      <span class="bao">宝</span>
+                      <span class="bei">贝</span>
+                      <p>8</p>
+                      <p>年利率</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="items">
+                    <div class="item-left">
+                      <h3>新手体验</h3>
+                      <ul>
+                        <li>起投金额</li>
+                        <li>起投金额</li>
+                      </ul>
+                      <ul>
+                        <li>0.01万</li>
+                        <li>0.01万</li>
+                      </ul>
+                      <ul>
+                        <li>借贷期限</li>
+                        <li>借贷期限</li>
+                      </ul>
+                      <ul>
+                        <li>10天</li>
+                        <li>10天</li>
+                      </ul>
+                    </div>
+                    <div class="item-right">
+                      <p>8</p>
+                      <p>年利率</p>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">...</div>
+        <div role="tabpanel" class="tab-pane" id="messages">...</div>
+        <div role="tabpanel" class="tab-pane" id="settings">...</div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="./js/jQuery.min.js"></script>
+  <script src="./lib/js/bootstrap.min.js"></script>
+</body>
+
+</html>

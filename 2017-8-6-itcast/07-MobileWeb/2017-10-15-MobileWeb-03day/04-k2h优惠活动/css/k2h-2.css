@@ -1,0 +1,199 @@
+@import "reset.css";
+@import "normalize.css";
+@media screen and (width: 320px) {
+  html {
+    font-size: calc(16px);
+  }
+}
+@media screen and (width: 375px) {
+  html {
+    font-size: calc(18.75px);
+  }
+}
+@media screen and (width: 414px) {
+  html {
+    font-size: calc(20.7px);
+  }
+}
+@media screen and (width: 360px) {
+  html {
+    font-size: calc(18px);
+  }
+}
+body {
+  height: 3000px;
+}
+header {
+  position: relative;
+  width: 100%;
+  height: 2.75rem;
+  padding-left: 1.75rem;
+  box-sizing: border-box;
+  background-color: #ff9b25;
+  line-height: 2.75rem;
+  color: #fff;
+}
+header h2 {
+  font-size: 1rem;
+}
+header .back {
+  position: absolute;
+  top: 0.875rem;
+  left: 0.625rem;
+  width: 0.625rem;
+  height: 1rem;
+  background-image: url("../images/back.png");
+  background-size: 0.625rem 1rem;
+}
+main {
+  padding: 0.8125rem;
+}
+.favourable {
+  position: relative;
+}
+.favourable .title {
+  width: 100%;
+  height: 1.6875rem;
+  font-size: 0.875rem;
+}
+.favourable .title h3 {
+  float: left;
+}
+.favourable .title .amount {
+  float: right;
+  color: #888;
+}
+.favourable .content {
+  position: relative;
+  padding: 0.75rem;
+  background-color: #55bc75;
+  background-image: url("../images/oval.png");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.favourable .content h4 {
+  font-size: 1.4375rem;
+  margin-top: 0.3125rem;
+  color: #fff;
+}
+.favourable .content p {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #bdf3ce;
+}
+.favourable .content .time {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 1.125rem;
+  margin-top: 1.875rem;
+  margin-bottom: 0.3125rem;
+  font-size: 0.6875rem;
+  color: #fff;
+}
+.favourable .content .time .time-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.6875rem;
+  height: 0.6875rem;
+  background-image: url("../images/time-icon.png");
+  background-size: 0.6875rem 0.6875rem;
+}
+.favourable .content .sale {
+  position: absolute;
+  top: -0.625rem;
+  right: 0;
+  width: 4.5625rem;
+  height: 4.5625rem;
+}
+.favourable .content .sale img {
+  width: 100%;
+}
+.favourable .content .status {
+  position: absolute;
+  right: 0.8125rem;
+  bottom: 0.8125rem;
+  width: 3rem;
+  height: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  line-height: 1rem;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 0.6875rem;
+}
+.favourable .opeate {
+  display: flex;
+  width: 100%;
+  height: 2.5rem;
+}
+.favourable .opeate a {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: #888;
+  line-height: 2.5rem;
+}
+.favourable .opeate a .edit-icon {
+  position: absolute;
+  top: 1em;
+  left: 2.875em;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-image: url("../images/edit.png");
+  background-size: 0.75rem 0.75rem;
+}
+.favourable .opeate a .share-icon {
+  position: absolute;
+  top: 1em;
+  left: 2.875em;
+  width: 0.78125rem;
+  height: 0.84375rem;
+  background-image: url("../images/share.png");
+  background-size: 0.78125rem 0.84375rem;
+}
+.favourable .opeate a.edit::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 1.4375rem;
+  background-color: #e8e2d9;
+}
+.ticket .content {
+  background: #a974bc;
+}
+.ticket .content .receive {
+  color: #fff;
+  margin-top: 1.75rem;
+}
+.ticket .content .time {
+  margin-top: 0.375rem;
+}
+.ticket .type {
+  color: #fff;
+  font-size: 0.75rem;
+}
+.ticket .type span {
+  font-size: 2.8125rem;
+  margin-right: 0.375rem;
+}
+.ticket .type span::before {
+  content: "¥";
+  margin-right: 0.375rem;
+  font-size: 1.25rem;
+}
+.ticket-ing {
+  margin-top: 0.875rem;
+}
+.ticket-ing .content {
+  background-image: url("../images/oval.png");
+  background-position: bottom;
+  background-repeat: repeat-x;
+}

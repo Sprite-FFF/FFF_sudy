@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
+  <title>Document</title>
+  <style>
+    .nav-tabs>li a:hover {
+      background-color: #fff;
+      border-bottom-color: red;
+      /* border-bottom-width: 2px; */
+    }
+    .tabs .nav-tabs>li.active {
+      border-bottom: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tabs">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">特别推荐</a>
+      </li>
+      <li role="presentation">
+        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">微融资</a>
+      </li>
+      <li role="presentation">
+        <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">微小宝</a>
+      </li>
+      <li role="presentation">
+        <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">微消费</a>
+      </li>
+      <li role="presentation">
+        <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">微增宝</a>
+      </li>
+      <li role="presentation">
+        <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">微转让</a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="home">...</div>
+      <div role="tabpanel" class="tab-pane" id="profile">...</div>
+      <div role="tabpanel" class="tab-pane" id="messages">...</div>
+      <div role="tabpanel" class="tab-pane" id="settings">...</div>
+    </div>
+  </div>
+
+  <script src="./js/jQuery.min.js"></script>
+  <script src="./lib/js/bootstrap.min.js"></script>
+</body>
+
+</html>

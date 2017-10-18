@@ -1,0 +1,219 @@
+@import "./reset.css";
+@import "./setting.less";
+@import "./normalize.css";
+
+
+// 媒体查询
+@media screen and (width:320px) {
+  html {
+    font-size: calc(320px / 20);
+  }
+}
+
+@media screen and (width:375px) {
+  html {
+    font-size: calc(375px / 20);
+  }
+}
+
+@media screen and (width:414px) {
+  html {
+    font-size:  calc(414px / 20);
+  }
+}
+
+@media screen and (width:360px){
+  html {
+    font-size: calc(360px / 20);
+  }
+}
+body {
+  height: 3000px;
+}
+// 头部开始
+header {
+  position: relative;
+  width: 100%;
+  height: (88rem / 32);
+  padding-left: (56rem / 32);
+  box-sizing: border-box;
+  background-color: @header-bg;
+  line-height: (88rem / 32);
+  color: @white;
+  h2 {
+    font-size: (32rem / 32);
+  }
+  .back {
+    position: absolute;
+    top: (28rem / 32);
+    left: (20rem / 32);
+    width: (20rem / 32);
+    height: 1rem;
+    background-image: url("../images/back.png");
+    background-size: (20rem / 32) (32rem / 32);
+  }
+}
+
+// main开始
+main {
+  padding: (26rem / 32);
+}
+// 优惠券
+.favourable {
+  position: relative;
+  .title {
+    width: 100%;
+    height: (54rem / 32);
+    font-size: (28rem / 32);
+    h3 {
+      float: left;
+    }
+    .amount {
+      float: right;
+      color: @amount-color;
+    }
+  }
+
+  .content {
+    position: relative;
+    padding: (24rem / 32);
+    background-color: @favourable-bg1;
+    background-image: url("../images/oval.png");
+    background-position: bottom;
+    background-repeat: repeat-x;
+    border-radius: 8px;
+    overflow: hidden;
+    h4 {
+      font-size: (46rem / 32);
+      margin-top: (10rem / 32);
+      color:@white;
+    }
+    p {
+      margin-top: (16rem / 32);
+      font-size: (24rem / 32);
+      color:@fav-p-color;
+    }
+
+    .time {
+      position: relative;
+      width: 100%;
+      box-sizing: border-box;
+      padding-left: (36rem / 32);
+      margin-top:(60rem / 32);
+      margin-bottom: (10rem / 32);
+      font-size: (22rem / 32);
+      color:@white;
+      .time-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: (22rem / 32);
+        height: (22rem / 32);
+        background-image: url("../images/time-icon.png");
+        background-size: (22rem / 32) (22rem / 32);
+      }
+    }
+
+    .sale {
+      position: absolute;
+      top: -(20rem / 32);
+      right:0;
+      width: (146rem / 32);
+      height: (146rem / 32);
+      img {
+        width: 100%;
+      }
+    }
+
+    .status {
+      position: absolute;
+      right: (26rem / 32);
+      bottom: (26rem / 32);
+      width: (96rem / 32);
+      height: (32rem / 32);
+      background-color: rgba(0, 0, 0, .3);
+      text-align: center;
+      line-height: 1rem;
+      border-radius: 3px;
+      color: @white;
+      font-size: (22rem / 32);
+    }
+  }
+
+  .opeate {
+    display: flex;
+    width: 100%;
+    height: (80rem / 32);
+    a {
+      position: relative;
+      flex: 1;
+      text-align: center;
+      font-size: (26rem / 32);
+      color:@amount-color;
+      line-height: (80rem / 32);
+      .edit-icon {
+        position: absolute;
+        top: (32em / 32);
+        left: (92em / 32);
+        width: (24rem / 32);
+        height: (24rem / 32);
+        background-image: url("../images/edit.png");
+        background-size: (24rem / 32) (24rem / 32);
+      }
+      .share-icon {
+        position: absolute;
+        top: (32em / 32);
+        left: (92em / 32);
+        width: (25rem / 32);
+        height: (27rem / 32);
+        background-image: url("../images/share.png");
+        background-size: (25rem / 32) (27rem / 32);
+      }
+      &.edit::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top:50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: (46rem / 32);
+        background-color: #e8e2d9;
+      }
+    }
+  }
+}
+
+.ticket {
+  .content {
+    background: @ticket-bg;
+    .receive {
+      color: @white;
+      margin-top:(56rem / 32);
+    }
+    .time {
+      margin-top: (12rem / 32);
+    }
+  }
+  .type {
+    color:@white;
+    font-size: (24rem / 32);
+    span {
+      font-size: (90rem / 32);
+      margin-right:(12rem / 32);
+      &::before {
+        content:"¥";
+        margin-right:(12rem / 32);
+        font-size: (40rem / 32);
+      }
+    }
+  }
+}
+
+.ticket-ing {
+  margin-top: (28rem / 32);
+  .content {
+    background-image: url("../images/oval.png");
+    background-position: bottom;
+    background-repeat: repeat-x;
+  }
+}
