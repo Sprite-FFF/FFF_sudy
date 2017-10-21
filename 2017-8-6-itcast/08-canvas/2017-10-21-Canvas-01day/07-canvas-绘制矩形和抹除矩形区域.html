@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas></canvas>
+    <script>
+        let canvas = document.querySelector('canvas');
+        canvas.width = 600;
+        canvas.height = 400;
+
+        let cxt = canvas.getContext("2d");
+
+        // rect(x,y,width,height);
+        // 左上角起始点坐标 和 矩形宽高
+        // cxt.rect(100,50,200,150);
+        // cxt.stroke();
+
+        // 描边矩形
+        // cxt.strokeRect(100,50,200,150);
+
+        // 填充矩形
+        cxt.fillStyle = "#00ffff";
+        cxt.fillRect(100, 50, 200, 150);
+
+        // 抹除矩形
+        cxt.clearRect(110, 60, 180, 130);
+    </script>
+</body>
+</html>

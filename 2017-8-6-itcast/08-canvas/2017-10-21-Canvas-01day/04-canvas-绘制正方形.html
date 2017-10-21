@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="">
+
+  </canvas>
+
+  <script>
+    let canvas = document.querySelector('canvas');
+
+    canvas.width = 400;
+    canvas.height = 400;
+
+    let cxt = canvas.getContext("2d");
+    cxt.moveTo(10,10);
+    cxt.lineTo(110,10);
+    cxt.lineTo(110,110);
+    cxt.lineTo(10,110);
+    cxt.lineTo(10,10);
+    // 填充样式
+    cxt.fillStyle = "#00ffff";
+    // 填充
+    cxt.fill();
+  </script>
+</body>
+</html>

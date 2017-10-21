@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    canvas {
+      border: 1px solid orchid;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 准备画布 -->
+  <canvas id=""></canvas>
+
+  <script>
+    // 获取画布
+    let cns = document.querySelector('canvas');
+    cns.width = 500;
+    cns.height = 500;
+    // 设置2d画笔
+    let content = cns.getContext("2d");
+    // 3d画笔
+    // let content = cns.getContext("webgl");
+
+    // 起始点位置
+    content.moveTo(20, 20);
+    // 终点位置 
+    content.lineTo(400, 400, );
+    // 线宽
+    content.lineWidth = 10;
+    // 设置颜色
+    content.strokeStyle = "#00ffff";
+    // 绘制 描边
+    content.stroke();
+  </script>
+</body>
+
+</html>

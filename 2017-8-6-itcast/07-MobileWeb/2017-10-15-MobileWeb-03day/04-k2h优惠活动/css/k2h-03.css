@@ -1,0 +1,119 @@
+@import "reset.css";
+@import "normalize.css";
+body {
+  background-color: #fff;
+}
+header {
+  height: 1.35384615rem;
+  width: 100%;
+  background-color: #ff9b25;
+}
+header h2 {
+  padding-left: 0.86153846rem;
+  line-height: 1.35384615rem;
+  font-size: 0.49230769rem;
+  color: #fff;
+}
+header .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.86153846rem;
+  height: 1.35384615rem;
+  box-sizing: border-box;
+  padding: 0.4rem 0.24615385rem 0.4rem 0.30769231rem;
+  background-image: url("../images/back.png");
+  background-size: 0.33846154rem 0.49230769rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-origin: content-box;
+  background-clip: content-box;
+}
+header .roles {
+  position: absolute;
+  top: 0;
+  right: 0.36923077rem;
+  line-height: 1.35384615rem;
+  font-size: 0.46153846rem;
+  color: #fff;
+}
+.space {
+  background-color: #f7f4f1;
+  height: 0.49230769rem;
+}
+.detail li {
+  box-sizing: border-box;
+  height: 1.6rem;
+  padding: 0.58461538rem 0.36923077rem 0;
+  border-top: 1px solid #dedede;
+}
+.detail li h3 {
+  font-size: 0.46153846rem;
+  color: #555;
+}
+.detail li:last-child {
+  border-bottom: 1px solid #ccc;
+}
+.detail li:nth-child(2) .left::after {
+  position: absolute;
+  top: -0.6rem;
+  right: 0;
+  content: "";
+  width: 1px;
+  height: 1.6rem;
+  background-color: #ccc;
+}
+.detail .left {
+  width: 5.26153846rem;
+  position: relative;
+  float: left;
+  font-size: 0;
+}
+.detail .left span {
+  color: #ccc;
+  font-size: 0.30769231rem;
+}
+.detail .right {
+  width: 3.84615385rem;
+  position: relative;
+  float: right;
+}
+.detail .right h3 {
+  width: 100%;
+}
+.detail .yuan {
+  position: absolute;
+  top: 0;
+  right: 0.30769231rem;
+  color: #ccc;
+  font-size: 0.46153846rem;
+}
+.detail .date {
+  float: left;
+}
+.detail .time {
+  float: right;
+  font-size: 0.4rem;
+  color: #ccc;
+}
+.detail .valid {
+  color: #ccc;
+  font-size: 0.4rem;
+  text-align: right;
+}
+footer {
+  width: 100%;
+  padding: 0.70769231rem 0;
+  text-align: center;
+  background-color: #f7f4f1;
+}
+footer a {
+  display: inline-block;
+  width: 9.13846154rem;
+  height: 1.23076923rem;
+  background-color: #ff9b25;
+  border-radius: 3px;
+  line-height: 1.23076923rem;
+  font-size: 0.49230769rem;
+  color: #fff;
+}

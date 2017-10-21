@@ -1,0 +1,139 @@
+@import "./reset.css";
+@import "./setting.less";
+@import "./normalize.css";
+
+body {
+  background-color: #fff;
+}
+header {
+  height: (88rem / 65);
+  width: 100%;
+  background-color: @header-bg;
+  h2 {
+    padding-left: (56rem / 65);
+    line-height: (88rem / 65);
+    font-size: (32rem / 65);
+    color:@white; 
+  }
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: (56rem / 65);
+    height: (88rem / 65);
+    box-sizing: border-box;
+    padding:(26rem / 65) (16rem / 65) (26rem / 65) (20rem / 65);
+    background-image: url("../images/back.png");
+    background-size: (22rem / 65) (32rem / 65);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-origin: content-box;
+    background-clip: content-box;
+  }
+
+  .roles {
+    position:absolute;
+    top: 0;
+    right: (24rem / 65);
+    line-height: (88rem / 65);
+    font-size: (30rem / 65);
+    color: @white;
+  }
+}
+
+.space {
+  background-color:@content-bg;
+  height: (32rem / 65);
+}
+
+.detail{
+  li {
+    box-sizing: border-box;
+    height: (104rem / 65);
+    padding: (38rem / 65) (24rem / 65) 0;
+    border-top: 1px solid @border-color;
+    h3 {
+      font-size: (30rem / 65);
+      color: #555;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid @explain-color;
+    }
+
+    &:nth-child(2) {
+      .left {
+        &::after {
+          position: absolute;
+          top:-0.6rem;
+          right: 0;
+          content: "";
+          width: 1px;
+          height: (104rem / 65);
+          background-color: #ccc;
+    
+        }
+      }
+    }
+  }
+  .left {
+    width: (342rem / 65);
+    position: relative;
+    float: left;
+    font-size: 0;
+    span {
+      color:@explain-color;
+      font-size: (20rem / 65);
+    }
+  }
+  .right {
+    width: (250rem / 65);
+    position: relative;
+    float:right;
+    h3 {
+      width: 100%;
+    }
+  }
+
+  .yuan {
+    position: absolute;
+    top:0;
+    right: (20rem / 65);
+    color: @explain-color;
+    font-size: (30rem / 65);
+  }
+
+  .date {
+    float: left;
+  }
+
+  .time {
+    float: right;
+    font-size: (26rem / 65);
+    color:#ccc;
+  }
+
+  .valid {
+    color : #ccc;
+    font-size:(26rem / 65);
+    text-align: right;
+  }
+ 
+}
+
+footer {
+  width: 100%;
+  padding: (46rem / 65) 0;
+  text-align: center;
+  background-color: @content-bg;
+  a {
+    display: inline-block;
+    width: (594rem / 65);
+    height: (80rem / 65);
+    background-color: @header-bg;
+    border-radius: 3px;
+    line-height: (80rem / 65);
+    font-size: (32rem / 65);
+    color: @white;
+  }
+}

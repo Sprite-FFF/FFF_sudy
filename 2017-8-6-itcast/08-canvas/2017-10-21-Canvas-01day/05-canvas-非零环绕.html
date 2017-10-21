@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id=""></canvas>
+  <script>
+    let canvas = document.querySelector('canvas');
+    canvas.width = 600;
+    canvas.height = 300;
+
+    let cxt = canvas.getContext("2d");
+
+    cxt.moveTo(100,50);
+    cxt.lineTo(500,50);
+    cxt.lineTo(500,250);
+    cxt.lineTo(100,250);
+    cxt.lineTo(100,50);
+    // cxt.stroke();
+
+    cxt.moveTo(200,100);
+    cxt.lineTo(200,200);
+    cxt.lineTo(400,200);
+    cxt.lineTo(400,100);
+    cxt.lineTo(200,100);
+
+    cxt.fillStyle = "#00ffff";
+    cxt.fill();
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas></canvas>
+  <script>
+    let canvas = document.querySelector('canvas');
+    canvas.width = 600;
+    canvas.height = 400;
+
+    let data = {
+      x : 320,
+      y : 240
+    }
+
+    let pWidth = 8;
+    let pointX = data.x - pWidth/2;
+    let pointY = data.y - pWidth/2;
+
+    let cxt = canvas.getContext("2d");
+    // cxt.fillRect(pointX,pointY,pWidth,pWidth);
+
+    cxt.moveTo(pointX,pointY);
+    cxt.lineTo(pointX+pWidth,pointY);
+    cxt.lineTo(pointX+pWidth,pointY+pWidth);
+    cxt.lineTo(pointX,pointY+pWidth);
+    cxt.lineTo(pointX,pointY);
+    // cxt.fillStyle = "#00ffff";
+    cxt.fill();
+  </script>
+</body>
+</html>

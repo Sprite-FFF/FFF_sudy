@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas></canvas>
+  <script>
+    let canvas = document.querySelector('canvas');
+    canvas.width = 400;
+    canvas.width = 400;
+
+    let ctx = canvas.getContext("2d");
+
+    ctx.arc(75,75,50,0,2*Math.PI,true);
+    ctx.moveTo(110,75);
+    ctx.arc(75,75,35,0,Math.PI)
+    ctx.moveTo(65,65);
+    ctx.arc(60,65,5,0,Math.PI*2);
+    ctx.moveTo(95,65);
+    ctx.arc(90,65,5,0,Math.PI*2);
+
+    ctx.fillStyle = "#00ffff";
+    ctx.fill();
+    // ctx.stroke();
+  </script>
+</body>
+</html>

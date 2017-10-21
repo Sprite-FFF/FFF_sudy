@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id=""></canvas>
+  <script>
+    let canvas = document.querySelector('canvas');
+    canvas.width = 400;
+    canvas.height = 400;
+    let cxt = canvas.getContext("2d");
+
+    // canvas是基于状态绘制的
+    // 如果没有开启新的路径
+    // 后面设置的属性会覆盖前面的
+
+    // 开启新的绘制路径
+    cxt.beginPath();
+    cxt.moveTo(100,100);
+    cxt.lineTo(200,100);
+    cxt.strokeStyle = "#00ffff";
+    cxt.stroke();
+
+    cxt.beginPath();
+    cxt.moveTo(100,200);
+    cxt.lineTo(200,200);
+    cxt.strokeStyle = "red";
+    cxt.stroke();
+
+    cxt.beginPath();
+    cxt.moveTo(100,300);
+    cxt.lineTo(200,300);
+    cxt.strokeStyle = "yellowgreen";
+    cxt.stroke();
+    
+  </script>
+</body>
+</html>

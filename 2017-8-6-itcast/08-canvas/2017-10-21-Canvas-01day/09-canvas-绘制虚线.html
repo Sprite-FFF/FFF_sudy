@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas></canvas>
+  <script>
+    let canvas = document.querySelector('canvas');
+    canvas.width = 400;
+    canvas.height = 400;
+    let cxt = canvas.getContext("2d");
+    cxt.moveTo(10,100);
+    cxt.lineTo(400,100);
+
+    // 设置虚线
+    // 方法接收一个数组参数
+    // 区分数组长度为奇偶数
+    cxt.setLineDash([5]);
+    cxt.stroke();
+  </script>
+</body>
+</html>

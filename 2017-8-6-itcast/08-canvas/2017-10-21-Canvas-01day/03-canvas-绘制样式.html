@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id=""></canvas>
+  <script>
+     let canvas = document.querySelector('canvas');
+     canvas.width = 400;
+     canvas.height = 400;
+
+     let cxt = canvas.getContext("2d");
+
+     cxt.moveTo(20,20);
+     cxt.lineTo(100,100);
+     cxt.lineTo(180,20)
+
+    //  绘制颜色
+    cxt.strokeStyle = "#00ffff";
+
+    // 线宽
+    cxt.lineWidth = 10;
+    // 设置线段末端样式
+    // cxt.lineCap = "butt";  // 默认的
+    // cxt.lineCap = "round";  // 圆角
+    cxt.lineCap = "square"; // 方块
+
+    // 设置相交线拐点样式
+    // cxt.lineJoin = "miter"  // 默认
+    // cxt.lineJoin = "round"; // 圆角
+    cxt.lineJoin = "bevel"; // 平角
+
+    cxt.stroke();
+  </script>
+</body>
+</html>

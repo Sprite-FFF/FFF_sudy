@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas>
+
+  </canvas>
+
+  <script>
+    let canvas = document.querySelector('canvas');
+    canvas.width = 600;
+    canvas.height = 400;
+
+    let cxt = canvas.getContext("2d");
+
+    let triangle = 10;
+    let space = 20;
+
+    // 原点坐标 
+    let origin = {
+      x: space,
+      y: canvas.height - space
+    }
+
+    // X轴
+    // 开始绘制 
+    cxt.moveTo(origin.x, origin.y);
+    cxt.lineTo(canvas.width - space, origin.y);
+    cxt.lineTo(canvas.width - space - triangle, canvas.height - space + triangle / 2);
+    cxt.lineTo(canvas.width - space - triangle, canvas.height - space - triangle / 2);
+    cxt.lineTo(canvas.width - space, origin.y);
+    cxt.stroke();    
+    cxt.fill();
+    // Y轴    
+    // 开始绘制 
+    cxt.moveTo(origin.x, origin.y);
+    cxt.lineTo(origin.x, space);
+    cxt.lineTo(space - triangle/2,space + triangle);
+    cxt.lineTo(space + triangle/2,space + triangle);
+    cxt.lineTo(origin.x ,space);
+    cxt.stroke();     
+    cxt.fill();
+  </script>
+</body>
+
+</html>
