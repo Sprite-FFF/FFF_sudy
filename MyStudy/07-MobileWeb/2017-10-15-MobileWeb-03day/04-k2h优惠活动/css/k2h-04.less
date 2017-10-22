@@ -1,0 +1,98 @@
+@import "./reset.css";
+@import "./normalize.css";
+@import "./setting.less";
+
+body {
+  background-color: #f4f3f2;
+}
+
+header {
+  position: relative;
+  height: (88rem / 65);
+  margin-bottom: (32rem / 65);
+  background-color: @header-bg;
+  line-height: (88rem / 65);
+  h2{
+    padding-left: (57rem / 65);
+    font-size: (32rem / 65);
+    color:@white;
+  }
+  .back {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: (57rem / 65);
+    height: 100%;
+    padding: (28rem / 65) (19rem / 65);
+    background-image: url("../images/back.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: (20rem / 65) (32rem / 65);
+    background-origin: content-box;
+    background-clip: content-box;
+  }
+}
+
+.content {
+  background-color: @white;
+  li{
+    position: relative;
+    box-sizing:border-box;
+    height: (104rem / 65);
+    padding: (38rem / 65) (24rem / 65) 0;
+    border-top:1px solid #ccc;
+    font-size:0;
+    color: #555;
+    &:last-child {
+      border-bottom:1px solid #ccc;
+    }
+
+    h3 {
+      font-size:(30rem / 65);
+    }
+
+    .explain {
+      font-size: (20rem / 65);
+      color: #ccc;
+    }
+
+    .yuan {
+      position: absolute;
+      right: (24rem / 65);
+      top: (38rem / 65);
+      color: #ccc;
+      font-size: (30rem / 65);
+    }
+    .time {
+      float: right;
+      color: #ccc;
+      font-size: (26rem / 65);
+    }
+    .fl {
+      float: left;
+    }
+  }
+}
+
+.btn {
+  padding: (48rem / 65) (24rem / 65);
+  a {
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    background-color: @header-bg;
+    line-height: (80rem / 65);
+    text-align: center;
+    color:@white;
+  }
+}
+
+.tips {
+  padding: (114rem / 65) (24rem / 65);
+  font-size: (24rem / 65);
+  color:#ccc;
+  p {
+    margin-bottom: (18rem / 65);
+  }
+}

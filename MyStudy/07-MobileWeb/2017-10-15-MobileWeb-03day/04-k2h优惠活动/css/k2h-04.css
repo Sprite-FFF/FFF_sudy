@@ -1,0 +1,89 @@
+@import "reset.css";
+@import "normalize.css";
+body {
+  background-color: #f4f3f2;
+}
+header {
+  position: relative;
+  height: 1.35384615rem;
+  margin-bottom: 0.49230769rem;
+  background-color: #ff9b25;
+  line-height: 1.35384615rem;
+}
+header h2 {
+  padding-left: 0.87692308rem;
+  font-size: 0.49230769rem;
+  color: #fff;
+}
+header .back {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.87692308rem;
+  height: 100%;
+  padding: 0.43076923rem 0.29230769rem;
+  background-image: url("../images/back.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 0.30769231rem 0.49230769rem;
+  background-origin: content-box;
+  background-clip: content-box;
+}
+.content {
+  background-color: #fff;
+}
+.content li {
+  position: relative;
+  box-sizing: border-box;
+  height: 1.6rem;
+  padding: 0.58461538rem 0.36923077rem 0;
+  border-top: 1px solid #ccc;
+  font-size: 0;
+  color: #555;
+}
+.content li:last-child {
+  border-bottom: 1px solid #ccc;
+}
+.content li h3 {
+  font-size: 0.46153846rem;
+}
+.content li .explain {
+  font-size: 0.30769231rem;
+  color: #ccc;
+}
+.content li .yuan {
+  position: absolute;
+  right: 0.36923077rem;
+  top: 0.58461538rem;
+  color: #ccc;
+  font-size: 0.46153846rem;
+}
+.content li .time {
+  float: right;
+  color: #ccc;
+  font-size: 0.4rem;
+}
+.content li .fl {
+  float: left;
+}
+.btn {
+  padding: 0.73846154rem 0.36923077rem;
+}
+.btn a {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  background-color: #ff9b25;
+  line-height: 1.23076923rem;
+  text-align: center;
+  color: #fff;
+}
+.tips {
+  padding: 1.75384615rem 0.36923077rem;
+  font-size: 0.36923077rem;
+  color: #ccc;
+}
+.tips p {
+  margin-bottom: 0.27692308rem;
+}
