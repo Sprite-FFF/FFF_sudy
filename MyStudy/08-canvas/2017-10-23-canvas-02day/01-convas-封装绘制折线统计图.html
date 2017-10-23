@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas></canvas>
+  <script>
+    //数据
+    var data = [{
+      x: 100,
+      y: 100
+    }, {
+      x: 200,
+      y: 120
+    }, {
+      x: 300,
+      y: 180
+    }, {
+      x: 400,
+      y: 300
+    }, {
+      x: 500,
+      y: 140
+    }]
+
+    // 构造函数
+    function LineChart(width, height, element) {
+      // 设置画布
+      this.canvas = document.querySelector(element);
+      // 设置画布大小
+      this.width = this.canvas.width = width;
+      this.height = this.canvas.height = height;
+
+      // 定义画笔
+      this.cxt = this.canvas.getContext("2d");
+      // 间隔
+      this.space = 20;
+      // 原点坐标
+      this.originX = this.space;
+      this.originY = this.canvas.height - this.space;
+      // 箭头大小
+      this.arrow = 10;
+      // 坐标点小方块大小
+      this.square = 8;
+    }
+
+    // 初始化
+    LineChart.prototype.init = function (data) {
+      this.drowAxis.call(this);
+      var temp = this.transformData.call(this, data);
+      this.drowsquare.call(this, temp);
+    }
+
+    // 绘制坐标轴
+
+    LineChart.prototype.drowAxis = function () {
+      this.cxt.moveTo(this.originX, this.originY);
+      // X轴
+      this.cxt.lineTo(this.width - this.space, this.originY);
+      // 小箭头
+      this.cxt.lineTo(this.width - this.space - this.arrow, this.originY + this.arrow / 2);
+      this.cxt.lineTo(this.width - this.space - this.arrow, this.originY - this.arrow / 2);
+      this.cxt.lineTo(this.width - this.space, this.originY);
+      this.cxt.stroke();
+      this.cxt.fill();
+
+      // Y轴
+      this.cxt.moveTo(this.originX, this.originY);
+      this.cxt.lineTo(this.originX, this.space);
+      // 小箭头
+      this.cxt.lineTo(this.originX - this.arrow / 2, this.space + this.arrow);
+      this.cxt.lineTo(this.originX + this.arrow / 2, this.space + this.arrow);
+      this.cxt.lineTo(this.originX, this.space);
+      this.cxt.stroke();
+      this.cxt.fill();
+    }
+
+    // 转换数据坐标
+    LineChart.prototype.transformData = function (data) {
+      var temp = [];
+      data.forEach((item) => {
+        temp.push({
+          x: this.originX + item.x,
+          y: this.originY - item.y
+        });
+      });
+      return temp;
+    }
+
+
+    // 根据数据绘制坐标点
+
+    LineChart.prototype.drowsquare = function (data) {
+      data.forEach((item,index,arr) => {
+        this.cxt.fillRect(item.x - this.square, item.y - this.square, this.square, this.square);
+        if(index == 0){
+          this.cxt.moveTo(this.originX , this.originY);
+          this.cxt.lineTo(item.x - this.square / 2,item.y - this.square / 2);
+          this.cxt.stroke();
+        }else {
+          this.cxt.beginPath();
+          this.cxt.moveTo(item.x - this.square / 2,item.y - this.square / 2);
+          // 这里减一是真的机智  我怎么没想到
+          this.cxt.lineTo(arr[index-1].x - this.square / 2,arr[index-1].y - this.square /2);
+          this.cxt.stroke();
+        }
+      });
+    }
+
+    // 实例化 调用初始化方法
+    new LineChart(600, 400, "canvas").init(data);
+  </script>
+</body>
+
+</html>

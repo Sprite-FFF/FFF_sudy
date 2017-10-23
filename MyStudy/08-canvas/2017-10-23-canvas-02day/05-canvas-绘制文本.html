@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas></canvas>
+  <script>
+    var canvas = document.querySelector('canvas');
+    canvas.width = 500;
+    canvas.height = 500;
+    var ctx = canvas.getContext("2d");
+    // 文本样式
+    ctx.font = "24px 楷体";
+    // 文本对齐方式
+    ctx.textAlign = "left";
+    // 文本垂直对齐方式
+    ctx.textBaseline = "middle";
+    // 描边文字
+    ctx.strokeText("杨家有女初长成 养在深闺人未识",100,100);
+    // 填充文字
+    ctx.fillText("白玉堂前春解舞 东风卷的均匀",100,200);
+    // 获取文本长度
+    console.log(ctx.measureText("杨家有女初长成 养在深闺人未识").width); 
+  </script>
+</body>
+</html>

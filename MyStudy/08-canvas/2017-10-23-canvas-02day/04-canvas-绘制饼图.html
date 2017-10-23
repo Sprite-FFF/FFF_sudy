@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas></canvas>
+
+  <script>
+    // 数据
+    var data = [{ title: '15-20岁', num: 12 }, { title: '20-25岁', num: 30 }, { title: '25-30岁', num: 22 }, { title: '30-35岁',
+num: 10 }, { title: '35-100岁', num: 12 }, ];
+
+    // 根据数据来绘制饼状图
+
+    var canvas = document.querySelector('canvas');
+    canvas.width = 600;
+    canvas.height = 600;
+
+    // 计算总和 根据数据算出各项数据的弧度绘制出来
+    var total = 0;
+    data.forEach((item)=>{
+      total = total + item.num;
+    });
+
+    // 随机颜色函数
+
+    var rdColor = function(){
+      var r = Math.floor(Math.random() * 256);
+      var g = Math.floor(Math.random() * 256);
+      var b = Math.floor(Math.random() * 256);
+      return "rgb("+r+","+g+","+b+")";
+    }
+
+    var cxt = canvas.getContext("2d");
+    var start = 0;
+    data.forEach((item)=>{
+      cxt.beginPath();
+      cxt.moveTo(canvas.width / 2,canvas.height / 2);
+      cxt.arc(canvas.width / 2,canvas.height / 2,150,start,start += item.num/total*2*Math.PI);
+      cxt.fillStyle = rdColor();
+      cxt.fill();
+      cxt.closePath();
+
+    });
+
+  </script>
+</body>
+</html>

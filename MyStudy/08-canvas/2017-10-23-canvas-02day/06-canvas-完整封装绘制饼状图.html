@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas></canvas>
+
+  <script>
+ var data = [{ title: '15-20岁', num: 12 }, { title: '20-25岁', num: 30 }, { title: '25-30岁', num: 22 }, { title: '30-35岁',
+num: 10 }, { title: '35-100岁', num: 12 }, ];
+    var PiChart = function (element, width, height) {
+      this.canvas = document.querySelector(element);
+      this.width = this.canvas.width = width;
+      this.height = this.canvas.height = height;
+      // 画笔
+      this.cxt = this.canvas.getContext("2d");
+      // 设置圆心坐标
+      this.zeroX = this.width / 2;
+      this.zeroY = this.height / 2;
+      // 半径
+      this.radius = 150;
+      // 延长线
+      this.outLine = 20;
+    }
+
+    // 定义颜色随机方法
+    PiChart.prototype.rdColor = function () {
+      var r = Math.floor(Math.random * 256);
+      var g = Math.floor(Math.random * 256);
+      var b = Math.floor(Math.random * 256);
+      return "rgb("+r+","+g+","+b+")";
+    }
+
+    // 将数据转换弧度
+    PiChart.prototype.transform = function(data){
+      // 计算数据总和
+      var total = 0;
+      data.forEach((item)=>{
+        total = total + item.num;
+      });
+
+      // 转换弧度
+      var canvasData = [];
+      data.forEach((item)=>{
+         canvasData.push({
+           title:item.title,
+           num:item.num,
+           angle:item.num / total * 2 * Math.PI
+         });
+      });
+
+      return canvasData;
+    }
+
+    // 绘制饼图
+    
+
+    new PiChart("canvas", 600, 500);
+  </script>
+</body>
+
+</html>

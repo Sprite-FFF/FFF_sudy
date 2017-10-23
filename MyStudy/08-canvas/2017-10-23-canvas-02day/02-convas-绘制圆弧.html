@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas></canvas>
+
+  <script>
+    var canvas = document.querySelector("canvas");
+    canvas.width = 500;
+    canvas.height = 500;
+    var cxt = canvas.getContext("2d");
+    cxt.moveTo(canvas.width / 2, canvas.height);
+    cxt.lineTo(canvas.width / 2, 0);
+    cxt.moveTo(0, canvas.height / 2);
+    cxt.lineTo(canvas.width, canvas.height / 2);
+    cxt.stroke();
+
+    // 绘制一个圆
+    // cxt.beginPath();
+    // cxt.arc(canvas.width / 2,canvas.height / 2,200,0,20*Math.PI/180,false);
+    // cxt.stroke();
+
+    // 绘制一个扇形
+    cxt.beginPath();
+    cxt.moveTo(canvas.width / 2,canvas.height / 2);
+    cxt.arc(canvas.width / 2,canvas.height / 2,100,30*Math.PI/180,90*Math.PI/180);
+    cxt.fillStyle = "#00ffff";
+    cxt.fill();
+    cxt.closePath();
+  </script>
+</body>
+
+</html>
