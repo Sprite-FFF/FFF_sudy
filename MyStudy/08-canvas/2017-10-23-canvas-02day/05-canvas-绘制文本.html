@@ -13,16 +13,24 @@
     canvas.width = 500;
     canvas.height = 500;
     var ctx = canvas.getContext("2d");
+
+    ctx.beginPath();
+    ctx.moveTo(0,canvas.height/2);
+    ctx.lineTo(canvas.width,canvas.height/2);
+    ctx.moveTo(canvas.width/2,0);
+    ctx.lineTo(canvas.width/2,canvas.height);
+    ctx.stroke();
+    ctx.beginPath();
     // 文本样式
     ctx.font = "24px 楷体";
     // 文本对齐方式
-    ctx.textAlign = "left";
+    // ctx.textAlign = "left";
     // 文本垂直对齐方式
-    ctx.textBaseline = "middle";
+    ctx.textBaseline = "top";
     // 描边文字
-    ctx.strokeText("杨家有女初长成 养在深闺人未识",100,100);
+    ctx.strokeText("杨家有女初长成 养在深闺人未识",canvas.width/2,canvas.height/2);
     // 填充文字
-    ctx.fillText("白玉堂前春解舞 东风卷的均匀",100,200);
+    // ctx.fillText("白玉堂前春解舞 东风卷的均匀",100,200);
     // 获取文本长度
     console.log(ctx.measureText("杨家有女初长成 养在深闺人未识").width); 
   </script>

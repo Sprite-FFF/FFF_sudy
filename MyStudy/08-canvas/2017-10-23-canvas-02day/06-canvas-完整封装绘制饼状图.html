@@ -12,8 +12,22 @@
   <canvas></canvas>
 
   <script>
- var data = [{ title: '15-20岁', num: 12 }, { title: '20-25岁', num: 30 }, { title: '25-30岁', num: 22 }, { title: '30-35岁',
-num: 10 }, { title: '35-100岁', num: 12 }, ];
+    var data = [{
+      title: '15-20岁',
+      num: 12
+    }, {
+      title: '20-25岁',
+      num: 30
+    }, {
+      title: '25-30岁',
+      num: 22
+    }, {
+      title: '30-35岁',
+      num: 10
+    }, {
+      title: '35-100岁',
+      num: 12
+    }, ];
     var PiChart = function (element, width, height) {
       this.canvas = document.querySelector(element);
       this.width = this.canvas.width = width;
@@ -27,41 +41,124 @@ num: 10 }, { title: '35-100岁', num: 12 }, ];
       this.radius = 150;
       // 延长线
       this.outLine = 20;
+      // 开始弧度位置
+      this.start = 0;
     }
 
     // 定义颜色随机方法
     PiChart.prototype.rdColor = function () {
-      var r = Math.floor(Math.random * 256);
-      var g = Math.floor(Math.random * 256);
-      var b = Math.floor(Math.random * 256);
-      return "rgb("+r+","+g+","+b+")";
+      var r = Math.floor(Math.random() * 256);
+      var g = Math.floor(Math.random() * 256);
+      var b = Math.floor(Math.random() * 256);
+      return "rgb(" + r + "," + g + "," + b + ")";
+    }
+
+    // 初始化方法
+    PiChart.prototype.init = function (data) {
+      let temp = this.transform.call(this, data);
+      this.drawPie.call(this, temp);
+      this.drawDesc.call(this, temp);
+      this.drawTitle.call(this, temp);
     }
 
     // 将数据转换弧度
-    PiChart.prototype.transform = function(data){
+    PiChart.prototype.transform = function (data) {
       // 计算数据总和
       var total = 0;
-      data.forEach((item)=>{
+      data.forEach((item) => {
         total = total + item.num;
       });
 
       // 转换弧度
       var canvasData = [];
-      data.forEach((item)=>{
-         canvasData.push({
-           title:item.title,
-           num:item.num,
-           angle:item.num / total * 2 * Math.PI
-         });
+      data.forEach((item) => {
+        canvasData.push({
+          title: item.title,
+          num: item.num,
+          angle: item.num / total * 2 * Math.PI
+        });
       });
 
       return canvasData;
     }
 
     // 绘制饼图
-    
 
-    new PiChart("canvas", 600, 500);
+    PiChart.prototype.drawPie = function (data) {
+      var colors = [];
+      data.forEach((item) => {
+        this.cxt.beginPath();
+        this.cxt.moveTo(this.zeroX, this.zeroY);
+        this.cxt.arc(this.zeroX, this.zeroY, this.radius, this.start, this.start += item.angle);
+        item.color = this.rdColor();
+        this.cxt.fillStyle = item.color;
+        this.cxt.fill();
+      });
+
+      this.start = 0;
+    }
+
+    // 绘制左侧矩形和文字
+    PiChart.prototype.drawDesc = function (data) {
+      data.forEach((item, index) => {
+        this.cxt.beginPath();
+        this.cxt.rect(20, 20 + index * (16 + 10), 30, 16);
+        this.cxt.fillStyle = item.color;
+        this.cxt.fill();
+        this.cxt.textBaseline = "top";
+        this.cxt.fillText(item.title, 20 + 30 + 10, 20 + index * (16 + 10));
+        this.fillStyle = item.color;
+      });
+    }
+
+    // 绘制饼状图部分title
+
+    PiChart.prototype.drawTitle = function (data) {
+      let edge = this.radius + this.outLine;
+      data.forEach((item, index) => {
+        let tmp = this.start;
+        // 拐点横坐标
+        let x = this.zeroX + edge * Math.cos(tmp + item.angle / 2);
+        // 拐点纵坐标
+        let y = this.zeroY +  edge * Math.sin(tmp + item.angle / 2);
+        tmp = this.start += item.angle;
+        this.cxt.beginPath();
+        this.cxt.moveTo(this.zeroX,this.zeroY);
+        this.cxt.lineTo(x,y);
+        this.cxt.strokeStyle = item.color;
+        this.cxt.stroke();
+
+        // 绘制文字
+
+        // 获取文字宽度        
+        let width = this.cxt.measureText(item.title).width;        
+        if(x>this.zeroX){
+          this.cxt.beginPath();
+          this.fillStyle = item.color;
+          this.cxt.textBaseline = "bottom";        
+          this.cxt.fillText(item.title,x,y);
+          // 绘制文字底线
+          this.cxt.beginPath();
+          this.cxt.moveTo(x,y);
+          this.cxt.lineTo(x+width,y);
+          this.cxt.strokeStyle = item.color;
+          this.cxt.stroke();
+        }else {
+          this.cxt.beginPath();
+          this.fillStyle = item.color;
+          this.cxt.textBaseline = "bottom";
+          this.cxt.fillText(item.title,x-width,y);
+          this.cxt.beginPath();
+          this.cxt.moveTo(x,y);
+          this.cxt.lineTo(x-width,y);
+          this.cxt.strokeStyle = item.color;
+          this.cxt.stroke();
+        }
+        
+      });
+    }
+
+    new PiChart("canvas", 600, 500).init(data);
   </script>
 </body>
 
