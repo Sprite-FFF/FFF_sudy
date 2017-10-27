@@ -24,6 +24,7 @@ server.on("request",(request,response)=>{
   }else {
     let realPath = path.join("./",request.url);
     fs.readFile(realPath,(error,data)=>{
+      console.log(error);
       if(!error){
         response.writeHeader(200,{
           "content-type":mime.getType(realPath)

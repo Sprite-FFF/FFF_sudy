@@ -1,0 +1,12 @@
+﻿.slider-box {
+    position: relative;
+}
+
+.slider_cube,
+.slider_inner_a,
+.slider_inner_b {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
