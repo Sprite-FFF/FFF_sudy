@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //  作用域
+    //  全局作用域和函数作用域
+    //  函数作用域链
+    //  ES6中JS有块级作用域
+    //  预解析 
+    // js引擎在工作时 1.预解析 2.执行代码
+    // 预解析:1.变量声明提升 2.函数声明提升
+    // 变量声明提升只提升声明 不提升赋值 赋值还是在原来的地方
+    // 变量声明提升会提升到最前面 
+    // 函数权限比变量高 也就是说 同名函数会覆盖变量
+    // 函数范围内 也会有声明提升 
+
+    console.log(fn); // function fn (){}
+    function fn() {};
+    var fn = "aaa";
+    console.log(fn);
+    console.log("====================");
+    // 面试题
+
+    // 1.
+    // var a = 25;
+
+    // function abc() {
+    //   //变量声明提升和就近原则
+    //   alert(a); //undefined
+    //   var a = 10;
+    // }
+    // abc();
+
+    // 2.
+    // console.log(a); //函数
+    // function a() {
+    //   console.log('aaaaa');
+    // }
+    // var a = 1;
+    // console.log(a); // 1 变量提升声明不提升赋值
+
+    // 3.
+    // var num = 10;
+    // fun();
+    // function fun() {
+    //   //变量声明提升和就近原则
+    //   console.log(num); //undefined
+    //   var num = 20;
+    // }
+    // 4.
+        f1();
+        console.log(c);//9
+        console.log(b);//9
+        console.log(a);//报错
+        function f1() {
+            var a;
+            a = b = c = 9;//b和c是隐式全局变量
+            console.log(a);//9
+            console.log(b);//9
+            console.log(c);//9
+        }
+  </script>
+</body>
+
+</html>

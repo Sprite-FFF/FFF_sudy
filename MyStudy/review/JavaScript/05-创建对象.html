@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1.字面量 
+    // 2.构造函数
+
+    // 添加和访问属性:
+    // .
+    // [] 使用[]添加或访问属性时一定要加双引号
+    // delete 删除属性
+
+    // 批量创建多个对象:
+    // 1.工厂函数
+    function createStudent(name,age,gender){
+      var obj = {
+        name:name,
+        age:age,
+        gender:gender,
+        sayHai:function(){
+          console.log("你好,我叫"+this.name);
+        }
+      }
+      return obj;
+    }
+
+    var stu1 = createStudent("林黛玉",16,"女");
+    console.log(stu1.name);
+    console.log(stu1.age);
+    console.log(stu1.gender);
+    stu1.sayHai();
+
+    // 构造函数
+    function Student(name,age){
+       this.name = name;
+       this.age = age;
+       this.sayHi = function(){
+         console.log(this.name);
+       }
+    }
+
+    var stu2 = new Student("薛宝钗",12);
+    console.log(stu2.name);
+    console.log(stu2.age);
+    stu2.sayHi();
+
+  
+  </script>
+</body>
+</html>

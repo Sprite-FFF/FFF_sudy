@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var obj = {
+      name: "琳琳",
+      age:"18",
+      gender:"女",
+      sing:function(){
+        console.log("葫芦娃~葫芦娃~");
+      }
+    }
+
+    // 使用for...in...语句来遍历对象
+
+    for (var key in obj) {
+      if (obj.hasOwnProperty(key)) {
+         console.log(obj[key]);
+      }
+    }
+
+
+    // 简单数据类型和复杂数据类型
+    // 简单数据类型是存储在栈中的 复杂数据类型是存储在堆里的(js并不能直接操作内存 这里的栈和堆只是为了方便理解)
+    // 简单数据类型在值传递是直接传值 复杂数据类型传递的是引用地址
+
+    var a = 10;
+    var b = a;
+    b = 20;
+    console.log(a,b); //10 20  其中一个的修改并不会引起另一个的变化
+
+    console.log("=================================================="); 
+
+    var o = {
+      name:"小明"
+    }
+
+    var o2 = o;
+    o2.name = "小红";
+
+    console.log(o.name,o2.name); // 都是小红 复杂数据类型在进行传递时实际上是传递的地址
+    // 修改其中一个时也会引起另一个的修改 因为操作的都是同一片内存空间
+  </script>
+</body>
+</html>

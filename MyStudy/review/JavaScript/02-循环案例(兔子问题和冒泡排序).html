@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 斐波那契数列: 1 1 2 3 5 8 13 21 34 ......
+    // 从第三项开始 每一项都等与前两项的和
+    // function fc(n) {
+    //   var n1 = 1,
+    //     n2 = 1;
+    //   for (var i = 3; i <= n; i++) {
+    //     var temp = n2;
+    //     n2 = n1 + n2;
+    //     n1 = temp;
+    //   }
+    //   return n2;
+    // }
+
+    // console.log(fc(5));
+    // // 递归实现
+    // function fci(n) {
+    //   if (n <= 2) {
+    //     return 1;
+    //   }
+    //   return fci(n - 1) + fci(n - 2);
+    // }
+
+    // console.log(fci(6));
+
+    // 冒泡排序
+
+    var arr = [1,2,3,4,5,6];
+    var arr2 = [2,4,2,4,5,8,3]
+    // 冒泡排序
+    // 双重for循环 外层控制比较的轮数 内层循环控制比较的次数
+    // 相邻位置相互比较 符合条件则交换位置
+    // 达到排序的目的
+
+
+    function sort(arr,fn) {
+    var flag;      
+      for (var i = 0; i < arr.length - 1; i++) {
+        flag = true
+        for (var j = 0; j < arr.length -1 - i; j++) {
+          // 前面的大于后面的 则交换位置 升序
+          // 反之则是降序
+          // 可以用一个回调函数来控制
+          // if(arr[j]>arr[j+1]){
+          //   var temp = arr[j];
+          //   arr[j] = arr[j+1];
+          //   arr[j+1] = temp;
+          //   flag = false;
+          // }
+          if(fn(arr[j],arr[j+1])>0){
+            var temp = arr[j];
+            arr[j] = arr[j+1];
+            arr[j+1] = temp;
+            flag = false;
+          }
+        }
+        if(flag){
+          break;
+        }
+      }
+      return arr;
+    }
+
+    // 升序
+    console.log(sort(arr,function(a,b){
+      return b-a;
+    }));
+    // 降序 bug:在刚好需要arr.length-1轮数排序时 循环结束而没有return出来
+    // 解决 跳出循环用break 在循环外return
+    // 或者多一轮排序
+    console.log(sort(arr,function(a,b){
+      return a-b;
+    }));
+  </script>
+</body>
+
+</html>
