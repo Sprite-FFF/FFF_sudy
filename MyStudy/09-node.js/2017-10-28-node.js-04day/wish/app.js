@@ -3,7 +3,7 @@ const fs = require ("fs");
 const url = require("url");
 const path = require("path");
 const template = require("art-template");
-// 引入格式化事件模块
+// 引入格式化时间模块
 const moment = require("moment");
 const mime = require("mime");
 // 引入操作数据库模块
