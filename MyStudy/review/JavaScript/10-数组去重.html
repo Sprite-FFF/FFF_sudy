@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 数组去重
+    // 1.
+    // 思路:定义一个新数组 
+
+    var arr = ["黛玉","晴雯","宝钗","袭人","黛玉","袭人"]
+
+    function norepeat(array){
+      var newArr = [];
+      for (var i = 0; i < array.length; i++) {
+          if(newArr.indexOf(array[i]) == -1){
+            newArr.push(array[i]);
+          }
+      }
+
+      return newArr;
+    }
+
+    console.log(norepeat(arr));
+
+    // 2.
+    function norepeat2(array){
+      var newArr = [];
+      var bool = true;
+      for (var i = 0; i < array.length; i++) {
+        bool = true;
+        for (var j = 0; j < newArr.length; j++) {
+          if(array[i] === array[j]){
+            bool = false;
+          }
+        }
+        if(bool) {
+          newArr.push(array[i]);
+        }
+      }
+      return newArr;
+    }
+
+    console.log(norepeat2(arr));
+
+    // 3.
+    function norepeat3 (array){
+      return Array.from(new Set(array));
+    }
+
+    console.log(norepeat3(arr));
+
+    
+  </script>
+</body>
+</html>
