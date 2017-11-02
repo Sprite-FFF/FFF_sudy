@@ -1,12 +1,16 @@
-{{extend "./layout" }} {{#block ("body")}}
+{{extend ("./layout") }} {{#block ("body")}}
 <!-- 个人资料 -->
 <div class="body center">
     <div class="settings">
         <form action="" class="form-horizontal">
+            <input type="hidden" name="id" value="{{info.id}}">
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">头像</label>
                 <div class="col-xs-2 preview">
-                    <img src="./images/default.png">
+                    {{#if (info.avator) }}
+                    <img src="{{info.avator}}"> {{else}}
+                    <img src="/admin/images/monkey.png"> {{/if}}
+                    <input type="hidden" name="avatar" value="{{info.avator}}">
                     <input type="file" id="upfile">
                     <div class="cover">
                         <i class="fa fa-upload"></i>
@@ -16,7 +20,7 @@
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">用户名</label>
                 <div class="col-xs-5">
-                    <input type="text" class="form-control input-sm">
+                    <input type="text" name="name" value="{{info.name}}" class="form-control input-sm">
                 </div>
             </div>
             <div class="form-group">
@@ -33,25 +37,25 @@
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">手机号码</label>
                 <div class="col-xs-5">
-                    <input type="text" class="form-control input-sm">
+                    <input type="text" name="phone" value="{{info.phone}}" class="form-control input-sm">
                 </div>
             </div>
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">就职公司</label>
                 <div class="col-xs-5">
-                    <input type="text" class="form-control input-sm">
+                    <input type="text" name="company" value="{{info.company}}" class="form-control input-sm">
                 </div>
             </div>
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">个人主页</label>
                 <div class="col-xs-5">
-                    <input type="text" class="form-control input-sm">
+                    <input type="text" name="homepage" value="{{info.homepage}}" class="form-control input-sm">
                 </div>
             </div>
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">个性签名</label>
                 <div class="col-xs-5 ckeditor">
-                    <textarea name="" rows="5" class="form-control input-sm"></textarea>
+                    <textarea name="alt" rows="5" class="form-control input-sm">{{info.alt}}</textarea>
                 </div>
             </div>
             <div class="form-group">
@@ -63,4 +67,22 @@
         </form>
     </div>
 </div>
+{{/block}} {{#block ("script") }}
+<script src="/home/libs/jquery.min.js"></script>
+<!-- 图片上传 -->
+<script>
+    $("#upfile").on("change", function () {
+        var formData = new FormData();
+        formData.append("avatar",this.files[0])
+        let xhr = new XMLHttpRequest();
+        xhr.open("post", "/admin/updateinfo");
+        xhr.send(formData);
+        xhr.addEventListener("readystatechange",function(){
+            if(this.readyState == 4 && this.status == 200){
+                let data = JSON.parse(this.responseText);
+                console.log(data);
+            }
+        });
+    });
+</script>
 {{/block}}

@@ -21,48 +21,40 @@
         </div>
         <table class="table table-hover">
             <tbody>
+                {{#each (list)}}
                 <tr>
-                    <td width="60" align="center">1</td>
+                    <td width="60" align="center">{{xindex+1}}</td>
                     <td align="left">
-                        <a class="title" href="javascript:;">JS the Hardcore: 执行上下文(Execution Context)</a>
+                        <a class="title" href="javascript:;">{{this.title}}</a>
                     </td>
                     <td width="120" align="center">
-                        <a href="javascript:;" class="btn btn-info btn-xs">编辑</a>
-                        <a href="javascript:;" class="btn btn-warning btn-xs">删除</a>
+                        <a href="/admin/edit?id={{this.id}}" class="btn btn-info btn-xs">编辑</a>
+                        <a href="javascript:;" data-id={{this.id}}  class="btn btn-warning btn-xs del">删除</a>
                     </td>
                 </tr>
-                <tr>
-                    <td width="60" align="center">2</td>
-                    <td align="left">
-                        <a class="title" href="javascript:;">中国第三届CSS开发者大会即将召开</a>
-                    </td>
-                    <td width="120" align="center">
-                        <a href="javascript:;" class="btn btn-info btn-xs">编辑</a>
-                        <a href="javascript:;" class="btn btn-warning btn-xs">删除</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="60" align="center">3</td>
-                    <td align="left">
-                        <a class="title" href="javascript:;">weui.js发布</a>
-                    </td>
-                    <td width="120" align="center">
-                        <a href="javascript:;" class="btn btn-info btn-xs">编辑</a>
-                        <a href="javascript:;" class="btn btn-warning btn-xs">删除</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="60" align="center">4</td>
-                    <td align="left">
-                        <a class="title" href="javascript:;">中国第三届CSS开发者大会即将召开</a>
-                    </td>
-                    <td width="120" align="center">
-                        <a href="javascript:;" class="btn btn-info btn-xs">编辑</a>
-                        <a href="javascript:;" class="btn btn-warning btn-xs">删除</a>
-                    </td>
-                </tr>
+                {{/each}}
             </tbody>
         </table>
     </div>
 </div>
+{{/block}}
+
+{{#block ("script")}}
+    <script src="/home/libs/jquery.min.js"></script>
+    <script>
+        $("table").on("click",".del",function(){
+            let _this = this;
+            let tr = $(this).parents('tr');
+            $.ajax({
+                url:"/admin/del-post",
+                type:"get",
+                data:{"id":_this.dataset.id},
+                success:function(info){
+                    if(info.code == 10000){
+                        tr.fadeOut(200);
+                    }
+                }
+            });
+        })
+    </script>
 {{/block}}

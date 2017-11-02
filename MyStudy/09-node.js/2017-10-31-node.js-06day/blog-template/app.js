@@ -30,7 +30,7 @@ app.use(session({
 // 登陆状态验证
 app.use("/admin",(req,res,next)=>{
   if(!req.session.loginfo && req.url != "/login"){
-    // return res.redirect("/login");
+    return res.redirect("/login");
   }
   next();
 });

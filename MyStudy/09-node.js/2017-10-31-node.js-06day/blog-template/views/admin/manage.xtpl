@@ -9,23 +9,26 @@
         <li class="active">写文章</li>
     </ol>
     <div class="settings">
-        <form action="" class="form-horizontal">
-            <div class="form-group">
+        <form action="{{action}}" class="form-horizontal">
+            {{#if (action === "/admin/modify")}}
+                <input type="hidden" name="id" value="{{list.id}}">
+            {{/if}}
+            <div class="form-group">        
                 <label for="" class="col-xs-3 control-label">标题</label>
                 <div class="col-xs-6">
-                    <input type="text" name="title" class="form-control input-sm">
+                    <input type="text" name="title" value="{{list.title}}" class="form-control input-sm">
                 </div>
             </div>
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">摘要</label>
                 <div class="col-xs-6 ckeditor">
-                    <textarea name="brief" rows="5" class="form-control input-sm"></textarea>
+                    <textarea name="brief" value="" rows="5" class="form-control input-sm">{{list.brief}}</textarea>
                 </div>
             </div>
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">内容</label>
                 <div class="col-xs-6">
-                    <textarea id="ckeditor" name="content" class="form-control input-sm"></textarea>
+                    <textarea id="ckeditor" name="content" value="" class="form-control input-sm">{{list.content}}</textarea>
                 </div>
             </div>
             <div class="form-group">
@@ -68,12 +71,15 @@
     // AJAX
     $("form").on("submit",function(){
         let _this = $(this);
+        let url = _this.attr("action");
         $.ajax({
-            url:'/admin/add',
+            url:url,
             type:'post',
             data:_this.serialize(),
             success:function(info){
-                console.log(info);
+                if(info.code == 10000){
+                    location.href = "/admin/blog_list"
+                }
             }
         });
         return false;

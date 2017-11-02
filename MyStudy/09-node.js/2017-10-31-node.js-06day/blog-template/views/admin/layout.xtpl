@@ -37,7 +37,7 @@
                     </a>
                     <ul class="list-unstyled">
                         <li>
-                            <a href="/admin/blog_add">
+                            <a href="/admin/add">
                                  写文章
                             </a>
                         </li>
@@ -70,7 +70,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:;">
+                            <a href="/admin/loginout">
                                 <i class="fa fa-sign-out"></i>
                                 退出
                             </a>
