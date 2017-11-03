@@ -16,9 +16,9 @@
         <div class="profile">
             <!-- 头像 -->
             <div class="avatar img-circle">
-                <img src="./images/default.png">
+                <img class="head-pic" src="./images/default.png">
             </div>
-            <h4>老布头儿</h4>
+            <h4 class="nickname"></h4>
         </div>
         <!-- 导航菜单 -->
         <div class="navs">
@@ -92,5 +92,23 @@
     <script src="./assets/nprogress/nprogress.js"></script>
     <script src="./libs/common.js"></script>
     {{{block ("script") }}}
+
+    <script>
+        $(function () {
+            $.ajax({
+                url:"/admin/show",
+                type:"get",
+                success:function(info){
+                    console.log(info);
+                    if(info.code == 10000){
+                        if(info.user.pic){
+                            $(".head-pic").attr("src",info.user.pic);
+                        }
+                        $(".nickname").text(info.user.name);
+                    }
+                }
+            })
+        });
+    </script>
 </body>
 </html>

@@ -70,6 +70,10 @@
 
     // AJAX
     $("form").on("submit",function(){
+        // 更新富文本元素否则无法获得表单数据
+        for (key in CKEDITOR.instances){
+                CKEDITOR.instances[key].updateElement();
+        }
         let _this = $(this);
         let url = _this.attr("action");
         $.ajax({

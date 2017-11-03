@@ -16,6 +16,7 @@ app.set("view engine","xtpl")
 
 // 处理静态资源
 app.use(express.static("public"));
+app.use("/public",express.static("public"));
 // 处理post数据中间件
 app.use(bodyParser.urlencoded({extended:false}));
 // session

@@ -7,10 +7,12 @@
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">头像</label>
                 <div class="col-xs-2 preview">
-                    {{#if (info.avator) }}
-                    <img src="{{info.avator}}"> {{else}}
-                    <img src="/admin/images/monkey.png"> {{/if}}
-                    <input type="hidden" name="avatar" value="{{info.avator}}">
+                    {{#if (info.avatar) }}
+                    <img class="head-pic" src="{{info.avatar}}">
+                    {{else}}
+                    <img class="head-pic" src="/admin/images/monkey.png"> 
+                    {{/if}}
+                    <input type="hidden" id="avatar" name="avatar" value="{{info.avatar}}">
                     <input type="file" id="upfile">
                     <div class="cover">
                         <i class="fa fa-upload"></i>
@@ -27,10 +29,10 @@
                 <label for="" class="col-xs-3 control-label">性别</label>
                 <div class="col-xs-3">
                     <label class="radio-inline">
-                        <input type="radio" checked> 男
+                        <input type="radio" {{#if (info.gender==="1")}} checked {{/if}} name="gender" value="1" > 男
                     </label>
                     <label class="radio-inline">
-                        <input type="radio"> 女
+                        <input type="radio" {{#if (info.gender==="0")}} checked {{/if}} name="gender" value="0" > 女
                     </label>
                 </div>
             </div>
@@ -60,7 +62,7 @@
             </div>
             <div class="form-group">
                 <div class="col-xs-8">
-                    <a href="./course_add_step2.html" class="btn btn-success btn-sm pull-right">保 存</a>
+                    <input type="submit" class="btn btn-success btn-sm pull-right" value="提 交">
                     <a href="./repass.html" class="btn btn-link btn-sm pull-right">更改密码？</a>
                 </div>
             </div>
@@ -75,14 +77,34 @@
         var formData = new FormData();
         formData.append("avatar",this.files[0])
         let xhr = new XMLHttpRequest();
-        xhr.open("post", "/admin/updateinfo");
+        xhr.open("post", "/admin/upload-hdpic");
         xhr.send(formData);
         xhr.addEventListener("readystatechange",function(){
             if(this.readyState == 4 && this.status == 200){
                 let data = JSON.parse(this.responseText);
-                console.log(data);
+                if(data.code == 10000){
+                    // data.path = data.path.slice(data.path.indexOf("\\"));
+                    $(".head-pic").attr("src",data.path);
+                    $("#avatar").val(data.path);
+                }
             }
         });
+    });
+
+    $("form").on("submit",function(){
+        let data = $(this).serialize();
+        $.ajax({
+            url:"updateinfo",
+            type:"post",
+            data:data,
+            success:function(info){
+                console.log(info);
+                if(info.code == 10000){
+                   location.reload(); 
+                }
+            }
+        });
+        return false;
     });
 </script>
 {{/block}}

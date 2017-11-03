@@ -31,6 +31,15 @@ module.exports.auth = function(data,callback){
       msg:"邮箱或者密码错误"
     });
   });
-
+}
+// 修改个人信息
+module.exports.updateinfo = function(data,callback){
+  let sql = "update users set ? where id=?"
+  db.query(sql,[data,data.id],(err)=>{
+    if(err){
+      return callback(err);
+    }
+  });
+  callback(null);
 }
 module.exports;
