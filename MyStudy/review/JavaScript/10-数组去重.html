@@ -54,6 +54,17 @@
 
     console.log(norepeat3(arr));
 
+    function norepeat4 (arr) {
+      for(var i = 0;i<arr.length;i++){
+        var temp = arr[i];
+        for(var j = i+1;j<arr.length;j++){
+          if(arr[j] === temp){
+            arr.splice(j,1);
+          }
+        }
+      }
+      return arr;
+    }
     
   </script>
 </body>

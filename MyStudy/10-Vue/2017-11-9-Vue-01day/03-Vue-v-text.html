@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!-- v-开头的在Vue中被称作指令 -->
+    <p v-text="msg"></p>
+    <!-- v-text通常用于正常标签的内容显示 input除外 -->
+    <!-- v-text内容还可以写js表达式 -->
+    <div v-text="msg+name"></div>
+    <!-- 还可以写函数 -->
+    <h1 v-text="Math.random()"></h1>
+    <!-- 但是不能使用BOM对象以及BOM对象的属性 -->
+    <!-- 全局定义的属性也不能用 -->
+    <!-- <p v-text="Location.href"></p> -->
+  </div>
+  <script src="./vue.js"></script>
+  <script>
+    var vm = new Vue({
+      el:"#app",
+      // 这里的数据通常是通过请求拿到的数据 渲染到页面
+      data:function(){
+        return {
+          msg:"帰る场所など何処に在りましょう",
+          name:"椎林名檎"
+        }
+      }
+    });
+
+    // vm.$mount("#app");
+    
+  </script>
+</body>
+</html>

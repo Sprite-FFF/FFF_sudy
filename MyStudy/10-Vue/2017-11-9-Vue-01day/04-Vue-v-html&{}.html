@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <p v-html="title"></p>
+    <div>
+      <!-- {{}}  插值表达式-->
+      <!-- 相当于 v-text -->
+      <!-- v-text和v-html -->
+      <!-- v-text 设置的是元素的innerText属性值 -->
+      <!-- v-html 设置的是元素的innerHTML属性值 -->
+      {{msg}}
+    </div>
+  </div>
+  <script src="./vue.js"></script>
+  <script>
+    var vm = new Vue({
+      el:"#app",
+      data:{
+        msg:"走吧走吧",
+        title:"<h2>爱的代价</h2>"
+      }
+    });
+  </script>
+</body>
+</html>

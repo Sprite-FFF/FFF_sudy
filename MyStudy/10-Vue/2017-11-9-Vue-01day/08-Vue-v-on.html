@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!-- vue中绑定事件使用 -->
+    <button v-on:click="click">点击1</button>
+
+    <!-- vue中阻止冒泡 -->
+    <!-- .stop 在vue中被称作修饰符 -->
+    <!-- v-on 可以简写为@ -->
+    <div v-on:click="click">
+      <button @:click.stop="click">点击2</button>
+    </div>
+  </div>
+  <script src="./vue.js"></script>
+  <script>
+    var vm = new Vue({
+      data:function(){
+        return{
+          click:function (event){
+          alert(1);
+          console.log(event);
+        }
+        }
+      }
+    });
+
+    vm.$mount("#app");
+  </script>
+</body>
+</html>

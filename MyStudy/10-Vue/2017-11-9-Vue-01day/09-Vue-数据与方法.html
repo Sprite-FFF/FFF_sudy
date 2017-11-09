@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="./vue.js"></script>
+  <script>
+    var obj = {
+      a:1,
+      msg:"情怎可料"
+    }
+
+    var vm = new Vue({
+      data:obj
+    });
+
+    obj.a = 1;
+    console.log(vm.a)
+    console.log(vm.msg === obj.msg);  //true
+    console.log(vm.$data === obj); //true
+  </script>
+</body>
+</html>

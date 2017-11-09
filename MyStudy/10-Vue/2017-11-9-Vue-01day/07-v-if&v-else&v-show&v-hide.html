@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!-- 当v-if的值为false时 元素将会被干掉 -->
+    <p v-if="gender === 1">男</p>
+    <!-- 使用v-else时必须和v-else联合使用 -->
+    <p v-else>女</p>
+
+    <!-- 当v-show的值为true时 元素会显示 -->
+    <!-- 当v-show的值为false时 元素会隐藏 display:block -->
+    <h1 v-show="false">v-show</h1>
+    <!-- <h2 v-hide="true">v-hide</h2> -->
+  </div>
+  <script src="./vue.js"></script>
+  <script>
+    var vm = new Vue({
+      data:function (){
+        return {
+          gender:1
+        }
+      }
+    });
+
+    vm.$mount("#app");
+  </script>
+</body>
+</html>

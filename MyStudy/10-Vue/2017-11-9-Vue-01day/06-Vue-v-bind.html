@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .red {
+      color:aqua;
+    }
+
+    .size {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <p v-bind:class="color">
+      v-bind
+    </p>
+    <!-- 支持js表达式 -->
+    <p v-bind:class="color+' '+font">
+      半醉半醒日复日
+    </p>
+    <!-- 支持函数 -->
+    <div v-bind:data-random="Math.random()"></div>
+    <img v-bind:src="img" alt="">
+
+    <!-- v-bind可以简写为 : -->
+    <img :src="img" :width="width" alt="">
+  </div>
+  <script src="./vue.js"></script>
+  <script>
+    new Vue({
+      el:"#app",
+      data:{
+        color:"red",
+        img:"./img/test.jpg",
+        font:"size",
+        width:100
+      }
+    });
+  </script>
+</body>
+</html>

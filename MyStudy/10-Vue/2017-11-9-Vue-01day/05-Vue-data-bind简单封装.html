@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input v-model="msg" type="text">
+  <input v-model="name" type="text">
+  <p v-text="msg"></p>
+  <script>
+    // 封装一个构造函数
+
+    function Vue(options){
+      var obj = options.data();
+      console.dir(this);
+      this.vModel(obj);
+      this.vText(obj);
+    }
+
+    Vue.prototype.vModel = function(obj){
+      var oIpt = document.querySelectorAll("[v-model]");
+      for (let i = 0; i < oIpt.length; i++) {
+        var tmp = oIpt[i].getAttribute("v-model");
+        oIpt[i].value = obj[tmp];
+      }
+    }
+
+    Vue.prototype.vText = function(obj){
+      var op = document.querySelectorAll("[v-text]");
+      for (let i = 0; i < op.length; i++) {
+        var tmp = op[i].getAttribute("v-text");
+        op[i].innerHTML = obj[tmp];        
+      }
+    }
+
+    new Vue({
+      data:function(){
+        return {
+          msg:"攻气满满小仙女",
+          name:"lalala"
+        }
+      }
+    });
+  </script>
+</body>
+</html>
