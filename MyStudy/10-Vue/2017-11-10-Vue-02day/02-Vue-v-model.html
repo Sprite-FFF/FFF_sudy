@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!-- v-model 双向数据绑定 -->
+    <!-- 其中一个改动 另一个随之改动 -->
+    <input type="text" v-model="msg">
+    <span>{{msg}}</span>
+
+    <!-- v-model绑定单选按钮 -->
+    <input type="radio" v-model="gender" value="男">男
+    <input type="radio" v-model="gender" value="女" >女
+    <span>{{gender}}</span>
+
+    <!-- v-model绑定复选框 -->
+    <ul>
+      <li><input type="checkbox" v-model="hobby" value="写代码" >写代码</li>
+      <li><input type="checkbox" v-model="hobby" value="游泳" >游泳</li>
+      <li><input type="checkbox" v-model="hobby" value="打游戏">打游戏</li>
+      <li><input type="checkbox" v-model="hobby" value="读书">读书</li>
+      <li><input type="checkbox" v-model="hobby" value="写博客">写博客</li>
+      <li><input type="checkbox" v-model="hobby" value="打球">打球</li>
+      <li><input type="checkbox" v-model="hobby" value="吃饭">吃饭</li>
+
+      <span v-for="item in hobby">{{item}}</span>
+    </ul>
+
+    <!-- v-model 绑定checkbox -->
+    <select v-model="sel">
+      <option v-for="(item,index) in address" v-bind:value="index">{{item}}</option>
+    </select>
+    <span>{{address[sel]}}</span>
+  </div>
+  <script src="./node_modules/vue/dist/vue.js"></script>
+  <script>
+    var vm = new Vue({
+      el:"#app",
+      data:function(){
+        return {
+          msg:"hello Vue",
+          gender:"男",
+          hobby:["打球","游泳","打游戏"],
+          address:["河南","湖南","浙江","北京","北京","上海"],
+          sel:3
+        }
+      }
+    });
+  </script>
+</body>
+</html>

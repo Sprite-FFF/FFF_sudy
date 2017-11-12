@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li v-for='item in list'>{{item}}</li>
+    </ul>
+
+    <ul>
+      <!-- v-for可以遍历 item在前面 index在后面 -->
+      <li v-for="(item,index) in list">{{index+"--------"+item}}</li>
+    </ul>
+
+    <ul>
+      <!-- 还可以遍历对象 对象也有index -->
+      <li v-for="(item,key,index) in obj">{{index+"---"+key+":"+item}}</li>
+    </ul>
+  </div>
+  <script src="./node_modules/vue/dist/vue.js"></script>
+  <script>
+    // v-for 指令
+
+    var vm = new Vue({
+      el:"#app",
+      data:function(){
+        return {
+          list:["黛玉","晴雯","宝钗","袭人","探春","鸳鸯"],
+          obj:{
+            name:"wixin",
+            age:"24",
+            gender:"男"
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

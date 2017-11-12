@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!-- 使用组件 -->
+    <!-- 可以是单标签 也可以是双标签 -->
+    <!-- 但是单标签后面再有双标签 就不会被解析了 -->
+    <!-- 所以还是建议使用双标签 -->
+    <test></test>
+    <demo></demo>
+  </div>
+  <script src="./node_modules/vue/dist/vue.js"></script>
+  <script>
+    // 定义公有组件
+
+    Vue.component("demo",{
+      data:function(){
+        return {
+          art:"高处不胜寒"
+        }
+      },
+      template:"<div>{{art}}</div>"
+    });
+    var vm = new Vue({
+      el:"#app",
+      data:function(){
+        return {
+          msg:"天晚欲来雪"
+        }
+      },
+      // 定义私有组件:
+      components:{
+        // 组件名
+        // template
+        "test":{
+          // 组件必须有 而且只能有一个根标签
+          // 
+          template:"<h1> 晚来天欲雪 能饮一杯无</h1>"
+        }
+      }
+    });
+  </script>
+</body>
+</html>

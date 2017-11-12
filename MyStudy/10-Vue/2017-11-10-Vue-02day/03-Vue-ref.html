@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!-- Vue为我们提供了获取DOM元素的属性 ref -->
+    <!-- 相当于给DOM元素去了一个别名 -->
+    <button v-on:click="fn" ref="btn">启用</button>
+  </div>
+  <script src="./node_modules/vue/dist/vue.js"></script>
+  <script>
+    var vm = new Vue({
+      el:"#app",
+      data:function(){
+        return {
+        }
+      },
+      methods:{
+        // 在Vue对象中 想要拿到DOM元素 需要在methods方法里获取
+        fn:function(){
+          this.$refs.btn.innerHTML = "click"
+        }
+      }
+      
+    });
+  </script>
+</body>
+</html>
