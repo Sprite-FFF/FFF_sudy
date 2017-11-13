@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div>
+    <p>侬今葬花人笑痴 他日葬侬知是谁</p>
+    <button>请求</button>
+  </div>
+  <script>
+    // Promise
+    function ajax(url, data) {
+      return new Promise(function (resolve, reject) {
+        let xhr = new XMLHttpRequest;
+        xhr.open("get", url);
+        xhr.send();
+        xhr.addEventListener("readystatechange", function () {
+          if (this.readyState != 4) {
+            return;
+          }
+          if (this.status == 200) {
+            resolve(xhr.responseText);
+          } else {
+            reject();
+          }
+        });
+
+      });
+    }
+
+    document.querySelector("button").addEventListener("click", function () {
+      ajax("http://localhost:3000").then(function (data) {
+        console.log(data);   
+      }, function () {
+        console.log("失败状态");
+      })
+    })
+  </script>
+</body>
+
+</html>
