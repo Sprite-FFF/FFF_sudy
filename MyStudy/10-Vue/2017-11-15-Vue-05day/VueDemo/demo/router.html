@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <a href="#/app1">app1</a>
+    <a href="#/app2">app2</a>
+    <!--  -->
+    <router-view></router-view> 
+  </div>
+  <script src="../node_modules/vue/dist/vue.js"></script>
+  <script src="../node_modules/vue-router/dist/vue-router.js"></script>
+  <script>
+    var app1 = Vue.component("app1",{
+      template:"<div>App1</div>"
+    });
+    var app2 = Vue.component("app2",{
+      template:"<div>App2</div>"
+    });
+    // 实例化路由
+    const router = new VueRouter({
+      // 配置路由
+      routes:[
+        {name:"app1",path:"/app1",component:app1},
+        {name:"app2",path:"/app2",component:app2}
+      ]
+    });
+    var vm = new Vue({
+      el:"#app",
+      router, //声明
+    });
+  </script>
+</body>
+</html>
