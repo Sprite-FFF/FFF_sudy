@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Template • TodoMVC</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/app.css">
+</head>
+<body >
+<section class="todoapp" ng-app="todosApp" ng-controller="todosController">
+	<header class="header">
+		<h1>todos</h1>
+		<form ng-submit="submit()">
+			<input ng-model="msg" class="new-todo" placeholder="What needs to be done?"autofocus>
+		</form>
+	</header>
+	<section class="main">
+		<input class="toggle-all" type="checkbox">
+		<label for="toggle-all">Mark all as complete</label>
+		<ul class="todo-list">
+			<li ng-repeat="item in array track by $index">
+				<div class="view"  >
+					<input class="toggle"  type="checkbox" ng-click="complete($index)" >
+					<label ng-bind="item"></label>
+					<button class="destroy" ng-click="delete(array,$index)" ></button>
+				</div>
+				<input class="edit" value="Create a TodoMVC template">
+			</li>
+			<li><h5>已完成</h5></li>
+			<li ng-repeat="item in completeArr" class="completed">
+				<div class="view"  >
+					<input class="toggle"  type="checkbox" >
+					<label ng-bind="item"></label>
+					<button class="destroy" ng-click="delete(completeArr,$index)"></button>
+				</div>
+				<input class="edit" value="Create a TodoMVC template">
+			</li>
+		</ul>
+	</section>
+	<footer class="footer">
+		<span class="todo-count"><strong></strong>未完成</span>
+		<button class="clear-completed" ng-click="clear()">Clear completed</button>
+	</footer>
+</section>
+<footer class="info">
+	<p>Double-click to edit a todo</p>
+	<p>Template by <a href="http://sindresorhus.com">Sindre Sorhus</a></p>
+	<p>Created by <a href="http://todomvc.com">you</a></p>
+	<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+</footer>
+
+<script src="./libs/angular.min.js"></script>
+<script>
+  var App = angular.module("todosApp",[]);
+  App.controller("todosController",["$scope",function($scope){
+    $scope.array = [];
+    $scope.completeArr = [];
+    // $scope.msg = '';
+    $scope.submit = function(){
+      this.array.push(this.msg);
+      this.msg = "";
+    };
+    $scope.delete = function(arr,index){
+      arr.splice(index,1);
+    };
+    $scope.complete = function(index){
+      this.completeArr = this.completeArr.push(this.array.splice(index,1)[0]);
+    };
+    $scope.clear = function(){
+      this.completeArr = [];
+    }
+  }]);
+</script>
+</body>
+
+</html>

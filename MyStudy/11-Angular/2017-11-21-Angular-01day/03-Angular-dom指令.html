@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div ng-app="App" ng-controller="appController">
+    <div ng-if="active">
+      to be with you 
+    </div>
+    <div ng-show="active">
+      to be No.1
+    </div>
+    <div ng-hide="active">
+      to be to be
+    </div>
+  </div>
+  <script src="./libs/angular.min.js"></script>
+  <script>
+    var App = angular.module("App",[]);
+    App.controller("appController",["$scope",function($scope){
+      $scope.active = false;
+    }]);
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div ng-app="App" ng-controller="appController">
+    <p>{{msg}}</p>
+
+    <p ng-bind="msg"></p>
+
+    <p ng-bind-template="{{msg}}======{{a}}"></p>
+  </div>
+
+  <script src="./libs/angular.min.js"></script>
+  <script>
+    var App = angular.module("App",[]);
+    App.controller("appController",["$scope",function($scope){
+      $scope.msg = "只知此生依我心去做";
+      $scope.a = "那年"
+    }]);
+  </script>
+</body>
+</html>
