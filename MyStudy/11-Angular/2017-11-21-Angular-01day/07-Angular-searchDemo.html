@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  <style>
+    .search {
+      width: 800px;
+      margin:150px auto;
+    }
+    .search .form-control{
+      float: left;
+    }
+    .search select {
+      width: 100px;
+    }
+    .search input {
+      width: 150px;
+      margin-left:10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="search" ng-app="App" ng-controller="app-Controller">
+    <select class="form-control" ng-model="filedName">
+      <option value="name" selected="selected">姓名</option>
+      <option value="age">年龄</option>
+      <option value="phone">电话</option>
+      <option value="weixin">微信</option>
+      <option value="momo">陌陌</option>
+      <option value="qq">QQ</option>
+    </select>
+    <input ng-keyup="search()" ng-model="filedVal" type="text" class="form-control">
+    <table class="table table-bordered">
+      <tr>
+        <th ng-click="sort('name')" >姓名</th>
+        <th ng-click="sort('age')" >年龄</th>
+        <th ng-click="sort('phone')" >电话</th>
+        <th ng-click="sort('weixin')" >微信</th>
+        <th ng-click="sort('momo')" >陌陌</th>
+        <th ng-click="sort('qq')" >QQ</th>
+      </tr>
+      <tr ng-repeat="item in person">
+        <td>{{item.name}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.phone}}</td>
+        <td>{{item.weixin}}</td>
+        <td>{{item.momo}}</td>
+        <td>{{item.qq}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <script src="./libs/angular.min.js"></script>
+  <script>
+    var App = angular.module("App",[]);
+    App.controller("app-Controller",["$scope","$filter",function($scope,$filter){
+      
+      $scope.temp = [
+        {
+          name:"绘里",
+          age:16,
+          phone:"13261624252",
+          weixin:"huili",
+          momo:"332445",
+          qq:"983242232"
+        },
+        {
+          name:"高板穗乃果",
+          age:18,
+          phone:"13261624232",
+          weixin:"huili",
+          momo:"332444",
+          qq:"988422132"
+        },
+        {
+          name:"矢泽日香",
+          age:13,
+          phone:"13261629822",
+          weixin:"huili",
+          momo:"331444",
+          qq:"98092232"
+        },
+        {
+          name:"南琴梨",
+          age:14,
+          phone:"13261629052",
+          weixin:"huili",
+          momo:"336444",
+          qq:"983902232"
+        },
+        {
+          name:"西木野真姬",
+          age:19,
+          phone:"13261634252",
+          weixin:"huili",
+          momo:"332044",
+          qq:"383242232"
+        },
+        {
+          name:"星空凛",
+          age:15,
+          phone:"13261610252",
+          weixin:"huili",
+          momo:"332944",
+          qq:"933242232"
+        },
+      ];
+      $scope.person = $scope.temp;
+      var filter = $filter("filter");
+      $scope.search = function(){
+        var obj = {};
+        obj[$scope.filedName] = $scope.filedVal;
+        $scope.person = filter($scope.temp,obj);
+      }
+      var flag = false;
+      $scope.sort = function(filedName){
+        flag = !flag;
+        $scope.person = $filter("orderBy")($scope.person,filedName,flag);
+      }
+
+    }])
+  </script>
+</body>
+</html>

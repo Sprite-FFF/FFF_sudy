@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div ng-app="App" ng-controller="appController">
+      {{"你好" | reverse:"哈哈"}}
+  </div>
+  <script src="./libs/angular.min.js"></script>
+  <script>
+    var App = angular.module("App",[]);
+    App.controller("appController",["$scope",function(){
+      
+    }]);
+
+    App.filter("reverse",function(){
+      return function(arg,str=""){
+        return arg.split("").reverse().join("")+str;
+      }
+    });
+  </script>
+</body>
+</html>

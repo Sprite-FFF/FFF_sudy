@@ -12,8 +12,10 @@
     <p>{{time | date:"yyyy-MM-dd hh:mm:ss"}}</p>
     <input type="text" ng-model="flag">
     <ul>
-      <li ng-repeat="item in arr">{{item | filter:flag}}</li>
+      <li ng-repeat="item in arr | filter:flag">{{item}}</li>
     </ul>
+
+    <span ng-repeat="item in array | orderBy:'':true track by $index">{{item}}</span>
   </div>
   <script src="./libs/angular.min.js"></script>
   <script>
@@ -22,7 +24,8 @@
       $scope.msg = 20.00;
       $scope.time = new Date();
       $scope.flag = "";
-      $scope.arr = ["yy","yyww","ww","ynn",'zx']
+      $scope.arr = ["yy","yyww","ww","ynn",'zx'];
+      $scope.array = [2,3,1,4,5,1,7,3]
     }]);
   </script>
 </body>
