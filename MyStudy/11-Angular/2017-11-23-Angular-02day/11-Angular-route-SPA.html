@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div ng-app="app" ng-controller="appController">
+    <a href="#/home">首页</a>
+    <a href="#/cart">购物车</a>
+    <a href="#/list">商品列表</a>
+    <a href="#/mine">个人中心</a>
+    <div ng-view></div>
+  </div>
+
+  <script src="./libs/angular.min.js"></script>
+  <script src="./libs/angular-route.js"></script>
+  <script>
+    var App = angular.module("app",["ngRoute"]);
+
+    App.config("$routeProvider",function($routeProvider){
+      $routeProvider
+      .when("/home",{
+        template:"欢迎来到首页"
+      })
+      .when("/cart",{
+        template:"购物车页面"
+      })
+      .when("/list",{
+        
+      })
+      
+    })
+
+  
+  </script>
+</body>
+</html>

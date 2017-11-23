@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div ng-app="app" ng-controller="appController"></div>
+
+  <script src="./libs/angular.min.js"></script>
+
+  <script>
+    var App = angular.module("app",[]);
+
+    App.controller("appController",["$scope","$location",function($scope,$location){
+      //$location 是用来获取浏览器地址的相关信息的 协议，ip，端口，绝对地址，请求参数，锚点值.
+      console.log($location.protocol());
+      console.log($location.host());
+      console.log($location.port());
+      console.log($location.search());
+      console.log($location.hash());
+      console.log($location.absUrl());
+
+    }]);
+  </script>
+</body>
+</html>

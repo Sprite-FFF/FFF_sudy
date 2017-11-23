@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <div ng-app="app" ng-controller="appController">
+    {{msg}}
+  </div>
+</head>
+<body>
+  <script src="./libs/angular.min.js"></script>
+  <!-- 服务：对外提供服务，就是对外提供功能，angular 有很多的功能。每个功能对应一个名字。
+        我们要使用这些服务，就是使用这些功能，把这些功能注入到我们的模块当中即可.
+          angular 提供的这些功能
+                    1：双向数据绑定
+                    2：指令（api） 用来操作dom
+                    3：过滤器 （api） 用来操作数据处理
+                    4：其它的一些开发需求就都是以服务的形式对外提供 -->
+    <script>
+      var App = angular.module("app",[]);
+      App.controller("appController",["$scope","$http",function($scope,$http){
+        // $http 服务 用来发送AJAX请求
+        $http({
+          method:"get",
+          url:"./api/01-angularDemo.php",
+          params:{user:"wuxin"}
+        })
+        .success(function(data,status,info,request){
+          $scope.msg = data;
+          console.log(status);
+          console.log(info());
+          console.log(request);
+        })
+        .error(function(){
+          
+        })
+      }]);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div ng-app="app" ng-controller="appController">
+    {{msg}}
+  </div>
+
+  <script src="./libs/angular.min.js"></script>
+  <script>
+    var App = angular.module("app",[]);
+    App.config(["$logProvider",function($logProvider){
+      $logProvider.debugEnabled(false);
+      // $logProvider.debugEnabled(false);
+    }]);
+
+    App.config(["$filterProvider",function($filterProvider){
+      $filterProvider.register("addPerson",function(){
+        return function(arg,arg1){
+          return `${arg}☆☆☆☆☆${arg1}`;
+        }
+      })
+    }])
+    App.controller("appController",["$scope","$log","$filter",function($scope,$log,$filetr){
+      $log.debug("this");
+      $log.log("haha");
+      $scope.msg = $filetr("addPerson")("糯米","团子");
+    }]);
+  </script>
+</body>
+</html>

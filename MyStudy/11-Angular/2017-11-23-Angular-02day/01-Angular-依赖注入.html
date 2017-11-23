@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div ng-app="app" ng-controller="appController">
+
+  </div>
+
+  <script src="./libs/angular.min.js"></script>
+  <script>
+
+    // 依赖注入（借助后台的一些概念）
+    //    我们angular 的每个模块之间是相互独立的。（解耦），最大的好处就是代码的重用
+    //    而我们在做实际的业务开发的时候，我们往往是需要调用angular 的这些模块的功能
+    //    进行开发。我们要使用angular 的模块，就注入angular 的模块，我们把这种思想叫做依赖注入
+    //    依赖注入有两种方式
+    var App = angular.module("app",[]);
+    // 行内式依赖注入  推荐使用
+    App.controller("appController",["$scope",function($scope){
+      
+    }]);
+
+    // 推断式注入依赖  使用形参的方式注入依赖 形参名字必须要和Angular内部模块名字相同
+    // 在对代码进行打包压缩时 形参会被压缩为简写形式 所以不推荐使用
+    App.controller("appController",function($scope){
+
+    });
+  </script>
+</body>
+</html>

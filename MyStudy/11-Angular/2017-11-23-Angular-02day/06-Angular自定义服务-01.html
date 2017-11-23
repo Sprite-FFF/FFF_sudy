@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<div ng-app="app" ng-controller="appController"></div>
+<script src="./libs/angular.min.js"></script>
+<script>
+  var App = angular.module("app",[]);
+
+  // 自定义服务的第一种方式
+  //创建一个服务，这个服务的名称叫做DateUtils
+  //在这个DateUtils 服务器下面在绑定了一个方法getCurrentTime
+  //假设getCurrentTime 要绑定在DateUtils 对象下面，
+  //this 必须指向到DateUtils
+  //假设要这个this 指向到DateUtils  call apply 将一个方法的调用委派给另外的一个对象.
+  App.service("dateUtils",function(){
+    this.currentTime = function(arg){
+      console.log(arg);
+    }
+    this.getTimeStyle = function(arg){
+      console.log(arg);
+    }
+  });
+
+  App.controller("appController",["$scope","dateUtils",function($scope,dateUtils){
+    dateUtils.currentTime("2017-11-22");
+    dateUtils.getTimeStyle(new Date());
+  }]);
+</script>
+</body>
+</html>
