@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+  <button id="btn">Send</button>
+  <script>
+    $("#btn").on("click",function (){
+        $.ajax({
+        url:'http://m-api.tubatulu.com/home',
+        type:'get',
+        async:false,
+        success(info){
+          console.log('第一个同步请求完成')
+          console.log(info)
+        }
+      })
+      $.ajax({
+        url:'http://m-api.tubatulu.com/home',
+        type:'get',
+        async:false,
+        success(info){
+          console.log('第二个同步请求完成')
+          console.log(info)
+        }
+      })
+      $.ajax({
+        url:'http://m-api.tubatulu.com/home',
+        type:'get',
+        async:true,
+        success(info){
+          console.log('异步请求完成')
+          console.log(info)
+        }
+      })
+    })
+  </script>
+</body>
+</html>

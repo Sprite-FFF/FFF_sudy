@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript">
+    window.$zopim || (function (d, s) {
+      var z = $zopim = function (c) {
+          z._.push(c)
+        },
+      $ = z.s = d.createElement(s),
+      e = d.getElementsByTagName(s)[0];
+      z.set = function (o) {
+        z.set._.push(o)
+      };
+      z._ = [];
+      z.set._ = [];
+      $.async = !0;
+      $.setAttribute("charset", "utf-8");
+      $.src = "https://v2.zopim.com/?5MEvs2AQ89eOQ88cG0uDCvHlklW7UW8S";
+      z.t = +new Date;
+      $.type = "text/javascript";
+      e.parentNode.insertBefore($, e)
+    })(document, "script");
+  </script>
+  <!-- <script src="https://v2.zopim.com/?5MEvs2AQ89eOQ88cG0uDCvHlklW7UW8S"></script> -->
+  <script>
+    // console.log(window.$zopim)
+    $zopim(function() {
+    $zopim.livechat.button.setColor('#FFCC00');
+    $zopim.livechat.theme.reload(); // apply new theme settings
+  })
+
+  $zopim(function() {
+    $zopim.livechat.button.hide();
+  })
+
+    $zopim(function(){
+      $zopim.livechat.window.hide()
+      console.log($zopim.livechat.window.getDisplay())
+    })
+    $zopim(function (){
+      $zopim.livechat.window.setTitle('Tubatulu')
+    })
+    $zopim(function(){
+      $zopim.livechat.window.onShow(function(){
+        console.log($zopim.livechat.window.getDisplay())
+      })
+    })
+    $zopim(function(){
+      $zopim.livechat.window.onHide(function(){
+        console.log($zopim.livechat.window.getDisplay())
+      })
+    })
+
+    $zopim(function() {
+      $zopim.livechat.window.setOffsetVertical(500);
+    });
+    $zopim(function() {
+      $zopim.livechat.window.setOffsetHorizontal(500);
+    });
+
+    window.onload = function () {
+      let btn = document.querySelector('#btn')
+      btn.addEventListener('click',()=>{
+        $zopim(function() {
+          $zopim.livechat.window.show()
+        })
+        $zopim(function() {
+          $zopim.livechat.button.show();
+        })
+      })
+
+
+    }
+  </script>
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>这个聊天的玩意真是厉害了...</h1>
+  <button id="btn">我是客服</button>
+</body>
+
+<!-- <script>
+  window.onload = function () {
+    console.dir(window.$zopim)
+  }
+</script> -->
+
+</html>

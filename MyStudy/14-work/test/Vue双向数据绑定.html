@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input v-model='msg' type="text">
+  <p v-bind='msg'></p>
+  <script>
+   class Vue {
+     constructor(obj){
+       this.$data = {}
+        //  实现属性代理 让$data去代代理传入的obj.data
+       Object.defineProperty(this.$data,'msg',{
+         get:function(){
+            return obj.data.msg
+         },
+         set:function(arg){
+            obj.data.msg = arg;
+            // 数据变化 让视图变化
+            const p = document.querySelector('[v-bind="msg"]');
+            p.innerHTML = obj.data.msg;
+         }
+       })
+     }
+   }
+
+  //  实例化对象
+   var vm = new Vue({
+     data:{
+       msg:'你好'
+     }
+   })
+
+  const ipt = document.querySelector('[v-model="msg"]');
+  const p = document.querySelector('[v-bind="msg"]');
+  p.innerHTML = vm.$data.msg;
+  ipt.value = vm.$data.msg;
+  
+  ipt.oninput = function () {
+    // 视图数据流向model 使用简单的事件就可以
+    vm.$data.msg = this.value;
+  }
+  </script>
+</body>
+</html>

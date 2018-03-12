@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>...拓展运算符</h1>
+  <script>
+    let arr1 = [1,2,3,4,5]
+    console.log(...arr1)
+    console.log([...arr1,6,7,8])
+    let str = 'wuxin'
+    console.log(...str)
+    let obj = {
+      name:'wuxin',
+      age:'18',
+      hh:{
+        aa:'1',
+        bb:'2'
+      }
+    }
+    console.log({...obj,gender:'男'})
+  </script>
+</body>
+</html>

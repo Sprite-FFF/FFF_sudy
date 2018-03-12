@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let count = 0
+    let promise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        count++
+        console.log(count)
+        if (count == 1) {
+          resolve(count)
+        }
+        if (count != 1) {
+          reject('........')
+        }
+      }, 0);
+    })
+    console.log(promise)
+    promise.then(
+      (res) => {
+        console.log(res)
+      },
+      (err) => {
+        console.log(err)
+      }
+    )
+  </script>
+
+  <script>
+    const fetch = function (url,type,params){
+      const promise = new Promise((resolve,reject) => {
+        const handler = function(){
+          if(this.readyState !==4) {
+            return
+          }
+          if(this.status === 200) {
+            resolve(this.response)
+          } else {
+            reject (new Error(this.statusText))
+          }
+        }
+        const xhr = new XMLHttpRequest()
+        xhr.open(type,url)
+        xhr.send(params)
+        xhr.onreadystatechange = handler
+      })
+      return promise
+    }
+
+    fetch("http://m-api.tubatulu.com/home",'get').then(
+      (res) => {
+        console.log(JSON.parse(res))
+      }
+    ).catch(
+      (error)=>{
+        console.log(error)
+      }
+    )
+  </script>
+</body>
+
+</html>

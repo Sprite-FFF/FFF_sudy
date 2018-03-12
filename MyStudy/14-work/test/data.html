@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const seatInfos = [
+                        {
+                            "anclCode":"ZUNXIANGZ",
+                            "seatColum":"C",
+                            "seatNumber":"31C",
+                            "seatRowNumber":"31",
+                            "seatStatus":"IC"
+                        },
+                        {
+                            "anclCode":"ZUNXIANGZ",
+                            "seatColum":"J",
+                            "seatNumber":"31J",
+                            "seatRowNumber":"31",
+                            "seatStatus":"IC"
+                        },
+                        {
+                            "anclCode":"ZUNXIANGZ",
+                            "seatColum":"K",
+                            "seatNumber":"31K",
+                            "seatRowNumber":"31",
+                            "seatStatus":"IC"
+                        },
+                        {
+                            "anclCode":"ZUNXIANGZ",
+                            "seatColum":"A",
+                            "seatNumber":"31A",
+                            "seatRowNumber":"31",
+                            "seatStatus":"IC"
+                        },
+                        {
+                            "anclCode":"ZUNXIANGZ",
+                            "seatColum":"B",
+                            "seatNumber":"31B",
+                            "seatRowNumber":"31",
+                            "seatStatus":"IC"
+                        },
+                        {
+                            "anclCode":"ZUNXIANGZ",
+                            "seatColum":"L",
+                            "seatNumber":"31L",
+                            "seatRowNumber":"31",
+                            "seatStatus":"IC"
+                        }
+                    ]
+
+console.log(seatInfos)
+
+let obj = {}
+seatInfos.forEach(el => {
+  obj[el.seatNumber] = el.seatStatus
+})
+console.log(obj)
+
+    
+  </script>
+</body>
+</html>

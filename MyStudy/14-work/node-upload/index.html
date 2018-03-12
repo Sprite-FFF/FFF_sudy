@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <img width="400" src="" alt="">
+  <input type="file" name="" id="choose">
+  <button id="send">点击上传</button>
+
+  <script>
+    var btn = document.querySelector('#send')
+    var fl = document.querySelector("#choose")
+    var img = document.querySelector('img')
+    var data = new FormData();
+    fl.addEventListener('change',function () {
+      data.append('avatar',this.files[0])
+      data.append('user','admin')
+    })
+    btn.addEventListener('click',function(){
+      fetch('http://localhost:3000/upload',{
+        method:'post',
+        body:data
+      }).then(
+        (res) => {
+          res.json().then(
+            data => {
+              console.log(data)
+              img.setAttribute('src',`http://localhost:3000${data.path}`)
+            }
+          )
+        },
+        (err) => {
+          console.log(err)
+        }
+      )
+    })
+  </script>
+</body>
+
+</html>

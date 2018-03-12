@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    form {
+      padding:20px 0;
+      padding-left: 20px;
+      width: 400px;
+      margin : 100px auto;
+      border: 1px solid #ccc;
+      /* text-align: center; */
+    }
+    .error {
+      margin-left: 20px;
+      color:red;
+      font-size: 12px;
+    }
+  </style>
+
+  <script src="./jquery-1.12.4.min.js"></script>
+  <script src="./jquery.validate.js"></script>
+  <script src="./messages_zh.js"></script>
+  <!-- <script
+  src="http://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.bootcss.com/jquery-validate/1.17.0/additional-methods.js"></script> -->
+</head>
+<body>
+  <form id="myform" action="">
+    用户名: <input type="text" id="userName" name="userName" > <br>
+    手机号: <input type="text" id="phoneNumber" name="phoneNumber" > <br>
+    密　码: <input type="text" id="pwd" name="pwd" > <br>
+    <input type="submit" value="提交">
+  </form>
+
+  <script>
+    // 自定义验证规则
+    $.validator.addMethod('isPhone',function (val,ele,params) {
+      let reg = /^((13|14|15|17|18)[0-9]{1}\d{8})$/
+      return this.optional(ele) || (reg.test(val))
+    },'手机号码格式错误')
+
+    $('#myform').validate({
+      // 改变默认提交方式
+      submitHandler: function () {
+        alert('提交')
+      },
+      // 使用验证规则
+      rules:{
+        userName:"required",
+        phoneNumber:{
+          required:true,
+          isPhone:true
+        },
+        pwd:{
+          required:true,
+          minlength:6
+        }
+      }
+    })
+  </script>
+</body>
+</html>
