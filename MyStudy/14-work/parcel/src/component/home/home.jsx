@@ -15,7 +15,7 @@ export default class extends React.Component{
   }
 
   componentDidMount () {
-    console.log(this.props.match)
+    // console.log(this.props.match)
   }
   render () {
     let {path} = this.props.match
